@@ -1,0 +1,88 @@
+base:
+  model: M1
+  reservoir: R1
+  physical:
+    hbar: 0.6582119569
+    mass_over_me: 0.0000563
+    gC: 0.0024
+    gR: 0.0048
+    gA: 0.0048
+    eta: 9.8
+    R: 0.021
+    gammaC: 0.182
+    gammaA: 0.050
+    alpha1: 0.0024
+    alpha2: -0.00024
+    GammaA: 0.1
+    GammaI: 0.1
+    J: 0.0
+  reservoirs:
+    R1: {W: 0.1020408163265306, gammaI: 0.0018181818181818182, gI: 0.0048}
+    R2: {W: 0.0500000000000000, gammaI: 0.0018181818181818182, gI: 0.002352}
+  pump: {kind: uniform, s: 1.5, epsilon: 0.3, P0: 3.16875, d: 2.5, r0: 10.0, off_time: null}
+  initial: {density_0d: 0.0001, density_2d: 0.000001, theta: 0.2, seed: 20261008}
+  space: {N: 512, L: 256.0}
+  time: {dt: 0.025, final: 2000.0, sample: 0.5}
+  ode: {rtol: 0.00000000002, atol: 0.0000000000002, max_step: 2.0}
+  save: {observable: 1.0, core: 20.0, checkpoint: 200.0, diagnostic: 20.0}
+  execution: {fft_workers: 2, local_workers: 4}
+profiles:
+  F1:
+    time: {final: 1200.0, sample: 0.1}
+    pump: {off_time: 1000.0}
+  F2:
+    pump: {kind: ring}
+    time: {final: 2000.0, sample: 1.0}
+  F3:
+    model: M2
+    pump: {s: 2.0, epsilon: 0.0}
+  F4:
+    model: M3
+    physical: {J: 0.010}
+    pump: {s: 2.0, epsilon: 0.3}
+    time: {final: 6000.0, sample: 0.5}
+  F5:
+    model: M3
+    pump: {s: 2.0, epsilon: 0.3}
+    time: {final: 6000.0, sample: 0.5}
+  N3:
+    model: M2
+    reservoir: R1
+    physical: {J: 0.0}
+    pump: {kind: ring, epsilon: 0.0, P0: 3.16875}
+    initial: {theta: 0.0}
+    space: {N: 512, L: 256.0}
+    time: {dt: 0.025, final: 2000.0}
+  report3:
+    model: M3
+    reservoir: R1
+    physical: {J: 0.0, beta: 0.0}
+    pump: {kind: gaussian, epsilon: 0.0, P0: 4.0, off_time: null}
+    initial: {kind: radial, density_2d: 0.0001, theta: 0.0}
+    space: {N: 512, L: 256.0}
+    time: {dt: 0.025, final: 3000.0}
+    save: {observable: 0.25, angular: 1.0, probe: 5.0, checkpoint: 200.0, diagnostic: 20.0}
+    analysis: {min_window: 200.0, max_final: 6000.0, high_k_cut: 0.7, edge_limit: 0.00001}
+    execution: {backend: xpu, fft_workers: 1, local_workers: 1}
+  demo:
+    model: M3
+    physical: {J: 0.010}
+    pump: {s: 2.0}
+    space: {N: 32, L: 32.0}
+    time: {final: 2.0, sample: 0.5}
+
+# Independent extra starts; finer ranges resolve phase behavior and polarization reversal.
+scan_J_additional: [0.00625, 0.00650, 0.00675, 0.01125, 0.01150, 0.01175]
+
+# All main F5 points use at least the common 16000–18000 ps window.
+scan_J_refined_ranges_meV:
+  - [0.00610, 0.00710, 0.00002]
+  - [0.01120, 0.01220, 0.00005]
+  - [0.01150, 0.01165, 0.00001]
+scan_refinement: {initial_final: 18000.0, max_final: 288000.0}
+# Check persistence of the smallest cycles, beyond the initial late window.
+scan_long_J: [0.00680, 0.00682, 0.00684, 0.00686, 0.00688, 0.01151, 0.01152, 0.01153, 0.01154, 0.01155, 0.01156, 0.01157, 0.01158, 0.01159, 0.01160]
+scan_long_final: 72000.0
+
+# Independent tighter-tolerance repeats at the sensitive parts of the scan.
+scan_J_check: [0.00636, 0.00638, 0.00640, 0.00642, 0.00684, 0.00686, 0.01150, 0.01151, 0.01155, 0.01159, 0.01160]

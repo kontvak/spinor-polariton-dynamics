@@ -1,0 +1,4056 @@
+{
+  "method": "CPU postprocessing of saved arrays; no field integration or temporal interpolation",
+  "PNG_width_mm": 160,
+  "PNG_dpi": 300,
+  "mask_relative_S0": 0.001,
+  "figures": {
+    "F1_reservoir_switching": {
+      "file": "results/figures/report3/F1_reservoir_switching.png",
+      "caption_en": "Condensate density after pump turn-on and turn-off in the matched one- and two-reservoir models. PA=1.5 Pth; identical seed and initially empty reservoirs. Time in (b) is measured from pump turn-off at1000 ps. The dotted level is the common stationary density. Saved F1_M0/F1_R1 data from the preceding report are reused.",
+      "status": "READY",
+      "sources": []
+    },
+    "F2_circular_component_densities": {
+      "file": "results/figures/report3/F2_circular_component_densities.png",
+      "caption_en": "Circular-component density profiles with pump imbalance epsilon=0.3, J=beta=0. production_A1_spot: p=13.8, epsilon=0.3, alpha2=-0.00024 meV um^2, J=0 meV, beta=0 meV um^2; N=512, L=256 um, dt=0.025 ps. matched_A1_ring: p=3.3, epsilon=0.3, alpha2=-0.00024 meV um^2, J=0 meV, beta=0 meV um^2; N=512, L=256 um, dt=0.025 ps. production_A1_spot: snapshot at3000 ps, N+=116.277, N-=93.7473, Z=0.107274. matched_A1_ring: snapshot at6000 ps, N+=516.265, N-=241.631, Z=0.362365. A common absolute density scale is used within each geometry. Density stationarity does not imply fixed relative phase. Thin contours mark half-maximum pump; w=d=2.5 um, ring radius10 um.",
+      "status": "READY",
+      "sources": [
+        {
+          "run": "production_A1_spot",
+          "time_ps": 3000.0,
+          "field_sha256": "15486c3484b6e3865be5a393b83871ec574b704e158799fc0a71dc9d4cbfffe3",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "matched_A1_ring",
+          "time_ps": 6000.0,
+          "field_sha256": "248cf1c20d82c06d661d84872d245081dff2aab412fd24aa26a1255f608cd752",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 6000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        }
+      ]
+    },
+    "F3_cross_spin_density_comparison": {
+      "file": "results/diagnostics/report3/F3_cross_spin_density_comparison.png",
+      "caption_en": "Radial density profiles for alpha2=0 (A0) and alpha2=-0.00024 meV um^2 (A1); all other parameters and preparation are held fixed within each geometry. Small differences have no independent paired convergence bound and are not claimed as a resolved alpha2 effect. Annular snapshots may retain evolving polarization.",
+      "status": "DIAGNOSTIC_ONLY",
+      "sources": [
+        {
+          "run": "production_A0_spot",
+          "time_ps": 3000.0,
+          "field_sha256": "10f28f2b1c9623e0cc70349cd186f9a2cc5eef7e56e2150f6510066515b0565c",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": 0.0,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "production_A1_spot",
+          "time_ps": 3000.0,
+          "field_sha256": "15486c3484b6e3865be5a393b83871ec574b704e158799fc0a71dc9d4cbfffe3",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "matched_A0_ring",
+          "time_ps": 6000.0,
+          "field_sha256": "dde5e96cae73ed9c7ccd77e50b8344a6763c9084224e4267fc6f3318d8ce5178",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": 0.0,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 6000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "matched_A1_ring",
+          "time_ps": 6000.0,
+          "field_sha256": "248cf1c20d82c06d661d84872d245081dff2aab412fd24aa26a1255f608cd752",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 6000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        }
+      ]
+    },
+    "F4_TE_TM_spot": {
+      "file": "results/figures/report3/F4_TE_TM_spot.png",
+      "caption_en": "Densities and circular polarization under Gaussian-spot pumping with TE-TM coupling, at t=3000 ps. production_T0_spot: p=13.8, epsilon=0, alpha2=-0.00024 meV um^2, J=0 meV, beta=0.0119 meV um^2; N=512, L=256 um, dt=0.025 ps. N+=104.912, N-=104.912, Z=5.41141e-14. Both densities share one absolute scale. Thin contours: half-maximum pump; polarization pixels below 0.001 of peak S0 are masked. Density and polarization stationarity were checked on the saved late windows.",
+      "status": "READY",
+      "sources": [
+        {
+          "run": "production_T0_spot",
+          "time_ps": 3000.0,
+          "field_sha256": "7082364ff34caad0d794c74803f63ddfc938fbc520747d0d59282c70c6c2fd24",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0119
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.0,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        }
+      ]
+    },
+    "F5_TE_TM_ring": {
+      "file": "results/figures/report3/F5_TE_TM_ring.png",
+      "caption_en": "Densities and circular polarization under annular pumping with TE-TM coupling, at t=6000 ps. matched_T0_ring: p=3.3, epsilon=0, alpha2=-0.00024 meV um^2, J=0 meV, beta=0.0119 meV um^2; N=512, L=256 um, dt=0.025 ps. N+=373.522, N-=382.324, Z=-0.0116459. Both densities share one absolute scale. Thin contours: half-maximum pump; polarization pixels below 0.001 of peak S0 are masked. Densities are stationary within the stated tolerance, while full polarization continues to drift. This is a finite-time snapshot, not a phase-locked state.",
+      "status": "READY_FINITE_TIME",
+      "sources": [
+        {
+          "run": "matched_T0_ring",
+          "time_ps": 6000.0,
+          "field_sha256": "674aebcbb9791cfec0c18a189d4b2b868df310c89ff5e76e4789cdb06bbf6171",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0119
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.0,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 6000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        }
+      ]
+    },
+    "F6_TE_TM_angular_response": {
+      "file": "results/figures/report3/F6_TE_TM_angular_response.png",
+      "caption_en": "Second angular harmonic Q2=2|C2| versus beta/beta_ref. Markers are time means and vertical bars show the temporal range, not statistical or numerical uncertainty. ROI: r=5-15 um for the spot, r=5-7.5 um for the ring. Each explicitly recorded late window is400 ps; ring T0 is still evolving, so no established monotonic ring response is claimed. The controlled initial seed is shared within each geometry; beta_ref=.0119 meV um^2. The hollow ring marker denotes the evolving beta_ref state at6000 ps. All points use the same Cartesian ROI quadrature; temporal bars do not include its discretization uncertainty. The independent C1 field-convergence controls passed, without providing an error bound for all beta variants.",
+      "status": "READY_FINITE_TIME",
+      "sources": [
+        {
+          "run": "production_B0_spot",
+          "time_ps": 3000.0,
+          "field_sha256": "a6628b5bfc60065b2cae24b4bde2d29150474481dfb96c57ff28c8fa25295380",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.0,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "report3_T0_spot_beta_0.5",
+          "time_ps": 3000.0,
+          "field_sha256": "e8711a0de09c9bbcec697c064e5ab48a5f4efdad1d6b1f8f457a52cdbade3fc6",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.00595
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.0,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "production_T0_spot",
+          "time_ps": 3000.0,
+          "field_sha256": "7082364ff34caad0d794c74803f63ddfc938fbc520747d0d59282c70c6c2fd24",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0119
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.0,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "report3_T0_spot_beta_2",
+          "time_ps": 3000.0,
+          "field_sha256": "d3066d70298ac33bb6a3ee272bde747a49b7cae66dab6dbfd6fcd0e5cda10fe6",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0238
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.0,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "matched_B0_ring",
+          "time_ps": 3600.0,
+          "field_sha256": "b76a10025fa368c11348abf7955a9f3e3c52ae77475c28b14c9456756b9d2b66",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.0,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3600.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "report3_T0_ring_beta_0.5",
+          "time_ps": 3000.0,
+          "field_sha256": "704b1b2735c4c12f622a85f475d4a9986e1cc858c12ea9f9b3a24649f92c3164",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.00595
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.0,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "matched_T0_ring",
+          "time_ps": 6000.0,
+          "field_sha256": "674aebcbb9791cfec0c18a189d4b2b868df310c89ff5e76e4789cdb06bbf6171",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0119
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.0,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 6000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "report3_T0_ring_beta_2",
+          "time_ps": 3000.0,
+          "field_sha256": "281a7b1ad6b853b77608942daf95c91c3598af7d1a2f170c842443b2fc24f02d",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0238
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.0,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        }
+      ],
+      "windows_ps": {
+        "production_B0_spot": [
+          2600.0,
+          3000.0
+        ],
+        "report3_T0_spot_beta_0.5": [
+          2600.0,
+          3000.0
+        ],
+        "production_T0_spot": [
+          2600.0,
+          3000.0
+        ],
+        "report3_T0_spot_beta_2": [
+          2600.0,
+          3000.0
+        ],
+        "matched_B0_ring": [
+          3200.0,
+          3600.0
+        ],
+        "report3_T0_ring_beta_0.5": [
+          2600.0,
+          3000.0
+        ],
+        "matched_T0_ring": [
+          5600.0,
+          6000.0
+        ],
+        "report3_T0_ring_beta_2": [
+          2600.0,
+          3000.0
+        ]
+      }
+    },
+    "F7_homogeneous_phase_dynamics": {
+      "file": "results/figures/report3/F7_homogeneous_phase_dynamics.png",
+      "caption_en": "Spin imbalance z and change of unwrapped relative phase theta=arg(psi+)-arg(psi-) for independent homogeneous runs at J=.005 and .010 meV, p=2, epsilon=.3, beta=0. Each panel displays the final1200 ps, measured from the start of its own display window; theta0 is the phase at that start. Classification uses two validated windows, not only the displayed segment. Both components remain nonzero. Running and locked phase states survive tighter independent tolerances.",
+      "status": "READY",
+      "sources": [],
+      "source_0d": [
+        {
+          "file": "results/data/report3/report3_0d_J_0.00500000.npz",
+          "display_interval_ps": [
+            18800.0,
+            20000.0
+          ],
+          "status": "RUNNING_PHASE_PERIODIC"
+        },
+        {
+          "file": "results/data/report3/report3_0d_J_0.01000000.npz",
+          "display_interval_ps": [
+            18800.0,
+            20000.0
+          ],
+          "status": "LOCKED_STEADY"
+        }
+      ]
+    },
+    "F8_spot_coupling_comparison": {
+      "file": "results/figures/report3/F8_spot_coupling_comparison.png",
+      "caption_en": "Angular circular-polarization response under Gaussian pumping, epsilon=.3. A1: J=beta=0; T1: J=0,beta_ref; J1: J_ref,beta=0; C1: J_ref,beta_ref. The cosine angular component2 Re C2 retains the oscillation hidden by the nearly constant modulus Q2. All runs share interval2460-3000 ps; fixed ROI5-15 um. Full-map periodicity is verified. ",
+      "status": "READY",
+      "sources": [
+        {
+          "run": "production_A1_spot",
+          "time_ps": 3000.0,
+          "field_sha256": "15486c3484b6e3865be5a393b83871ec574b704e158799fc0a71dc9d4cbfffe3",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "production_T1_spot",
+          "time_ps": 3000.0,
+          "field_sha256": "bf86138e6cfbbc41d7c8ad2a4677b8cc7f73707bf25b6a017b83a736f8220d7f",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0119
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "production_J1_spot",
+          "time_ps": 3000.0,
+          "field_sha256": "c16fefa347c80ac187d2b903181a6999ee7f34c4e7d15863119443f1c35242f8",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.01,
+              "beta": 0.0
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "production_C1_spot",
+          "time_ps": 3000.0,
+          "field_sha256": "01f1f7590d91f4bb1001994833032b711f50794035c1e6eb75207a77fd2b9592",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.01,
+              "beta": 0.0119
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        }
+      ],
+      "windows_ps": {
+        "production_A1_spot": [
+          2460.0,
+          3000.0
+        ],
+        "production_T1_spot": [
+          2460.0,
+          3000.0
+        ],
+        "production_J1_spot": [
+          2460.0,
+          3000.0
+        ],
+        "production_C1_spot": [
+          2460.0,
+          3000.0
+        ]
+      },
+      "polar_order3_vs5_max": {}
+    },
+    "F8_ring_coupling_comparison": {
+      "file": "results/figures/report3/F8_ring_coupling_comparison.png",
+      "caption_en": "Angular circular-polarization response under annular pumping, epsilon=.3. A1: J=beta=0; T1: J=0,beta_ref; J1: J_ref,beta=0; C1: J_ref,beta_ref. Angular s3 is the ratio of integrated S3 and S0 in each of72 polar sectors over r=5-7.5 um. The same Gauss quadrature (32 radial and8 angular nodes per sector) is applied to cubic-interpolated complex fields; a fifth-order cross-check is recorded. This removes unequal Cartesian pixel counts without angular filtering. A1/T1 have periodic observables; J1/C1 are stationary. Each snapshot uses its explicitly recorded physical time and is not phase-aligned across different parameter sets. The four starts share the same explicit seed. ",
+      "status": "READY_PERIODIC_AND_STATIONARY",
+      "sources": [
+        {
+          "run": "matched_A1_ring",
+          "time_ps": 6000.0,
+          "field_sha256": "248cf1c20d82c06d661d84872d245081dff2aab412fd24aa26a1255f608cd752",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 6000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "matched_T1_ring",
+          "time_ps": 6000.0,
+          "field_sha256": "5149e303ce119b40306a7c6eb0b040c248a4ceeda560c546ca646ffa80c6b7b1",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0,
+              "beta": 0.0119
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 6000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "charge_J1_seeded_c128_L256_t3600",
+          "time_ps": 3600.0,
+          "field_sha256": "4dcb5b26ce89b3d30d4336a5a6eb7cf9a91eaa312e125f02e4ee187f3e6fa163",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.01,
+              "beta": 0.0
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3600.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        },
+        {
+          "run": "matched_C1_ring",
+          "time_ps": 3600.0,
+          "field_sha256": "5e6a49ee8cf52c3a75331ddba3f73b9e892d324548011e6246334379b9de365c",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.01,
+              "beta": 0.0119
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3600.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        }
+      ],
+      "windows_ps": {
+        "matched_A1_ring": [
+          5400.0,
+          6000.0
+        ],
+        "matched_T1_ring": [
+          5400.0,
+          6000.0
+        ],
+        "charge_J1_seeded_c128_L256_t3600": [
+          3000.0,
+          3600.0
+        ],
+        "matched_C1_ring": [
+          3000.0,
+          3600.0
+        ]
+      },
+      "polar_order3_vs5_max": {
+        "matched_A1_ring": 2.2602050480102776e-06,
+        "matched_T1_ring": 1.9295458417722955e-06,
+        "charge_J1_seeded_c128_L256_t3600": 5.342914004557997e-07,
+        "matched_C1_ring": 6.04664425862822e-07
+      }
+    },
+    "F9_spot_Stokes": {
+      "file": "results/figures/report3/F9_spot_Stokes.png",
+      "caption_en": "Gaussian-spot C1 polarization at t=3000 ps. production_C1_spot: p=13.8, epsilon=0.3, alpha2=-0.00024 meV um^2, J=0.01 meV, beta=0.0119 meV um^2; N=512, L=256 um, dt=0.025 ps. S1=2Re(conj(psi+)*psi-), S2=2Im(conj(psi+)*psi-), S3=n+-n-; si=Si/S0. One common [-1,1] scale; low-intensity pixels are masked. Instantaneous phase of a verified periodic state; the accompanying GIF shows its evolution, so this is not a time mean. Independent C1 space/time controls passed.",
+      "status": "READY",
+      "sources": [
+        {
+          "run": "production_C1_spot",
+          "time_ps": 3000.0,
+          "field_sha256": "01f1f7590d91f4bb1001994833032b711f50794035c1e6eb75207a77fd2b9592",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.01,
+              "beta": 0.0119
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "gaussian",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 13.799999999999999,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial"
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        }
+      ]
+    },
+    "F10_ring_Stokes": {
+      "file": "results/figures/report3/F10_ring_Stokes.png",
+      "caption_en": "Annular-pump C1 polarization at t=3600 ps. matched_C1_ring: p=3.3, epsilon=0.3, alpha2=-0.00024 meV um^2, J=0.01 meV, beta=0.0119 meV um^2; N=512, L=256 um, dt=0.025 ps. S1=2Re(conj(psi+)*psi-), S2=2Im(conj(psi+)*psi-), S3=n+-n-; si=Si/S0. One common [-1,1] scale; low-intensity pixels are masked. Snapshot of the verified stationary polarization. Independent C1 space/time controls passed.",
+      "status": "READY",
+      "sources": [
+        {
+          "run": "matched_C1_ring",
+          "time_ps": 3600.0,
+          "field_sha256": "5e6a49ee8cf52c3a75331ddba3f73b9e892d324548011e6246334379b9de365c",
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.01,
+              "beta": 0.0119
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "ring",
+              "s": 1.5,
+              "epsilon": 0.3,
+              "P0": 3.3,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 0.0001,
+              "theta": 0.0,
+              "seed": 20261008,
+              "kind": "radial_perturbed",
+              "perturbation": 0.001,
+              "perturb_seed": 20261025
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 3600.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 0.25,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0,
+              "angular": 1.0,
+              "probe": 5.0
+            },
+            "execution": {
+              "fft_workers": 1,
+              "local_workers": 1,
+              "backend": "xpu",
+              "precision": "complex128"
+            },
+            "analysis": {
+              "min_window": 200.0,
+              "max_final": 6000.0,
+              "high_k_cut": 0.7,
+              "edge_limit": 1e-05
+            }
+          }
+        }
+      ]
+    }
+  },
+  "animations": {
+    "T0_spot_density_evolution": {
+      "file": "results/figures/report3/T0_spot_density_evolution.gif",
+      "source": "production_T0_spot",
+      "caption_en": "Component-density evolution from saved20-ps frames. One fixed density scale for both components and all times; circular polarization uses [-1,1]. Ring evolution is a finite-time record, not proof of stationary full polarization.",
+      "times_ps": [
+        0.0,
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0,
+        140.0,
+        160.0,
+        180.0,
+        200.0,
+        220.0,
+        240.0,
+        260.0,
+        280.0,
+        300.0,
+        320.0,
+        340.0,
+        360.0,
+        380.0,
+        400.0,
+        420.0,
+        440.0,
+        460.0,
+        480.0,
+        500.0,
+        520.0,
+        540.0,
+        560.0,
+        580.0,
+        600.0,
+        620.0,
+        640.0,
+        660.0,
+        680.0,
+        700.0,
+        720.0,
+        740.0,
+        760.0,
+        780.0,
+        800.0,
+        820.0,
+        840.0,
+        860.0,
+        880.0,
+        900.0,
+        920.0,
+        940.0,
+        960.0,
+        980.0,
+        1000.0,
+        1020.0,
+        1040.0,
+        1060.0,
+        1080.0,
+        1100.0,
+        1120.0,
+        1140.0,
+        1160.0,
+        1180.0,
+        1200.0,
+        1220.0,
+        1240.0,
+        1260.0,
+        1280.0,
+        1300.0,
+        1320.0,
+        1340.0,
+        1360.0,
+        1380.0,
+        1400.0,
+        1420.0,
+        1440.0,
+        1460.0,
+        1480.0,
+        1500.0,
+        1520.0,
+        1540.0,
+        1560.0,
+        1580.0,
+        1600.0,
+        1620.0,
+        1640.0,
+        1660.0,
+        1680.0,
+        1700.0,
+        1720.0,
+        1740.0,
+        1760.0,
+        1780.0,
+        1800.0,
+        1820.0,
+        1840.0,
+        1860.0,
+        1880.0,
+        1900.0,
+        1920.0,
+        1940.0,
+        1960.0,
+        1980.0,
+        2000.0,
+        2020.0,
+        2040.0,
+        2060.0,
+        2080.0,
+        2100.0,
+        2120.0,
+        2140.0,
+        2160.0,
+        2180.0,
+        2200.0,
+        2220.0,
+        2240.0,
+        2260.0,
+        2280.0,
+        2300.0,
+        2320.0,
+        2340.0,
+        2360.0,
+        2380.0,
+        2400.0,
+        2420.0,
+        2440.0,
+        2460.0,
+        2480.0,
+        2500.0,
+        2520.0,
+        2540.0,
+        2560.0,
+        2580.0,
+        2600.0,
+        2620.0,
+        2640.0,
+        2660.0,
+        2680.0,
+        2700.0,
+        2720.0,
+        2740.0,
+        2760.0,
+        2780.0,
+        2800.0,
+        2820.0,
+        2840.0,
+        2860.0,
+        2880.0,
+        2900.0,
+        2920.0,
+        2940.0,
+        2960.0,
+        2980.0,
+        3000.0
+      ],
+      "duration_ms": 30000,
+      "frames": 151,
+      "interpolation": "none; saved frames only",
+      "ranges": [
+        [
+          0,
+          2.0509586334228516
+        ],
+        [
+          0,
+          2.0509586334228516
+        ],
+        [
+          -1,
+          1
+        ]
+      ]
+    },
+    "T0_ring_density_evolution": {
+      "file": "results/figures/report3/T0_ring_density_evolution.gif",
+      "source": "matched_T0_ring",
+      "caption_en": "Component-density evolution from saved20-ps frames. One fixed density scale for both components and all times; circular polarization uses [-1,1]. Ring evolution is a finite-time record, not proof of stationary full polarization.",
+      "times_ps": [
+        0.0,
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0,
+        140.0,
+        160.0,
+        180.0,
+        200.0,
+        220.0,
+        240.0,
+        260.0,
+        280.0,
+        300.0,
+        320.0,
+        340.0,
+        360.0,
+        380.0,
+        400.0,
+        420.0,
+        440.0,
+        460.0,
+        480.0,
+        500.0,
+        520.0,
+        540.0,
+        560.0,
+        580.0,
+        600.0,
+        620.0,
+        640.0,
+        660.0,
+        680.0,
+        700.0,
+        720.0,
+        740.0,
+        760.0,
+        780.0,
+        800.0,
+        820.0,
+        840.0,
+        860.0,
+        880.0,
+        900.0,
+        920.0,
+        940.0,
+        960.0,
+        980.0,
+        1000.0,
+        1020.0,
+        1040.0,
+        1060.0,
+        1080.0,
+        1100.0,
+        1120.0,
+        1140.0,
+        1160.0,
+        1180.0,
+        1200.0,
+        1220.0,
+        1240.0,
+        1260.0,
+        1280.0,
+        1300.0,
+        1320.0,
+        1340.0,
+        1360.0,
+        1380.0,
+        1400.0,
+        1420.0,
+        1440.0,
+        1460.0,
+        1480.0,
+        1500.0,
+        1520.0,
+        1540.0,
+        1560.0,
+        1580.0,
+        1600.0,
+        1620.0,
+        1640.0,
+        1660.0,
+        1680.0,
+        1700.0,
+        1720.0,
+        1740.0,
+        1760.0,
+        1780.0,
+        1800.0,
+        1820.0,
+        1840.0,
+        1860.0,
+        1880.0,
+        1900.0,
+        1920.0,
+        1940.0,
+        1960.0,
+        1980.0,
+        2000.0,
+        2020.0,
+        2040.0,
+        2060.0,
+        2080.0,
+        2100.0,
+        2120.0,
+        2140.0,
+        2160.0,
+        2180.0,
+        2200.0,
+        2220.0,
+        2240.0,
+        2260.0,
+        2280.0,
+        2300.0,
+        2320.0,
+        2340.0,
+        2360.0,
+        2380.0,
+        2400.0,
+        2420.0,
+        2440.0,
+        2460.0,
+        2480.0,
+        2500.0,
+        2520.0,
+        2540.0,
+        2560.0,
+        2580.0,
+        2600.0,
+        2620.0,
+        2640.0,
+        2660.0,
+        2680.0,
+        2700.0,
+        2720.0,
+        2740.0,
+        2760.0,
+        2780.0,
+        2800.0,
+        2820.0,
+        2840.0,
+        2860.0,
+        2880.0,
+        2900.0,
+        2920.0,
+        2940.0,
+        2960.0,
+        2980.0,
+        3000.0,
+        3020.0,
+        3040.0,
+        3060.0,
+        3080.0,
+        3100.0,
+        3120.0,
+        3140.0,
+        3160.0,
+        3180.0,
+        3200.0,
+        3220.0,
+        3240.0,
+        3260.0,
+        3280.0,
+        3300.0,
+        3320.0,
+        3340.0,
+        3360.0,
+        3380.0,
+        3400.0,
+        3420.0,
+        3440.0,
+        3460.0,
+        3480.0,
+        3500.0,
+        3520.0,
+        3540.0,
+        3560.0,
+        3580.0,
+        3600.0,
+        3620.0,
+        3640.0,
+        3660.0,
+        3680.0,
+        3700.0,
+        3720.0,
+        3740.0,
+        3760.0,
+        3780.0,
+        3800.0,
+        3820.0,
+        3840.0,
+        3860.0,
+        3880.0,
+        3900.0,
+        3920.0,
+        3940.0,
+        3960.0,
+        3980.0,
+        4000.0,
+        4020.0,
+        4040.0,
+        4060.0,
+        4080.0,
+        4100.0,
+        4120.0,
+        4140.0,
+        4160.0,
+        4180.0,
+        4200.0,
+        4220.0,
+        4240.0,
+        4260.0,
+        4280.0,
+        4300.0,
+        4320.0,
+        4340.0,
+        4360.0,
+        4380.0,
+        4400.0,
+        4420.0,
+        4440.0,
+        4460.0,
+        4480.0,
+        4500.0,
+        4520.0,
+        4540.0,
+        4560.0,
+        4580.0,
+        4600.0,
+        4620.0,
+        4640.0,
+        4660.0,
+        4680.0,
+        4700.0,
+        4720.0,
+        4740.0,
+        4760.0,
+        4780.0,
+        4800.0,
+        4820.0,
+        4840.0,
+        4860.0,
+        4880.0,
+        4900.0,
+        4920.0,
+        4940.0,
+        4960.0,
+        4980.0,
+        5000.0,
+        5020.0,
+        5040.0,
+        5060.0,
+        5080.0,
+        5100.0,
+        5120.0,
+        5140.0,
+        5160.0,
+        5180.0,
+        5200.0,
+        5220.0,
+        5240.0,
+        5260.0,
+        5280.0,
+        5300.0,
+        5320.0,
+        5340.0,
+        5360.0,
+        5380.0,
+        5400.0,
+        5420.0,
+        5440.0,
+        5460.0,
+        5480.0,
+        5500.0,
+        5520.0,
+        5540.0,
+        5560.0,
+        5580.0,
+        5600.0,
+        5620.0,
+        5640.0,
+        5660.0,
+        5680.0,
+        5700.0,
+        5720.0,
+        5740.0,
+        5760.0,
+        5780.0,
+        5800.0,
+        5820.0,
+        5840.0,
+        5860.0,
+        5880.0,
+        5900.0,
+        5920.0,
+        5940.0,
+        5960.0,
+        5980.0,
+        6000.0
+      ],
+      "duration_ms": 30000,
+      "frames": 301,
+      "interpolation": "none; saved frames only",
+      "ranges": [
+        [
+          0,
+          2.0665030479431152
+        ],
+        [
+          0,
+          2.0665030479431152
+        ],
+        [
+          -1,
+          1
+        ]
+      ]
+    },
+    "C1_spot_density_evolution": {
+      "file": "results/figures/report3/C1_spot_density_evolution.gif",
+      "source": "production_C1_spot",
+      "caption_en": "Component-density evolution from saved20-ps frames. One fixed density scale for both components and all times; circular polarization uses [-1,1]. Ring evolution is a finite-time record, not proof of stationary full polarization.",
+      "times_ps": [
+        0.0,
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0,
+        140.0,
+        160.0,
+        180.0,
+        200.0,
+        220.0,
+        240.0,
+        260.0,
+        280.0,
+        300.0,
+        320.0,
+        340.0,
+        360.0,
+        380.0,
+        400.0,
+        420.0,
+        440.0,
+        460.0,
+        480.0,
+        500.0,
+        520.0,
+        540.0,
+        560.0,
+        580.0,
+        600.0,
+        620.0,
+        640.0,
+        660.0,
+        680.0,
+        700.0,
+        720.0,
+        740.0,
+        760.0,
+        780.0,
+        800.0,
+        820.0,
+        840.0,
+        860.0,
+        880.0,
+        900.0,
+        920.0,
+        940.0,
+        960.0,
+        980.0,
+        1000.0,
+        1020.0,
+        1040.0,
+        1060.0,
+        1080.0,
+        1100.0,
+        1120.0,
+        1140.0,
+        1160.0,
+        1180.0,
+        1200.0,
+        1220.0,
+        1240.0,
+        1260.0,
+        1280.0,
+        1300.0,
+        1320.0,
+        1340.0,
+        1360.0,
+        1380.0,
+        1400.0,
+        1420.0,
+        1440.0,
+        1460.0,
+        1480.0,
+        1500.0,
+        1520.0,
+        1540.0,
+        1560.0,
+        1580.0,
+        1600.0,
+        1620.0,
+        1640.0,
+        1660.0,
+        1680.0,
+        1700.0,
+        1720.0,
+        1740.0,
+        1760.0,
+        1780.0,
+        1800.0,
+        1820.0,
+        1840.0,
+        1860.0,
+        1880.0,
+        1900.0,
+        1920.0,
+        1940.0,
+        1960.0,
+        1980.0,
+        2000.0,
+        2020.0,
+        2040.0,
+        2060.0,
+        2080.0,
+        2100.0,
+        2120.0,
+        2140.0,
+        2160.0,
+        2180.0,
+        2200.0,
+        2220.0,
+        2240.0,
+        2260.0,
+        2280.0,
+        2300.0,
+        2320.0,
+        2340.0,
+        2360.0,
+        2380.0,
+        2400.0,
+        2420.0,
+        2440.0,
+        2460.0,
+        2480.0,
+        2500.0,
+        2520.0,
+        2540.0,
+        2560.0,
+        2580.0,
+        2600.0,
+        2620.0,
+        2640.0,
+        2660.0,
+        2680.0,
+        2700.0,
+        2720.0,
+        2740.0,
+        2760.0,
+        2780.0,
+        2800.0,
+        2820.0,
+        2840.0,
+        2860.0,
+        2880.0,
+        2900.0,
+        2920.0,
+        2940.0,
+        2960.0,
+        2980.0,
+        3000.0
+      ],
+      "duration_ms": 30000,
+      "frames": 151,
+      "interpolation": "none; saved frames only",
+      "ranges": [
+        [
+          0,
+          2.229128360748291
+        ],
+        [
+          0,
+          2.229128360748291
+        ],
+        [
+          -1,
+          1
+        ]
+      ]
+    },
+    "C1_spot_Stokes_evolution": {
+      "file": "results/figures/report3/C1_spot_Stokes_evolution.gif",
+      "source": "check_C1_spot_full_dt0125",
+      "caption_en": "Normalized Stokes from actual saved complex fields and the fixed circular-basis convention. Low-intensity pixels are masked, all color scales remain [-1,1]. No phase or frame interpolation. Full evolution from0 ps. A time-step control, when used, is identified by its source run.",
+      "times_ps": [
+        0.0,
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0,
+        90.0,
+        100.0,
+        110.0,
+        120.0,
+        130.0,
+        140.0,
+        150.0,
+        160.0,
+        170.0,
+        180.0,
+        190.0,
+        200.0,
+        210.0,
+        220.0,
+        230.0,
+        240.0,
+        250.0,
+        260.0,
+        270.0,
+        280.0,
+        290.0,
+        300.0,
+        310.0,
+        320.0,
+        330.0,
+        340.0,
+        350.0,
+        360.0,
+        370.0,
+        380.0,
+        390.0,
+        400.0,
+        410.0,
+        420.0,
+        430.0,
+        440.0,
+        450.0,
+        460.0,
+        470.0,
+        480.0,
+        490.0,
+        500.0,
+        510.0,
+        520.0,
+        530.0,
+        540.0,
+        550.0,
+        560.0,
+        570.0,
+        580.0,
+        590.0,
+        600.0,
+        610.0,
+        620.0,
+        630.0,
+        640.0,
+        650.0,
+        660.0,
+        670.0,
+        680.0,
+        690.0,
+        700.0,
+        710.0,
+        720.0,
+        730.0,
+        740.0,
+        750.0,
+        760.0,
+        770.0,
+        780.0,
+        790.0,
+        800.0,
+        810.0,
+        820.0,
+        830.0,
+        840.0,
+        850.0,
+        860.0,
+        870.0,
+        880.0,
+        890.0,
+        900.0,
+        910.0,
+        920.0,
+        930.0,
+        940.0,
+        950.0,
+        960.0,
+        970.0,
+        980.0,
+        990.0,
+        1000.0,
+        1010.0,
+        1020.0,
+        1030.0,
+        1040.0,
+        1050.0,
+        1060.0,
+        1070.0,
+        1080.0,
+        1090.0,
+        1100.0,
+        1110.0,
+        1120.0,
+        1130.0,
+        1140.0,
+        1150.0,
+        1160.0,
+        1170.0,
+        1180.0,
+        1190.0,
+        1200.0,
+        1210.0,
+        1220.0,
+        1230.0,
+        1240.0,
+        1250.0,
+        1260.0,
+        1270.0,
+        1280.0,
+        1290.0,
+        1300.0,
+        1310.0,
+        1320.0,
+        1330.0,
+        1340.0,
+        1350.0,
+        1360.0,
+        1370.0,
+        1380.0,
+        1390.0,
+        1400.0,
+        1410.0,
+        1420.0,
+        1430.0,
+        1440.0,
+        1450.0,
+        1460.0,
+        1470.0,
+        1480.0,
+        1490.0,
+        1500.0,
+        1510.0,
+        1520.0,
+        1530.0,
+        1540.0,
+        1550.0,
+        1560.0,
+        1570.0,
+        1580.0,
+        1590.0,
+        1600.0,
+        1610.0,
+        1620.0,
+        1630.0,
+        1640.0,
+        1650.0,
+        1660.0,
+        1670.0,
+        1680.0,
+        1690.0,
+        1700.0,
+        1710.0,
+        1720.0,
+        1730.0,
+        1740.0,
+        1750.0,
+        1760.0,
+        1770.0,
+        1780.0,
+        1790.0,
+        1800.0,
+        1810.0,
+        1820.0,
+        1830.0,
+        1840.0,
+        1850.0,
+        1860.0,
+        1870.0,
+        1880.0,
+        1890.0,
+        1900.0,
+        1910.0,
+        1920.0,
+        1930.0,
+        1940.0,
+        1950.0,
+        1960.0,
+        1970.0,
+        1980.0,
+        1990.0,
+        2000.0,
+        2010.0,
+        2020.0,
+        2030.0,
+        2040.0,
+        2050.0,
+        2060.0,
+        2070.0,
+        2080.0,
+        2090.0,
+        2100.0,
+        2110.0,
+        2120.0,
+        2130.0,
+        2140.0,
+        2150.0,
+        2160.0,
+        2170.0,
+        2180.0,
+        2190.0,
+        2200.0,
+        2210.0,
+        2220.0,
+        2230.0,
+        2240.0,
+        2250.0,
+        2260.0,
+        2270.0,
+        2280.0,
+        2290.0,
+        2300.0,
+        2310.0,
+        2320.0,
+        2330.0,
+        2340.0,
+        2350.0,
+        2360.0,
+        2370.0,
+        2380.0,
+        2390.0,
+        2400.0,
+        2410.0,
+        2420.0,
+        2430.0,
+        2440.0,
+        2450.0,
+        2460.0,
+        2470.0,
+        2480.0,
+        2490.0,
+        2500.0,
+        2510.0,
+        2520.0,
+        2530.0,
+        2540.0,
+        2550.0,
+        2560.0,
+        2570.0,
+        2580.0,
+        2590.0,
+        2600.0,
+        2610.0,
+        2620.0,
+        2630.0,
+        2640.0,
+        2650.0,
+        2660.0,
+        2670.0,
+        2680.0,
+        2690.0,
+        2700.0,
+        2710.0,
+        2720.0,
+        2730.0,
+        2740.0,
+        2750.0,
+        2760.0,
+        2770.0,
+        2780.0,
+        2790.0,
+        2800.0,
+        2810.0,
+        2820.0,
+        2830.0,
+        2840.0,
+        2850.0,
+        2860.0,
+        2870.0,
+        2880.0,
+        2890.0,
+        2900.0,
+        2910.0,
+        2920.0,
+        2930.0,
+        2940.0,
+        2950.0,
+        2960.0,
+        2970.0,
+        2980.0,
+        2990.0,
+        3000.0
+      ],
+      "duration_ms": 30000,
+      "frames": 301,
+      "interpolation": "none; saved frames only",
+      "ranges": [
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ]
+    },
+    "C1_ring_Stokes_evolution": {
+      "file": "results/figures/report3/C1_ring_Stokes_evolution.gif",
+      "source": "matched_C1_ring",
+      "caption_en": "Normalized Stokes from actual saved complex fields and the fixed circular-basis convention. Low-intensity pixels are masked, all color scales remain [-1,1]. No phase or frame interpolation. Full evolution from0 ps. A time-step control, when used, is identified by its source run.",
+      "times_ps": [
+        0.0,
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0,
+        140.0,
+        160.0,
+        180.0,
+        200.0,
+        220.0,
+        240.0,
+        260.0,
+        280.0,
+        300.0,
+        320.0,
+        340.0,
+        360.0,
+        380.0,
+        400.0,
+        420.0,
+        440.0,
+        460.0,
+        480.0,
+        500.0,
+        520.0,
+        540.0,
+        560.0,
+        580.0,
+        600.0,
+        620.0,
+        640.0,
+        660.0,
+        680.0,
+        700.0,
+        720.0,
+        740.0,
+        760.0,
+        780.0,
+        800.0,
+        820.0,
+        840.0,
+        860.0,
+        880.0,
+        900.0,
+        920.0,
+        940.0,
+        960.0,
+        980.0,
+        1000.0,
+        1020.0,
+        1040.0,
+        1060.0,
+        1080.0,
+        1100.0,
+        1120.0,
+        1140.0,
+        1160.0,
+        1180.0,
+        1200.0,
+        1220.0,
+        1240.0,
+        1260.0,
+        1280.0,
+        1300.0,
+        1320.0,
+        1340.0,
+        1360.0,
+        1380.0,
+        1400.0,
+        1420.0,
+        1440.0,
+        1460.0,
+        1480.0,
+        1500.0,
+        1520.0,
+        1540.0,
+        1560.0,
+        1580.0,
+        1600.0,
+        1620.0,
+        1640.0,
+        1660.0,
+        1680.0,
+        1700.0,
+        1720.0,
+        1740.0,
+        1760.0,
+        1780.0,
+        1800.0,
+        1820.0,
+        1840.0,
+        1860.0,
+        1880.0,
+        1900.0,
+        1920.0,
+        1940.0,
+        1960.0,
+        1980.0,
+        2000.0,
+        2020.0,
+        2040.0,
+        2060.0,
+        2080.0,
+        2100.0,
+        2120.0,
+        2140.0,
+        2160.0,
+        2180.0,
+        2200.0,
+        2220.0,
+        2240.0,
+        2260.0,
+        2280.0,
+        2300.0,
+        2320.0,
+        2340.0,
+        2360.0,
+        2380.0,
+        2400.0,
+        2420.0,
+        2440.0,
+        2460.0,
+        2480.0,
+        2500.0,
+        2520.0,
+        2540.0,
+        2560.0,
+        2580.0,
+        2600.0,
+        2620.0,
+        2640.0,
+        2660.0,
+        2680.0,
+        2700.0,
+        2720.0,
+        2740.0,
+        2760.0,
+        2780.0,
+        2800.0,
+        2820.0,
+        2840.0,
+        2860.0,
+        2880.0,
+        2900.0,
+        2920.0,
+        2940.0,
+        2960.0,
+        2980.0,
+        3000.0,
+        3020.0,
+        3040.0,
+        3060.0,
+        3080.0,
+        3100.0,
+        3120.0,
+        3140.0,
+        3160.0,
+        3180.0,
+        3200.0,
+        3220.0,
+        3240.0,
+        3260.0,
+        3280.0,
+        3300.0,
+        3320.0,
+        3340.0,
+        3360.0,
+        3380.0,
+        3400.0,
+        3420.0,
+        3440.0,
+        3460.0,
+        3480.0,
+        3500.0,
+        3520.0,
+        3540.0,
+        3560.0,
+        3580.0,
+        3600.0
+      ],
+      "duration_ms": 30000,
+      "frames": 181,
+      "interpolation": "none; saved frames only",
+      "ranges": [
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ]
+    },
+    "T0_ring_Stokes_evolution": {
+      "file": "results/figures/report3/T0_ring_Stokes_evolution.gif",
+      "source": "matched_T0_ring",
+      "caption_en": "Normalized Stokes from actual saved complex fields and the fixed circular-basis convention. Low-intensity pixels are masked, all color scales remain [-1,1]. No phase or frame interpolation. Full evolution from0 ps. A time-step control, when used, is identified by its source run.",
+      "times_ps": [
+        0.0,
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0,
+        140.0,
+        160.0,
+        180.0,
+        200.0,
+        220.0,
+        240.0,
+        260.0,
+        280.0,
+        300.0,
+        320.0,
+        340.0,
+        360.0,
+        380.0,
+        400.0,
+        420.0,
+        440.0,
+        460.0,
+        480.0,
+        500.0,
+        520.0,
+        540.0,
+        560.0,
+        580.0,
+        600.0,
+        620.0,
+        640.0,
+        660.0,
+        680.0,
+        700.0,
+        720.0,
+        740.0,
+        760.0,
+        780.0,
+        800.0,
+        820.0,
+        840.0,
+        860.0,
+        880.0,
+        900.0,
+        920.0,
+        940.0,
+        960.0,
+        980.0,
+        1000.0,
+        1020.0,
+        1040.0,
+        1060.0,
+        1080.0,
+        1100.0,
+        1120.0,
+        1140.0,
+        1160.0,
+        1180.0,
+        1200.0,
+        1220.0,
+        1240.0,
+        1260.0,
+        1280.0,
+        1300.0,
+        1320.0,
+        1340.0,
+        1360.0,
+        1380.0,
+        1400.0,
+        1420.0,
+        1440.0,
+        1460.0,
+        1480.0,
+        1500.0,
+        1520.0,
+        1540.0,
+        1560.0,
+        1580.0,
+        1600.0,
+        1620.0,
+        1640.0,
+        1660.0,
+        1680.0,
+        1700.0,
+        1720.0,
+        1740.0,
+        1760.0,
+        1780.0,
+        1800.0,
+        1820.0,
+        1840.0,
+        1860.0,
+        1880.0,
+        1900.0,
+        1920.0,
+        1940.0,
+        1960.0,
+        1980.0,
+        2000.0,
+        2020.0,
+        2040.0,
+        2060.0,
+        2080.0,
+        2100.0,
+        2120.0,
+        2140.0,
+        2160.0,
+        2180.0,
+        2200.0,
+        2220.0,
+        2240.0,
+        2260.0,
+        2280.0,
+        2300.0,
+        2320.0,
+        2340.0,
+        2360.0,
+        2380.0,
+        2400.0,
+        2420.0,
+        2440.0,
+        2460.0,
+        2480.0,
+        2500.0,
+        2520.0,
+        2540.0,
+        2560.0,
+        2580.0,
+        2600.0,
+        2620.0,
+        2640.0,
+        2660.0,
+        2680.0,
+        2700.0,
+        2720.0,
+        2740.0,
+        2760.0,
+        2780.0,
+        2800.0,
+        2820.0,
+        2840.0,
+        2860.0,
+        2880.0,
+        2900.0,
+        2920.0,
+        2940.0,
+        2960.0,
+        2980.0,
+        3000.0,
+        3020.0,
+        3040.0,
+        3060.0,
+        3080.0,
+        3100.0,
+        3120.0,
+        3140.0,
+        3160.0,
+        3180.0,
+        3200.0,
+        3220.0,
+        3240.0,
+        3260.0,
+        3280.0,
+        3300.0,
+        3320.0,
+        3340.0,
+        3360.0,
+        3380.0,
+        3400.0,
+        3420.0,
+        3440.0,
+        3460.0,
+        3480.0,
+        3500.0,
+        3520.0,
+        3540.0,
+        3560.0,
+        3580.0,
+        3600.0,
+        3620.0,
+        3640.0,
+        3660.0,
+        3680.0,
+        3700.0,
+        3720.0,
+        3740.0,
+        3760.0,
+        3780.0,
+        3800.0,
+        3820.0,
+        3840.0,
+        3860.0,
+        3880.0,
+        3900.0,
+        3920.0,
+        3940.0,
+        3960.0,
+        3980.0,
+        4000.0,
+        4020.0,
+        4040.0,
+        4060.0,
+        4080.0,
+        4100.0,
+        4120.0,
+        4140.0,
+        4160.0,
+        4180.0,
+        4200.0,
+        4220.0,
+        4240.0,
+        4260.0,
+        4280.0,
+        4300.0,
+        4320.0,
+        4340.0,
+        4360.0,
+        4380.0,
+        4400.0,
+        4420.0,
+        4440.0,
+        4460.0,
+        4480.0,
+        4500.0,
+        4520.0,
+        4540.0,
+        4560.0,
+        4580.0,
+        4600.0,
+        4620.0,
+        4640.0,
+        4660.0,
+        4680.0,
+        4700.0,
+        4720.0,
+        4740.0,
+        4760.0,
+        4780.0,
+        4800.0,
+        4820.0,
+        4840.0,
+        4860.0,
+        4880.0,
+        4900.0,
+        4920.0,
+        4940.0,
+        4960.0,
+        4980.0,
+        5000.0,
+        5020.0,
+        5040.0,
+        5060.0,
+        5080.0,
+        5100.0,
+        5120.0,
+        5140.0,
+        5160.0,
+        5180.0,
+        5200.0,
+        5220.0,
+        5240.0,
+        5260.0,
+        5280.0,
+        5300.0,
+        5320.0,
+        5340.0,
+        5360.0,
+        5380.0,
+        5400.0,
+        5420.0,
+        5440.0,
+        5460.0,
+        5480.0,
+        5500.0,
+        5520.0,
+        5540.0,
+        5560.0,
+        5580.0,
+        5600.0,
+        5620.0,
+        5640.0,
+        5660.0,
+        5680.0,
+        5700.0,
+        5720.0,
+        5740.0,
+        5760.0,
+        5780.0,
+        5800.0,
+        5820.0,
+        5840.0,
+        5860.0,
+        5880.0,
+        5900.0,
+        5920.0,
+        5940.0,
+        5960.0,
+        5980.0,
+        6000.0
+      ],
+      "duration_ms": 30000,
+      "frames": 301,
+      "interpolation": "none; saved frames only",
+      "ranges": [
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ]
+    }
+  },
+  "limitations": [
+    "T0 ring polarization still evolves at6000 ps",
+    "Small alpha2 contribution has no paired error bound",
+    "Only two modes are verified in the new0D sample; no2D J scan has been performed"
+  ],
+  "chapters": {
+    "1": {
+      "status": "READY",
+      "figures": [
+        "F1_reservoir_switching"
+      ]
+    },
+    "2": {
+      "status": "DENSITY_FIGURE_READY_ALPHA2_UNRESOLVED",
+      "figures": [
+        "F2_circular_component_densities"
+      ],
+      "diagnostic": "F3_cross_spin_density_comparison"
+    },
+    "3": {
+      "status": "READY_WITH_DYNAMIC_RING",
+      "figures": [
+        "F4_TE_TM_spot",
+        "F5_TE_TM_ring",
+        "F6_TE_TM_angular_response"
+      ]
+    },
+    "4": {
+      "status": "READY_FOR_SAMPLED_CASES_NO_2D_J_SCAN",
+      "figures": [
+        "F7_homogeneous_phase_dynamics",
+        "F8_spot_coupling_comparison",
+        "F8_ring_coupling_comparison"
+      ]
+    },
+    "5": {
+      "status": "READY_C1_CONVERGENCE_VERIFIED",
+      "figures": [
+        "F9_spot_Stokes",
+        "F10_ring_Stokes"
+      ]
+    }
+  }
+}

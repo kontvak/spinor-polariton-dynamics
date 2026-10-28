@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+local/*
+!local/*.py
+!local/*.sh
+!local/experiments.yaml
+!local/report3_figure_plan_RU.md
+results/runs/
+results/preview/
+latex/*.aux
+latex/*.log
+latex/*.out
+latex/*.toc
+latex/*.fls
+latex/*.fdb_latexmk
+latex/*.synctex.gz
+
+# Large numerical archives stay on the calculation machine.
+*.npz

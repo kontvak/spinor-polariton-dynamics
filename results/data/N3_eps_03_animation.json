@@ -1,0 +1,85 @@
+{
+  "case": "N3_eps_03",
+  "time_ps": [
+    0.0,
+    200.0,
+    500.0,
+    1000.0,
+    2000.0,
+    2300.0
+  ],
+  "populations": [
+    [
+      0.0001508452209818335,
+      0.0001508452209818335
+    ],
+    [
+      2.185532694840383e-05,
+      2.822887086777793e-06
+    ],
+    [
+      401.5621093007065,
+      1.1532005354809933
+    ],
+    [
+      364.6538548106916,
+      216.37930795179835
+    ],
+    [
+      440.33867141555197,
+      169.5166396977561
+    ],
+    [
+      440.26556551806664,
+      169.61078808569343
+    ]
+  ],
+  "source_snapshots": [
+    {
+      "path": "results/runs/N3_eps_03/snapshots/t_00000.0.npz",
+      "sha256": "005ee447e01bb8db3c18ea38dae9b58ba21112dcc42e45e7015b46117bbab11b"
+    },
+    {
+      "path": "results/runs/N3_eps_03/snapshots/t_00200.0.npz",
+      "sha256": "57a986e3834ec24fcba666028e765d42b2e8b887ba14cccbec1410ab01eef37e"
+    },
+    {
+      "path": "results/runs/N3_eps_03/snapshots/t_00500.0.npz",
+      "sha256": "3c521b0f55eb0f014ddec0c0a74a9e9994841776ae1df5304f5189ead244fafc"
+    },
+    {
+      "path": "results/runs/N3_eps_03/snapshots/t_01000.0.npz",
+      "sha256": "ab1f063121753893ce9679fe7539439c71fc1646991153596509d6e0046797d4"
+    },
+    {
+      "path": "results/runs/N3_eps_03/snapshots/t_02000.0.npz",
+      "sha256": "332412b74612e17eb3e7f60f7a36f02376ef8c4f2bc4c191e06be244a6b20e03"
+    },
+    {
+      "path": "results/runs/N3_eps_03/snapshots/t_02300.0.npz",
+      "sha256": "0b19d3c6b2db01cea03b71b65b4e038d29a4d5bc9eb5343319fdb44a3ea35d36"
+    }
+  ],
+  "archive": "results/data/N3_eps_03_animation.npz",
+  "density_scale": {
+    "minimum": 0.0,
+    "maximum": 1.6914144710495778,
+    "units": "um^-2",
+    "shared_between_components": true
+  },
+  "window_um": [
+    -20,
+    20
+  ],
+  "fps": 5,
+  "duration_ms": [
+    800,
+    200,
+    200,
+    200,
+    200,
+    3600
+  ],
+  "sampling": "Saved snapshots only; irregular physical times; no interpolation or integration.",
+  "style": "Previous polariton-condensate GIF: viridis, fixed palette, 935x451 px, endpoint pauses."
+}

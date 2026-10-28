@@ -1,0 +1,804 @@
+{
+  "F1_RK4_M0": {
+    "errors": {
+      "psi": 7.69175359801839e-11,
+      "active": 1.3059719421460423e-11,
+      "inactive": 0.0
+    },
+    "status": "PASS"
+  },
+  "F1_RK4_R1": {
+    "errors": {
+      "psi": 8.103255577322243e-11,
+      "active": 1.3424130133832694e-11,
+      "inactive": 2.031864995459981e-12
+    },
+    "status": "PASS"
+  },
+  "F1_RK4_R2": {
+    "errors": {
+      "psi": 9.147916011611735e-11,
+      "active": 1.2795446109706535e-11,
+      "inactive": 5.206091967780737e-14
+    },
+    "status": "PASS"
+  },
+  "F4_fixed_steps": {
+    "J=0.005,dt=0.025": {
+      "status": "RUNNING_PHASE_PERIODIC",
+      "window_ps": [
+        4000.0,
+        6000.0
+      ],
+      "mean_z": 0.2776044185755498,
+      "A_z": 0.4997160700061841,
+      "phase_slope": -0.0182615793869795,
+      "phase_span": 36.506840553725695,
+      "density_settling": {
+        "span_max": 1.3919225599714498,
+        "half_mean_drift_max": 0.009694750187139427,
+        "passed": false
+      },
+      "period_ps": 344.47905321373344,
+      "cycles": 5.805868256259668,
+      "half_periods_ps": [
+        344.4790504146939,
+        344.479056012773
+      ],
+      "half_amplitudes": [
+        0.4997160700061841,
+        0.49971427761956866
+      ],
+      "period_half_difference": 1.6250854868298226e-08,
+      "amplitude_half_difference": 3.586810036827804e-06,
+      "density_return_error": 1.0567247903625535e-06,
+      "phase_return_error": 2.2090330932181402e-06,
+      "mean_density_relative": 3.23596851102827e-11,
+      "short_field_relative": 9.066163085870961e-11,
+      "phase_final_difference": 1.28247279462812e-09,
+      "amplitude_relative": 6.386520862873916e-12,
+      "period_relative": 1.0047293312444779e-11,
+      "check": "PASS"
+    },
+    "J=0.005,dt=0.0125": {
+      "status": "RUNNING_PHASE_PERIODIC",
+      "window_ps": [
+        4000.0,
+        6000.0
+      ],
+      "mean_z": 0.2776044185680475,
+      "A_z": 0.4997160700057893,
+      "phase_slope": -0.018261579387081915,
+      "phase_span": 36.50684055404989,
+      "density_settling": {
+        "span_max": 1.3919225599576754,
+        "half_mean_drift_max": 0.009694750187599216,
+        "passed": false
+      },
+      "period_ps": 344.47905321197777,
+      "cycles": 5.8058682562892585,
+      "half_periods_ps": [
+        344.4790504129602,
+        344.47905601099535
+      ],
+      "half_amplitudes": [
+        0.4997160700057893,
+        0.49971427761876275
+      ],
+      "period_half_difference": 1.6250727313563507e-08,
+      "amplitude_half_difference": 3.5868108595289875e-06,
+      "density_return_error": 1.05672487462922e-06,
+      "phase_return_error": 2.2090332715634315e-06,
+      "mean_density_relative": 2.7060719243278917e-11,
+      "short_field_relative": 1.3339580288811843e-10,
+      "phase_final_difference": 6.846363476142869e-10,
+      "amplitude_relative": 5.596481616078548e-12,
+      "period_relative": 4.950711042569443e-12,
+      "check": "PASS"
+    },
+    "J=0.01,dt=0.025": {
+      "status": "LOCKED_STEADY",
+      "window_ps": [
+        4000.0,
+        6000.0
+      ],
+      "mean_z": 0.4737863934038852,
+      "A_z": 3.0616342794331786e-12,
+      "phase_slope": -8.073376573821955e-19,
+      "phase_span": 9.402256750945526e-12,
+      "density_settling": {
+        "span_max": 1.262300113226281e-11,
+        "half_mean_drift_max": 2.779559136138777e-13,
+        "passed": true
+      },
+      "mean_density_relative": 1.620256627931304e-11,
+      "short_field_relative": 1.910187198361026e-10,
+      "phase_final_difference": 9.906742093335197e-12,
+      "check": "PASS"
+    },
+    "J=0.01,dt=0.0125": {
+      "status": "LOCKED_STEADY",
+      "window_ps": [
+        4000.0,
+        6000.0
+      ],
+      "mean_z": 0.4737863934030231,
+      "A_z": 3.1264157929200564e-12,
+      "phase_slope": 5.714742744453703e-18,
+      "phase_span": 9.530154443382344e-12,
+      "density_settling": {
+        "span_max": 1.2892084186161294e-11,
+        "half_mean_drift_max": 3.0584204436241396e-13,
+        "passed": true
+      },
+      "mean_density_relative": 1.0949652208853352e-11,
+      "short_field_relative": 1.6789537333943343e-10,
+      "phase_final_difference": 1.0311751452718454e-11,
+      "check": "PASS"
+    }
+  },
+  "Q_equivalence_R1": {
+    "active_error": 1.4913034563630872e-11,
+    "feed_error": 2.7981890309110194e-12,
+    "status": "PASS"
+  },
+  "Q_equivalence_R2": {
+    "active_error": 1.4215090848426494e-11,
+    "feed_error": 2.2866324218721973e-14,
+    "status": "PASS"
+  },
+  "independent_density_phase": {
+    "density_relative": 1.1405634352444961e-10,
+    "status": "PASS"
+  },
+  "Rabi": {
+    "dt_ps": 0.125,
+    "duration_ps": 500.0,
+    "max_abs_field_error": 7.951417302365371e-13,
+    "population_period_ps": 206.78338483020013,
+    "status": "PASS"
+  },
+  "F5_refinement": {
+    "J=0.00625": {
+      "status": "PASS",
+      "classification_reference": "RUNNING_PHASE_PERIODIC",
+      "classification_tighter": "RUNNING_PHASE_PERIODIC",
+      "mean_density_relative": 1.5146886794328032e-10,
+      "short_field_relative": 1.5072065578985431e-10,
+      "elapsed_wall_s": 6.618285744000332,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "amplitude_relative": 3.730778477520801e-11,
+      "period_relative": 8.497295113283762e-12
+    },
+    "J=0.00650": {
+      "status": "PASS",
+      "classification_reference": "BOUNDED_PHASE_PERIODIC",
+      "classification_tighter": "BOUNDED_PHASE_PERIODIC",
+      "mean_density_relative": 8.749335973141152e-11,
+      "short_field_relative": 1.447692955068135e-10,
+      "elapsed_wall_s": 6.429476958000123,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "amplitude_relative": 1.5479001166151782e-10,
+      "period_relative": 1.522505892861109e-11
+    },
+    "J=0.00675": {
+      "status": "PASS",
+      "classification_reference": "BOUNDED_PHASE_PERIODIC",
+      "classification_tighter": "BOUNDED_PHASE_PERIODIC",
+      "mean_density_relative": 1.1117097037909657e-10,
+      "short_field_relative": 1.5817203458696778e-10,
+      "elapsed_wall_s": 6.419584534000023,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "amplitude_relative": 8.131297413430115e-10,
+      "period_relative": 2.217008811239773e-11
+    },
+    "J=0.01125": {
+      "status": "PASS",
+      "classification_reference": "LOCKED_STEADY",
+      "classification_tighter": "LOCKED_STEADY",
+      "mean_density_relative": 8.594013723891651e-12,
+      "short_field_relative": 1.2295548142692107e-10,
+      "elapsed_wall_s": 6.492095258000063,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "relative_phase_difference": 9.270806344829907e-12
+    },
+    "J=0.01150": {
+      "status": "PASS",
+      "classification_reference": "LOCKED_STEADY",
+      "classification_tighter": "LOCKED_STEADY",
+      "mean_density_relative": 8.16712929484204e-12,
+      "short_field_relative": 1.2095000075990356e-10,
+      "window_ps": [
+        16000.0,
+        18000.0
+      ],
+      "elapsed_wall_s": 26.76001574700058,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "relative_phase_difference": 8.767653270069786e-12
+    },
+    "J=0.01175": {
+      "status": "PASS",
+      "classification_reference": "LOCKED_STEADY",
+      "classification_tighter": "LOCKED_STEADY",
+      "mean_density_relative": 4.939636383652001e-12,
+      "short_field_relative": 1.1812246659714028e-10,
+      "elapsed_wall_s": 9.65603281299991,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "relative_phase_difference": 6.00863803157381e-12
+    },
+    "J=0.00636": {
+      "status": "PASS",
+      "classification_reference": "RUNNING_PHASE_PERIODIC",
+      "classification_tighter": "RUNNING_PHASE_PERIODIC",
+      "mean_density_relative": 2.562060756660941e-11,
+      "short_field_relative": 1.5024251566669088e-10,
+      "window_ps": [
+        16000.0,
+        18000.0
+      ],
+      "elapsed_wall_s": 5.671068571999967,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "amplitude_relative": 8.635848095933015e-11,
+      "period_relative": 1.149526402639304e-11
+    },
+    "J=0.00638": {
+      "status": "PASS",
+      "classification_reference": "PERIODIC_PHASE_MASKED",
+      "classification_tighter": "PERIODIC_PHASE_MASKED",
+      "mean_density_relative": 7.271802426541202e-11,
+      "short_field_relative": 1.4988561210542762e-10,
+      "window_ps": [
+        16000.0,
+        18000.0
+      ],
+      "elapsed_wall_s": 11.520092306999686,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "amplitude_relative": 1.1241277639490279e-10,
+      "period_relative": 1.1790962741106746e-11
+    },
+    "J=0.00640": {
+      "status": "PASS",
+      "classification_reference": "PERIODIC_PHASE_MASKED",
+      "classification_tighter": "PERIODIC_PHASE_MASKED",
+      "mean_density_relative": 1.6697553672586113e-10,
+      "short_field_relative": 1.4944601119910965e-10,
+      "window_ps": [
+        16000.0,
+        18000.0
+      ],
+      "elapsed_wall_s": 11.479482245999861,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "amplitude_relative": 8.6831285295557e-11,
+      "period_relative": 1.2317365700547749e-11
+    },
+    "J=0.00642": {
+      "status": "PASS",
+      "classification_reference": "BOUNDED_PHASE_PERIODIC",
+      "classification_tighter": "BOUNDED_PHASE_PERIODIC",
+      "mean_density_relative": 8.010840480050583e-11,
+      "short_field_relative": 1.4889554344327639e-10,
+      "window_ps": [
+        16000.0,
+        18000.0
+      ],
+      "elapsed_wall_s": 5.750116231999527,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "amplitude_relative": 7.357207659729128e-11,
+      "period_relative": 1.297893205096547e-11
+    },
+    "J=0.00684": {
+      "status": "PASS",
+      "classification_reference": "BOUNDED_PHASE_PERIODIC",
+      "classification_tighter": "BOUNDED_PHASE_PERIODIC",
+      "mean_density_relative": 8.332306562785456e-11,
+      "short_field_relative": 1.5599213921157915e-10,
+      "window_ps": [
+        70000.0,
+        72000.0
+      ],
+      "elapsed_wall_s": 37.98341536599946,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "amplitude_relative": 1.1156812087570293e-08,
+      "period_relative": 6.801231079417176e-12
+    },
+    "J=0.00686": {
+      "status": "PASS",
+      "classification_reference": "LOCKED_STEADY",
+      "classification_tighter": "LOCKED_STEADY",
+      "mean_density_relative": 1.9960200059610842e-11,
+      "short_field_relative": 1.6162835316096223e-10,
+      "window_ps": [
+        142000.0,
+        144000.0
+      ],
+      "elapsed_wall_s": 67.15788970800077,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "relative_phase_difference": 9.385381360971223e-12
+    },
+    "J=0.01151": {
+      "status": "PASS",
+      "classification_reference": "BOUNDED_PHASE_PERIODIC",
+      "classification_tighter": "BOUNDED_PHASE_PERIODIC",
+      "mean_density_relative": 2.2110764556531404e-09,
+      "short_field_relative": 1.2066805208750402e-10,
+      "window_ps": [
+        70000.0,
+        72000.0
+      ],
+      "elapsed_wall_s": 46.76643213100033,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "amplitude_relative": 1.2411147999963957e-09,
+      "period_relative": 1.4456431405714408e-11
+    },
+    "J=0.01155": {
+      "status": "PASS",
+      "classification_reference": "BOUNDED_PHASE_PERIODIC",
+      "classification_tighter": "BOUNDED_PHASE_PERIODIC",
+      "mean_density_relative": 4.227890451529581e-10,
+      "short_field_relative": 1.2086686210863038e-10,
+      "window_ps": [
+        70000.0,
+        72000.0
+      ],
+      "elapsed_wall_s": 23.69816561799962,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "amplitude_relative": 2.351224136986898e-10,
+      "period_relative": 1.5975784050378293e-11
+    },
+    "J=0.01160": {
+      "status": "PASS",
+      "classification_reference": "LOCKED_STEADY",
+      "classification_tighter": "LOCKED_STEADY",
+      "mean_density_relative": 4.979140398755674e-12,
+      "short_field_relative": 1.1945441279767813e-10,
+      "window_ps": [
+        142000.0,
+        144000.0
+      ],
+      "elapsed_wall_s": 89.52555094699983,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "relative_phase_difference": 8.831713138590658e-12
+    },
+    "J=0.01159": {
+      "status": "PASS",
+      "classification_reference": "LOCKED_STEADY",
+      "classification_tighter": "LOCKED_STEADY",
+      "mean_density_relative": 7.509159708877205e-12,
+      "short_field_relative": 1.1959829351763908e-10,
+      "window_ps": [
+        286000.0,
+        288000.0
+      ],
+      "elapsed_wall_s": 166.0517524449997,
+      "ode_tighter": {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 1.0
+      },
+      "relative_phase_difference": 4.792766183925323e-11
+    }
+  },
+  "F5_polarization_controls": {
+    "jump_interval_meV": [
+      0.0115,
+      0.01151
+    ],
+    "continuations": [
+      {
+        "status": "LOCKED_STEADY",
+        "window_ps": [
+          16000.0,
+          18000.0
+        ],
+        "mean_z": 0.42241123147519655,
+        "A_z": 8.353956415518837e-12,
+        "phase_slope": 7.155584532509928e-19,
+        "phase_span": 3.006483950684924e-12,
+        "density_settling": {
+          "span_max": 9.991329231249778e-11,
+          "half_mean_drift_max": 1.8841807927812643e-14,
+          "passed": true
+        },
+        "phase_valid_fraction": 1.0,
+        "J": 0.01151,
+        "final_ps": 18000.0,
+        "stored_final_ps": 18000.0,
+        "z_min": 0.42241123146476184,
+        "z_max": 0.42241123148146975,
+        "density_mean": [
+          3.334766195697207,
+          1.3541256267312252
+        ],
+        "balance": {
+          "absolute": 7.2504406645190755e-09,
+          "denominator": 63511.85495304107,
+          "relative": 1.1415885538030426e-13,
+          "population_change": -0.00040757927523316084,
+          "plus": {
+            "absolute": 4.1766390347555e-08,
+            "denominator": 458.0802982778214,
+            "relative": 9.117700653046658e-11
+          },
+          "status": "PASS"
+        },
+        "minimum_active": 8.48478703882539,
+        "minimum_inactive": 7.622426995563152,
+        "plot_mean_z": 0.42241123147519655,
+        "mean_phase_drift": 7.155584532509928e-19,
+        "mean_method": "full observation window",
+        "case": "F5_continue_J_0.01151_from_0.01150",
+        "source_J": 0.0115,
+        "source_z": 0.42271397446608594,
+        "opposite_sign_to_direct": true
+      },
+      {
+        "status": "BOUNDED_PHASE_PERIODIC",
+        "window_ps": [
+          16000.0,
+          18000.0
+        ],
+        "mean_z": -0.4503418535921814,
+        "A_z": 0.5071677455340565,
+        "phase_slope": 1.965485408313755e-05,
+        "phase_span": 1.4498824676508648,
+        "density_settling": {
+          "span_max": 2.018728029200966,
+          "half_mean_drift_max": 0.014497863555792115,
+          "passed": false
+        },
+        "period_ps": 188.83165423333742,
+        "cycles": 10.591444575964047,
+        "half_periods_ps": [
+          188.83591811107846,
+          188.8273903555964
+        ],
+        "half_amplitudes": [
+          0.5065383514556494,
+          0.5071677455340565
+        ],
+        "period_half_difference": 4.516062477274945e-05,
+        "amplitude_half_difference": 0.0012409978433158373,
+        "density_return_error": 0.00017302298387311175,
+        "phase_return_error": 0.00018234339384794385,
+        "stokes_return_error": 0.00018947010835085947,
+        "phase_valid_fraction": 1.0,
+        "J": 0.0115,
+        "final_ps": 18000.0,
+        "stored_final_ps": 18000.0,
+        "z_min": -0.9227765527644214,
+        "z_max": 0.0915589383036916,
+        "density_mean": [
+          1.2829400235371298,
+          3.1513216455306057
+        ],
+        "balance": {
+          "absolute": 4.26039333922823e-05,
+          "denominator": 63512.20547101203,
+          "relative": 6.70799149176569e-10,
+          "population_change": -0.3508829535542546,
+          "plus": {
+            "absolute": 5.460686394931358e-05,
+            "denominator": 996.5498657076358,
+            "relative": 5.4795917222404144e-08
+          },
+          "status": "PASS"
+        },
+        "minimum_active": 8.073465947926428,
+        "minimum_inactive": 7.622426995563152,
+        "plot_mean_z": -0.4363394252768691,
+        "mean_phase_drift": 3.165972844975487e-07,
+        "mean_method": "integer number of final cycles, trapezoid with interpolated endpoints",
+        "mean_window_ps": [
+          16111.683457666626,
+          18000.0
+        ],
+        "mean_cycles": 10,
+        "case": "F5_continue_J_0.01150_from_0.01151",
+        "source_J": 0.01151,
+        "source_z": -0.46247993908631624,
+        "opposite_sign_to_direct": true
+      }
+    ],
+    "initial_phases": [
+      {
+        "status": "LOCKED_STEADY",
+        "window_ps": [
+          16000.0,
+          18000.0
+        ],
+        "mean_z": 0.4227139744660854,
+        "A_z": 8.36225533262791e-12,
+        "phase_slope": 3.0131223908198322e-18,
+        "phase_span": 3.0233593406592263e-12,
+        "density_settling": {
+          "span_max": 9.988228878120766e-11,
+          "half_mean_drift_max": 3.1172875429799614e-15,
+          "passed": true
+        },
+        "phase_valid_fraction": 1.0,
+        "J": 0.0115,
+        "final_ps": 18000.0,
+        "stored_final_ps": 18000.0,
+        "z_min": 0.42271397445564013,
+        "z_max": 0.42271397447236464,
+        "density_mean": [
+          3.33536613664096,
+          1.3533712996981346
+        ],
+        "balance": {
+          "absolute": 6.686746112904984e-05,
+          "denominator": 63472.57951208568,
+          "relative": 1.0534857987978534e-09,
+          "population_change": 39.274966501406766,
+          "plus": {
+            "absolute": 4.54303483721219e-09,
+            "denominator": 465.2579566422403,
+            "relative": 9.764550551696535e-12
+          },
+          "status": "PASS"
+        },
+        "minimum_active": 0.0,
+        "minimum_inactive": 0.0,
+        "plot_mean_z": 0.4227139744660854,
+        "mean_phase_drift": 3.0131223908198322e-18,
+        "mean_method": "full observation window",
+        "initial_theta": 1.0,
+        "protocol": "independent start near polarization reversal"
+      },
+      {
+        "status": "LOCKED_STEADY",
+        "window_ps": [
+          16000.0,
+          18000.0
+        ],
+        "mean_z": 0.422713974466085,
+        "A_z": 8.359091197007729e-12,
+        "phase_slope": 1.797987780844187e-18,
+        "phase_span": 3.027800232757727e-12,
+        "density_settling": {
+          "span_max": 9.992122924466969e-11,
+          "half_mean_drift_max": 4.260658090602809e-15,
+          "passed": true
+        },
+        "phase_valid_fraction": 1.0,
+        "J": 0.0115,
+        "final_ps": 18000.0,
+        "stored_final_ps": 18000.0,
+        "z_min": 0.4227139744556415,
+        "z_max": 0.4227139744723597,
+        "density_mean": [
+          3.3353661366409746,
+          1.3533712996981333
+        ],
+        "balance": {
+          "absolute": 6.686747458672926e-05,
+          "denominator": 63472.579512085664,
+          "relative": 1.0534860108213687e-09,
+          "population_change": 39.27496650140573,
+          "plus": {
+            "absolute": 3.695168171446994e-09,
+            "denominator": 460.38411049237516,
+            "relative": 8.026272165420864e-12
+          },
+          "status": "PASS"
+        },
+        "minimum_active": 0.0,
+        "minimum_inactive": 0.0,
+        "plot_mean_z": 0.422713974466085,
+        "mean_phase_drift": 1.797987780844187e-18,
+        "mean_method": "full observation window",
+        "initial_theta": 2.0,
+        "protocol": "independent start near polarization reversal"
+      },
+      {
+        "status": "LOCKED_STEADY",
+        "window_ps": [
+          16000.0,
+          18000.0
+        ],
+        "mean_z": 0.42241123147519755,
+        "A_z": 8.346157098770846e-12,
+        "phase_slope": -5.97554714441844e-19,
+        "phase_span": 3.034905660115328e-12,
+        "density_settling": {
+          "span_max": 9.982515452208017e-11,
+          "half_mean_drift_max": 7.95543001396536e-15,
+          "passed": true
+        },
+        "phase_valid_fraction": 1.0,
+        "J": 0.01151,
+        "final_ps": 18000.0,
+        "stored_final_ps": 18000.0,
+        "z_min": 0.42241123146479725,
+        "z_max": 0.42241123148148957,
+        "density_mean": [
+          3.334766195697212,
+          1.3541256267312272
+        ],
+        "balance": {
+          "absolute": 6.686739129690977e-05,
+          "denominator": 63472.57991966502,
+          "relative": 1.053484691839239e-09,
+          "population_change": 39.27455892213311,
+          "plus": {
+            "absolute": 4.5511510116114096e-09,
+            "denominator": 464.85980537103876,
+            "relative": 9.790373267438775e-12
+          },
+          "status": "PASS"
+        },
+        "minimum_active": 0.0,
+        "minimum_inactive": 0.0,
+        "plot_mean_z": 0.42241123147519755,
+        "mean_phase_drift": -5.97554714441844e-19,
+        "mean_method": "full observation window",
+        "initial_theta": 1.0,
+        "protocol": "independent start near polarization reversal"
+      },
+      {
+        "status": "LOCKED_STEADY",
+        "window_ps": [
+          16000.0,
+          18000.0
+        ],
+        "mean_z": 0.4224112314751991,
+        "A_z": 8.358730374524725e-12,
+        "phase_slope": 1.6091174249471313e-18,
+        "phase_span": 3.0162539133016253e-12,
+        "density_settling": {
+          "span_max": 9.991392037276351e-11,
+          "half_mean_drift_max": 2.1440292539282833e-14,
+          "passed": true
+        },
+        "phase_valid_fraction": 1.0,
+        "J": 0.01151,
+        "final_ps": 18000.0,
+        "stored_final_ps": 18000.0,
+        "z_min": 0.4224112314647561,
+        "z_max": 0.4224112314814736,
+        "density_mean": [
+          3.3347661956972376,
+          1.3541256267312307
+        ],
+        "balance": {
+          "absolute": 6.686740293559978e-05,
+          "denominator": 63472.579919665004,
+          "relative": 1.0534848752048758e-09,
+          "population_change": 39.27455892213157,
+          "plus": {
+            "absolute": 3.7065621683041172e-09,
+            "denominator": 459.90950685921246,
+            "relative": 8.059329309404274e-12
+          },
+          "status": "PASS"
+        },
+        "minimum_active": 0.0,
+        "minimum_inactive": 0.0,
+        "plot_mean_z": 0.4224112314751991,
+        "mean_phase_drift": 1.6091174249471313e-18,
+        "mean_method": "full observation window",
+        "initial_theta": 2.0,
+        "protocol": "independent start near polarization reversal"
+      }
+    ],
+    "coexistence_both_sides": true
+  },
+  "F5_phase_sampling": {
+    "J=0.00636": {
+      "status": "PASS",
+      "classification": "RUNNING_PHASE_PERIODIC",
+      "density_relative": 8.042849298765995e-11,
+      "period_relative": 5.611331275685687e-09,
+      "sample_ps": 0.05,
+      "window_ps": [
+        16000.0,
+        18000.0
+      ],
+      "minimum_component_fraction": 0.0003851977321218301,
+      "max_phase_increment_rad": 0.025223312196216454,
+      "phase_valid_fraction": 1.0
+    },
+    "J=0.00638": {
+      "status": "PASS",
+      "classification": "PERIODIC_PHASE_MASKED",
+      "density_relative": 7.702143710565847e-11,
+      "period_relative": 4.7397155929588534e-09,
+      "sample_ps": 0.05,
+      "window_ps": [
+        16000.0,
+        18000.0
+      ],
+      "minimum_component_fraction": 8.348803417184923e-05,
+      "max_phase_increment_rad": 0.0536514530705693,
+      "phase_valid_fraction": 0.9971000724981876
+    },
+    "J=0.00640": {
+      "status": "PASS",
+      "classification": "PERIODIC_PHASE_MASKED",
+      "density_relative": 7.739621612030304e-11,
+      "period_relative": 1.4376317883197633e-07,
+      "sample_ps": 0.05,
+      "window_ps": [
+        16000.0,
+        18000.0
+      ],
+      "minimum_component_fraction": 2.9629414607302666e-06,
+      "max_phase_increment_rad": 0.2798078175516568,
+      "phase_valid_fraction": 0.9929501762455939
+    },
+    "J=0.00642": {
+      "status": "PASS",
+      "classification": "BOUNDED_PHASE_PERIODIC",
+      "density_relative": 8.825118252195768e-11,
+      "period_relative": 2.066380733217781e-10,
+      "sample_ps": 0.05,
+      "window_ps": [
+        16000.0,
+        18000.0
+      ],
+      "minimum_component_fraction": 0.00016800469231570268,
+      "max_phase_increment_rad": 0.03696494112168436,
+      "phase_valid_fraction": 1.0
+    }
+  }
+}

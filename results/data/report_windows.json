@@ -1,0 +1,23 @@
+{
+  "J5": {
+    "J": 0.005,
+    "start_ps": 16966.5,
+    "end_ps": 18000.0,
+    "current_mean": -0.0013168251559535756,
+    "status": "RUNNING_PHASE_PERIODIC"
+  },
+  "J6.5": {
+    "J": 0.0065,
+    "start_ps": 16966.5,
+    "end_ps": 18000.0,
+    "current_mean": 0.00286392495885985,
+    "status": "BOUNDED_PHASE_PERIODIC"
+  },
+  "J10": {
+    "J": 0.01,
+    "start_ps": 16966.5,
+    "end_ps": 18000.0,
+    "current_mean": 0.014770710817183636,
+    "status": "LOCKED_STEADY"
+  }
+}

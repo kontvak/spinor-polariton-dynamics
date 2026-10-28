@@ -1,0 +1,430 @@
+{
+  "status": "COMPLETED",
+  "cases": {
+    "N3_eps_0": {
+      "run_status": "RUN_COMPLETED",
+      "time_ps": 2300.0,
+      "elapsed_wall_s": 5736.776026153999,
+      "NC": 611.7632529942642,
+      "NA": 13065.205166159796,
+      "NI": 7493.090174478847,
+      "balance": {
+        "absolute": 3.798952093347907e-06,
+        "denominator": 3558664.1989385076,
+        "relative": 1.0675219354726062e-12
+      },
+      "minimum_active": 0.0,
+      "minimum_inactive": 0.0,
+      "stationarity": {
+        "status": "PASS",
+        "components": [
+          {
+            "component": "+",
+            "status": "PASS",
+            "populations": {
+              "span_max": 1.4806007679460282e-11,
+              "half_mean_drift_max": 7.141255671385535e-12,
+              "passed": true
+            },
+            "density_map": 7.062019895755178e-06,
+            "active_map": 1.12417027853258e-06,
+            "inactive_map": 0.0
+          },
+          {
+            "component": "-",
+            "status": "PASS",
+            "populations": {
+              "span_max": 1.4806007679460282e-11,
+              "half_mean_drift_max": 7.141255671385535e-12,
+              "passed": true
+            },
+            "density_map": 7.062019895755178e-06,
+            "active_map": 1.12417027853258e-06,
+            "inactive_map": 0.0
+          }
+        ],
+        "total_populations": {
+          "span_max": 1.4806007679460295e-11,
+          "half_mean_drift_max": 7.141813175471472e-12,
+          "passed": true
+        },
+        "phase_required": false,
+        "aligned_field": null,
+        "window_ps": [
+          2200.0,
+          2300.0
+        ]
+      },
+      "two_windows_pass": true,
+      "edge_mass_max_last_window": 2.729411535539186e-07,
+      "high_k_max_last_window": 8.512139132355234e-21,
+      "checks": "PASS",
+      "component_populations": {
+        "NC": [
+          305.8816264971321,
+          305.8816264971321
+        ],
+        "NA": [
+          6532.602583079898,
+          6532.602583079898
+        ],
+        "NI": [
+          3746.5450872394235,
+          3746.5450872394235
+        ]
+      },
+      "Z": 0.0,
+      "symmetry_density_relative": 0.0,
+      "spatial_components": [
+        {
+          "edge_mass": 2.729411535539186e-07,
+          "high_k": 8.512139132355234e-21
+        },
+        {
+          "edge_mass": 2.729411535539186e-07,
+          "high_k": 8.512139132355234e-21
+        }
+      ]
+    },
+    "N3_eps_03": {
+      "run_status": "RUN_COMPLETED",
+      "time_ps": 2300.0,
+      "elapsed_wall_s": 5816.949501208001,
+      "NC": 609.8763536037601,
+      "NA": 13072.074774910943,
+      "NI": 7493.090174478848,
+      "balance": {
+        "absolute": 4.196681402390823e-06,
+        "denominator": 3558659.2162296684,
+        "relative": 1.1792872392083462e-12
+      },
+      "minimum_active": 0.0,
+      "minimum_inactive": 0.0,
+      "stationarity": {
+        "status": "PASS",
+        "components": [
+          {
+            "component": "+",
+            "status": "PASS",
+            "populations": {
+              "span_max": 2.510843159331269e-05,
+              "half_mean_drift_max": 1.2582058762910334e-05,
+              "passed": true
+            },
+            "density_map": 0.0007463638304449892,
+            "active_map": 2.5392926949616545e-05,
+            "inactive_map": 0.0
+          },
+          {
+            "component": "-",
+            "status": "PASS",
+            "populations": {
+              "span_max": 8.309014047192296e-05,
+              "half_mean_drift_max": 4.162926354623709e-05,
+              "passed": true
+            },
+            "density_map": 0.0022318786663022365,
+            "active_map": 5.906335474004821e-05,
+            "inactive_map": 0.0
+          }
+        ],
+        "total_populations": {
+          "span_max": 4.981286483715751e-06,
+          "half_mean_drift_max": 2.493957248597331e-06,
+          "passed": true
+        },
+        "phase_required": false,
+        "aligned_field": null,
+        "window_ps": [
+          2200.0,
+          2300.0
+        ]
+      },
+      "two_windows_pass": true,
+      "edge_mass_max_last_window": 2.8754892848321057e-07,
+      "high_k_max_last_window": 1.1161023939319827e-20,
+      "checks": "PASS",
+      "component_populations": {
+        "NC": [
+          440.26556551806664,
+          169.61078808569343
+        ],
+        "NA": [
+          6594.32345509773,
+          6477.751319813213
+        ],
+        "NI": [
+          4130.715793034396,
+          3362.3743814444524
+        ]
+      },
+      "Z": 0.4437863114926063,
+      "symmetry_density_relative": 1.649867867835507,
+      "spatial_components": [
+        {
+          "edge_mass": 3.0464793088583815e-07,
+          "high_k": 1.2592270265998062e-20
+        },
+        {
+          "edge_mass": 2.4317214009288193e-07,
+          "high_k": 7.445515671909467e-21
+        }
+      ]
+    },
+    "N3_eps_03_dt_half": {
+      "run_status": "RUN_COMPLETED",
+      "time_ps": 2300.0,
+      "elapsed_wall_s": 7948.293854779,
+      "NC": 609.867219599638,
+      "NA": 13072.106036186018,
+      "NI": 7493.090174478627,
+      "balance": {
+        "absolute": 3.1281160772778094e-07,
+        "denominator": 3558659.1941062906,
+        "relative": 8.790153556874653e-14
+      },
+      "minimum_active": 0.0,
+      "minimum_inactive": 0.0,
+      "stationarity": {
+        "status": "PASS",
+        "components": [
+          {
+            "component": "+",
+            "status": "PASS",
+            "populations": {
+              "span_max": 2.5117833137238266e-05,
+              "half_mean_drift_max": 1.2586777846690746e-05,
+              "passed": true
+            },
+            "density_map": 0.0007465196460930281,
+            "active_map": 2.5398064948920065e-05,
+            "inactive_map": 0.0
+          },
+          {
+            "component": "-",
+            "status": "PASS",
+            "populations": {
+              "span_max": 8.312192580604118e-05,
+              "half_mean_drift_max": 4.164521475166654e-05,
+              "passed": true
+            },
+            "density_map": 0.0022323385136644616,
+            "active_map": 5.907418428771384e-05,
+            "inactive_map": 0.0
+          }
+        ],
+        "total_populations": {
+          "span_max": 4.983259698424235e-06,
+          "half_mean_drift_max": 2.494946833481979e-06,
+          "passed": true
+        },
+        "phase_required": false,
+        "aligned_field": null,
+        "window_ps": [
+          2200.0,
+          2300.0
+        ]
+      },
+      "two_windows_pass": true,
+      "edge_mass_max_last_window": 2.875502120438138e-07,
+      "high_k_max_last_window": 1.0869141748405407e-20,
+      "checks": "PASS",
+      "component_populations": {
+        "NC": [
+          440.25941571048753,
+          169.6078038891505
+        ],
+        "NA": [
+          6594.34028421396,
+          6477.765751972057
+        ],
+        "NI": [
+          4130.715793034283,
+          3362.374381444344
+        ]
+      },
+      "Z": 0.4437877674406124,
+      "symmetry_density_relative": 1.6498778872394748,
+      "spatial_components": [
+        {
+          "edge_mass": 3.046491944675302e-07,
+          "high_k": 1.2262781288094487e-20
+        },
+        {
+          "edge_mass": 2.431733170640774e-07,
+          "high_k": 7.251252888138773e-21
+        }
+      ]
+    },
+    "N3_eps_03_grid256": {
+      "run_status": "RUN_COMPLETED",
+      "time_ps": 2300.0,
+      "elapsed_wall_s": 1960.492039880999,
+      "NC": 609.8763483249767,
+      "NA": 13072.074790872382,
+      "NI": 7493.090172884999,
+      "balance": {
+        "absolute": 4.211251507513225e-06,
+        "denominator": 3558659.2154590557,
+        "relative": 1.1833815076249123e-12
+      },
+      "minimum_active": 0.0,
+      "minimum_inactive": 0.0,
+      "stationarity": {
+        "status": "PASS",
+        "components": [
+          {
+            "component": "+",
+            "status": "PASS",
+            "populations": {
+              "span_max": 2.5108424007740872e-05,
+              "half_mean_drift_max": 1.2582054960774922e-05,
+              "passed": true
+            },
+            "density_map": 0.0007463637032528724,
+            "active_map": 2.539292177252363e-05,
+            "inactive_map": 0.0
+          },
+          {
+            "component": "-",
+            "status": "PASS",
+            "populations": {
+              "span_max": 8.309011512001236e-05,
+              "half_mean_drift_max": 4.1629250841463e-05,
+              "passed": true
+            },
+            "density_map": 0.0022318782869262697,
+            "active_map": 5.9063344389745895e-05,
+            "inactive_map": 0.0
+          }
+        ],
+        "total_populations": {
+          "span_max": 4.9812849885721236e-06,
+          "half_mean_drift_max": 2.4939564997493294e-06,
+          "passed": true
+        },
+        "phase_required": false,
+        "aligned_field": null,
+        "window_ps": [
+          2200.0,
+          2300.0
+        ]
+      },
+      "two_windows_pass": true,
+      "edge_mass_max_last_window": 2.7709263741278445e-07,
+      "high_k_max_last_window": 2.4462264599902565e-10,
+      "checks": "PASS",
+      "component_populations": {
+        "NC": [
+          440.2655612627202,
+          169.6107870622565
+        ],
+        "NA": [
+          6594.323464221474,
+          6477.751326650909
+        ],
+        "NI": [
+          4130.715792155755,
+          3362.374380729245
+        ]
+      },
+      "Z": 0.44378631003451136,
+      "symmetry_density_relative": 1.6498678587188218,
+      "spatial_components": [
+        {
+          "edge_mass": 2.936211925320137e-07,
+          "high_k": 2.5857023086167783e-10
+        },
+        {
+          "edge_mass": 2.3419631826114857e-07,
+          "high_k": 2.084144199145858e-10
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "grid256": {
+      "status": "PASS",
+      "time_ps": 2300.0,
+      "NC_relative": [
+        9.665408241603266e-09,
+        6.034032083256456e-09
+      ],
+      "NA_relative": [
+        1.3835753585796164e-09,
+        1.0555662646923692e-09
+      ],
+      "NI_relative": [
+        2.1270913990055457e-10,
+        2.1270907190835941e-10
+      ],
+      "density_L2_relative": [
+        3.2685638128999947e-07,
+        2.953179263367667e-07
+      ],
+      "tolerance": 0.01,
+      "map_comparison": "Fine-grid density sampled at the identical coarse-grid nodes; absolute densities, no fit."
+    },
+    "dt_half": {
+      "status": "PASS",
+      "time_ps": 2300.0,
+      "NC_relative": [
+        1.396840466473882e-05,
+        1.7594379323513763e-05
+      ],
+      "NA_relative": [
+        2.5520610786719315e-06,
+        2.2279581496064292e-06
+      ],
+      "NI_relative": [
+        2.730213083408424e-14,
+        3.2188524308373913e-14
+      ],
+      "density_L2_relative": [
+        1.3041862512014302e-05,
+        1.6783765026514416e-05
+      ],
+      "tolerance": 0.01,
+      "map_comparison": "Fine-grid density sampled at the identical coarse-grid nodes; absolute densities, no fit."
+    }
+  },
+  "reference_checks": {
+    "0.0": {
+      "relative_errors": {
+        "psi": 5.043985951830945e-12,
+        "active": 1.1108765691327708e-12,
+        "inactive": 2.0914719479110507e-16
+      },
+      "symmetry_max_absolute": 0.0,
+      "status": "PASS"
+    },
+    "0.3": {
+      "relative_errors": {
+        "psi": 3.162254445022841e-11,
+        "active": 9.6401717639643e-13,
+        "inactive": 2.080562563822182e-16
+      },
+      "symmetry_max_absolute": null,
+      "status": "PASS"
+    },
+    "continuous_seed": {
+      "nested_grid_equal": true,
+      "equal_initial_components": true
+    }
+  },
+  "protocol": "Independent continuous equal-component seed; initially empty reservoirs; no coupling.",
+  "finalization": {
+    "source": "Saved checkpoints and run summaries; no time integration repeated.",
+    "common_final_ps": 2300.0
+  },
+  "symmetric_preparation": {
+    "relative_density_difference": 0.0,
+    "status": "PASS"
+  },
+  "assessment": "PASS",
+  "profile_comparison": {
+    "case": "N3_eps_03",
+    "density_L2_relative": 0.05554320951791472,
+    "normalization": "Each component density divided by its own integrated population; same grid; no rotation or translation."
+  }
+}

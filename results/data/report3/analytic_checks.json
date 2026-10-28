@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "checks": {
+    "matrix_exponential_axes_off_axes_k0": {
+      "error": 5.551115123125783e-16,
+      "tolerance": 2e-13,
+      "status": "PASS"
+    },
+    "free_plus_wave_complex_conversion": {
+      "error": 2.135556627277529e-15,
+      "tolerance": 3e-13,
+      "status": "PASS"
+    },
+    "TE_TM_eigenwaves": {
+      "error": 1.5982970556924732e-15,
+      "tolerance": 3e-13,
+      "status": "PASS"
+    },
+    "unitarity": {
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-14,
+      "status": "PASS"
+    },
+    "beta_zero_scalar_factor": {
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "status": "PASS"
+    },
+    "k0_unchanged_by_beta": {
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "status": "PASS"
+    },
+    "known_Stokes_and_analyzers": {
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-15,
+      "status": "PASS"
+    },
+    "minus_J_transfer_sign_with_new_S2": {
+      "error": 1.734723475976807e-18,
+      "tolerance": 1e-15,
+      "status": "PASS"
+    },
+    "minus_J_Rabi_complex_phase": {
+      "error": 2.631825313237357e-12,
+      "tolerance": 1e-11,
+      "status": "PASS"
+    },
+    "device_free_wave": {
+      "error": 2.0807427796300308e-15,
+      "tolerance": 3e-13,
+      "status": "PASS"
+    },
+    "device_merged_FFT_half_steps": {
+      "error": 4.276617593773714e-15,
+      "tolerance": 2e-13,
+      "status": "PASS"
+    },
+    "device_uniform_2D_0D_psi": {
+      "error": 2.932790615696367e-12,
+      "tolerance": 2e-09,
+      "status": "PASS"
+    },
+    "device_uniform_2D_0D_active": {
+      "error": 4.629185923477053e-12,
+      "tolerance": 2e-09,
+      "status": "PASS"
+    },
+    "device_uniform_2D_0D_inactive": {
+      "error": 2.616573624436569e-12,
+      "tolerance": 2e-09,
+      "status": "PASS"
+    },
+    "device_minus_J_Rabi_sign": {
+      "error": 2.6319918466910508e-12,
+      "tolerance": 1e-11,
+      "status": "PASS"
+    },
+    "device": {
+      "name": "xpu",
+      "precision": "complex128/float64",
+      "compiled_local": true,
+      "torch": "2.14.1+xpu"
+    }
+  },
+  "elapsed_wall_s": 26.19182302899935,
+  "pytest": {
+    "status": "PASS",
+    "tests_passed": 21,
+    "elapsed_wall_s": 28.395706473002065,
+    "command": ".venv/bin/python -m pytest -q -p no:cacheprovider"
+  }
+}

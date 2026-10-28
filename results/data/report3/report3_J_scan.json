@@ -1,0 +1,1154 @@
+{
+  "status": "COMPLETED",
+  "started_utc": "2026-10-25T21:39:23.853983+00:00",
+  "pid": 307522,
+  "points": {
+    "0.00000000": {
+      "status": "UNCOUPLED",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": 378.0,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 1.0893603967588761e-10,
+            "half_mean_drift_max": 3.6217585616800764e-14,
+            "passed": true
+          },
+          "A_z": 1.980328401263165e-11,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 33.23807510707462,
+          "max_individual_phase_step_rad": 0.035315478852912925
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 1.0881921005298467e-10,
+            "half_mean_drift_max": 3.080042537497228e-14,
+            "passed": true
+          },
+          "A_z": 1.974473362587048e-11,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 33.23807510707428,
+          "max_individual_phase_step_rad": 0.035315478852749924
+        }
+      ],
+      "frequency_rad_ps": 0.016619037553536914,
+      "mean_z": 0.20507998533776342,
+      "A_z": 1.974473362587048e-11,
+      "phase_sampling_pass": true,
+      "J": 0.0,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 19.50796816199727,
+      "balance": {
+        "absolute": 1.6692177901234118e-05,
+        "denominator": 70529.64545127319,
+        "relative": 2.3666896089483736e-10,
+        "population_change": 39.081804761908145,
+        "plus": {
+          "absolute": 7.782128719213688e-09,
+          "denominator": 7.6464876227482605,
+          "relative": 1.0177390068692318e-09
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "UNCOUPLED",
+        "1e-05": "UNCOUPLED"
+      },
+      "tighter": false,
+      "J0_frequency_formula_error": 1.5259668528777581e-13
+    },
+    "0.00250000": {
+      "status": "RUNNING_PHASE_PERIODIC",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": 370.75,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 0.5960946361821691,
+            "half_mean_drift_max": 0.00725053783375906,
+            "passed": false
+          },
+          "A_z": 0.23260894066257035,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 33.88142991919784,
+          "max_individual_phase_step_rad": 0.03622942732871953,
+          "period_ps": 370.830352610317,
+          "cycles": 5.393301777812341,
+          "full_state_recurrence_RMS": 1.3733201263206905e-06,
+          "phase_recurrence_RMS": 1.9884386505985335e-06
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 0.6132627508618269,
+            "half_mean_drift_max": 0.03375192325034696,
+            "passed": false
+          },
+          "A_z": 0.23260892873909247,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 33.77427347563531,
+          "max_individual_phase_step_rad": 0.03622942732380618,
+          "period_ps": 370.8303514370412,
+          "cycles": 5.393301794876291,
+          "full_state_recurrence_RMS": 1.3575640606417274e-06,
+          "phase_recurrence_RMS": 1.977518002197377e-06
+        }
+      ],
+      "frequency_rad_ps": 0.016943557138607974,
+      "mean_z": 0.22289919907015018,
+      "A_z": 0.23260892873909247,
+      "phase_sampling_pass": true,
+      "period_ps": 370.8303520236791,
+      "period_relative_difference": 3.163915205240947e-09,
+      "amplitude_relative_difference": 5.1259757418387467e-08,
+      "J": 0.0025,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 26.95220684200467,
+      "balance": {
+        "absolute": 1.6149897795969537e-05,
+        "denominator": 70529.41617511064,
+        "relative": 2.289810219876558e-10,
+        "population_change": 39.311081466737605,
+        "plus": {
+          "absolute": 7.7105154927537e-07,
+          "denominator": 418.0321190168577,
+          "relative": 1.8444792019540403e-09
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "RUNNING_PHASE_PERIODIC",
+        "1e-05": "RUNNING_PHASE_PERIODIC"
+      },
+      "tighter": false
+    },
+    "0.00500000": {
+      "status": "RUNNING_PHASE_PERIODIC",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": 344.5,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 1.4023408464395695,
+            "half_mean_drift_max": 0.0018305053924257048,
+            "passed": false
+          },
+          "A_z": 0.4997172840579527,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 36.44974389709944,
+          "max_individual_phase_step_rad": 0.03768343359273173,
+          "period_ps": 344.47905457137296,
+          "cycles": 5.8058682333779394,
+          "full_state_recurrence_RMS": 5.947422214582965e-07,
+          "phase_recurrence_RMS": 1.055749117964783e-06
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 1.376251393407328,
+            "half_mean_drift_max": 0.018484431865846387,
+            "passed": false
+          },
+          "A_z": 0.4997174962835567,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 36.422587097747396,
+          "max_individual_phase_step_rad": 0.03768343037933924,
+          "period_ps": 344.479050847226,
+          "cycles": 5.805868296144911,
+          "full_state_recurrence_RMS": 5.914866325216918e-07,
+          "phase_recurrence_RMS": 1.047783162125926e-06
+        }
+      ],
+      "frequency_rad_ps": 0.018239673269675686,
+      "mean_z": 0.2693363872679096,
+      "A_z": 0.4997174962835567,
+      "phase_sampling_pass": true,
+      "period_ps": 344.4790527092995,
+      "period_relative_difference": 1.0810953236529328e-08,
+      "amplitude_relative_difference": 4.246911617328363e-07,
+      "J": 0.005,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 17.332805908998125,
+      "balance": {
+        "absolute": 1.2577705533090011e-05,
+        "denominator": 70528.83104534804,
+        "relative": 1.7833424071643699e-10,
+        "population_change": 39.89621480152354,
+        "plus": {
+          "absolute": 3.2214996870116863e-06,
+          "denominator": 740.4411474788908,
+          "relative": 4.3507842560890744e-09
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "RUNNING_PHASE_PERIODIC",
+        "1e-05": "RUNNING_PHASE_PERIODIC"
+      },
+      "tighter": false
+    },
+    "0.00750000": {
+      "status": "LOCKED_STEADY",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": null,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 7.88617624122597e-11,
+            "half_mean_drift_max": 6.947468043836349e-15,
+            "passed": true
+          },
+          "A_z": 4.681199872180741e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 2.8324009804236994e-12,
+          "max_individual_phase_step_rad": 0.037000073716487364
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 7.88741836430035e-11,
+            "half_mean_drift_max": 2.084240413150872e-14,
+            "passed": true
+          },
+          "A_z": 4.6803672049122724e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 2.8324009804236994e-12,
+          "max_individual_phase_step_rad": 0.03700007371648877
+        }
+      ],
+      "frequency_rad_ps": -2.950264069830095e-18,
+      "mean_z": 0.596442941689677,
+      "A_z": 4.6803672049122724e-12,
+      "phase_sampling_pass": true,
+      "J": 0.0075,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 19.896848711010534,
+      "balance": {
+        "absolute": 1.670965372113642e-05,
+        "denominator": 70529.1543085583,
+        "relative": 2.369183904861993e-10,
+        "population_change": 39.57294745932532,
+        "plus": {
+          "absolute": 1.2044603092675743e-08,
+          "denominator": 698.4937758679948,
+          "relative": 1.7243679913551582e-11
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "LOCKED_STEADY",
+        "1e-05": "LOCKED_STEADY"
+      },
+      "tighter": false
+    },
+    "0.01000000": {
+      "status": "LOCKED_STEADY",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": null,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 9.328501103780837e-11,
+            "half_mean_drift_max": 5.251284361519178e-15,
+            "passed": true
+          },
+          "A_z": 7.190997797223986e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 3.128164394183841e-12,
+          "max_individual_phase_step_rad": 0.03772293258455638
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 9.327304531165129e-11,
+            "half_mean_drift_max": 1.0706176034385925e-14,
+            "passed": true
+          },
+          "A_z": 7.190664730316598e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 3.128164394183841e-12,
+          "max_individual_phase_step_rad": 0.03772293258455475
+        }
+      ],
+      "frequency_rad_ps": -3.113835851193748e-18,
+      "mean_z": 0.4737863934076404,
+      "A_z": 7.190664730316598e-12,
+      "phase_sampling_pass": true,
+      "J": 0.01,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 20.492062556993915,
+      "balance": {
+        "absolute": 1.6696828815554454e-05,
+        "denominator": 70529.37797208171,
+        "relative": 2.3673580138710016e-10,
+        "population_change": 39.349283948716305,
+        "plus": {
+          "absolute": 1.2353743361614988e-08,
+          "denominator": 602.3831973792219,
+          "relative": 2.050811412961418e-11
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "LOCKED_STEADY",
+        "1e-05": "LOCKED_STEADY"
+      },
+      "tighter": false
+    },
+    "0.01250000": {
+      "status": "LOCKED_STEADY",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": null,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 9.927829782335626e-11,
+            "half_mean_drift_max": 4.8065817531514977e-14,
+            "passed": true
+          },
+          "A_z": 5.813155512512935e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 7.51709805513201e-12,
+          "max_individual_phase_step_rad": 0.029274024802787096
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 9.925497863183596e-11,
+            "half_mean_drift_max": 1.5892729990259388e-14,
+            "passed": true
+          },
+          "A_z": 5.812100800639541e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 7.516764988224622e-12,
+          "max_individual_phase_step_rad": 0.029274024802785167
+        }
+      ],
+      "frequency_rad_ps": -1.7441736622723054e-17,
+      "mean_z": -0.48967624003981786,
+      "A_z": 5.812100800639541e-12,
+      "phase_sampling_pass": true,
+      "J": 0.0125,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 25.024284194005304,
+      "balance": {
+        "absolute": 1.6710630916350055e-05,
+        "denominator": 70528.92744359747,
+        "relative": 2.369330078032688e-10,
+        "population_change": 39.79981241917811,
+        "plus": {
+          "absolute": 1.2086327938476416e-08,
+          "denominator": 1438.4617356367203,
+          "relative": 8.402258912453118e-12
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "LOCKED_STEADY",
+        "1e-05": "LOCKED_STEADY"
+      },
+      "tighter": false
+    },
+    "0.01500000": {
+      "status": "LOCKED_STEADY",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": null,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 1.1541568719494689e-10,
+            "half_mean_drift_max": 1.7948048889616224e-14,
+            "passed": true
+          },
+          "A_z": 8.010231367094889e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 9.289513602794841e-12,
+          "max_individual_phase_step_rad": 0.02802350063637105
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 1.1542878180640818e-10,
+            "half_mean_drift_max": 1.6025043651442987e-14,
+            "passed": true
+          },
+          "A_z": 7.995354378564912e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 9.272527190518076e-12,
+          "max_individual_phase_step_rad": 0.02802350063636618
+        }
+      ],
+      "frequency_rad_ps": 3.8106133997073545e-18,
+      "mean_z": -0.39406639172644964,
+      "A_z": 7.995354378564912e-12,
+      "phase_sampling_pass": true,
+      "J": 0.015,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 19.27468590400531,
+      "balance": {
+        "absolute": 1.6707730843279478e-05,
+        "denominator": 70529.14798693011,
+        "relative": 2.368911481303534e-10,
+        "population_change": 39.579269089422795,
+        "plus": {
+          "absolute": 1.330848409253349e-08,
+          "denominator": 1407.0721777171248,
+          "relative": 9.458281034399789e-12
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "LOCKED_STEADY",
+        "1e-05": "LOCKED_STEADY"
+      },
+      "tighter": false
+    },
+    "0.01750000": {
+      "status": "LOCKED_STEADY",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": null,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 1.2936688224170506e-10,
+            "half_mean_drift_max": 1.351982897657632e-14,
+            "passed": true
+          },
+          "A_z": 9.614531393253856e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 9.948653012514797e-12,
+          "max_individual_phase_step_rad": 0.026908432410518712
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 1.2933657165738363e-10,
+            "half_mean_drift_max": 1.5482384795756396e-14,
+            "passed": true
+          },
+          "A_z": 9.619000040927972e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 9.945821943802002e-12,
+          "max_individual_phase_step_rad": 0.026908432410513158
+        }
+      ],
+      "frequency_rad_ps": -2.7802256175723138e-18,
+      "mean_z": -0.3321093003771275,
+      "A_z": 9.619000040927972e-12,
+      "phase_sampling_pass": true,
+      "J": 0.0175,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 14.789664862008067,
+      "balance": {
+        "absolute": 1.670599537817452e-05,
+        "denominator": 70529.26998630687,
+        "relative": 2.368661320529471e-10,
+        "population_change": 39.45726971438915,
+        "plus": {
+          "absolute": 1.4148584304152223e-08,
+          "denominator": 1341.7094932618668,
+          "relative": 1.0545192066693373e-11
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "LOCKED_STEADY",
+        "1e-05": "LOCKED_STEADY"
+      },
+      "tighter": false
+    },
+    "0.02000000": {
+      "status": "LOCKED_STEADY",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": null,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 1.3807687416184597e-10,
+            "half_mean_drift_max": 5.232595317880393e-15,
+            "passed": true
+          },
+          "A_z": 1.113864556145927e-11,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 1.0611816980699018e-11,
+          "max_individual_phase_step_rad": 0.025859717949200636
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 1.380361545686777e-10,
+            "half_mean_drift_max": 6.40190395292606e-14,
+            "passed": true
+          },
+          "A_z": 1.1098483243543456e-11,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 1.0591555410499609e-11,
+          "max_individual_phase_step_rad": 0.025859717949201323
+        }
+      ],
+      "frequency_rad_ps": 1.4453493559903568e-18,
+      "mean_z": -0.288003366988215,
+      "A_z": 1.1098483243543456e-11,
+      "phase_sampling_pass": true,
+      "J": 0.02,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 17.111168927993276,
+      "balance": {
+        "absolute": 1.67048992594232e-05,
+        "denominator": 70529.34682297021,
+        "relative": 2.368503326899193e-10,
+        "population_change": 39.38043305215759,
+        "plus": {
+          "absolute": 1.4621321708929713e-08,
+          "denominator": 1277.1704326630638,
+          "relative": 1.144821500325715e-11
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "LOCKED_STEADY",
+        "1e-05": "LOCKED_STEADY"
+      },
+      "tighter": false
+    },
+    "0.02250000": {
+      "status": "LOCKED_STEADY",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": null,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 1.1166108396231913e-10,
+            "half_mean_drift_max": 1.2827734904886002e-14,
+            "passed": true
+          },
+          "A_z": 9.621442531582147e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 8.833433984278827e-12,
+          "max_individual_phase_step_rad": 0.024846589603519192
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 1.1166673686244598e-10,
+            "half_mean_drift_max": 5.1310939619543675e-14,
+            "passed": true
+          },
+          "A_z": 9.596629046981775e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 8.836598119899008e-12,
+          "max_individual_phase_step_rad": 0.02484658960351772
+        }
+      ],
+      "frequency_rad_ps": -5.213945900543653e-18,
+      "mean_z": -0.2546679216848462,
+      "A_z": 9.596629046981775e-12,
+      "phase_sampling_pass": true,
+      "J": 0.0225,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 17.435222551008337,
+      "balance": {
+        "absolute": 1.6703207144530552e-05,
+        "denominator": 70529.39938373415,
+        "relative": 2.368261645566023e-10,
+        "population_change": 39.327872289900654,
+        "plus": {
+          "absolute": 1.3864200454349884e-08,
+          "denominator": 1219.1933142297207,
+          "relative": 1.1371617849716643e-11
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "LOCKED_STEADY",
+        "1e-05": "LOCKED_STEADY"
+      },
+      "tighter": false
+    },
+    "0.02500000": {
+      "status": "LOCKED_STEADY",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": null,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 9.086126623974604e-11,
+            "half_mean_drift_max": 4.993271903743286e-15,
+            "passed": true
+          },
+          "A_z": 8.368056247931577e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 7.08105796221048e-12,
+          "max_individual_phase_step_rad": 0.02385418206950606
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 9.084064185579656e-11,
+            "half_mean_drift_max": 1.3677223040688248e-14,
+            "passed": true
+          },
+          "A_z": 8.34987634590334e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 7.080197539366395e-12,
+          "max_individual_phase_step_rad": 0.02385418206950855
+        }
+      ],
+      "frequency_rad_ps": 1.189049448125682e-18,
+      "mean_z": -0.228442468134402,
+      "A_z": 8.34987634590334e-12,
+      "phase_sampling_pass": true,
+      "J": 0.025,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 20.75993006399949,
+      "balance": {
+        "absolute": 1.6701797264317975e-05,
+        "denominator": 70529.4374056042,
+        "relative": 2.368060469314174e-10,
+        "population_change": 39.289850421269655,
+        "plus": {
+          "absolute": 1.2703614382658657e-08,
+          "denominator": 1167.2929646382404,
+          "relative": 1.0882970057645877e-11
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "LOCKED_STEADY",
+        "1e-05": "LOCKED_STEADY"
+      },
+      "tighter": false
+    },
+    "0.02750000": {
+      "status": "LOCKED_STEADY",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": null,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 7.451108218181871e-11,
+            "half_mean_drift_max": 9.322476042801664e-15,
+            "passed": true
+          },
+          "A_z": 7.490202902360465e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 5.803024727413231e-12,
+          "max_individual_phase_step_rad": 0.022874619165479355
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 7.450457812876455e-11,
+            "half_mean_drift_max": 2.1680176843724498e-14,
+            "passed": true
+          },
+          "A_z": 7.474659780015713e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 5.832667682170722e-12,
+          "max_individual_phase_step_rad": 0.022874619165486568
+        }
+      ],
+      "frequency_rad_ps": -1.741591138747614e-18,
+      "mean_z": -0.20720684629213476,
+      "A_z": 7.474659780015713e-12,
+      "phase_sampling_pass": true,
+      "J": 0.0275,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 17.984590474996367,
+      "balance": {
+        "absolute": 1.670078543014597e-05,
+        "denominator": 70529.4660495191,
+        "relative": 2.3679160449648465e-10,
+        "population_change": 39.26120650739324,
+        "plus": {
+          "absolute": 1.1589673443168635e-08,
+          "denominator": 1121.8290227770472,
+          "relative": 1.0331051530899796e-11
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "LOCKED_STEADY",
+        "1e-05": "LOCKED_STEADY"
+      },
+      "tighter": false
+    },
+    "0.03000000": {
+      "status": "LOCKED_STEADY",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": null,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 6.157507408215091e-11,
+            "half_mean_drift_max": 2.5983693449255056e-14,
+            "passed": true
+          },
+          "A_z": 6.536174379512261e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 4.441808032495942e-12,
+          "max_individual_phase_step_rad": 0.021903412432484812
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 6.151466199488124e-11,
+            "half_mean_drift_max": 4.1140847961320406e-15,
+            "passed": true
+          },
+          "A_z": 6.550635034408003e-12,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 4.440836587349395e-12,
+          "max_individual_phase_step_rad": 0.021903412432485694
+        }
+      ],
+      "frequency_rad_ps": 7.620240619649887e-19,
+      "mean_z": -0.18963007646608823,
+      "A_z": 6.550635034408003e-12,
+      "phase_sampling_pass": true,
+      "J": 0.03,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 17.34886125900084,
+      "balance": {
+        "absolute": 1.6700030592176063e-05,
+        "denominator": 70529.48830939583,
+        "relative": 2.3678082731746274e-10,
+        "population_change": 39.238946631409064,
+        "plus": {
+          "absolute": 1.0620264223604181e-08,
+          "denominator": 1084.7954439272112,
+          "relative": 9.79010769547147e-12
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "LOCKED_STEADY",
+        "1e-05": "LOCKED_STEADY"
+      },
+      "tighter": false
+    },
+    "0.00625000": {
+      "status": "RUNNING_PHASE_PERIODIC",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": 299.0,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            16000.0,
+            18000.0
+          ],
+          "density_settling": {
+            "span_max": 2.0764477171593656,
+            "half_mean_drift_max": 0.11263102001896313,
+            "passed": false
+          },
+          "A_z": 0.5925186649642152,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 42.33155509539881,
+          "max_individual_phase_step_rad": 0.038282044390555096,
+          "period_ps": 299.05142228682524,
+          "cycles": 6.6878130346484905,
+          "full_state_recurrence_RMS": 3.528867209133369e-06,
+          "phase_recurrence_RMS": 2.192480067025821e-05
+        },
+        {
+          "interval_ps": [
+            18000.0,
+            20000.0
+          ],
+          "density_settling": {
+            "span_max": 1.9544811347313604,
+            "half_mean_drift_max": 0.036629114829379535,
+            "passed": false
+          },
+          "A_z": 0.5925186614982972,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 40.79598728512292,
+          "max_individual_phase_step_rad": 0.038282044663791204,
+          "period_ps": 299.0514281156115,
+          "cycles": 6.687812904296889,
+          "full_state_recurrence_RMS": 3.532974458463754e-06,
+          "phase_recurrence_RMS": 2.003790206617198e-05
+        }
+      ],
+      "frequency_rad_ps": 0.021010377432895706,
+      "mean_z": 0.4026579480146965,
+      "A_z": 0.5925186614982972,
+      "phase_sampling_pass": true,
+      "period_ps": 299.05142520121836,
+      "period_relative_difference": 1.9490915926163965e-08,
+      "amplitude_relative_difference": 5.8494663577507085e-09,
+      "J": 0.00625,
+      "final_ps": 20000.0,
+      "elapsed_this_call_s": 21.836500931996852,
+      "balance": {
+        "absolute": 1.693852520645578e-05,
+        "denominator": 70529.15876471045,
+        "relative": 2.4016343740840193e-10,
+        "population_change": 39.56849107828933,
+        "plus": {
+          "absolute": 5.004848255829586e-07,
+          "denominator": 728.7729785774648,
+          "relative": 6.867499760486244e-10
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "RUNNING_PHASE_PERIODIC",
+        "1e-05": "RUNNING_PHASE_PERIODIC"
+      },
+      "tighter": false
+    },
+    "0.00687500": {
+      "status": "UNRESOLVED",
+      "window_length_ps": 2000.0,
+      "candidate_period_ps": 254.75,
+      "phase_density_floor_relative": 1e-06,
+      "windows": [
+        {
+          "interval_ps": [
+            36000.0,
+            38000.0
+          ],
+          "density_settling": {
+            "span_max": 0.012601545273538918,
+            "half_mean_drift_max": 5.303536541343978e-05,
+            "passed": false
+          },
+          "A_z": 0.0021120221596243605,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 0.007254526755604562,
+          "max_individual_phase_step_rad": 0.03686921128525466,
+          "period_ps": 254.8552968739728,
+          "cycles": 7.847590474013219,
+          "full_state_recurrence_RMS": 0.00012058424272399933,
+          "phase_recurrence_RMS": 6.875569996707732e-05
+        },
+        {
+          "interval_ps": [
+            38000.0,
+            40000.0
+          ],
+          "density_settling": {
+            "span_max": 0.009941038014456676,
+            "half_mean_drift_max": 1.197463609046347e-05,
+            "passed": false
+          },
+          "A_z": 0.0016660065831882176,
+          "phase_valid_fraction": 1.0,
+          "theta_span": 0.005798099744414031,
+          "max_individual_phase_step_rad": 0.036864286823180874,
+          "period_ps": 254.87786985615523,
+          "cycles": 7.846895460671948,
+          "full_state_recurrence_RMS": 9.443258066987197e-05,
+          "phase_recurrence_RMS": 5.535597648292055e-05
+        }
+      ],
+      "frequency_rad_ps": null,
+      "mean_z": 0.6389882141557656,
+      "A_z": 0.0016660065831882176,
+      "phase_sampling_pass": true,
+      "period_ps": 254.866583365064,
+      "period_relative_difference": 8.856391571054794e-05,
+      "amplitude_relative_difference": 0.21117940188443393,
+      "reason": "Period, amplitude or full-state recurrence not stable",
+      "J": 0.006875,
+      "final_ps": 40000.0,
+      "elapsed_this_call_s": 51.68828014699102,
+      "balance": {
+        "absolute": 1.6738450966613527e-05,
+        "denominator": 141097.79225963715,
+        "relative": 1.1863014083035925e-10,
+        "population_change": 39.662269078958886,
+        "plus": {
+          "absolute": 3.820996585801595e-08,
+          "denominator": 1398.452420177336,
+          "relative": 2.7323036026617616e-11
+        },
+        "status": "PASS"
+      },
+      "phase_mask_sensitivity": {
+        "1e-07": "UNRESOLVED",
+        "1e-05": "UNRESOLVED"
+      },
+      "tighter": false
+    }
+  },
+  "boundaries": [
+    {
+      "interval_meV": [
+        0.00625,
+        0.0075
+      ],
+      "status": "UNRESOLVED_MIDPOINT_NO_INTERPOLATION",
+      "endpoint_families": [
+        "RUNNING",
+        "LOCKED"
+      ]
+    }
+  ],
+  "tighter_checks": {
+    "0.00625000": {
+      "reference_status": "RUNNING_PHASE_PERIODIC",
+      "tighter": {
+        "status": "RUNNING_PHASE_PERIODIC",
+        "window_length_ps": 2000.0,
+        "candidate_period_ps": 299.0,
+        "phase_density_floor_relative": 1e-06,
+        "windows": [
+          {
+            "interval_ps": [
+              16000.0,
+              18000.0
+            ],
+            "density_settling": {
+              "span_max": 2.0764477174606584,
+              "half_mean_drift_max": 0.11263101992960944,
+              "passed": false
+            },
+            "A_z": 0.5925186649429272,
+            "phase_valid_fraction": 1.0,
+            "theta_span": 42.33155509706427,
+            "max_individual_phase_step_rad": 0.03828204440696893,
+            "period_ps": 299.0514222842614,
+            "cycles": 6.687813034705828,
+            "full_state_recurrence_RMS": 3.5288670914553416e-06,
+            "phase_recurrence_RMS": 2.192479996153748e-05
+          },
+          {
+            "interval_ps": [
+              18000.0,
+              20000.0
+            ],
+            "density_settling": {
+              "span_max": 1.9544811347283209,
+              "half_mean_drift_max": 0.036629115284471415,
+              "passed": false
+            },
+            "A_z": 0.5925186614770307,
+            "phase_valid_fraction": 1.0,
+            "theta_span": 40.79598728203638,
+            "max_individual_phase_step_rad": 0.03828204465844999,
+            "period_ps": 299.05142811302403,
+            "cycles": 6.687812904354754,
+            "full_state_recurrence_RMS": 3.5329743419137477e-06,
+            "phase_recurrence_RMS": 2.0037901267350452e-05
+          }
+        ],
+        "frequency_rad_ps": 0.021010377433083507,
+        "mean_z": 0.4026579480414141,
+        "A_z": 0.5925186614770307,
+        "phase_sampling_pass": true,
+        "period_ps": 299.05142519864273,
+        "period_relative_difference": 1.949083704351644e-08,
+        "amplitude_relative_difference": 5.849430007499775e-09,
+        "J": 0.00625,
+        "final_ps": 20000.0,
+        "elapsed_this_call_s": 38.56232670600002,
+        "balance": {
+          "absolute": 1.6941559607630552e-05,
+          "denominator": 70529.15876470547,
+          "relative": 2.4020646076539517e-10,
+          "population_change": 39.56849108024251,
+          "plus": {
+            "absolute": 5.181196502945795e-07,
+            "denominator": 728.7729785378883,
+            "relative": 7.109479433966732e-10
+          },
+          "status": "PASS"
+        },
+        "phase_mask_sensitivity": {
+          "1e-07": "RUNNING_PHASE_PERIODIC",
+          "1e-05": "RUNNING_PHASE_PERIODIC"
+        },
+        "tighter": true
+      },
+      "A_z_difference": 2.12665440812998e-11,
+      "period_relative_difference": 8.612666135832114e-12,
+      "frequency_difference": 1.8780116350924914e-13
+    },
+    "0.01000000": {
+      "reference_status": "LOCKED_STEADY",
+      "tighter": {
+        "status": "LOCKED_STEADY",
+        "window_length_ps": 2000.0,
+        "candidate_period_ps": null,
+        "phase_density_floor_relative": 1e-06,
+        "windows": [
+          {
+            "interval_ps": [
+              16000.0,
+              18000.0
+            ],
+            "density_settling": {
+              "span_max": 2.5417721455770374e-12,
+              "half_mean_drift_max": 7.887782017631497e-14,
+              "passed": true
+            },
+            "A_z": 1.9598211942195576e-13,
+            "phase_valid_fraction": 1.0,
+            "theta_span": 1.1546319456101628e-13,
+            "max_individual_phase_step_rad": 0.03772293257751736
+          },
+          {
+            "interval_ps": [
+              18000.0,
+              20000.0
+            ],
+            "density_settling": {
+              "span_max": 2.551428696510045e-12,
+              "half_mean_drift_max": 6.478325886612017e-14,
+              "passed": true
+            },
+            "A_z": 1.9617640845126516e-13,
+            "phase_valid_fraction": 1.0,
+            "theta_span": 1.1723955140041653e-13,
+            "max_individual_phase_step_rad": 0.03772293257751848
+          }
+        ],
+        "frequency_rad_ps": 2.9078634734593382e-18,
+        "mean_z": 0.47378639340309536,
+        "A_z": 1.9617640845126516e-13,
+        "phase_sampling_pass": true,
+        "J": 0.01,
+        "final_ps": 20000.0,
+        "elapsed_this_call_s": 31.859491415001685,
+        "balance": {
+          "absolute": 1.6696688099671064e-05,
+          "denominator": 70529.37797208187,
+          "relative": 2.367338062485143e-10,
+          "population_change": 39.34928394869657,
+          "plus": {
+            "absolute": 7.356836029259739e-09,
+            "denominator": 602.3831973745945,
+            "relative": 1.2212883860843914e-11
+          },
+          "status": "PASS"
+        },
+        "phase_mask_sensitivity": {
+          "1e-07": "LOCKED_STEADY",
+          "1e-05": "LOCKED_STEADY"
+        },
+        "tighter": true
+      },
+      "A_z_difference": 6.994488321865333e-12,
+      "period_relative_difference": null,
+      "frequency_difference": 6.021699324653086e-18
+    }
+  },
+  "initial_final_ps": 20000.0,
+  "max_final_ps": 40000.0,
+  "source": "new independent starts; no old F5 scan reused",
+  "benchmark_1000ps_s": [
+    0.429,
+    0.39
+  ],
+  "source_sha256": "f58a177346d603f061562e7f15e114410fe02de77c021550c3bc727490866d53",
+  "finished_utc": "2026-10-25T21:46:16.969138+00:00"
+}

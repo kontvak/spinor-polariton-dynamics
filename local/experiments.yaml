@@ -1,0 +1,1010 @@
+description: Completed earlier scan; three new TE-TM-only points J=.07,.05,.045. Diagnostic
+  now shows TE-TM series only.
+experiments:
+- id: ring_A0_late
+  name: matched_A0_ring
+  source: matched_A0_ring
+  final_ps: 6000.0
+  retain_ps: 6000.0
+  priority: 10
+  purpose: Common late interval; two windows of at least five candidate periods; no
+    extension beyond 6000 ps
+- id: ring_A1_late
+  name: matched_A1_ring
+  source: matched_A1_ring
+  final_ps: 6000.0
+  retain_ps: 6000.0
+  priority: 10
+  purpose: Common late interval; two windows of at least five candidate periods; no
+    extension beyond 6000 ps
+- id: ring_T1_late
+  name: matched_T1_ring
+  source: matched_T1_ring
+  final_ps: 6000.0
+  retain_ps: 6000.0
+  priority: 10
+  purpose: Common late interval; two windows of at least five candidate periods; no
+    extension beyond 6000 ps
+- id: ring_T0_late
+  name: matched_T0_ring
+  source: matched_T0_ring
+  final_ps: 6000.0
+  retain_ps: 6000.0
+  priority: 10
+  purpose: Common late interval; two windows of at least five candidate periods; no
+    extension beyond 6000 ps
+- id: spot_T0_seed
+  name: check_T0_spot_seeded
+  source: production_T0_spot
+  final_ps: 3000.0
+  parameters:
+    initial:
+      kind: radial_perturbed
+      perturbation: 0.001
+      perturb_seed: 20261025
+  retain_ps: 1200.0
+  priority: 25
+  purpose: Required perturbed start for T0 spot; compare with original radial preparation
+- id: C1_spot_dt
+  name: check_C1_spot_full_dt0125
+  source: production_C1_spot
+  final_ps: 3000.0
+  parameters:
+    time:
+      dt: 0.0125
+  retain_ps: 3000.0
+  priority: 30
+  purpose: Independent C1 control at the accepted reference time; N768 replaces the
+    original N1024 requirement in the shortened protocol; retain complex fields from
+    t=0 for the requested full Stokes animation
+  compare_to: production_C1_spot
+- id: C1_spot_grid
+  name: check_C1_spot_full_N768
+  source: production_C1_spot
+  final_ps: 3000.0
+  parameters:
+    space:
+      N: 768
+      L: 256.0
+  retain_ps: 1200.0
+  priority: 30
+  purpose: Independent C1 control at the accepted reference time; N768 replaces the
+    original N1024 requirement in the shortened protocol
+  compare_to: production_C1_spot
+- id: C1_ring_dt
+  name: check_C1_ring_full_dt0125
+  source: matched_C1_ring
+  final_ps: 3600.0
+  parameters:
+    time:
+      dt: 0.0125
+  retain_ps: 1200.0
+  priority: 40
+  purpose: Independent C1 control at the accepted reference time; N768 replaces the
+    original N1024 requirement in the shortened protocol
+  compare_to: matched_C1_ring
+- id: C1_ring_grid
+  name: check_C1_ring_full_N768
+  source: matched_C1_ring
+  final_ps: 3600.0
+  parameters:
+    space:
+      N: 768
+      L: 256.0
+  retain_ps: 1200.0
+  priority: 40
+  purpose: Independent C1 control at the accepted reference time; N768 replaces the
+    original N1024 requirement in the shortened protocol
+  compare_to: matched_C1_ring
+- id: Jspot_noTETM_reuse_0p00000
+  name: production_A1_spot
+  source: production_A1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 45
+  note: Reuse established endpoint; no integration; same pump and continuous initial
+    seed.
+- id: Jspot_noTETM_reuse_0p01000
+  name: production_J1_spot
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 45
+  note: Reuse established endpoint; no integration; same pump and continuous initial
+    seed.
+- id: Jspot_TETM_reuse_0p00000
+  name: production_T1_spot
+  source: production_T1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 45
+  note: Reuse established endpoint; no integration; same pump and continuous initial
+    seed.
+- id: Jspot_TETM_reuse_0p01000
+  name: production_C1_spot
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 45
+  note: Reuse established endpoint; no integration; same pump and continuous initial
+    seed.
+- id: Jspot_noTETM_J0p00250_N256
+  name: Jspot_noTETM_J0p00250_N256
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 50
+  parameters:
+    physical:
+      J: 0.0025
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_TETM_J0p00250_N256
+  name: Jspot_TETM_J0p00250_N256
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 50
+  parameters:
+    physical:
+      J: 0.0025
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_noTETM_J0p00500_N256
+  name: Jspot_noTETM_J0p00500_N256
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 51
+  parameters:
+    physical:
+      J: 0.005
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_TETM_J0p00500_N256
+  name: Jspot_TETM_J0p00500_N256
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 51
+  parameters:
+    physical:
+      J: 0.005
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_noTETM_J0p00750_N256
+  name: Jspot_noTETM_J0p00750_N256
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 52
+  parameters:
+    physical:
+      J: 0.0075
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_TETM_J0p00750_N256
+  name: Jspot_TETM_J0p00750_N256
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 52
+  parameters:
+    physical:
+      J: 0.0075
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_noTETM_J0p01500_N256
+  name: Jspot_noTETM_J0p01500_N256
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 53
+  parameters:
+    physical:
+      J: 0.015
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_TETM_J0p01500_N256
+  name: Jspot_TETM_J0p01500_N256
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 53
+  parameters:
+    physical:
+      J: 0.015
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_noTETM_J0p02000_N256
+  name: Jspot_noTETM_J0p02000_N256
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 54
+  parameters:
+    physical:
+      J: 0.02
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_TETM_J0p02000_N256
+  name: Jspot_TETM_J0p02000_N256
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 54
+  parameters:
+    physical:
+      J: 0.02
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_noTETM_J0p03000_N256
+  name: Jspot_noTETM_J0p03000_N256
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 55
+  parameters:
+    physical:
+      J: 0.03
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_TETM_J0p03000_N256
+  name: Jspot_TETM_J0p03000_N256
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 55
+  parameters:
+    physical:
+      J: 0.03
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_noTETM_J0p00625_N256
+  name: Jspot_noTETM_J0p00625_N256
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 56
+  parameters:
+    physical:
+      J: 0.00625
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_TETM_J0p00625_N256
+  name: Jspot_TETM_J0p00625_N256
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 56
+  parameters:
+    physical:
+      J: 0.00625
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+  note: Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime
+    label. Save late full fields every5ps and density frames every20ps. UNRESOLVED
+    is retained; no automatic extension.
+- id: Jspot_noTETM_J0p00500_N512
+  name: Jspot_noTETM_J0p00500_N512
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 65
+  depends_on:
+  - Jspot_noTETM_J0p00500_N256
+  compare_to: Jspot_noTETM_J0p00500_N256
+  parameters:
+    physical:
+      J: 0.005
+    execution:
+      precision: complex128
+  note: Independent N512 check of the N256 scan; compare populations, maps, Stokes
+    and periodicity on shared late times. Do not infer all J values converge from
+    this test.
+- id: Jspot_TETM_J0p00500_N512
+  name: Jspot_TETM_J0p00500_N512
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 65
+  depends_on:
+  - Jspot_TETM_J0p00500_N256
+  compare_to: Jspot_TETM_J0p00500_N256
+  parameters:
+    physical:
+      J: 0.005
+    execution:
+      precision: complex128
+  note: Independent N512 check of the N256 scan; compare populations, maps, Stokes
+    and periodicity on shared late times. Do not infer all J values converge from
+    this test.
+- id: Jspot_noTETM_J0p02000_N512
+  name: Jspot_noTETM_J0p02000_N512
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 65
+  depends_on:
+  - Jspot_noTETM_J0p02000_N256
+  compare_to: Jspot_noTETM_J0p02000_N256
+  parameters:
+    physical:
+      J: 0.02
+    execution:
+      precision: complex128
+  note: Independent N512 check of the N256 scan; compare populations, maps, Stokes
+    and periodicity on shared late times. Do not infer all J values converge from
+    this test.
+- id: Jspot_TETM_J0p02000_N512
+  name: Jspot_TETM_J0p02000_N512
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 65
+  depends_on:
+  - Jspot_TETM_J0p02000_N256
+  compare_to: Jspot_TETM_J0p02000_N256
+  parameters:
+    physical:
+      J: 0.02
+    execution:
+      precision: complex128
+  note: Independent N512 check of the N256 scan; compare populations, maps, Stokes
+    and periodicity on shared late times. Do not infer all J values converge from
+    this test.
+- id: Jspot_TETM_J0p00500_dt
+  name: Jspot_TETM_J0p00500_dt
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 70
+  depends_on:
+  - Jspot_TETM_J0p00500_N512
+  compare_to: Jspot_TETM_J0p00500_N512
+  parameters:
+    time:
+      dt: 0.0125
+    physical:
+      J: 0.005
+    execution:
+      precision: complex128
+  note: Independent half-time-step check.
+- id: Jspot_TETM_J0p02000_domain
+  name: Jspot_TETM_J0p02000_domain
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 70
+  depends_on:
+  - Jspot_TETM_J0p02000_N512
+  compare_to: Jspot_TETM_J0p02000_N512
+  parameters:
+    space:
+      N: 768
+      L: 384.0
+    physical:
+      J: 0.02
+    execution:
+      precision: complex128
+  note: Independent larger-domain check at fixed dx=.5um; pump width and seed definition
+    unchanged.
+- id: Jspot_noTETM_J0p03000_probe25
+  name: Jspot_noTETM_J0p03000_probe25
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 80
+  parameters:
+    physical:
+      J: 0.03
+    space:
+      N: 256
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 2.5
+  note: Resolve interpolation-limited rejection at J=.03 with 2.5ps complex maps;
+    independent start. No blind time extension.
+- id: Jspot_TETM_J0p03000_probe25
+  name: Jspot_TETM_J0p03000_probe25
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 80
+  parameters:
+    physical:
+      J: 0.03
+    space:
+      N: 256
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 2.5
+  note: Resolve interpolation-limited rejection at J=.03 with 2.5ps complex maps;
+    independent start. No blind time extension.
+- id: Jspot_TETM_J0p02000_domain_dx1_L384
+  name: Jspot_TETM_J0p02000_domain_dx1_L384
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 81
+  parameters:
+    physical:
+      J: 0.02
+    space:
+      N: 384
+      L: 384.0
+    execution:
+      precision: complex128
+    save:
+      probe: 5.0
+  note: Fixed dx=1um domain check L256 ->384. Diagnostic coarse-grid control; does
+    not replace fine-grid domain convergence.
+  compare_to: Jspot_TETM_J0p02000_N256
+- id: Jspot_TETM_J0p02000_domain_dx1_L512
+  name: Jspot_TETM_J0p02000_domain_dx1_L512
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 82
+  parameters:
+    physical:
+      J: 0.02
+    space:
+      N: 512
+      L: 512.0
+    execution:
+      precision: complex128
+    save:
+      probe: 5.0
+  note: Fixed dx=1um domain check L384 ->512; isolate far-field boundary effect before
+    paying for N1024.
+  compare_to: Jspot_TETM_J0p02000_domain_dx1_L384
+  depends_on:
+  - Jspot_TETM_J0p02000_domain_dx1_L384
+- id: Jspot_noTETM_J0p04000_refine
+  name: Jspot_noTETM_J0p04000_refine
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 83
+  parameters:
+    physical:
+      J: 0.04
+    space:
+      N: 256
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 2.5
+  note: Independent start; expand spatial J scan beyond running-phase region; no assumed
+    0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion.
+- id: Jspot_TETM_J0p04000_refine
+  name: Jspot_TETM_J0p04000_refine
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 83
+  parameters:
+    physical:
+      J: 0.04
+    space:
+      N: 256
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 2.5
+  note: Independent start; expand spatial J scan beyond running-phase region; no assumed
+    0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion.
+- id: Jspot_noTETM_J0p06000_refine
+  name: Jspot_noTETM_J0p06000_refine
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 83
+  parameters:
+    physical:
+      J: 0.06
+    space:
+      N: 256
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 2.5
+  note: Independent start; expand spatial J scan beyond running-phase region; no assumed
+    0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion.
+- id: Jspot_TETM_J0p06000_refine
+  name: Jspot_TETM_J0p06000_refine
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 83
+  parameters:
+    physical:
+      J: 0.06
+    space:
+      N: 256
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 2.5
+  note: Independent start; expand spatial J scan beyond running-phase region; no assumed
+    0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion.
+- id: Jspot_noTETM_J0p02500_refine
+  name: Jspot_noTETM_J0p02500_refine
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 84
+  parameters:
+    physical:
+      J: 0.025
+    space:
+      N: 256
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 2.5
+  note: Independent start; expand spatial J scan beyond running-phase region; no assumed
+    0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion.
+- id: Jspot_TETM_J0p02500_refine
+  name: Jspot_TETM_J0p02500_refine
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 84
+  parameters:
+    physical:
+      J: 0.025
+    space:
+      N: 256
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 2.5
+  note: Independent start; expand spatial J scan beyond running-phase region; no assumed
+    0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion.
+- id: Jspot_noTETM_J0p08000_refine
+  name: Jspot_noTETM_J0p08000_refine
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 85
+  parameters:
+    physical:
+      J: 0.08
+    space:
+      N: 256
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 1.25
+  note: Independent start; expand spatial J scan beyond running-phase region; no assumed
+    0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion.
+- id: Jspot_TETM_J0p08000_refine
+  name: Jspot_TETM_J0p08000_refine
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 85
+  parameters:
+    physical:
+      J: 0.08
+    space:
+      N: 256
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 1.25
+  note: Independent start; expand spatial J scan beyond running-phase region; no assumed
+    0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion.
+- id: Jspot_noTETM_J0p12000_refine
+  name: Jspot_noTETM_J0p12000_refine
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 85
+  parameters:
+    physical:
+      J: 0.12
+    space:
+      N: 256
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 1.25
+  note: Independent start; expand spatial J scan beyond running-phase region; no assumed
+    0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion.
+- id: Jspot_TETM_J0p12000_refine
+  name: Jspot_TETM_J0p12000_refine
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 85
+  parameters:
+    physical:
+      J: 0.12
+    space:
+      N: 256
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 1.25
+  note: Independent start; expand spatial J scan beyond running-phase region; no assumed
+    0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion.
+- id: Jspot_TETM_J0p03000_N512_probe25
+  name: Jspot_TETM_J0p03000_N512_probe25
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1200.0
+  priority: 86
+  parameters:
+    physical:
+      J: 0.03
+    space:
+      N: 512
+      L: 256.0
+    execution:
+      precision: complex128
+    save:
+      probe: 2.5
+  note: Independent fine-grid check at previously interpolation-limited J=.03, same
+    2.5ps map cadence as coarse reference.
+  compare_to: Jspot_TETM_J0p03000_probe25
+  depends_on:
+  - Jspot_TETM_J0p03000_probe25
+- id: Jspot_TETM_J0p06500_fill2h
+  name: Jspot_TETM_J0p06500_fill2h
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1000.0
+  priority: 100
+  parameters:
+    physical:
+      J: 0.065
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+    save:
+      probe: 1.25
+  note: 'Two-hour fill: prioritize bounded-phase interval and stationary branch. Independent
+    t=0 seed, unchanged pump. Dense1.25ps probes in last1000ps; no automatic extension;
+    preserve unresolved status if windows insufficient.'
+- id: Jspot_noTETM_J0p06500_fill2h
+  name: Jspot_noTETM_J0p06500_fill2h
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1000.0
+  priority: 100
+  parameters:
+    physical:
+      J: 0.065
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+    save:
+      probe: 1.25
+  note: 'Two-hour fill: prioritize bounded-phase interval and stationary branch. Independent
+    t=0 seed, unchanged pump. Dense1.25ps probes in last1000ps; no automatic extension;
+    preserve unresolved status if windows insufficient.'
+- id: Jspot_TETM_J0p05500_fill2h
+  name: Jspot_TETM_J0p05500_fill2h
+  source: production_C1_spot
+  final_ps: 4500.0
+  retain_ps: 1000.0
+  priority: 111
+  parameters:
+    physical:
+      J: 0.055
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+    save:
+      probe: 1.25
+  note: 'User-authorized continuation3000->4500ps from same checkpoint; physical parameters
+    and1.25ps probe cadence unchanged, existing1000ps rolling storage reused. J=.075:
+    test amplitude relaxation; J=.055: inspect late dynamics without assuming local
+    phase ambiguity resolves.'
+- id: Jspot_noTETM_J0p05500_fill2h
+  name: Jspot_noTETM_J0p05500_fill2h
+  source: production_J1_spot
+  final_ps: 4500.0
+  retain_ps: 1000.0
+  priority: 111
+  parameters:
+    physical:
+      J: 0.055
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+    save:
+      probe: 1.25
+  note: 'User-authorized continuation3000->4500ps from same checkpoint; physical parameters
+    and1.25ps probe cadence unchanged, existing1000ps rolling storage reused. J=.075:
+    test amplitude relaxation; J=.055: inspect late dynamics without assuming local
+    phase ambiguity resolves.'
+- id: Jspot_TETM_J0p07500_fill2h
+  name: Jspot_TETM_J0p07500_fill2h
+  source: production_C1_spot
+  final_ps: 4500.0
+  retain_ps: 1000.0
+  priority: 110
+  parameters:
+    physical:
+      J: 0.075
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+    save:
+      probe: 1.25
+  note: 'User-authorized continuation3000->4500ps from same checkpoint; physical parameters
+    and1.25ps probe cadence unchanged, existing1000ps rolling storage reused. J=.075:
+    test amplitude relaxation; J=.055: inspect late dynamics without assuming local
+    phase ambiguity resolves.'
+- id: Jspot_noTETM_J0p07500_fill2h
+  name: Jspot_noTETM_J0p07500_fill2h
+  source: production_J1_spot
+  final_ps: 4500.0
+  retain_ps: 1000.0
+  priority: 110
+  parameters:
+    physical:
+      J: 0.075
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+    save:
+      probe: 1.25
+  note: 'User-authorized continuation3000->4500ps from same checkpoint; physical parameters
+    and1.25ps probe cadence unchanged, existing1000ps rolling storage reused. J=.075:
+    test amplitude relaxation; J=.055: inspect late dynamics without assuming local
+    phase ambiguity resolves.'
+- id: Jspot_TETM_J0p10000_fill2h
+  name: Jspot_TETM_J0p10000_fill2h
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 1000.0
+  priority: 103
+  parameters:
+    physical:
+      J: 0.1
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+    save:
+      probe: 1.25
+  note: 'Two-hour fill: prioritize bounded-phase interval and stationary branch. Independent
+    t=0 seed, unchanged pump. Dense1.25ps probes in last1000ps; no automatic extension;
+    preserve unresolved status if windows insufficient.'
+- id: Jspot_noTETM_J0p10000_fill2h
+  name: Jspot_noTETM_J0p10000_fill2h
+  source: production_J1_spot
+  final_ps: 3000.0
+  retain_ps: 1000.0
+  priority: 103
+  parameters:
+    physical:
+      J: 0.1
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+    save:
+      probe: 1.25
+  note: 'Two-hour fill: prioritize bounded-phase interval and stationary branch. Independent
+    t=0 seed, unchanged pump. Dense1.25ps probes in last1000ps; no automatic extension;
+    preserve unresolved status if windows insufficient.'
+- id: Jspot_TETM_J0p07000_transition3
+  name: Jspot_TETM_J0p07000_transition3
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 800.0
+  priority: 120
+  parameters:
+    physical:
+      J: 0.07
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+    save:
+      probe: 2.5
+  note: TE-TM-only transition fill. Independent t=0 preparation; 2.5ps complex probes,
+    initial800ps rolling retention. No beta0 duplicate, no automatic extension.
+- id: Jspot_TETM_J0p05000_transition3
+  name: Jspot_TETM_J0p05000_transition3
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 800.0
+  priority: 121
+  parameters:
+    physical:
+      J: 0.05
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+    save:
+      probe: 2.5
+  note: TE-TM-only transition fill. Independent t=0 preparation; 2.5ps complex probes,
+    initial800ps rolling retention. No beta0 duplicate, no automatic extension.
+- id: Jspot_TETM_J0p04500_transition3
+  name: Jspot_TETM_J0p04500_transition3
+  source: production_C1_spot
+  final_ps: 3000.0
+  retain_ps: 800.0
+  priority: 122
+  parameters:
+    physical:
+      J: 0.045
+    space:
+      N: 256
+      L: 256.0
+    time:
+      dt: 0.025
+    execution:
+      precision: complex128
+    save:
+      probe: 2.5
+  note: TE-TM-only transition fill. Independent t=0 preparation; 2.5ps complex probes,
+    initial800ps rolling retention. No beta0 duplicate, no automatic extension.
+comparisons: []

@@ -1,0 +1,256 @@
+{
+  "config": {
+    "model": "M3",
+    "reservoir": "R1",
+    "physical": {
+      "hbar": 0.6582119569,
+      "mass_over_me": 5.63e-05,
+      "gC": 0.0024,
+      "gR": 0.0048,
+      "gA": 0.0048,
+      "eta": 9.8,
+      "R": 0.021,
+      "gammaC": 0.182,
+      "gammaA": 0.05,
+      "alpha1": 0.0024,
+      "alpha2": -0.00024,
+      "GammaA": 0.1,
+      "GammaI": 0.1,
+      "J": 0.0,
+      "beta": 0.0
+    },
+    "reservoirs": {
+      "R1": {
+        "W": 0.1020408163265306,
+        "gammaI": 0.0018181818181818182,
+        "gI": 0.0048
+      },
+      "R2": {
+        "W": 0.05,
+        "gammaI": 0.0018181818181818182,
+        "gI": 0.002352
+      }
+    },
+    "pump": {
+      "kind": "gaussian",
+      "s": 1.5,
+      "epsilon": 0.3,
+      "P0": 13.799999999999999,
+      "d": 2.5,
+      "r0": 10.0,
+      "off_time": null
+    },
+    "initial": {
+      "density_0d": 0.0001,
+      "density_2d": 0.0001,
+      "theta": 0.0,
+      "seed": 20261008,
+      "kind": "radial"
+    },
+    "space": {
+      "N": 256,
+      "L": 128.0
+    },
+    "time": {
+      "dt": 0.025,
+      "final": 400.0,
+      "sample": 0.5
+    },
+    "ode": {
+      "rtol": 2e-11,
+      "atol": 2e-13,
+      "max_step": 2.0
+    },
+    "save": {
+      "observable": 0.25,
+      "core": 20.0,
+      "checkpoint": 200.0,
+      "diagnostic": 20.0,
+      "angular": 1.0,
+      "probe": 5.0
+    },
+    "execution": {
+      "fft_workers": 1,
+      "local_workers": 1,
+      "backend": "xpu"
+    },
+    "analysis": {
+      "min_window": 200.0,
+      "max_final": 6000.0,
+      "high_k_cut": 0.7,
+      "edge_limit": 1e-05
+    }
+  },
+  "metadata": {
+    "signature": "c6f8e10cd518ce201b0466d1c8ad003946a846800cb8a732e9ad509cdd03be25",
+    "source_sha256": "31ea10c71c711ef296bc02ac4cb41290dc1536d8ef2120de9fffded347958a74",
+    "derived": {
+      "hbar": 0.6582119569,
+      "mass_over_me": 5.63e-05,
+      "gC": 0.0024,
+      "gR": 0.0048,
+      "gA": 0.0048,
+      "eta": 9.8,
+      "R": 0.021,
+      "gammaC": 0.182,
+      "gammaA": 0.05,
+      "alpha1": 0.0024,
+      "alpha2": -0.00024,
+      "GammaA": 0.1,
+      "GammaI": 0.1,
+      "J": 0.0,
+      "beta": 0.0,
+      "W": 0.1020408163265306,
+      "gammaI": 0.0018181818181818182,
+      "gI": 0.0048,
+      "model": "M3",
+      "spins": 2,
+      "K": 0.6767286181172291,
+      "Pth": 0.43333333333333335,
+      "nAth": 8.666666666666666,
+      "tauI": 9.628438728117185,
+      "injection_ratio": 1.0178181818181817
+    },
+    "backend": "torch-xpu",
+    "torch": "2.14.1+xpu",
+    "device": "Intel(R) Arc(TM) Graphics",
+    "precision": "complex128/float64",
+    "compiled_local": true,
+    "initial_kind": "radial_linearly_x_polarized",
+    "initial_NC": 0.0019634954084936204,
+    "PA_integrals": [
+      152.64213305629409,
+      82.19191779954295
+    ],
+    "Pin_integrals": [
+      155.3619383362062,
+      83.65642833488025
+    ],
+    "roi_limits_um": [
+      5.0,
+      15.0
+    ],
+    "roi_sector_node_counts": [
+      46,
+      33,
+      36,
+      36,
+      33,
+      35,
+      36,
+      35,
+      28,
+      42,
+      35,
+      36,
+      35,
+      33,
+      36,
+      36,
+      33,
+      25,
+      46,
+      33,
+      36,
+      36,
+      33,
+      35,
+      36,
+      35,
+      28,
+      42,
+      35,
+      36,
+      35,
+      33,
+      36,
+      36,
+      33,
+      25,
+      46,
+      33,
+      36,
+      36,
+      33,
+      35,
+      36,
+      35,
+      28,
+      42,
+      35,
+      36,
+      35,
+      33,
+      36,
+      36,
+      33,
+      25,
+      46,
+      33,
+      36,
+      36,
+      33,
+      35,
+      36,
+      35,
+      28,
+      42,
+      35,
+      36,
+      35,
+      33,
+      36,
+      36,
+      33,
+      25
+    ],
+    "method": "exact kinetic+TE-TM half / joint local RK4 / exact half",
+    "Stokes": "S2=2 Im(conj(psi_plus)*psi_minus); Si unnormalized; si=Si/S0",
+    "units": {
+      "length": "um",
+      "time": "ps",
+      "energy": "meV",
+      "density": "um^-2"
+    },
+    "thermal_stop": false,
+    "merged_adjacent_FFT_half_steps": true
+  },
+  "summary": {
+    "run_status": "RUN_COMPLETED",
+    "time_ps": 400.0,
+    "elapsed_wall_s": 84.16654763100087,
+    "NC": [
+      113.61172928547549,
+      95.25221812279749
+    ],
+    "NA": [
+      2009.729651890072,
+      1926.777735681671
+    ],
+    "NI": [
+      1268.6782702789073,
+      1032.6954281082255
+    ],
+    "Z": 0.08790177237620664,
+    "total_balance_relative": 4.407148930423179e-10,
+    "condensate_balance_relative": 4.0888650463486455e-09,
+    "edge_mass_max_late": 0.42254948094810035,
+    "high_k_max_late": 2.687325768710251e-13,
+    "analysis": {
+      "status": "UNRESOLVED",
+      "candidate_period_ps": 53.49999302890887,
+      "window_length_ps": 270.0,
+      "common_interval_ps": [
+        -140.0,
+        400.0
+      ],
+      "windows": [],
+      "reason": "Insufficient full-map history for two required windows"
+    },
+    "nonzero_condensate": true,
+    "late_NC_to_seed": 68920.71568651413,
+    "late_half_NC_ratio": 3.349048252932579,
+    "roi_intensity_fraction": 0.40877921048396587,
+    "numerical_checks": "NEEDS_REVIEW"
+  }
+}

@@ -1,0 +1,282 @@
+[
+  {
+    "status": "RUNNING_PHASE_PERIODIC",
+    "window_ps": [
+      4000.0,
+      6000.0
+    ],
+    "mean_z": 0.3886460860550138,
+    "A_z": 0.6027085333755446,
+    "phase_slope": -0.020069172188026268,
+    "phase_span": 40.20239318263306,
+    "density_settling": {
+      "span_max": 1.9469293965508676,
+      "half_mean_drift_max": 0.02944939384117086,
+      "passed": false
+    },
+    "period_ps": 312.8714927879246,
+    "cycles": 6.392400861383914,
+    "half_periods_ps": [
+      312.8714946760805,
+      312.8714908997687
+    ],
+    "half_amplitudes": [
+      0.6027084436197231,
+      0.6027084109480079
+    ],
+    "period_half_difference": 1.206984944749414e-08,
+    "amplitude_half_difference": 5.4208159132340804e-08,
+    "density_return_error": 1.0952989382862355e-05,
+    "phase_return_error": 3.132731006295486e-05,
+    "J": 0.006,
+    "initial_theta": 1.0
+  },
+  {
+    "status": "RUNNING_PHASE_PERIODIC",
+    "window_ps": [
+      4000.0,
+      6000.0
+    ],
+    "mean_z": 0.3861569646399027,
+    "A_z": 0.6027085366847766,
+    "phase_slope": -0.02006950668933198,
+    "phase_span": 39.74389743866038,
+    "density_settling": {
+      "span_max": 1.9389087939587482,
+      "half_mean_drift_max": 0.031898025385777865,
+      "passed": false
+    },
+    "period_ps": 312.8714950013763,
+    "cycles": 6.392400816160009,
+    "half_periods_ps": [
+      312.87149606881815,
+      312.87149393393446
+    ],
+    "half_amplitudes": [
+      0.6027077221480425,
+      0.6027085366847766
+    ],
+    "period_half_difference": 6.8235161107038115e-09,
+    "amplitude_half_difference": 1.3514604233966024e-06,
+    "density_return_error": 1.0895038770828602e-05,
+    "phase_return_error": 3.046547307880194e-05,
+    "J": 0.006,
+    "initial_theta": 2.0
+  },
+  {
+    "status": "LOCKED_STEADY",
+    "window_ps": [
+      10000.0,
+      12000.0
+    ],
+    "mean_z": 0.6299559643205167,
+    "A_z": 0.0008122474028271487,
+    "phase_slope": 1.0920768735834501e-07,
+    "phase_span": 0.0026723145637808088,
+    "density_settling": {
+      "span_max": 0.0047275960935963465,
+      "half_mean_drift_max": 6.605210612650635e-06,
+      "passed": true
+    },
+    "J": 0.007,
+    "initial_theta": 1.0
+  },
+  {
+    "status": "LOCKED_STEADY",
+    "window_ps": [
+      10000.0,
+      12000.0
+    ],
+    "mean_z": 0.6299542021601356,
+    "A_z": 0.0008030729136978554,
+    "phase_slope": 1.0179182204529725e-07,
+    "phase_span": 0.0026069456347666,
+    "density_settling": {
+      "span_max": 0.004676938385180511,
+      "half_mean_drift_max": 3.6689390475925356e-06,
+      "passed": true
+    },
+    "J": 0.007,
+    "initial_theta": 2.0
+  },
+  {
+    "status": "LOCKED_STEADY",
+    "window_ps": [
+      16000.0,
+      18000.0
+    ],
+    "mean_z": 0.4227139744660854,
+    "A_z": 8.36225533262791e-12,
+    "phase_slope": 3.0131223908198322e-18,
+    "phase_span": 3.0233593406592263e-12,
+    "density_settling": {
+      "span_max": 9.988228878120766e-11,
+      "half_mean_drift_max": 3.1172875429799614e-15,
+      "passed": true
+    },
+    "phase_valid_fraction": 1.0,
+    "J": 0.0115,
+    "final_ps": 18000.0,
+    "stored_final_ps": 18000.0,
+    "z_min": 0.42271397445564013,
+    "z_max": 0.42271397447236464,
+    "density_mean": [
+      3.33536613664096,
+      1.3533712996981346
+    ],
+    "balance": {
+      "absolute": 6.686746112904984e-05,
+      "denominator": 63472.57951208568,
+      "relative": 1.0534857987978534e-09,
+      "population_change": 39.274966501406766,
+      "plus": {
+        "absolute": 4.54303483721219e-09,
+        "denominator": 465.2579566422403,
+        "relative": 9.764550551696535e-12
+      },
+      "status": "PASS"
+    },
+    "minimum_active": 0.0,
+    "minimum_inactive": 0.0,
+    "plot_mean_z": 0.4227139744660854,
+    "mean_phase_drift": 3.0131223908198322e-18,
+    "mean_method": "full observation window",
+    "initial_theta": 1.0,
+    "protocol": "independent start near polarization reversal"
+  },
+  {
+    "status": "LOCKED_STEADY",
+    "window_ps": [
+      16000.0,
+      18000.0
+    ],
+    "mean_z": 0.422713974466085,
+    "A_z": 8.359091197007729e-12,
+    "phase_slope": 1.797987780844187e-18,
+    "phase_span": 3.027800232757727e-12,
+    "density_settling": {
+      "span_max": 9.992122924466969e-11,
+      "half_mean_drift_max": 4.260658090602809e-15,
+      "passed": true
+    },
+    "phase_valid_fraction": 1.0,
+    "J": 0.0115,
+    "final_ps": 18000.0,
+    "stored_final_ps": 18000.0,
+    "z_min": 0.4227139744556415,
+    "z_max": 0.4227139744723597,
+    "density_mean": [
+      3.3353661366409746,
+      1.3533712996981333
+    ],
+    "balance": {
+      "absolute": 6.686747458672926e-05,
+      "denominator": 63472.579512085664,
+      "relative": 1.0534860108213687e-09,
+      "population_change": 39.27496650140573,
+      "plus": {
+        "absolute": 3.695168171446994e-09,
+        "denominator": 460.38411049237516,
+        "relative": 8.026272165420864e-12
+      },
+      "status": "PASS"
+    },
+    "minimum_active": 0.0,
+    "minimum_inactive": 0.0,
+    "plot_mean_z": 0.422713974466085,
+    "mean_phase_drift": 1.797987780844187e-18,
+    "mean_method": "full observation window",
+    "initial_theta": 2.0,
+    "protocol": "independent start near polarization reversal"
+  },
+  {
+    "status": "LOCKED_STEADY",
+    "window_ps": [
+      16000.0,
+      18000.0
+    ],
+    "mean_z": 0.42241123147519755,
+    "A_z": 8.346157098770846e-12,
+    "phase_slope": -5.97554714441844e-19,
+    "phase_span": 3.034905660115328e-12,
+    "density_settling": {
+      "span_max": 9.982515452208017e-11,
+      "half_mean_drift_max": 7.95543001396536e-15,
+      "passed": true
+    },
+    "phase_valid_fraction": 1.0,
+    "J": 0.01151,
+    "final_ps": 18000.0,
+    "stored_final_ps": 18000.0,
+    "z_min": 0.42241123146479725,
+    "z_max": 0.42241123148148957,
+    "density_mean": [
+      3.334766195697212,
+      1.3541256267312272
+    ],
+    "balance": {
+      "absolute": 6.686739129690977e-05,
+      "denominator": 63472.57991966502,
+      "relative": 1.053484691839239e-09,
+      "population_change": 39.27455892213311,
+      "plus": {
+        "absolute": 4.5511510116114096e-09,
+        "denominator": 464.85980537103876,
+        "relative": 9.790373267438775e-12
+      },
+      "status": "PASS"
+    },
+    "minimum_active": 0.0,
+    "minimum_inactive": 0.0,
+    "plot_mean_z": 0.42241123147519755,
+    "mean_phase_drift": -5.97554714441844e-19,
+    "mean_method": "full observation window",
+    "initial_theta": 1.0,
+    "protocol": "independent start near polarization reversal"
+  },
+  {
+    "status": "LOCKED_STEADY",
+    "window_ps": [
+      16000.0,
+      18000.0
+    ],
+    "mean_z": 0.4224112314751991,
+    "A_z": 8.358730374524725e-12,
+    "phase_slope": 1.6091174249471313e-18,
+    "phase_span": 3.0162539133016253e-12,
+    "density_settling": {
+      "span_max": 9.991392037276351e-11,
+      "half_mean_drift_max": 2.1440292539282833e-14,
+      "passed": true
+    },
+    "phase_valid_fraction": 1.0,
+    "J": 0.01151,
+    "final_ps": 18000.0,
+    "stored_final_ps": 18000.0,
+    "z_min": 0.4224112314647561,
+    "z_max": 0.4224112314814736,
+    "density_mean": [
+      3.3347661956972376,
+      1.3541256267312307
+    ],
+    "balance": {
+      "absolute": 6.686740293559978e-05,
+      "denominator": 63472.579919665004,
+      "relative": 1.0534848752048758e-09,
+      "population_change": 39.27455892213157,
+      "plus": {
+        "absolute": 3.7065621683041172e-09,
+        "denominator": 459.90950685921246,
+        "relative": 8.059329309404274e-12
+      },
+      "status": "PASS"
+    },
+    "minimum_active": 0.0,
+    "minimum_inactive": 0.0,
+    "plot_mean_z": 0.4224112314751991,
+    "mean_phase_drift": 1.6091174249471313e-18,
+    "mean_method": "full observation window",
+    "initial_theta": 2.0,
+    "protocol": "independent start near polarization reversal"
+  }
+]

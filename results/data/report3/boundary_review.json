@@ -1,0 +1,3610 @@
+{
+  "status": "COMPLETED",
+  "boundary_condition": "periodic FFT; no absorber/filter",
+  "precision256": {
+    "torch_supported": false,
+    "numpy_longdouble_eps": 1.0842021724855044e-19,
+    "caveat": "NumPy complex256 here stores extended-precision components, not IEEE binary128 arithmetic on Arc"
+  },
+  "caveat": "small edge population alone does not exclude boundary-triggered mode selection",
+  "results": {
+    "production_J1_ring": {
+      "time_ps": 3000.0,
+      "boundary_strips_um": {
+        "25.6": {
+          "population_fraction": 2.146426347386135e-06,
+          "component_population_fractions": [
+            1.020202604581985e-06,
+            5.261495281518914e-06
+          ],
+          "peak_over_global_peak": 3.8230974353303567e-07
+        },
+        "10.0": {
+          "population_fraction": 2.702487012461804e-07,
+          "component_population_fractions": [
+            1.0535935632850645e-07,
+            7.263229753008556e-07
+          ],
+          "peak_over_global_peak": 7.909362958066407e-08
+        },
+        "2.0": {
+          "population_fraction": 4.446129819523761e-08,
+          "component_population_fractions": [
+            1.637747010292762e-08,
+            1.2213952243872415e-07
+          ],
+          "peak_over_global_peak": 5.661246276480227e-08
+        }
+      },
+      "boundary_pixels_population_fraction": 1.1070570061554206e-08,
+      "edge_history": [
+        {
+          "interval_ps": [
+            0.0,
+            400.0
+          ],
+          "max_edge_fraction": 5.5632859506854834e-05
+        },
+        {
+          "interval_ps": [
+            400.0,
+            800.0
+          ],
+          "max_edge_fraction": 1.556367435557116e-07
+        },
+        {
+          "interval_ps": [
+            800.0,
+            1600.0
+          ],
+          "max_edge_fraction": 2.7303613828198348e-06
+        },
+        {
+          "interval_ps": [
+            2600.0,
+            3000.0
+          ],
+          "max_edge_fraction": 2.1621420531319745e-06
+        }
+      ]
+    },
+    "production_J1_ring_c64": {
+      "time_ps": 3000.0,
+      "boundary_strips_um": {
+        "25.6": {
+          "population_fraction": 2.992185048631877e-07,
+          "component_population_fractions": [
+            1.4407554773079848e-07,
+            6.882610666711889e-07
+          ],
+          "peak_over_global_peak": 5.584707338236492e-08
+        },
+        "10.0": {
+          "population_fraction": 2.8612578798729008e-08,
+          "component_population_fractions": [
+            1.1185211938026803e-08,
+            7.23141271923828e-08
+          ],
+          "peak_over_global_peak": 7.971794787984844e-09
+        },
+        "2.0": {
+          "population_fraction": 4.304356784675292e-09,
+          "component_population_fractions": [
+            1.5578476217257334e-09,
+            1.1191610840760379e-08
+          ],
+          "peak_over_global_peak": 5.814753144430683e-09
+        }
+      },
+      "boundary_pixels_population_fraction": 6.315318890473047e-10,
+      "edge_history": [
+        {
+          "interval_ps": [
+            0.0,
+            400.0
+          ],
+          "max_edge_fraction": 5.5622502259211615e-05
+        },
+        {
+          "interval_ps": [
+            400.0,
+            800.0
+          ],
+          "max_edge_fraction": 2.6232903564959997e-06
+        },
+        {
+          "interval_ps": [
+            800.0,
+            1600.0
+          ],
+          "max_edge_fraction": 2.039538912868011e-06
+        },
+        {
+          "interval_ps": [
+            2600.0,
+            3000.0
+          ],
+          "max_edge_fraction": 2.993421048813616e-07
+        }
+      ]
+    },
+    "production_A1_spot": {
+      "time_ps": 3000.0,
+      "boundary_strips_um": {
+        "25.6": {
+          "population_fraction": 0.00018257065117427613,
+          "component_population_fractions": [
+            0.00021190815105189448,
+            0.0001461825118755343
+          ],
+          "peak_over_global_peak": 8.717865553203594e-06
+        },
+        "10.0": {
+          "population_fraction": 4.155257339388662e-05,
+          "component_population_fractions": [
+            4.8417536149842514e-05,
+            3.303776394909851e-05
+          ],
+          "peak_over_global_peak": 3.5880703369989754e-06
+        },
+        "2.0": {
+          "population_fraction": 6.58541119055203e-06,
+          "component_population_fractions": [
+            7.807835544886021e-06,
+            5.069203338034297e-06
+          ],
+          "peak_over_global_peak": 3.4037721564188986e-06
+        }
+      },
+      "boundary_pixels_population_fraction": 3.1742660782786936e-06,
+      "edge_history": [
+        {
+          "interval_ps": [
+            0.0,
+            400.0
+          ],
+          "max_edge_fraction": 0.040276635541275765
+        },
+        {
+          "interval_ps": [
+            400.0,
+            800.0
+          ],
+          "max_edge_fraction": 0.00018293084530629435
+        },
+        {
+          "interval_ps": [
+            800.0,
+            1600.0
+          ],
+          "max_edge_fraction": 0.00018257065156359844
+        },
+        {
+          "interval_ps": [
+            2600.0,
+            3000.0
+          ],
+          "max_edge_fraction": 0.0001825706511742784
+        }
+      ]
+    },
+    "production_A1_spot_c64": {
+      "time_ps": 3000.0,
+      "boundary_strips_um": {
+        "25.6": {
+          "population_fraction": 0.0001825205345859443,
+          "component_population_fractions": [
+            0.00021184744672808964,
+            0.00014614834640717998
+          ],
+          "peak_over_global_peak": 8.718319909757781e-06
+        },
+        "10.0": {
+          "population_fraction": 4.154055249732588e-05,
+          "component_population_fractions": [
+            4.840323789222359e-05,
+            3.302922735729612e-05
+          ],
+          "peak_over_global_peak": 3.58872874833652e-06
+        },
+        "2.0": {
+          "population_fraction": 6.583393661499775e-06,
+          "component_population_fractions": [
+            7.80545945300747e-06,
+            5.067748007429241e-06
+          ],
+          "peak_over_global_peak": 3.4047314177804813e-06
+        }
+      },
+      "boundary_pixels_population_fraction": 3.173265224208932e-06,
+      "edge_history": [
+        {
+          "interval_ps": [
+            0.0,
+            400.0
+          ],
+          "max_edge_fraction": 0.0402701161801815
+        },
+        {
+          "interval_ps": [
+            400.0,
+            800.0
+          ],
+          "max_edge_fraction": 0.00018289056606590748
+        },
+        {
+          "interval_ps": [
+            800.0,
+            1600.0
+          ],
+          "max_edge_fraction": 0.00018252221343573183
+        },
+        {
+          "interval_ps": [
+            2600.0,
+            3000.0
+          ],
+          "max_edge_fraction": 0.0001825216895667836
+        }
+      ]
+    }
+  },
+  "controlled_domain_analysis": {
+    "status": "REVIEW_COMPLETED",
+    "original_queue_preserved": true,
+    "results": {
+      "boundary_J1_ring_seeded_L256": {
+        "charge_history": [
+          {
+            "time_ps": 400.0,
+            "NC": [
+              0.02264016920195478,
+              0.011874687360305324
+            ],
+            "topology": [
+              {
+                "q": 0,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.533949646070574e-17,
+                    "density_min_rel": 0.0037483436799337724,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": 5.300924469105861e-17,
+                    "density_min_rel": 0.06968355594339154,
+                    "q": 0,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -1.766974823035287e-17,
+                    "density_min_rel": 0.09753578380282103,
+                    "q": 0,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.533949646070574e-17,
+                    "density_min_rel": 0.04962290837294838,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -7.067899292141149e-17,
+                    "density_min_rel": 0.02120390642867498,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": 0.00024320385165697904,
+                "Lz_imag_over_hbar_NC": -9.57768612782181e-18
+              },
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": 1.0601848938211722e-16,
+                    "density_min_rel": 0.013918315504518388,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": 1.236882376124701e-16,
+                    "density_min_rel": 0.00041343827186948284,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -1.0,
+                    "density_min_rel": 0.00013087168706931864,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 0.0,
+                    "density_min_rel": 3.7064596222950545e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 3.533949646070574e-17,
+                    "density_min_rel": 0.0039351874572000995,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": 0.000526801668454885,
+                "Lz_imag_over_hbar_NC": -5.421153588137214e-18
+              }
+            ]
+          },
+          {
+            "time_ps": 600.0,
+            "NC": [
+              270.93033563900644,
+              268.7356675907392
+            ],
+            "topology": [
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -1.0000000000000004,
+                    "density_min_rel": 6.944939079270143e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": 0.0,
+                    "density_min_rel": 4.470879315456358e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": 1.0000000000000002,
+                    "density_min_rel": 4.017922604207881e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 1.0000000000000002,
+                    "density_min_rel": 5.543032960914926e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 1.0,
+                    "density_min_rel": 7.447911810863895e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": 0.0018473334007048643,
+                "Lz_imag_over_hbar_NC": -1.4752142388277967e-17
+              },
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -2.8271597168564594e-16,
+                    "density_min_rel": 8.471094416621345e-07,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -2.1203697876423444e-16,
+                    "density_min_rel": 9.506926281995308e-07,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -1.4135798584282297e-16,
+                    "density_min_rel": 3.219856476457162e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 1.0000000000000002,
+                    "density_min_rel": 3.354995200786271e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 0.9999999999999999,
+                    "density_min_rel": 2.8834862279233305e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": 0.003686609697206648,
+                "Lz_imag_over_hbar_NC": -8.262565476168417e-18
+              }
+            ]
+          },
+          {
+            "time_ps": 800.0,
+            "NC": [
+              425.34571364322073,
+              131.82660191202496
+            ],
+            "topology": [
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -1.4135798584282297e-16,
+                    "density_min_rel": 4.68938309349649e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": 0.0,
+                    "density_min_rel": 1.0367181562648182e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": 0.0,
+                    "density_min_rel": 3.229492617766093e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 0.0,
+                    "density_min_rel": 3.497419765944099e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 1.4135798584282297e-16,
+                    "density_min_rel": 2.1643245893323934e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": 0.011711712596631682,
+                "Lz_imag_over_hbar_NC": 8.352531987146135e-18
+              },
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": 1.0000000000000002,
+                    "density_min_rel": 7.803784024096452e-07,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": 1.0,
+                    "density_min_rel": 2.820822462415896e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": 1.0000000000000002,
+                    "density_min_rel": 1.4965348459601632e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 0.0,
+                    "density_min_rel": 9.711984256850902e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 0.9999999999999999,
+                    "density_min_rel": 8.105163223290613e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -0.00030522067667307617,
+                "Lz_imag_over_hbar_NC": -1.6843687215211215e-18
+              }
+            ]
+          },
+          {
+            "time_ps": 1000.0,
+            "NC": [
+              401.4121683258285,
+              137.65879006857062
+            ],
+            "topology": [
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -0.9999999999999997,
+                    "density_min_rel": 3.6215398015416135e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -1.0,
+                    "density_min_rel": 3.366188820273192e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -0.9999999999999997,
+                    "density_min_rel": 4.830140876529948e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 1.4135798584282297e-16,
+                    "density_min_rel": 2.585102593819858e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 2.8271597168564594e-16,
+                    "density_min_rel": 1.989616218038623e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -0.07217105787654551,
+                "Lz_imag_over_hbar_NC": -1.3275807109751381e-17
+              },
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -1.0000000000000002,
+                    "density_min_rel": 7.043998469760642e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -1.0000000000000002,
+                    "density_min_rel": 0.0003389980396554818,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -0.9999999999999999,
+                    "density_min_rel": 0.00042938440421134066,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -1.0,
+                    "density_min_rel": 0.0002592210992359246,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -0.9999999999999997,
+                    "density_min_rel": 0.0001093923614193076,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -0.15532114647559808,
+                "Lz_imag_over_hbar_NC": -1.532356739251486e-17
+              }
+            ]
+          },
+          {
+            "time_ps": 1200.0,
+            "NC": [
+              335.072932923679,
+              238.33830048199158
+            ],
+            "topology": [
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.0010741819353213822,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -2.0000000000000004,
+                    "density_min_rel": 3.734367383478383e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -1.0,
+                    "density_min_rel": 0.005839590746378387,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -0.9999999999999999,
+                    "density_min_rel": 0.0036249694480854563,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -1.0,
+                    "density_min_rel": 0.0010315249289903163,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -1.1730078670619468,
+                "Lz_imag_over_hbar_NC": 3.9760526698635016e-17
+              },
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -2.0,
+                    "density_min_rel": 8.079734548479923e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": 0.0,
+                    "density_min_rel": 0.0012783832922619517,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -2.1203697876423444e-16,
+                    "density_min_rel": 0.00550954709625453,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 3.5339496460705744e-16,
+                    "density_min_rel": 0.006651043458018702,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -1.4135798584282297e-16,
+                    "density_min_rel": 0.004612580181946666,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -0.29575178540064206,
+                "Lz_imag_over_hbar_NC": -1.1179635223175989e-17
+              }
+            ]
+          },
+          {
+            "time_ps": 1400.0,
+            "NC": [
+              444.07074959748667,
+              285.09296632521284
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.05406928028134741,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.18348685122000527,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.18172928524233803,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0000000000000004,
+                    "density_min_rel": 0.09815694396581219,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.049850198749958934,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.512887026410944,
+                "Lz_imag_over_hbar_NC": 0.0
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.07101437231942442,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.29803722181318854,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.3404480854976161,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.2005421011157412,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.10212492958462353,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.8244697594675805,
+                "Lz_imag_over_hbar_NC": 6.2307985437070195e-18
+              }
+            ]
+          },
+          {
+            "time_ps": 1600.0,
+            "NC": [
+              532.0149464974097,
+              224.23105993051934
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.1505894244268013,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5911231428326944,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.6842026724863969,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.4265550076410828,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.23842072727085759,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.9676171541343357,
+                "Lz_imag_over_hbar_NC": 8.86901371046328e-18
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.10092785844680367,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.40919891522562646,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5038417198344188,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.33198020589709576,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.18835523455620384,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.8937663085631558,
+                "Lz_imag_over_hbar_NC": 6.281892717849336e-18
+              }
+            ]
+          },
+          {
+            "time_ps": 1800.0,
+            "NC": [
+              553.4437904711781,
+              196.58472598369656
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.18432334186911797,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0000000000000004,
+                    "density_min_rel": 0.7253738812609917,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.8483956946613822,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5322591618304443,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.2970551129401812,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.9961281468604284,
+                "Lz_imag_over_hbar_NC": 1.1334050895740972e-17
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.1319838332252674,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5478605038813769,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.6899801574090967,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.4612430998853331,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.2635868014484052,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.9617431641671,
+                "Lz_imag_over_hbar_NC": 2.011941418864422e-17
+              }
+            ]
+          },
+          {
+            "time_ps": 1900.0,
+            "NC": [
+              524.4518121088181,
+              232.3365795286293
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.18766595577727999,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.7379191581176101,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.8640486033946821,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5421210014447012,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0000000000000004,
+                    "density_min_rel": 0.30253595260515687,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.9975037366705917,
+                "Lz_imag_over_hbar_NC": 5.1864563102458176e-18
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.14947919843191537,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0000000000000004,
+                    "density_min_rel": 0.6196446365769345,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.7797829114909824,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5222354199587053,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.29776965928846444,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.9841082414870534,
+                "Lz_imag_over_hbar_NC": 2.1503301894816697e-18
+              }
+            ]
+          },
+          {
+            "time_ps": 2000.0,
+            "NC": [
+              546.2707807136896,
+              203.82763352213323
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.19260504365587025,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.7598147759342171,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.891544864945568,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5593848027045369,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.3122371673122955,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.9988991167263923,
+                "Lz_imag_over_hbar_NC": 1.2194205480014986e-18
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.15795995626760992,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.652741207026419,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.8220006677058854,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5506230887722743,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.3136321939358196,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.9912139162198974,
+                "Lz_imag_over_hbar_NC": 9.259682356356355e-18
+              }
+            ],
+            "independent_square_contours": [
+              {
+                "component": 0,
+                "halfside_um": 4.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.19996451772200194,
+                "max_phase_increment": 0.3816195126433646
+              },
+              {
+                "component": 0,
+                "halfside_um": 6.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.7845931533762306,
+                "max_phase_increment": 0.2578747825351864
+              },
+              {
+                "component": 0,
+                "halfside_um": 8.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.38682275888346546,
+                "max_phase_increment": 0.1974828528735435
+              },
+              {
+                "component": 0,
+                "halfside_um": 10.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.18326628509864376,
+                "max_phase_increment": 0.27580602024896805
+              },
+              {
+                "component": 1,
+                "halfside_um": 4.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.1701357561100291,
+                "max_phase_increment": 0.38936220961503426
+              },
+              {
+                "component": 1,
+                "halfside_um": 6.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.6920592042246289,
+                "max_phase_increment": 0.2657793964472431
+              },
+              {
+                "component": 1,
+                "halfside_um": 8.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.3864314276684626,
+                "max_phase_increment": 0.20485358748148907
+              },
+              {
+                "component": 1,
+                "halfside_um": 10.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.1827367649526127,
+                "max_phase_increment": 0.27721127947472657
+              }
+            ]
+          }
+        ],
+        "late_windows": [
+          {
+            "interval_ps": [
+              1600.0,
+              1800.0
+            ],
+            "population_mean": [
+              539.1760037943118,
+              212.3665105202719,
+              6639.409620916011,
+              6549.209850138104,
+              4301.810530024008,
+              3501.644326237972
+            ],
+            "population_span_relative": [
+              0.10624142394472123,
+              0.34602165617179176,
+              0.0047103266343479855,
+              0.010226380517868382,
+              0.0,
+              0.0
+            ],
+            "population_half_mean_drift_relative": [
+              0.048028089243813424,
+              0.1674986679322207,
+              0.0013263883730182668,
+              0.0053302318981621605,
+              0.0,
+              0.0
+            ],
+            "edge_fraction_max": 3.0433663058808554e-07
+          },
+          {
+            "interval_ps": [
+              1800.0,
+              2000.0
+            ],
+            "population_mean": [
+              539.8752243129804,
+              212.3969143657036,
+              6637.716376046757,
+              6548.775230238247,
+              4301.810530024008,
+              3501.644326237972
+            ],
+            "population_span_relative": [
+              0.05734677008370506,
+              0.18760231023224042,
+              0.00265477783750005,
+              0.005525287992516094,
+              0.0,
+              0.0
+            ],
+            "population_half_mean_drift_relative": [
+              0.0044030954415499755,
+              0.026092502637261726,
+              0.00038277760585116123,
+              0.0016876960965942953,
+              0.0,
+              0.0
+            ],
+            "edge_fraction_max": 3.017726817503504e-07
+          }
+        ],
+        "global_edge_max": {
+          "time_ps": 60.0,
+          "fraction": 5.555675338085766e-05,
+          "NC": [
+            8.192829149502867e-06,
+            1.5165396450073351e-05
+          ]
+        },
+        "late_edge_check": "PASS"
+      },
+      "boundary_J1_ring_seeded_L384": {
+        "charge_history": [
+          {
+            "time_ps": 400.0,
+            "NC": [
+              0.022641579691380975,
+              0.011876083111040145
+            ],
+            "topology": [
+              {
+                "q": 0,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": 8.834874115176436e-18,
+                    "density_min_rel": 0.0037472689988388465,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -5.300924469105861e-17,
+                    "density_min_rel": 0.0696635723681602,
+                    "q": 0,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": 1.766974823035287e-17,
+                    "density_min_rel": 0.09750935944323262,
+                    "q": 0,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 0.0,
+                    "density_min_rel": 0.049609062934399234,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 2.1203697876423444e-16,
+                    "density_min_rel": 0.02119823783765635,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -1.754653493684367e-08,
+                "Lz_imag_over_hbar_NC": 4.788544736117641e-18
+              },
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -1.5902773407317583e-16,
+                    "density_min_rel": 0.013915945982758655,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -1.8111491936111694e-16,
+                    "density_min_rel": 0.00041656522525662155,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -1.0,
+                    "density_min_rel": 0.00013125367399856305,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -1.766974823035287e-17,
+                    "density_min_rel": 4.014318736873409e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 1.7669748230352872e-16,
+                    "density_min_rel": 0.003927456710171999,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -1.58903349047167e-08,
+                "Lz_imag_over_hbar_NC": 1.1982194281415672e-17
+              }
+            ]
+          },
+          {
+            "time_ps": 600.0,
+            "NC": [
+              270.91466602748653,
+              268.74042363270047
+            ],
+            "topology": [
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -1.0000000000000002,
+                    "density_min_rel": 6.997941544554731e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": 2.8271597168564594e-16,
+                    "density_min_rel": 4.5458672058111606e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": 1.0,
+                    "density_min_rel": 4.0623347005418066e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 1.0000000000000002,
+                    "density_min_rel": 5.3195942758684685e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 1.0000000000000002,
+                    "density_min_rel": 7.158941453555513e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": 6.104769431355951e-05,
+                "Lz_imag_over_hbar_NC": -2.1309882601428004e-17
+              },
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -2.8271597168564594e-16,
+                    "density_min_rel": 1.0300022406719019e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -7.067899292141149e-17,
+                    "density_min_rel": 1.4571130082833564e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -2.8271597168564594e-16,
+                    "density_min_rel": 3.586222473094695e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 1.0000000000000002,
+                    "density_min_rel": 2.937502545814571e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 1.0,
+                    "density_min_rel": 2.5849216121120487e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": 0.00013358607707566393,
+                "Lz_imag_over_hbar_NC": -4.131209624580141e-17
+              }
+            ]
+          },
+          {
+            "time_ps": 800.0,
+            "NC": [
+              425.3455058607342,
+              131.81593799997012
+            ],
+            "topology": [
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": 1.4135798584282297e-16,
+                    "density_min_rel": 4.209534533769715e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -2.8271597168564594e-16,
+                    "density_min_rel": 1.933706098678774e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": 0.0,
+                    "density_min_rel": 3.786696603144754e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 1.4135798584282297e-16,
+                    "density_min_rel": 3.629530026817563e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -1.4135798584282297e-16,
+                    "density_min_rel": 2.7647511059093266e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -0.003042862324312491,
+                "Lz_imag_over_hbar_NC": -2.505760820214513e-17
+              },
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -5.654319433712919e-16,
+                    "density_min_rel": 1.1220467055172823e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": 2.8271597168564594e-16,
+                    "density_min_rel": 3.895116019151787e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -1.4135798584282297e-16,
+                    "density_min_rel": 8.22920693740397e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 1.4135798584282297e-16,
+                    "density_min_rel": 1.2174968491932374e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 2.8271597168564594e-16,
+                    "density_min_rel": 3.372143618570294e-06,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -0.007448564392116084,
+                "Lz_imag_over_hbar_NC": -1.8529554856833005e-17
+              }
+            ]
+          },
+          {
+            "time_ps": 1000.0,
+            "NC": [
+              401.3964246457492,
+              137.59507061430148
+            ],
+            "topology": [
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -1.0,
+                    "density_min_rel": 1.3200858376192429e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -1.0,
+                    "density_min_rel": 0.00013949436648447907,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -0.9999999999999996,
+                    "density_min_rel": 0.00016923316753472201,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -1.0000000000000002,
+                    "density_min_rel": 7.494237327157137e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -1.0,
+                    "density_min_rel": 2.886039180988954e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -0.06022390292476194,
+                "Lz_imag_over_hbar_NC": -8.850885211386559e-18
+              },
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -0.9999999999999997,
+                    "density_min_rel": 1.5660415134407494e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -1.0,
+                    "density_min_rel": 5.478870209533022e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -1.0,
+                    "density_min_rel": 3.795604358196471e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -1.0000000000000002,
+                    "density_min_rel": 2.6874096880194368e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -1.0000000000000002,
+                    "density_min_rel": 1.4259687763573957e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -0.0532821719597848,
+                "Lz_imag_over_hbar_NC": 2.803897692953704e-17
+              }
+            ]
+          },
+          {
+            "time_ps": 1200.0,
+            "NC": [
+              334.0009812196164,
+              236.03974368645302
+            ],
+            "topology": [
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.00026053398536958835,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -1.0,
+                    "density_min_rel": 0.001007032589342014,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -1.0000000000000002,
+                    "density_min_rel": 0.0049944806767996675,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -0.9999999999999997,
+                    "density_min_rel": 0.0010163466895288687,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -1.0,
+                    "density_min_rel": 0.00021345142929545555,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -0.9025927472127719,
+                "Lz_imag_over_hbar_NC": 2.127367210615754e-17
+              },
+              {
+                "q": null,
+                "status": "UNDEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -2.1203697876423444e-16,
+                    "density_min_rel": 1.867431986899722e-05,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": 2.1203697876423444e-16,
+                    "density_min_rel": 0.0002711039160197566,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -2.1203697876423444e-16,
+                    "density_min_rel": 0.0004937430189228146,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 2.1203697876423444e-16,
+                    "density_min_rel": 0.0003726641818170778,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 3.5339496460705744e-16,
+                    "density_min_rel": 0.00016902135144508285,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": 0.05261841994540801,
+                "Lz_imag_over_hbar_NC": 0.0
+              }
+            ]
+          },
+          {
+            "time_ps": 1400.0,
+            "NC": [
+              396.7849477375921,
+              314.87013317391734
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.01906291231801139,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.06255144531402212,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.054111512991755865,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.025058676729975336,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.011697077978271166,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  }
+                ],
+                "Lz_over_hbar_NC": -1.8063084985008546,
+                "Lz_imag_over_hbar_NC": 1.1192188927079826e-17
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.038999975609798405,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.1735150331527792,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.20336202820838217,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.11950609889133507,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.06009051623672197,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.517312584131476,
+                "Lz_imag_over_hbar_NC": 3.1028546652613047e-17
+              }
+            ]
+          },
+          {
+            "time_ps": 1600.0,
+            "NC": [
+              505.21508738647026,
+              241.14755876525328
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.10158783898645332,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.393860991148843,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.452186810708328,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0000000000000004,
+                    "density_min_rel": 0.2803014438502996,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.15628895538627038,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.8194953250881145,
+                "Lz_imag_over_hbar_NC": 8.790101897933846e-18
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.04339221266810459,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.17531468088419572,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.21564036724054375,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.14202818115965243,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.0801238570654377,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.4170773265857535,
+                "Lz_imag_over_hbar_NC": 1.473253014457805e-17
+              }
+            ]
+          },
+          {
+            "time_ps": 1800.0,
+            "NC": [
+              565.1226220364026,
+              181.50085339662388
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.1573202851339169,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.6207780520949705,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.7251359212301003,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.4551599680680392,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.25340953074756467,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.974343560926876,
+                "Lz_imag_over_hbar_NC": -2.7503981859269783e-18
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.07245727186951352,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.30197600311973655,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.3749618443951551,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.25082677037924184,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.14260127966329902,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.7040768437866727,
+                "Lz_imag_over_hbar_NC": 2.2020849014503357e-17
+              }
+            ]
+          },
+          {
+            "time_ps": 1900.0,
+            "NC": [
+              500.2016312929197,
+              258.75097063401864
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.16032395620157658,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0000000000000004,
+                    "density_min_rel": 0.6325895077442114,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.7383690890905091,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.46108125392266525,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.25668627550642253,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.977202268600904,
+                "Lz_imag_over_hbar_NC": 9.322114146994907e-18
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.10824604082153448,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0000000000000004,
+                    "density_min_rel": 0.44689695167598587,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5609176118209771,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.37507316544029434,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.2132074168424757,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.894423349067189,
+                "Lz_imag_over_hbar_NC": 3.5398282490358855e-18
+              }
+            ]
+          },
+          {
+            "time_ps": 2000.0,
+            "NC": [
+              556.3742842090633,
+              188.87458502540736
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.17744802319367672,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.6999744573936166,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.8192311199611995,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.513865895395986,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.2866230452601488,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.9923568208614078,
+                "Lz_imag_over_hbar_NC": 1.057594176711138e-17
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.11750976694012047,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.4884847596462551,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0000000000000004,
+                    "density_min_rel": 0.6118862163317966,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.40876921398570204,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.2323966584898205,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.925797382462891,
+                "Lz_imag_over_hbar_NC": 2.057333751740783e-18
+              }
+            ],
+            "independent_square_contours": [
+              {
+                "component": 0,
+                "halfside_um": 4.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.1881763048551214,
+                "max_phase_increment": 0.3899436073696035
+              },
+              {
+                "component": 0,
+                "halfside_um": 6.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.7277312302028808,
+                "max_phase_increment": 0.26017042493972203
+              },
+              {
+                "component": 0,
+                "halfside_um": 8.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.3554168615099462,
+                "max_phase_increment": 0.20228716866628302
+              },
+              {
+                "component": 0,
+                "halfside_um": 10.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.16818536852811966,
+                "max_phase_increment": 0.2797743199495995
+              },
+              {
+                "component": 1,
+                "halfside_um": 4.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.12439883650913731,
+                "max_phase_increment": 0.46061324978402773
+              },
+              {
+                "component": 1,
+                "halfside_um": 6.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.5007953266050754,
+                "max_phase_increment": 0.30672943436878675
+              },
+              {
+                "component": 1,
+                "halfside_um": 8.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.33110738271578827,
+                "max_phase_increment": 0.2298044754865185
+              },
+              {
+                "component": 1,
+                "halfside_um": 10.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.15672998630220744,
+                "max_phase_increment": 0.2791103045066997
+              }
+            ]
+          }
+        ],
+        "late_windows": [
+          {
+            "interval_ps": [
+              1600.0,
+              1800.0
+            ],
+            "population_mean": [
+              526.2983183521754,
+              219.566915847873,
+              6658.372693515621,
+              6554.046233313888,
+              4301.810530024008,
+              3501.644326237972
+            ],
+            "population_span_relative": [
+              0.24599423474479498,
+              0.7094466718315575,
+              0.010528347867883531,
+              0.02059530608643555,
+              0.0,
+              0.0
+            ],
+            "population_half_mean_drift_relative": [
+              0.11041920367638036,
+              0.3475752732841664,
+              0.0031115242551325775,
+              0.011461249056964579,
+              0.0,
+              0.0
+            ],
+            "edge_fraction_max": 1.5882409174278414e-10
+          },
+          {
+            "interval_ps": [
+              1800.0,
+              2000.0
+            ],
+            "population_mean": [
+              537.6199551029691,
+              212.23609390511777,
+              6642.564160710776,
+              6552.31580204446,
+              4301.810530024008,
+              3501.644326237972
+            ],
+            "population_span_relative": [
+              0.13421773378725468,
+              0.42903812834761373,
+              0.006022051289816252,
+              0.01248675655055974,
+              0.0,
+              0.0
+            ],
+            "population_half_mean_drift_relative": [
+              0.013985623255238755,
+              0.07452897624857786,
+              0.0007697734097525034,
+              0.004310972265811521,
+              0.0,
+              0.0
+            ],
+            "edge_fraction_max": 1.4972256693740615e-10
+          }
+        ],
+        "global_edge_max": {
+          "time_ps": 80.0,
+          "fraction": 4.630661746842568e-07,
+          "NC": [
+            3.999527061394092e-06,
+            2.277704331622174e-05
+          ]
+        },
+        "late_edge_check": "PASS"
+      },
+      "production_J1_ring": {
+        "charge_history": [
+          {
+            "time_ps": 2000.0,
+            "NC": [
+              470.2076030349811,
+              209.37433280922855
+            ],
+            "topology": [
+              {
+                "q": -4,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -4.000000000000001,
+                    "density_min_rel": 0.024370141748973027,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.2113743430303003,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.40380053391066834,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.3332207819168357,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.2027681699131151,
+                    "q": -4,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -3.6217977372306156,
+                "Lz_imag_over_hbar_NC": 3.4000325497528984e-17
+              },
+              {
+                "q": 4,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": 4.0,
+                    "density_min_rel": 0.020948409699057226,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": 4.0,
+                    "density_min_rel": 0.19624660220374165,
+                    "q": 4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": 4.0,
+                    "density_min_rel": 0.397216117948003,
+                    "q": 4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": 4.0,
+                    "density_min_rel": 0.3500836431320165,
+                    "q": 4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": 4.0,
+                    "density_min_rel": 0.22051612125603962,
+                    "q": 4,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": 3.653796714181604,
+                "Lz_imag_over_hbar_NC": -2.969441790921776e-17
+              }
+            ],
+            "independent_square_contours": [
+              {
+                "component": 0,
+                "halfside_um": 4.0,
+                "q": -4.0,
+                "density_min_over_peak": 0.0300510817205476,
+                "max_phase_increment": 0.6973162748103551
+              },
+              {
+                "component": 0,
+                "halfside_um": 6.0,
+                "q": -4.0,
+                "density_min_over_peak": 0.23409593460339911,
+                "max_phase_increment": 0.48099594946514973
+              },
+              {
+                "component": 0,
+                "halfside_um": 8.0,
+                "q": -4.0,
+                "density_min_over_peak": 0.3406803193746639,
+                "max_phase_increment": 0.3756403210642866
+              },
+              {
+                "component": 0,
+                "halfside_um": 10.0,
+                "q": -4.0,
+                "density_min_over_peak": 0.18186690815617337,
+                "max_phase_increment": 0.362960403697062
+              },
+              {
+                "component": 1,
+                "halfside_um": 4.0,
+                "q": 4.0,
+                "density_min_over_peak": 0.02933044852505018,
+                "max_phase_increment": 0.69724629882092
+              },
+              {
+                "component": 1,
+                "halfside_um": 6.0,
+                "q": 4.0,
+                "density_min_over_peak": 0.21980290708144434,
+                "max_phase_increment": 0.4894318531641079
+              },
+              {
+                "component": 1,
+                "halfside_um": 8.0,
+                "q": 4.0,
+                "density_min_over_peak": 0.3941442553506864,
+                "max_phase_increment": 0.36979608768951117
+              },
+              {
+                "component": 1,
+                "halfside_um": 10.0,
+                "q": 4.0,
+                "density_min_over_peak": 0.23215328922866008,
+                "max_phase_increment": 0.3445051115171654
+              }
+            ]
+          },
+          {
+            "time_ps": 2500.0,
+            "NC": [
+              530.4071527765282,
+              187.65924484955815
+            ],
+            "topology": [
+              {
+                "q": -4,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.044465764587776756,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.3795278273416091,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.7400220905489786,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.6262712737868011,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.38891970648351143,
+                    "q": -4,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -3.962117754835705,
+                "Lz_imag_over_hbar_NC": 1.4128778952151858e-17
+              },
+              {
+                "q": -4,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.02568567200841966,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.229127281141124,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.47794493345954986,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.42871695282543887,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.27475130839246975,
+                    "q": -4,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -3.7811270976757116,
+                "Lz_imag_over_hbar_NC": 1.9819152184460213e-17
+              }
+            ]
+          },
+          {
+            "time_ps": 3000.0,
+            "NC": [
+              526.8208332250327,
+              190.46709499129574
+            ],
+            "topology": [
+              {
+                "q": -4,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.030494437389067045,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.30553872568504054,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.6343272517860354,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.5575932796349268,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.3528060461145498,
+                    "q": -4,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -3.954644828821306,
+                "Lz_imag_over_hbar_NC": 2.191697580640208e-17
+              },
+              {
+                "q": -4,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.021330536432317623,
+                    "q": null,
+                    "status": "UNDEFINED"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.23867386512358826,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.5400695274967681,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.5066464606505755,
+                    "q": -4,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -4.0,
+                    "density_min_rel": 0.3264949867829468,
+                    "q": -4,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -3.924638809068925,
+                "Lz_imag_over_hbar_NC": 1.8652637501311492e-17
+              }
+            ],
+            "independent_square_contours": [
+              {
+                "component": 0,
+                "halfside_um": 4.0,
+                "q": -4.0,
+                "density_min_over_peak": 0.034264959980905625,
+                "max_phase_increment": 0.6600331782513275
+              },
+              {
+                "component": 0,
+                "halfside_um": 6.0,
+                "q": -4.0,
+                "density_min_over_peak": 0.32164248862295886,
+                "max_phase_increment": 0.4061164763589194
+              },
+              {
+                "component": 0,
+                "halfside_um": 8.0,
+                "q": -4.0,
+                "density_min_over_peak": 0.4366839990962675,
+                "max_phase_increment": 0.2949975473860484
+              },
+              {
+                "component": 0,
+                "halfside_um": 10.0,
+                "q": -4.0,
+                "density_min_over_peak": 0.22481935107488346,
+                "max_phase_increment": 0.3385379769220479
+              },
+              {
+                "component": 1,
+                "halfside_um": 4.0,
+                "q": -4.000000000000001,
+                "density_min_over_peak": 0.02527746141367328,
+                "max_phase_increment": 0.7230067259396138
+              },
+              {
+                "component": 1,
+                "halfside_um": 6.0,
+                "q": -4.0,
+                "density_min_over_peak": 0.2592235540484559,
+                "max_phase_increment": 0.4254984422614297
+              },
+              {
+                "component": 1,
+                "halfside_um": 8.0,
+                "q": -4.000000000000001,
+                "density_min_over_peak": 0.43383271844253996,
+                "max_phase_increment": 0.30521840605235084
+              },
+              {
+                "component": 1,
+                "halfside_um": 10.0,
+                "q": -4.0,
+                "density_min_over_peak": 0.2265227665439724,
+                "max_phase_increment": 0.33702376188976163
+              }
+            ]
+          }
+        ]
+      },
+      "production_J1_ring_c64": {
+        "charge_history": [
+          {
+            "time_ps": 2000.0,
+            "NC": [
+              531.3940438512185,
+              224.05637904234163
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.191025814930908,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.7524556755378207,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.8814628552620288,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5530997081581498,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.30862062775430027,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.9983724175884228,
+                "Lz_imag_over_hbar_NC": -1.2431127282956907e-17
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.15728996676835866,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.6535411256950693,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.8238041029083898,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5527733419750914,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.31518208778903667,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.991215233667668,
+                "Lz_imag_over_hbar_NC": -1.3316846373368603e-18
+              }
+            ],
+            "independent_square_contours": [
+              {
+                "component": 0,
+                "halfside_um": 4.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.19734710510390602,
+                "max_phase_increment": 0.3815249879679305
+              },
+              {
+                "component": 0,
+                "halfside_um": 6.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.7753780757514827,
+                "max_phase_increment": 0.25498913913925325
+              },
+              {
+                "component": 0,
+                "halfside_um": 8.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.3832708537528475,
+                "max_phase_increment": 0.19829729006860441
+              },
+              {
+                "component": 0,
+                "halfside_um": 10.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.18146399122439832,
+                "max_phase_increment": 0.27640027537729445
+              },
+              {
+                "component": 1,
+                "halfside_um": 4.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.16126298034895434,
+                "max_phase_increment": 0.3991158388834237
+              },
+              {
+                "component": 1,
+                "halfside_um": 6.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.6673146678521665,
+                "max_phase_increment": 0.2691916135037923
+              },
+              {
+                "component": 1,
+                "halfside_um": 8.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.4160132904283235,
+                "max_phase_increment": 0.20291087633994712
+              },
+              {
+                "component": 1,
+                "halfside_um": 10.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.19723984246468856,
+                "max_phase_increment": 0.27172413910850485
+              }
+            ]
+          },
+          {
+            "time_ps": 2500.0,
+            "NC": [
+              537.4460576534472,
+              216.08084874001602
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.20018844886557632,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.7910093869159655,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.9268667235723692,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5825284592640344,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.3253672575440814,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.9999644702520296,
+                "Lz_imag_over_hbar_NC": 1.1335740137773937e-17
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.17873663820639363,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.7442368075638937,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.9382544627139159,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.6298775898297461,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.3590867305111352,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.9998150138356587,
+                "Lz_imag_over_hbar_NC": 3.1149114445067188e-18
+              }
+            ]
+          },
+          {
+            "time_ps": 3000.0,
+            "NC": [
+              538.4805079276232,
+              214.7360380566012
+            ],
+            "topology": [
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.20156809211574872,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.7966977513554577,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.9341383844434337,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.5872233369235256,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.3280319522562679,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.999999232358756,
+                "Lz_imag_over_hbar_NC": 5.2152314258874076e-18
+              },
+              {
+                "q": -3,
+                "status": "DEFINED",
+                "contours": [
+                  {
+                    "radius_um": 4.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.18217869725495633,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 6.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.7577462443488511,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 8.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.9561994123294858,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 10.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.641731326860912,
+                    "q": -3,
+                    "status": "VALID"
+                  },
+                  {
+                    "radius_um": 12.0,
+                    "raw": -3.0,
+                    "density_min_rel": 0.3658732423886433,
+                    "q": -3,
+                    "status": "VALID"
+                  }
+                ],
+                "Lz_over_hbar_NC": -2.9999962896639505,
+                "Lz_imag_over_hbar_NC": 2.6840481928858808e-17
+              }
+            ],
+            "independent_square_contours": [
+              {
+                "component": 0,
+                "halfside_um": 4.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.20702176562792932,
+                "max_phase_increment": 0.3749323203874739
+              },
+              {
+                "component": 0,
+                "halfside_um": 6.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.8143044163533716,
+                "max_phase_increment": 0.25210659558802695
+              },
+              {
+                "component": 0,
+                "halfside_um": 8.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.40440252992871956,
+                "max_phase_increment": 0.1956549483566914
+              },
+              {
+                "component": 0,
+                "halfside_um": 10.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.1916814863654551,
+                "max_phase_increment": 0.27419352753760234
+              },
+              {
+                "component": 1,
+                "halfside_um": 4.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.18712617893823177,
+                "max_phase_increment": 0.3751853228214844
+              },
+              {
+                "component": 1,
+                "halfside_um": 6.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.7743491931861094,
+                "max_phase_increment": 0.2521986500140727
+              },
+              {
+                "component": 1,
+                "halfside_um": 8.0,
+                "q": -3.0,
+                "density_min_over_peak": 0.449847196723976,
+                "max_phase_increment": 0.19698082885702012
+              },
+              {
+                "component": 1,
+                "halfside_um": 10.0,
+                "q": -3.0000000000000004,
+                "density_min_over_peak": 0.2129404235315513,
+                "max_phase_increment": 0.27094685060812984
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "comparisons": [
+      {
+        "time_ps": 400.0,
+        "common_domain_metrics": {
+          "population_relative": [
+            6.230021258094698e-05,
+            0.00011753988152477927
+          ],
+          "density_relative_L2": [
+            0.0001163750867101893,
+            0.00024039013388470838
+          ],
+          "reservoir_relative_L2": [
+            7.73867698628995e-10,
+            8.35233696814368e-10,
+            0.0,
+            0.0
+          ],
+          "unnormalized_stokes_relative_L2": [
+            7.94511930655642e-05,
+            0.00014097995418396687,
+            0.00011136276741306133
+          ],
+          "normalized_stokes_weighted_RMS": [
+            0.0001205347028299502,
+            0.00011416655403546549,
+            0.00013790594679411957
+          ],
+          "common_phase_aligned_field_relative_L2": 0.00015859789823846097,
+          "raw_field_relative_L2": 0.00016034264949508876,
+          "scaled_state_error": 9.156653924206055e-05
+        },
+        "shape_only_relative_L2_r40": [
+          0.00010243004138959049,
+          0.00020683986069316727
+        ]
+      },
+      {
+        "time_ps": 600.0,
+        "common_domain_metrics": {
+          "population_relative": [
+            5.7839949021666685e-05,
+            1.767823094481728e-05
+          ],
+          "density_relative_L2": [
+            0.00026172992374237484,
+            0.000108516463405645
+          ],
+          "reservoir_relative_L2": [
+            1.0087887843719986e-05,
+            5.358294063347455e-06,
+            0.0,
+            0.0
+          ],
+          "unnormalized_stokes_relative_L2": [
+            0.0002136054356942437,
+            9.986894230654227e-05,
+            9.073925964287629e-05
+          ],
+          "normalized_stokes_weighted_RMS": [
+            0.00014914706123620385,
+            0.00023145646799657785,
+            0.0001738990262395091
+          ],
+          "common_phase_aligned_field_relative_L2": 0.0004054652843591085,
+          "raw_field_relative_L2": 0.0004055390471993334,
+          "scaled_state_error": 0.00023414306097917096
+        },
+        "shape_only_relative_L2_r40": [
+          0.00025574707406929824,
+          0.00010773415978595138
+        ]
+      },
+      {
+        "time_ps": 800.0,
+        "common_domain_metrics": {
+          "population_relative": [
+            5.004586216544916e-07,
+            8.109226511612567e-05
+          ],
+          "density_relative_L2": [
+            0.004713831191917967,
+            0.011582820628962369
+          ],
+          "reservoir_relative_L2": [
+            0.0006434596800709303,
+            0.0007874109381845694,
+            0.0,
+            0.0
+          ],
+          "unnormalized_stokes_relative_L2": [
+            0.007144781176564007,
+            0.002249756086880576,
+            0.0024720807750487567
+          ],
+          "normalized_stokes_weighted_RMS": [
+            0.005562100601412097,
+            0.004916954042405816,
+            0.005053413521808782
+          ],
+          "common_phase_aligned_field_relative_L2": 0.007277413585531838,
+          "raw_field_relative_L2": 0.0072774160200714515,
+          "scaled_state_error": 0.00422200765694489
+        },
+        "shape_only_relative_L2_r40": [
+          0.004713838735186783,
+          0.011583360561147612
+        ]
+      },
+      {
+        "time_ps": 1000.0,
+        "common_domain_metrics": {
+          "population_relative": [
+            3.92348950356247e-05,
+            0.00046293216658297364
+          ],
+          "density_relative_L2": [
+            0.0104461271629166,
+            0.023508238368280646
+          ],
+          "reservoir_relative_L2": [
+            0.0012523498826578871,
+            0.0010379358507297861,
+            0.0,
+            0.0
+          ],
+          "unnormalized_stokes_relative_L2": [
+            0.0123467270247629,
+            0.005533538726411332,
+            0.009291301458117771
+          ],
+          "normalized_stokes_weighted_RMS": [
+            0.012247814918166056,
+            0.007822078475736393,
+            0.011826066587858765
+          ],
+          "common_phase_aligned_field_relative_L2": 0.014156385277018303,
+          "raw_field_relative_L2": 0.014156997040212794,
+          "scaled_state_error": 0.008200214741886694
+        },
+        "shape_only_relative_L2_r40": [
+          0.01044621833883307,
+          0.02350898583374191
+        ]
+      },
+      {
+        "time_ps": 1200.0,
+        "common_domain_metrics": {
+          "population_relative": [
+            0.0031991800554620614,
+            0.009644104493291483
+          ],
+          "density_relative_L2": [
+            0.05798997439894216,
+            0.15446899648383147
+          ],
+          "reservoir_relative_L2": [
+            0.010362964643231384,
+            0.013496081829985344,
+            0.0,
+            0.0
+          ],
+          "unnormalized_stokes_relative_L2": [
+            0.09617130412562816,
+            0.07510661953093584,
+            0.05801039681881513
+          ],
+          "normalized_stokes_weighted_RMS": [
+            0.09340055459762829,
+            0.08630524003775601,
+            0.09489868839474097
+          ],
+          "common_phase_aligned_field_relative_L2": 0.10840700828824423,
+          "raw_field_relative_L2": 0.10840700878127225,
+          "scaled_state_error": 0.06296975046845454
+        },
+        "shape_only_relative_L2_r40": [
+          0.05817802919948621,
+          0.15503793688777337
+        ]
+      },
+      {
+        "time_ps": 1400.0,
+        "common_domain_metrics": {
+          "population_relative": [
+            0.10648259556724957,
+            0.1044472034228622
+          ],
+          "density_relative_L2": [
+            0.4225651194016614,
+            0.26960698239419406
+          ],
+          "reservoir_relative_L2": [
+            0.043429955396927525,
+            0.01795603804566996,
+            0.0,
+            0.0
+          ],
+          "unnormalized_stokes_relative_L2": [
+            0.314773709107475,
+            0.3662786548738928,
+            0.3747688428732842
+          ],
+          "normalized_stokes_weighted_RMS": [
+            0.24693440565224872,
+            0.39383264743466345,
+            0.38635522760697955
+          ],
+          "common_phase_aligned_field_relative_L2": 0.3367207804486046,
+          "raw_field_relative_L2": 0.34049151722195237,
+          "scaled_state_error": 0.19537258948808967
+        },
+        "shape_only_relative_L2_r40": [
+          0.44931820107054143,
+          0.21751234587111473
+        ]
+      },
+      {
+        "time_ps": 1600.0,
+        "common_domain_metrics": {
+          "population_relative": [
+            0.05037426179109016,
+            0.0754422466354598
+          ],
+          "density_relative_L2": [
+            0.20356596964244675,
+            0.3778975977847676
+          ],
+          "reservoir_relative_L2": [
+            0.016767896787002863,
+            0.007465199738551436,
+            0.0,
+            0.0
+          ],
+          "unnormalized_stokes_relative_L2": [
+            0.15404278548415615,
+            0.2649992784036493,
+            0.2566364425223907
+          ],
+          "normalized_stokes_weighted_RMS": [
+            0.15108330634170455,
+            0.27822199925866575,
+            0.2546406802445816
+          ],
+          "common_phase_aligned_field_relative_L2": 0.20662772727961443,
+          "raw_field_relative_L2": 0.2094834346798226,
+          "scaled_state_error": 0.11953429085818179
+        },
+        "shape_only_relative_L2_r40": [
+          0.20858293707300196,
+          0.3432594190626451
+        ]
+      },
+      {
+        "time_ps": 1800.0,
+        "common_domain_metrics": {
+          "population_relative": [
+            0.021102107306247966,
+            0.07672964462239087
+          ],
+          "density_relative_L2": [
+            0.08393631420651881,
+            0.2507570665123772
+          ],
+          "reservoir_relative_L2": [
+            0.006999387511816355,
+            0.005971932776023593,
+            0.0,
+            0.0
+          ],
+          "unnormalized_stokes_relative_L2": [
+            0.0987762257890571,
+            0.1587032459700639,
+            0.1250725579127966
+          ],
+          "normalized_stokes_weighted_RMS": [
+            0.09718058398708712,
+            0.15763809309574564,
+            0.13036869908109835
+          ],
+          "common_phase_aligned_field_relative_L2": 0.1146022070671769,
+          "raw_field_relative_L2": 0.11467598865410931,
+          "scaled_state_error": 0.06627232330621961
+        },
+        "shape_only_relative_L2_r40": [
+          0.07970107329559942,
+          0.26019380821018817
+        ]
+      },
+      {
+        "time_ps": 1900.0,
+        "common_domain_metrics": {
+          "population_relative": [
+            0.046239104029243486,
+            0.11369017839547517
+          ],
+          "density_relative_L2": [
+            0.08439413970647061,
+            0.2083304409207863
+          ],
+          "reservoir_relative_L2": [
+            0.0071660051626161085,
+            0.006447533722871041,
+            0.0,
+            0.0
+          ],
+          "unnormalized_stokes_relative_L2": [
+            0.05343345443933239,
+            0.11105169707739282,
+            0.11928780462929599
+          ],
+          "normalized_stokes_weighted_RMS": [
+            0.03896604506130334,
+            0.1136894045593466,
+            0.12297540285802885
+          ],
+          "common_phase_aligned_field_relative_L2": 0.08854000117376144,
+          "raw_field_relative_L2": 0.0890974397515508,
+          "scaled_state_error": 0.05127011934197308
+        },
+        "shape_only_relative_L2_r40": [
+          0.07532776860343554,
+          0.15578004895391412
+        ]
+      },
+      {
+        "time_ps": 2000.0,
+        "common_domain_metrics": {
+          "population_relative": [
+            0.01849541005708704,
+            0.07336126015026602
+          ],
+          "density_relative_L2": [
+            0.04631817948353406,
+            0.14155363214636862
+          ],
+          "reservoir_relative_L2": [
+            0.004661168795717984,
+            0.0045061943062125855,
+            0.0,
+            0.0
+          ],
+          "unnormalized_stokes_relative_L2": [
+            0.05437246438407908,
+            0.0725377861882142,
+            0.06868682817229632
+          ],
+          "normalized_stokes_weighted_RMS": [
+            0.04624501295731517,
+            0.07395034552380299,
+            0.07360145500696325
+          ],
+          "common_phase_aligned_field_relative_L2": 0.05899606520651526,
+          "raw_field_relative_L2": 0.05939797613604076,
+          "scaled_state_error": 0.03416411328643957
+        },
+        "shape_only_relative_L2_r40": [
+          0.04196214426697207,
+          0.13244084227703135
+        ]
+      }
+    ],
+    "conclusions": {
+      "charge_matches_for_controlled_seed": true,
+      "density_convergence_established": false,
+      "settled_state_established": false,
+      "universal_charge_established": false,
+      "boundary_influence_on_original_radial_seed_excluded": false,
+      "precision_test_with_controlled_seed_completed": false,
+      "main_observation": "original double spin-minus charge changes from +4 at 2000 ps to -4 at 2500/3000 ps; both seeded domain controls have -3/-3 at 2000 ps",
+      "caveat": "changing domain size also changes FFT rounding; matching input seeds does not eliminate all numerical perturbations"
+    }
+  }
+}

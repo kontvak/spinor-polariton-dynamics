@@ -1,0 +1,335 @@
+{
+  "scope": "completed runs only; no time integration; active half-dt run left untouched",
+  "cases": {
+    "charge_J1_seeded_c64_L256_t3000": {
+      "late_stationarity": {
+        "status": "UNRESOLVED",
+        "candidate_period_ps": null,
+        "window_length_ps": 200.0,
+        "common_interval_ps": [
+          2600.0,
+          3000.0
+        ],
+        "windows": [
+          {
+            "interval_ps": [
+              2600.0,
+              2800.0
+            ],
+            "population_span": [
+              0.0060296977235077395,
+              0.01935377371540742,
+              0.0002868458633451582,
+              0.000564867083689953,
+              0.0,
+              0.0
+            ],
+            "population_half_mean_drift": [
+              0.0011073318643623974,
+              0.004627719245772631,
+              4.1989585301134474e-06,
+              0.00021527181670761116,
+              0.0,
+              0.0
+            ],
+            "map_errors": [
+              0.006856032597266869,
+              0.019022734248905337,
+              0.0006408780747704751,
+              0.0004994005706452958,
+              0.0,
+              0.0,
+              0.0060913777008999685,
+              0.013704845633892642,
+              0.010000797649113314
+            ],
+            "density_stationary": false,
+            "polarization_stationary": false,
+            "common_phase_aligned_field_error": 0.008624283181363225,
+            "field_stationary": true
+          },
+          {
+            "interval_ps": [
+              2800.0,
+              3000.0
+            ],
+            "population_span": [
+              0.0030816465064167717,
+              0.010153003665751573,
+              0.00012474646386658307,
+              0.00029833085376199743,
+              0.0,
+              0.0
+            ],
+            "population_half_mean_drift": [
+              0.0007954671888158463,
+              0.0020868512928445115,
+              5.3639407014322574e-05,
+              1.4869601554951483e-05,
+              0.0,
+              0.0
+            ],
+            "map_errors": [
+              0.0037311544263529924,
+              0.011297779843613659,
+              0.000278152605926781,
+              0.00036292055933655545,
+              0.0,
+              0.0,
+              0.0035866982901747607,
+              0.003685716885427862,
+              0.005745639686842994
+            ],
+            "density_stationary": false,
+            "polarization_stationary": true,
+            "common_phase_aligned_field_error": 0.0038829157190733,
+            "field_stationary": true
+          }
+        ],
+        "density_stationary": false,
+        "polarization_stationary": false,
+        "reason": "No repeatable period candidate in measured features"
+      }
+    },
+    "charge_J1_seeded_c128_L256_t3000": {
+      "late_stationarity": {
+        "status": "UNRESOLVED",
+        "candidate_period_ps": null,
+        "window_length_ps": 200.0,
+        "common_interval_ps": [
+          2600.0,
+          3000.0
+        ],
+        "windows": [
+          {
+            "interval_ps": [
+              2600.0,
+              2800.0
+            ],
+            "population_span": [
+              0.003040136618180925,
+              0.010246114573108773,
+              0.00012069176432423131,
+              0.0003296640979251369,
+              0.0,
+              0.0
+            ],
+            "population_half_mean_drift": [
+              0.0011047417836385243,
+              0.0032528370507404402,
+              6.045288186424478e-05,
+              5.765242261933965e-05,
+              0.0,
+              0.0
+            ],
+            "map_errors": [
+              0.004600038136706729,
+              0.01315081216101678,
+              0.0004394142179650577,
+              0.0004634405734235953,
+              0.0,
+              0.0,
+              0.004238304408990847,
+              0.006059925896217873,
+              0.006740991374324981
+            ],
+            "density_stationary": false,
+            "polarization_stationary": true,
+            "common_phase_aligned_field_error": 0.005015611852173725,
+            "field_stationary": true
+          },
+          {
+            "interval_ps": [
+              2800.0,
+              3000.0
+            ],
+            "population_span": [
+              0.0013701161516446643,
+              0.004414977194358924,
+              6.460443149310773e-05,
+              0.0001304081318087198,
+              0.0,
+              0.0
+            ],
+            "population_half_mean_drift": [
+              0.0005902107887036709,
+              0.0020280307632146374,
+              1.7746696081779713e-05,
+              6.561045590338199e-05,
+              0.0,
+              0.0
+            ],
+            "map_errors": [
+              0.00165896424231683,
+              0.004150081221489711,
+              0.00020014766554306152,
+              0.00016975136174040808,
+              0.0,
+              0.0,
+              0.0013467097082687672,
+              0.003919632238009584,
+              0.0021703002926009383
+            ],
+            "density_stationary": true,
+            "polarization_stationary": true,
+            "common_phase_aligned_field_error": 0.0023952841402034466,
+            "field_stationary": true
+          }
+        ],
+        "density_stationary": false,
+        "polarization_stationary": true,
+        "reason": "No repeatable period candidate in measured features"
+      }
+    },
+    "charge_J1_seeded_c128_L384_t3000": {
+      "late_stationarity": {
+        "status": "UNRESOLVED",
+        "candidate_period_ps": null,
+        "window_length_ps": 200.0,
+        "common_interval_ps": [
+          2600.0,
+          3000.0
+        ],
+        "windows": [
+          {
+            "interval_ps": [
+              2600.0,
+              2800.0
+            ],
+            "population_span": [
+              0.007693850725393173,
+              0.025597167977805157,
+              0.0002932418216230219,
+              0.0007966346334317146,
+              0.0,
+              0.0
+            ],
+            "population_half_mean_drift": [
+              0.0023518755730045954,
+              0.006700898849277921,
+              0.000140029965303872,
+              9.45846725776226e-05,
+              0.0,
+              0.0
+            ],
+            "map_errors": [
+              0.012643473143572857,
+              0.03488699910821938,
+              0.001251876600000531,
+              0.0012117631496938047,
+              0.0,
+              0.0,
+              0.011338821462520124,
+              0.015579750745628833,
+              0.018155417866258846
+            ],
+            "density_stationary": false,
+            "polarization_stationary": false,
+            "common_phase_aligned_field_error": 0.01361007950274148,
+            "field_stationary": false
+          },
+          {
+            "interval_ps": [
+              2800.0,
+              3000.0
+            ],
+            "population_span": [
+              0.003273753456782084,
+              0.01055878339994617,
+              0.00015418052889095102,
+              0.0003119738906050444,
+              0.0,
+              0.0
+            ],
+            "population_half_mean_drift": [
+              0.0015155107565691934,
+              0.005109918551680654,
+              5.062407005849078e-05,
+              0.00015622108358682307,
+              0.0,
+              0.0
+            ],
+            "map_errors": [
+              0.004760635061050507,
+              0.012178334180362224,
+              0.0005652664543269873,
+              0.00048033445892342423,
+              0.0,
+              0.0,
+              0.003955124770438988,
+              0.010027099007788936,
+              0.0063751513693758
+            ],
+            "density_stationary": false,
+            "polarization_stationary": false,
+            "common_phase_aligned_field_error": 0.0063827620548106345,
+            "field_stationary": true
+          }
+        ],
+        "density_stationary": false,
+        "polarization_stationary": false,
+        "reason": "No repeatable period candidate in measured features"
+      }
+    }
+  },
+  "comparisons": {
+    "charge_J1_seeded_c64_L256_t3000 vs charge_J1_seeded_c128_L256_t3000": {
+      "population_relative": [
+        0.0007274495159926001,
+        0.0020103238003976068
+      ],
+      "density_relative_L2": [
+        0.001246290806801261,
+        0.003175690474161475
+      ],
+      "reservoir_relative_L2": [
+        0.0001144917111297565,
+        0.00010951352873680238,
+        1.3977888375184864e-05,
+        1.6769468151312507e-05
+      ],
+      "unnormalized_stokes_relative_L2": [
+        0.0009491734876346926,
+        0.0018630932652811416,
+        0.0017239766530782765
+      ],
+      "normalized_stokes_weighted_RMS": [
+        0.0008421295442329537,
+        0.0018679482423527907,
+        0.0017802021014598482
+      ],
+      "common_phase_aligned_field_relative_L2": 0.001400801753536799,
+      "raw_field_relative_L2": 0.20366474180110355,
+      "scaled_state_error": 0.0008113842902763013
+    },
+    "charge_J1_seeded_c128_L384_t3000 vs charge_J1_seeded_c128_L256_t3000": {
+      "population_relative": [
+        0.0005094885439779474,
+        0.0015030287126023454
+      ],
+      "density_relative_L2": [
+        0.0011753675805671045,
+        0.002997677408210006
+      ],
+      "reservoir_relative_L2": [
+        0.0001301967407898095,
+        9.253457532001043e-05,
+        0.0,
+        0.0
+      ],
+      "unnormalized_stokes_relative_L2": [
+        0.0009754383606297854,
+        0.001812384734593852,
+        0.0015945987164403517
+      ],
+      "normalized_stokes_weighted_RMS": [
+        0.0007945988890059356,
+        0.001824417247652932,
+        0.0016396499925827388
+      ],
+      "common_phase_aligned_field_relative_L2": 0.0013524505971189108,
+      "raw_field_relative_L2": 0.013956713133664632,
+      "scaled_state_error": 0.0007835678601577008
+    }
+  }
+}

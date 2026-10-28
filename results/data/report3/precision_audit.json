@@ -1,0 +1,4212 @@
+{
+  "status": "SHORT_AUDIT_COMPLETED",
+  "source_sha256": "d5399b65de221a59832743b8f94bf69bf0de7e9e6e37aef9678348863c82651f",
+  "block_ps": 10.0,
+  "samples": 3,
+  "epsilon": 1e-05,
+  "results": {
+    "production_B0_spot": {
+      "case": "B0",
+      "geometry": "spot",
+      "blocks": [
+        {
+          "interval_ps": [
+            2430.0,
+            2440.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.659825050446609e-05,
+              5.659825050446609e-05
+            ],
+            "density_relative_L2": [
+              5.833298275730453e-05,
+              5.833298275730453e-05
+            ],
+            "reservoir_relative_L2": [
+              2.531925665565355e-08,
+              2.531925665565355e-08,
+              2.2824826971508345e-08,
+              2.2824826971508345e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.833298275732562e-05,
+              1.473786783043928e-17,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.655094990795944e-16,
+              1.6184680008366588e-17,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 3.07461312190723e-05,
+            "raw_field_relative_L2": 3.084571521471741e-05,
+            "scaled_state_error": 1.7751298046226517e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.659825050446609e-05,
+              5.659825050446609e-05
+            ],
+            "density_relative_L2": [
+              5.833298275730453e-05,
+              5.833298275730453e-05
+            ],
+            "reservoir_relative_L2": [
+              2.531925665565355e-08,
+              2.531925665565355e-08,
+              2.2824826971508345e-08,
+              2.2824826971508345e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.833298275732562e-05,
+              1.473786783043928e-17,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.655094990795944e-16,
+              1.6184680008366588e-17,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 3.07461312190723e-05,
+            "raw_field_relative_L2": 3.084571521471741e-05,
+            "scaled_state_error": 1.7751298046226517e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 4.863629542462391e-22,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 2.8080178255792776e-22
+          },
+          "input_perturbation_norm": 8.90760826153661e-06,
+          "directional_amplification": 1.846941174899138,
+          "risk_score": 0.00010773758770914718,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2710.0,
+            2720.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.695915672765773e-05,
+              5.695915672765773e-05
+            ],
+            "density_relative_L2": [
+              5.8932353442043615e-05,
+              5.8932353442043615e-05
+            ],
+            "reservoir_relative_L2": [
+              2.531925665565355e-08,
+              2.531925665565355e-08,
+              2.2824826971508345e-08,
+              2.2824826971508345e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.893235344205783e-05,
+              1.547992819996472e-17,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.6054604120161496e-16,
+              1.654199562348991e-17,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 3.0894250031789895e-05,
+            "raw_field_relative_L2": 3.100365239343453e-05,
+            "scaled_state_error": 1.7836814430312697e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.695915672765773e-05,
+              5.695915672765773e-05
+            ],
+            "density_relative_L2": [
+              5.8932353442043615e-05,
+              5.8932353442043615e-05
+            ],
+            "reservoir_relative_L2": [
+              2.531925665565355e-08,
+              2.531925665565355e-08,
+              2.2824826971508345e-08,
+              2.2824826971508345e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.893235344205783e-05,
+              1.547992819996472e-17,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.6054604120161496e-16,
+              1.654199562348991e-17,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 3.0894250031789895e-05,
+            "raw_field_relative_L2": 3.100365239343453e-05,
+            "scaled_state_error": 1.7836814430312697e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.1738098415335955e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 6.776994279868533e-21
+          },
+          "input_perturbation_norm": 1.0666130987274435e-05,
+          "directional_amplification": 1.754614524968977,
+          "risk_score": 0.00010340356334001522,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.639226748973806e-05,
+              5.639226748973806e-05
+            ],
+            "density_relative_L2": [
+              5.819833671424471e-05,
+              5.819833671424471e-05
+            ],
+            "reservoir_relative_L2": [
+              2.531925665565355e-08,
+              2.531925665565355e-08,
+              2.2824826971508345e-08,
+              2.2824826971508345e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.819833671420661e-05,
+              1.4970352522262312e-17,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.6209992519451143e-16,
+              1.6132081306171532e-17,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 3.064969218471595e-05,
+            "raw_field_relative_L2": 3.073654375878729e-05,
+            "scaled_state_error": 1.769561897810982e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.639226748973806e-05,
+              5.639226748973806e-05
+            ],
+            "density_relative_L2": [
+              5.819833671424471e-05,
+              5.819833671424471e-05
+            ],
+            "reservoir_relative_L2": [
+              2.531925665565355e-08,
+              2.531925665565355e-08,
+              2.2824826971508345e-08,
+              2.2824826971508345e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.819833671420661e-05,
+              1.4970352522262312e-17,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.6209992519451143e-16,
+              1.6132081306171532e-17,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 3.064969218471595e-05,
+            "raw_field_relative_L2": 3.073654375878729e-05,
+            "scaled_state_error": 1.769561897810982e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 8.803422603596694e-23,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 5.0826584099765874e-23
+          },
+          "input_perturbation_norm": 1.231747663931284e-05,
+          "directional_amplification": 3.1190381769263236,
+          "risk_score": 0.00018152283404534214,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 0.00018152283404534214,
+      "elapsed_s": 56.839857629995095
+    },
+    "production_B0_ring": {
+      "case": "B0",
+      "geometry": "ring",
+      "blocks": [
+        {
+          "interval_ps": [
+            2595.0,
+            2605.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.405035718918741e-05,
+              4.405035718918741e-05
+            ],
+            "density_relative_L2": [
+              4.481360552188601e-05,
+              4.481360552188601e-05
+            ],
+            "reservoir_relative_L2": [
+              2.0496562767599887e-06,
+              2.0496562767599887e-06,
+              2.2768143350634068e-08,
+              2.2768143350634068e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.4813605521888584e-05,
+              1.6981014371364448e-17,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.622507222887446e-16,
+              1.6739130283990454e-17,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7398208102113654e-05,
+            "raw_field_relative_L2": 2.7420140984387916e-05,
+            "scaled_state_error": 1.5862570372294014e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.405035718918741e-05,
+              4.405035718918741e-05
+            ],
+            "density_relative_L2": [
+              4.481360552188601e-05,
+              4.481360552188601e-05
+            ],
+            "reservoir_relative_L2": [
+              2.0496562767599887e-06,
+              2.0496562767599887e-06,
+              2.2768143350634068e-08,
+              2.2768143350634068e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.4813605521888584e-05,
+              1.6981014371364448e-17,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.622507222887446e-16,
+              1.6739130283990454e-17,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7398208102113654e-05,
+            "raw_field_relative_L2": 2.7420140984387916e-05,
+            "scaled_state_error": 1.5862570372294014e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.7216341079038418e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 9.939859156443243e-21
+          },
+          "input_perturbation_norm": 9.506874428558311e-06,
+          "directional_amplification": 0.9485386890114155,
+          "risk_score": 4.481360552188601e-05,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2795.0,
+            2805.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.245061730217652e-05,
+              4.245061730217652e-05
+            ],
+            "density_relative_L2": [
+              4.3664650438349144e-05,
+              4.3664650438349144e-05
+            ],
+            "reservoir_relative_L2": [
+              2.0574136674666704e-06,
+              2.0574136674666704e-06,
+              2.2768143350634068e-08,
+              2.2768143350634068e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.366465043835978e-05,
+              1.6323152267809897e-17,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.647269319173743e-16,
+              1.6509843648280407e-17,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.6857390382654395e-05,
+            "raw_field_relative_L2": 2.6868095845136648e-05,
+            "scaled_state_error": 1.5551558202248063e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.245061730217652e-05,
+              4.245061730217652e-05
+            ],
+            "density_relative_L2": [
+              4.3664650438349144e-05,
+              4.3664650438349144e-05
+            ],
+            "reservoir_relative_L2": [
+              2.0574136674666704e-06,
+              2.0574136674666704e-06,
+              2.2768143350634068e-08,
+              2.2768143350634068e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.366465043835978e-05,
+              1.6323152267809897e-17,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.647269319173743e-16,
+              1.6509843648280407e-17,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.6857390382654395e-05,
+            "raw_field_relative_L2": 2.6868095845136648e-05,
+            "scaled_state_error": 1.5551558202248063e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.7979047619113902e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.0380207982668511e-20
+          },
+          "input_perturbation_norm": 1.0725243735260586e-05,
+          "directional_amplification": 0.8483535444457297,
+          "risk_score": 4.3664650438349144e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.08660793922409e-05,
+              4.08660793922409e-05
+            ],
+            "density_relative_L2": [
+              4.464943329508921e-05,
+              4.464943329508921e-05
+            ],
+            "reservoir_relative_L2": [
+              2.1893986971028438e-06,
+              2.1893986971028438e-06,
+              2.2768143350634068e-08,
+              2.2768143350634068e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.4649433295094525e-05,
+              1.7171871731799802e-17,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.64561584756338e-16,
+              1.6914629768023764e-17,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.6704748425110098e-05,
+            "raw_field_relative_L2": 2.6704750870234974e-05,
+            "scaled_state_error": 1.5469729296184075e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.08660793922409e-05,
+              4.08660793922409e-05
+            ],
+            "density_relative_L2": [
+              4.464943329508921e-05,
+              4.464943329508921e-05
+            ],
+            "reservoir_relative_L2": [
+              2.1893986971028438e-06,
+              2.1893986971028438e-06,
+              2.2768143350634068e-08,
+              2.2768143350634068e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.4649433295094525e-05,
+              1.7171871731799802e-17,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.64561584756338e-16,
+              1.6914629768023764e-17,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.6704748425110098e-05,
+            "raw_field_relative_L2": 2.6704750870234974e-05,
+            "scaled_state_error": 1.5469729296184075e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 9.259608546453306e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 5.3460374868853754e-21
+          },
+          "input_perturbation_norm": 1.0664851834186188e-05,
+          "directional_amplification": 0.8845989268141502,
+          "risk_score": 4.464943329508921e-05,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 4.481360552188601e-05,
+      "elapsed_s": 67.92447145800543
+    },
+    "production_A0_spot": {
+      "case": "A0",
+      "geometry": "spot",
+      "blocks": [
+        {
+          "interval_ps": [
+            2425.0,
+            2435.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.437517381163839e-05,
+              5.8356393307518344e-05
+            ],
+            "density_relative_L2": [
+              5.341952277446344e-05,
+              6.240387777301525e-05
+            ],
+            "reservoir_relative_L2": [
+              2.511321949788547e-08,
+              1.8771656449469706e-08,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              1.7400461294158344e-05,
+              5.5013098999604904e-05,
+              2.113926780467553e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.0842778153238073e-06,
+              2.401326263007267e-06,
+              4.058812419279626e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 3.0563264591587286e-05,
+            "raw_field_relative_L2": 3.068257028441622e-05,
+            "scaled_state_error": 1.764571977381612e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.437517381163839e-05,
+              5.8356393307518344e-05
+            ],
+            "density_relative_L2": [
+              5.341952277446344e-05,
+              6.240387777301525e-05
+            ],
+            "reservoir_relative_L2": [
+              2.511321949788547e-08,
+              1.8771656449469706e-08,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              1.7400461294158344e-05,
+              5.5013098999604904e-05,
+              2.113926780467553e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.0842778153238073e-06,
+              2.401326263007267e-06,
+              4.058812419279626e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 3.0563264591587286e-05,
+            "raw_field_relative_L2": 3.068257028441622e-05,
+            "scaled_state_error": 1.764571977381612e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 7.343938923525468e-22,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 4.240025114409599e-22
+          },
+          "input_perturbation_norm": 8.926957522174147e-06,
+          "directional_amplification": 1.8631387084800117,
+          "risk_score": 0.00011626708023816014,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2705.0,
+            2715.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.4802949997789597e-05,
+              5.8494154227756345e-05
+            ],
+            "density_relative_L2": [
+              5.4198616396413964e-05,
+              6.252726005863232e-05
+            ],
+            "reservoir_relative_L2": [
+              2.511321949788547e-08,
+              1.8771656449469706e-08,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.864919305517117e-05,
+              5.059524268663893e-05,
+              2.1972165695567825e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.0279711632686628e-06,
+              2.4104987098983533e-06,
+              3.8959407849650805e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 3.069504676832934e-05,
+            "raw_field_relative_L2": 3.081380427119974e-05,
+            "scaled_state_error": 1.7721804202946226e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.4802949997789597e-05,
+              5.8494154227756345e-05
+            ],
+            "density_relative_L2": [
+              5.4198616396413964e-05,
+              6.252726005863232e-05
+            ],
+            "reservoir_relative_L2": [
+              2.511321949788547e-08,
+              1.8771656449469706e-08,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.864919305517117e-05,
+              5.059524268663893e-05,
+              2.1972165695567825e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.0279711632686628e-06,
+              2.4104987098983533e-06,
+              3.8959407849650805e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 3.069504676832934e-05,
+            "raw_field_relative_L2": 3.081380427119974e-05,
+            "scaled_state_error": 1.7721804202946226e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.2287325076722676e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 7.094090440666275e-21
+          },
+          "input_perturbation_norm": 1.0268579959623986e-05,
+          "directional_amplification": 1.5137946677314447,
+          "risk_score": 9.465343286461495e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.5265526695970644e-05,
+              5.779586176018053e-05
+            ],
+            "density_relative_L2": [
+              5.4825537629149524e-05,
+              6.129977938250861e-05
+            ],
+            "reservoir_relative_L2": [
+              2.511321949788547e-08,
+              1.8771656449469706e-08,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.4762141728286105e-05,
+              1.8802191948782495e-05,
+              2.745336966216009e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.2477426090806286e-06,
+              2.699948456765756e-06,
+              3.4267726228611402e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 3.066900041345572e-05,
+            "raw_field_relative_L2": 3.076721388318365e-05,
+            "scaled_state_error": 1.7706766342025953e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.5265526695970644e-05,
+              5.779586176018053e-05
+            ],
+            "density_relative_L2": [
+              5.4825537629149524e-05,
+              6.129977938250861e-05
+            ],
+            "reservoir_relative_L2": [
+              2.511321949788547e-08,
+              1.8771656449469706e-08,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.4762141728286105e-05,
+              1.8802191948782495e-05,
+              2.745336966216009e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.2477426090806286e-06,
+              2.699948456765756e-06,
+              3.4267726228611402e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 3.066900041345572e-05,
+            "raw_field_relative_L2": 3.076721388318365e-05,
+            "scaled_state_error": 1.7706766342025953e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 3.824901296654857e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 2.2083077932474306e-21
+          },
+          "input_perturbation_norm": 1.2716997347268452e-05,
+          "directional_amplification": 2.965427086969088,
+          "risk_score": 0.0001817800262061203,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 0.0001817800262061203,
+      "elapsed_s": 102.38827045399375
+    },
+    "production_A0_ring": {
+      "case": "A0",
+      "geometry": "ring",
+      "blocks": [
+        {
+          "interval_ps": [
+            2265.0,
+            2275.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.439972973667423e-05,
+              4.65621192395256e-05
+            ],
+            "density_relative_L2": [
+              4.5794283845831966e-05,
+              4.712846530014258e-05
+            ],
+            "reservoir_relative_L2": [
+              2.9184335439146415e-06,
+              1.951847631419468e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.422849680007421e-05,
+              9.394940633719783e-06,
+              2.9448168479880407e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.921094963132799e-06,
+              2.8721371905044153e-06,
+              2.1363269127370305e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.756464560613593e-05,
+            "raw_field_relative_L2": 2.7586018669469592e-05,
+            "scaled_state_error": 1.5978827663095807e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.439972973667423e-05,
+              4.65621192395256e-05
+            ],
+            "density_relative_L2": [
+              4.5794283845831966e-05,
+              4.712846530014258e-05
+            ],
+            "reservoir_relative_L2": [
+              2.9184335439146415e-06,
+              1.951847631419468e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.422849680007421e-05,
+              9.394940633719783e-06,
+              2.9448168479880407e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.921094963132799e-06,
+              2.8721371905044153e-06,
+              2.1363269127370305e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.756464560613593e-05,
+            "raw_field_relative_L2": 2.7586018669469592e-05,
+            "scaled_state_error": 1.5978827663095807e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 5.086067252882147e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 2.9364422975680476e-21
+          },
+          "input_perturbation_norm": 9.471498130614078e-06,
+          "directional_amplification": 0.9123896130904889,
+          "risk_score": 4.712846530014258e-05,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2625.0,
+            2635.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.448628639068026e-05,
+              4.615010224378971e-05
+            ],
+            "density_relative_L2": [
+              4.595610447000228e-05,
+              4.837799661829818e-05
+            ],
+            "reservoir_relative_L2": [
+              3.0643774647037804e-06,
+              2.704526567988149e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.5744830153685366e-05,
+              1.427436767820176e-05,
+              2.6094653943678377e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.076170715828231e-06,
+              1.5505828912080947e-06,
+              1.3873508062184442e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7739723913176606e-05,
+            "raw_field_relative_L2": 2.7761882350638836e-05,
+            "scaled_state_error": 1.6102252275350498e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.448628639068026e-05,
+              4.615010224378971e-05
+            ],
+            "density_relative_L2": [
+              4.595610447000228e-05,
+              4.837799661829818e-05
+            ],
+            "reservoir_relative_L2": [
+              3.0643774647037804e-06,
+              2.704526567988149e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.5744830153685366e-05,
+              1.427436767820176e-05,
+              2.6094653943678377e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.076170715828231e-06,
+              1.5505828912080947e-06,
+              1.3873508062184442e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7739723913176606e-05,
+            "raw_field_relative_L2": 2.7761882350638836e-05,
+            "scaled_state_error": 1.6102252275350498e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 4.31329061773215e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 2.490279499240744e-21
+          },
+          "input_perturbation_norm": 9.924560483770795e-06,
+          "directional_amplification": 0.8443552255957291,
+          "risk_score": 4.837799661829818e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.465632778383486e-05,
+              4.569418370967848e-05
+            ],
+            "density_relative_L2": [
+              4.5882390875718015e-05,
+              4.74717647410571e-05
+            ],
+            "reservoir_relative_L2": [
+              2.7502637452567986e-06,
+              1.5293376535367434e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.8505181879457166e-05,
+              2.5686465524990512e-05,
+              2.5794735459083656e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.0327045674539193e-06,
+              9.959126365381543e-07,
+              1.070358251862641e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7651049903809014e-05,
+            "raw_field_relative_L2": 2.7671623607368113e-05,
+            "scaled_state_error": 1.6016034502133942e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.465632778383486e-05,
+              4.569418370967848e-05
+            ],
+            "density_relative_L2": [
+              4.5882390875718015e-05,
+              4.74717647410571e-05
+            ],
+            "reservoir_relative_L2": [
+              2.7502637452567986e-06,
+              1.5293376535367434e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.8505181879457166e-05,
+              2.5686465524990512e-05,
+              2.5794735459083656e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.0327045674539193e-06,
+              9.959126365381543e-07,
+              1.070358251862641e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7651049903809014e-05,
+            "raw_field_relative_L2": 2.7671623607368113e-05,
+            "scaled_state_error": 1.6016034502133942e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 8.61868979494099e-24,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 4.976002873171061e-24
+          },
+          "input_perturbation_norm": 1.0720896665578647e-05,
+          "directional_amplification": 0.9180300007346494,
+          "risk_score": 4.74717647410571e-05,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 4.837799661829818e-05,
+      "elapsed_s": 65.15577852301067
+    },
+    "production_A1_spot": {
+      "case": "A1",
+      "geometry": "spot",
+      "blocks": [
+        {
+          "interval_ps": [
+            2425.0,
+            2435.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.506204075770437e-05,
+              5.886997615469701e-05
+            ],
+            "density_relative_L2": [
+              5.482405979381351e-05,
+              6.337106578069643e-05
+            ],
+            "reservoir_relative_L2": [
+              3.085679745127424e-08,
+              2.8179150199929195e-08,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.3792651572240737e-05,
+              5.389174734952394e-05,
+              2.153333607738007e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.242549284802873e-06,
+              2.486625490239852e-06,
+              3.976621122346385e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 3.084708766997534e-05,
+            "raw_field_relative_L2": 3.0966093643255905e-05,
+            "scaled_state_error": 1.7809588553833306e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.506204075770437e-05,
+              5.886997615469701e-05
+            ],
+            "density_relative_L2": [
+              5.482405979381351e-05,
+              6.337106578069643e-05
+            ],
+            "reservoir_relative_L2": [
+              3.085679745127424e-08,
+              2.8179150199929195e-08,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.3792651572240737e-05,
+              5.389174734952394e-05,
+              2.153333607738007e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.242549284802873e-06,
+              2.486625490239852e-06,
+              3.976621122346385e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 3.084708766997534e-05,
+            "raw_field_relative_L2": 3.0966093643255905e-05,
+            "scaled_state_error": 1.7809588553833306e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.673551506128498e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.5435756817556178e-21
+          },
+          "input_perturbation_norm": 8.92950901524039e-06,
+          "directional_amplification": 1.6718473056216003,
+          "risk_score": 0.00010594674557982652,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2705.0,
+            2715.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.450446580219429e-05,
+              5.7770956713907726e-05
+            ],
+            "density_relative_L2": [
+              5.392260244018004e-05,
+              6.155087100315825e-05
+            ],
+            "reservoir_relative_L2": [
+              3.085679745127424e-08,
+              2.8179150199929195e-08,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.377174506284e-05,
+              4.668102528303598e-05,
+              2.309440156352549e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.583924922076177e-06,
+              2.798802236643544e-06,
+              3.706572421224927e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 3.0465082448095955e-05,
+            "raw_field_relative_L2": 3.0536646594897796e-05,
+            "scaled_state_error": 1.7589037914002294e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.450446580219429e-05,
+              5.7770956713907726e-05
+            ],
+            "density_relative_L2": [
+              5.392260244018004e-05,
+              6.155087100315825e-05
+            ],
+            "reservoir_relative_L2": [
+              3.085679745127424e-08,
+              2.8179150199929195e-08,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.377174506284e-05,
+              4.668102528303598e-05,
+              2.309440156352549e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.583924922076177e-06,
+              2.798802236643544e-06,
+              3.706572421224927e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 3.0465082448095955e-05,
+            "raw_field_relative_L2": 3.0536646594897796e-05,
+            "scaled_state_error": 1.7589037914002294e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 8.777645992139438e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 5.067776276412944e-21
+          },
+          "input_perturbation_norm": 1.0268881488858683e-05,
+          "directional_amplification": 1.4453798988847861,
+          "risk_score": 8.896439170681538e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.461736241449818e-05,
+              5.844460029230139e-05
+            ],
+            "density_relative_L2": [
+              5.3805564389435554e-05,
+              6.25759453618333e-05
+            ],
+            "reservoir_relative_L2": [
+              3.085679745127424e-08,
+              2.8179150199929195e-08,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.6833432966340416e-05,
+              1.1502221582267586e-05,
+              2.1435738310026493e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.2747276854958158e-06,
+              2.3497438734370173e-06,
+              4.0109044466833636e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 3.06420579540635e-05,
+            "raw_field_relative_L2": 3.0724538962939964e-05,
+            "scaled_state_error": 1.769121468706556e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.461736241449818e-05,
+              5.844460029230139e-05
+            ],
+            "density_relative_L2": [
+              5.3805564389435554e-05,
+              6.25759453618333e-05
+            ],
+            "reservoir_relative_L2": [
+              3.085679745127424e-08,
+              2.8179150199929195e-08,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.6833432966340416e-05,
+              1.1502221582267586e-05,
+              2.1435738310026493e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.2747276854958158e-06,
+              2.3497438734370173e-06,
+              4.0109044466833636e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 3.06420579540635e-05,
+            "raw_field_relative_L2": 3.0724538962939964e-05,
+            "scaled_state_error": 1.769121468706556e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.7901551640903443e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.033546565878759e-21
+          },
+          "input_perturbation_norm": 1.2716701532098971e-05,
+          "directional_amplification": 3.067663457787742,
+          "risk_score": 0.0001919619409230184,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 0.0001919619409230184,
+      "elapsed_s": 68.4957963009947,
+      "half_epsilon_check": {
+        "amplification": 3.0676458557883746,
+        "relative_change": 5.737917346371191e-06,
+        "status": "PASS"
+      }
+    },
+    "production_A1_ring": {
+      "case": "A1",
+      "geometry": "ring",
+      "blocks": [
+        {
+          "interval_ps": [
+            2195.0,
+            2205.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.405067782318042e-05,
+              4.686645819134e-05
+            ],
+            "density_relative_L2": [
+              4.555910618872451e-05,
+              4.6931725776852844e-05
+            ],
+            "reservoir_relative_L2": [
+              2.8555293934109586e-06,
+              1.8683140279316364e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.6308747567656524e-05,
+              2.0423676874367324e-05,
+              3.1687514967009034e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              3.5603048829448286e-06,
+              3.939914726193562e-06,
+              2.863951177810775e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7447684266505376e-05,
+            "raw_field_relative_L2": 2.7467898526083774e-05,
+            "scaled_state_error": 1.590792686123932e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.405067782318042e-05,
+              4.686645819134e-05
+            ],
+            "density_relative_L2": [
+              4.555910618872451e-05,
+              4.6931725776852844e-05
+            ],
+            "reservoir_relative_L2": [
+              2.8555293934109586e-06,
+              1.8683140279316364e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.6308747567656524e-05,
+              2.0423676874367324e-05,
+              3.1687514967009034e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              3.5603048829448286e-06,
+              3.939914726193562e-06,
+              2.863951177810775e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7447684266505376e-05,
+            "raw_field_relative_L2": 2.7467898526083774e-05,
+            "scaled_state_error": 1.590792686123932e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.8461402868342065e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.065869591565542e-21
+          },
+          "input_perturbation_norm": 9.47254283753189e-06,
+          "directional_amplification": 0.8965221388864013,
+          "risk_score": 4.6931725776852844e-05,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2595.0,
+            2605.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.4598071284567295e-05,
+              4.583540006185854e-05
+            ],
+            "density_relative_L2": [
+              4.568098958432606e-05,
+              4.65285568805902e-05
+            ],
+            "reservoir_relative_L2": [
+              3.9087032050845915e-06,
+              3.3582377515786558e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.4106141046026016e-05,
+              1.4267662113009321e-05,
+              2.717214476891832e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.2827415843247216e-06,
+              1.6657566329495263e-06,
+              1.4441082256338912e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7481625966700332e-05,
+            "raw_field_relative_L2": 2.7502155127915825e-05,
+            "scaled_state_error": 1.6005416127116848e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.4598071284567295e-05,
+              4.583540006185854e-05
+            ],
+            "density_relative_L2": [
+              4.568098958432606e-05,
+              4.65285568805902e-05
+            ],
+            "reservoir_relative_L2": [
+              3.9087032050845915e-06,
+              3.3582377515786558e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.4106141046026016e-05,
+              1.4267662113009321e-05,
+              2.717214476891832e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.2827415843247216e-06,
+              1.6657566329495263e-06,
+              1.4441082256338912e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7481625966700332e-05,
+            "raw_field_relative_L2": 2.7502155127915825e-05,
+            "scaled_state_error": 1.6005416127116848e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 9.410163193263559e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 5.432960252749024e-21
+          },
+          "input_perturbation_norm": 9.907511364408229e-06,
+          "directional_amplification": 0.841056454691964,
+          "risk_score": 4.65285568805902e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.452205071704e-05,
+              4.573144780503836e-05
+            ],
+            "density_relative_L2": [
+              4.581725735478017e-05,
+              4.7669307258259546e-05
+            ],
+            "reservoir_relative_L2": [
+              2.7796271905934078e-06,
+              1.7522332270497e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.7718115302025686e-05,
+              7.455884492920611e-06,
+              2.5672326034122884e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              8.684315294460189e-07,
+              1.231210812262049e-06,
+              1.1407899657314668e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7626457019935686e-05,
+            "raw_field_relative_L2": 2.7645606734896056e-05,
+            "scaled_state_error": 1.6006528120088438e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.452205071704e-05,
+              4.573144780503836e-05
+            ],
+            "density_relative_L2": [
+              4.581725735478017e-05,
+              4.7669307258259546e-05
+            ],
+            "reservoir_relative_L2": [
+              2.7796271905934078e-06,
+              1.7522332270497e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.7718115302025686e-05,
+              7.455884492920611e-06,
+              2.5672326034122884e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              8.684315294460189e-07,
+              1.231210812262049e-06,
+              1.1407899657314668e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7626457019935686e-05,
+            "raw_field_relative_L2": 2.7645606734896056e-05,
+            "scaled_state_error": 1.6006528120088438e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.9363291648527314e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.6952904337570736e-20
+          },
+          "input_perturbation_norm": 1.0719956010651975e-05,
+          "directional_amplification": 0.8977552919124738,
+          "risk_score": 4.7669307258259546e-05,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 4.7669307258259546e-05,
+      "elapsed_s": 79.23279996101337
+    },
+    "production_T0_spot": {
+      "case": "T0",
+      "geometry": "spot",
+      "blocks": [
+        {
+          "interval_ps": [
+            2440.0,
+            2450.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.427736994724935e-05,
+              5.447041693002013e-05
+            ],
+            "density_relative_L2": [
+              5.3912998238775665e-05,
+              5.48844587106535e-05
+            ],
+            "reservoir_relative_L2": [
+              2.6032375206447216e-08,
+              2.6032375236870218e-08,
+              2.2824826971508345e-08,
+              2.2824826971508345e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.4231009910438514e-05,
+              1.0986708537178973e-06,
+              4.0065603257441725e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              9.697360448323273e-07,
+              2.1402371385882564e-06,
+              1.9066792009189558e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.9834817855664448e-05,
+            "raw_field_relative_L2": 3.005566913868661e-05,
+            "scaled_state_error": 1.7225151718131638e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.427736994724935e-05,
+              5.447041693002013e-05
+            ],
+            "density_relative_L2": [
+              5.3912998238775665e-05,
+              5.48844587106535e-05
+            ],
+            "reservoir_relative_L2": [
+              2.6032375206447216e-08,
+              2.6032375236870218e-08,
+              2.2824826971508345e-08,
+              2.2824826971508345e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.4231009910438514e-05,
+              1.0986708537178973e-06,
+              4.0065603257441725e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              9.697360448323273e-07,
+              2.1402371385882564e-06,
+              1.9066792009189558e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.9834817855664448e-05,
+            "raw_field_relative_L2": 3.005566913868661e-05,
+            "scaled_state_error": 1.7225151718131638e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.1900855168059642e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.264446462676224e-21
+          },
+          "input_perturbation_norm": 8.873254169195584e-06,
+          "directional_amplification": 1.8629906799986156,
+          "risk_score": 0.0001022492350547163,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2715.0,
+            2725.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.444727170760367e-05,
+              5.398699208643887e-05
+            ],
+            "density_relative_L2": [
+              5.432309013240788e-05,
+              5.3716009744463434e-05
+            ],
+            "reservoir_relative_L2": [
+              2.6032375206447216e-08,
+              2.6032375236870218e-08,
+              2.2824826971508345e-08,
+              2.2824826971508345e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.3852224222951104e-05,
+              8.978239120831062e-07,
+              3.974026856581941e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              9.653788105093234e-07,
+              2.1122184526728087e-06,
+              1.900718422427995e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.975007565351551e-05,
+            "raw_field_relative_L2": 2.9943579874626385e-05,
+            "scaled_state_error": 1.7176225817945594e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.444727170760367e-05,
+              5.398699208643887e-05
+            ],
+            "density_relative_L2": [
+              5.432309013240788e-05,
+              5.3716009744463434e-05
+            ],
+            "reservoir_relative_L2": [
+              2.6032375206447216e-08,
+              2.6032375236870218e-08,
+              2.2824826971508345e-08,
+              2.2824826971508345e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.3852224222951104e-05,
+              8.978239120831062e-07,
+              3.974026856581941e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              9.653788105093234e-07,
+              2.1122184526728087e-06,
+              1.900718422427995e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.975007565351551e-05,
+            "raw_field_relative_L2": 2.9943579874626385e-05,
+            "scaled_state_error": 1.7176225817945594e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.4088198063515997e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.3907327636263984e-21
+          },
+          "input_perturbation_norm": 1.0686973256751647e-05,
+          "directional_amplification": 1.7370874093294577,
+          "risk_score": 9.457967015561834e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.4610945882492e-05,
+              5.411168579517267e-05
+            ],
+            "density_relative_L2": [
+              5.4324344439413606e-05,
+              5.366015444027595e-05
+            ],
+            "reservoir_relative_L2": [
+              2.6032375206447216e-08,
+              2.6032375236870218e-08,
+              2.2824826971508345e-08,
+              2.2824826971508345e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.381676621095034e-05,
+              9.473311224466983e-07,
+              4.025124747665219e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              9.73526000051713e-07,
+              2.079553896836535e-06,
+              1.904186689870805e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.9824666884646028e-05,
+            "raw_field_relative_L2": 3.0033715225833005e-05,
+            "scaled_state_error": 1.721929105622903e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.4610945882492e-05,
+              5.411168579517267e-05
+            ],
+            "density_relative_L2": [
+              5.4324344439413606e-05,
+              5.366015444027595e-05
+            ],
+            "reservoir_relative_L2": [
+              2.6032375206447216e-08,
+              2.6032375236870218e-08,
+              2.2824826971508345e-08,
+              2.2824826971508345e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              5.381676621095034e-05,
+              9.473311224466983e-07,
+              4.025124747665219e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              9.73526000051713e-07,
+              2.079553896836535e-06,
+              1.904186689870805e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.9824666884646028e-05,
+            "raw_field_relative_L2": 3.0033715225833005e-05,
+            "scaled_state_error": 1.721929105622903e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.3549398310549599e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 7.822748761953272e-21
+          },
+          "input_perturbation_norm": 1.2322990515391384e-05,
+          "directional_amplification": 3.139517448517999,
+          "risk_score": 0.0001714520174781558,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 0.0001714520174781558,
+      "elapsed_s": 73.60767074499745
+    },
+    "production_T0_ring": {
+      "case": "T0",
+      "geometry": "ring",
+      "blocks": [
+        {
+          "interval_ps": [
+            2420.0,
+            2430.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.491419601545934e-05,
+              4.4923982908000085e-05
+            ],
+            "density_relative_L2": [
+              4.7039498626070725e-05,
+              4.7081787204111066e-05
+            ],
+            "reservoir_relative_L2": [
+              3.9615949031628795e-07,
+              3.81017862398394e-07,
+              2.2768143350634068e-08,
+              2.2768143350634068e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.419199030494528e-05,
+              3.466595738008101e-05,
+              3.963775255812241e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              9.846241693740781e-06,
+              1.0098449248092754e-05,
+              6.298492958721957e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7798045324764257e-05,
+            "raw_field_relative_L2": 2.7856161349824417e-05,
+            "scaled_state_error": 1.6050782958499945e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.491419601545934e-05,
+              4.4923982908000085e-05
+            ],
+            "density_relative_L2": [
+              4.7039498626070725e-05,
+              4.7081787204111066e-05
+            ],
+            "reservoir_relative_L2": [
+              3.9615949031628795e-07,
+              3.81017862398394e-07,
+              2.2768143350634068e-08,
+              2.2768143350634068e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.419199030494528e-05,
+              3.466595738008101e-05,
+              3.963775255812241e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              9.846241693740781e-06,
+              1.0098449248092754e-05,
+              6.298492958721957e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7798045324764257e-05,
+            "raw_field_relative_L2": 2.7856161349824417e-05,
+            "scaled_state_error": 1.6050782958499945e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 3.919284075978295e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 2.2627997162966823e-20
+          },
+          "input_perturbation_norm": 9.493808025041706e-06,
+          "directional_amplification": 0.9463522441741404,
+          "risk_score": 4.7081787204111066e-05,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2705.0,
+            2715.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.475361337461422e-05,
+              4.489041993103714e-05
+            ],
+            "density_relative_L2": [
+              4.718945702780034e-05,
+              4.749432703327036e-05
+            ],
+            "reservoir_relative_L2": [
+              8.977643623253065e-07,
+              8.221300651590263e-07,
+              2.2768143350634068e-08,
+              2.2768143350634068e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.446861802707536e-05,
+              3.486034177557909e-05,
+              4.347114408488141e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.0005183659779455e-05,
+              1.0218947248796794e-05,
+              6.424749174912998e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7926872045948886e-05,
+            "raw_field_relative_L2": 2.7985811117028426e-05,
+            "scaled_state_error": 1.613124959001733e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.475361337461422e-05,
+              4.489041993103714e-05
+            ],
+            "density_relative_L2": [
+              4.718945702780034e-05,
+              4.749432703327036e-05
+            ],
+            "reservoir_relative_L2": [
+              8.977643623253065e-07,
+              8.221300651590263e-07,
+              2.2768143350634068e-08,
+              2.2768143350634068e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.446861802707536e-05,
+              3.486034177557909e-05,
+              4.347114408488141e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.0005183659779455e-05,
+              1.0218947248796794e-05,
+              6.424749174912998e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7926872045948886e-05,
+            "raw_field_relative_L2": 2.7985811117028426e-05,
+            "scaled_state_error": 1.613124959001733e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 5.101988491056736e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 2.945634428713979e-21
+          },
+          "input_perturbation_norm": 1.0719288187245005e-05,
+          "directional_amplification": 0.8629354918597975,
+          "risk_score": 4.749432703327036e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.494823604128788e-05,
+              4.478826676177116e-05
+            ],
+            "density_relative_L2": [
+              4.7541462133614536e-05,
+              4.700465362796063e-05
+            ],
+            "reservoir_relative_L2": [
+              1.5716581485548705e-06,
+              1.0417352206649253e-06,
+              2.2768143350634068e-08,
+              2.2768143350634068e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.4205842393777796e-05,
+              3.481671310665638e-05,
+              3.871150778393354e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              9.682413374966676e-06,
+              1.0032716913323342e-05,
+              6.344576249569251e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7869900866926047e-05,
+            "raw_field_relative_L2": 2.792905702292309e-05,
+            "scaled_state_error": 1.6109102535767272e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.494823604128788e-05,
+              4.478826676177116e-05
+            ],
+            "density_relative_L2": [
+              4.7541462133614536e-05,
+              4.700465362796063e-05
+            ],
+            "reservoir_relative_L2": [
+              1.5716581485548705e-06,
+              1.0417352206649253e-06,
+              2.2768143350634068e-08,
+              2.2768143350634068e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.4205842393777796e-05,
+              3.481671310665638e-05,
+              3.871150778393354e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              9.682413374966676e-06,
+              1.0032716913323342e-05,
+              6.344576249569251e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7869900866926047e-05,
+            "raw_field_relative_L2": 2.792905702292309e-05,
+            "scaled_state_error": 1.6109102535767272e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.0849818720351861e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 6.264145758853788e-22
+          },
+          "input_perturbation_norm": 1.0704258587493897e-05,
+          "directional_amplification": 0.9116775078817855,
+          "risk_score": 4.7541462133614536e-05,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 4.7541462133614536e-05,
+      "elapsed_s": 77.04739424001309
+    },
+    "production_T1_spot": {
+      "case": "T1",
+      "geometry": "spot",
+      "blocks": [
+        {
+          "interval_ps": [
+            2425.0,
+            2435.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.80916823963764e-05,
+              5.14302194072872e-05
+            ],
+            "density_relative_L2": [
+              4.201794199509059e-05,
+              4.8485817892262015e-05
+            ],
+            "reservoir_relative_L2": [
+              2.2507990752435625e-06,
+              2.1447273010337354e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              1.6683174006252176e-05,
+              4.187880100821958e-05,
+              3.829117699153609e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.948754870014735e-06,
+              2.88087453602032e-06,
+              3.5771116455839854e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7717075063089187e-05,
+            "raw_field_relative_L2": 2.7732263977065502e-05,
+            "scaled_state_error": 1.6052822636235683e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.80916823963764e-05,
+              5.14302194072872e-05
+            ],
+            "density_relative_L2": [
+              4.201794199509059e-05,
+              4.8485817892262015e-05
+            ],
+            "reservoir_relative_L2": [
+              2.2507990752435625e-06,
+              2.1447273010337354e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              1.6683174006252176e-05,
+              4.187880100821958e-05,
+              3.829117699153609e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.948754870014735e-06,
+              2.88087453602032e-06,
+              3.5771116455839854e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7717075063089187e-05,
+            "raw_field_relative_L2": 2.7732263977065502e-05,
+            "scaled_state_error": 1.6052822636235683e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.57098378010141e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 9.070079083340851e-21
+          },
+          "input_perturbation_norm": 8.947562322368051e-06,
+          "directional_amplification": 1.6362337718397597,
+          "risk_score": 8.415186188733195e-05,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2705.0,
+            2715.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.7791673866423196e-05,
+              5.0980173134416935e-05
+            ],
+            "density_relative_L2": [
+              4.161598709183628e-05,
+              4.769487040566395e-05
+            ],
+            "reservoir_relative_L2": [
+              2.0153776472292627e-06,
+              2.328564005636091e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.5078271136705725e-05,
+              3.6776272290908884e-05,
+              3.7248815445889137e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.8916684720753023e-06,
+              3.0888968256453214e-06,
+              3.4702509730201424e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7575653275470174e-05,
+            "raw_field_relative_L2": 2.759281523467744e-05,
+            "scaled_state_error": 1.5970093026116918e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.7791673866423196e-05,
+              5.0980173134416935e-05
+            ],
+            "density_relative_L2": [
+              4.161598709183628e-05,
+              4.769487040566395e-05
+            ],
+            "reservoir_relative_L2": [
+              2.0153776472292627e-06,
+              2.328564005636091e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.5078271136705725e-05,
+              3.6776272290908884e-05,
+              3.7248815445889137e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.8916684720753023e-06,
+              3.0888968256453214e-06,
+              3.4702509730201424e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7575653275470174e-05,
+            "raw_field_relative_L2": 2.759281523467744e-05,
+            "scaled_state_error": 1.5970093026116918e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 5.4610909514454795e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 3.152962330886077e-21
+          },
+          "input_perturbation_norm": 1.0259860852749073e-05,
+          "directional_amplification": 1.3885224308593325,
+          "risk_score": 7.078711392623024e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.8666589248715086e-05,
+              5.111689621603474e-05
+            ],
+            "density_relative_L2": [
+              4.313695069469486e-05,
+              4.83307361376101e-05
+            ],
+            "reservoir_relative_L2": [
+              2.291593773257561e-06,
+              2.7381405024490772e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.4306358461857676e-05,
+              9.949068645318822e-06,
+              4.105524759164377e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.5100270844919776e-06,
+              2.479000346193257e-06,
+              3.1186657094007536e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7785039467615315e-05,
+            "raw_field_relative_L2": 2.7789672571571334e-05,
+            "scaled_state_error": 1.6107325502455563e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.8666589248715086e-05,
+              5.111689621603474e-05
+            ],
+            "density_relative_L2": [
+              4.313695069469486e-05,
+              4.83307361376101e-05
+            ],
+            "reservoir_relative_L2": [
+              2.291593773257561e-06,
+              2.7381405024490772e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.4306358461857676e-05,
+              9.949068645318822e-06,
+              4.105524759164377e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.5100270844919776e-06,
+              2.479000346193257e-06,
+              3.1186657094007536e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7785039467615315e-05,
+            "raw_field_relative_L2": 2.7789672571571334e-05,
+            "scaled_state_error": 1.6107325502455563e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.0411636016197433e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 6.011160856655991e-21
+          },
+          "input_perturbation_norm": 1.2709464163387122e-05,
+          "directional_amplification": 3.0365497911404318,
+          "risk_score": 0.0001552190005285474,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 0.0001552190005285474,
+      "elapsed_s": 72.51239372500277
+    },
+    "production_T1_ring": {
+      "case": "T1",
+      "geometry": "ring",
+      "blocks": [
+        {
+          "interval_ps": [
+            995.0,
+            1005.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.352255013310285e-05,
+              4.333009699081537e-05
+            ],
+            "density_relative_L2": [
+              4.248175563223208e-05,
+              4.4944865151137866e-05
+            ],
+            "reservoir_relative_L2": [
+              2.0381493456615685e-06,
+              7.212388157530762e-07,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              1.3823787598647092e-05,
+              9.822239883729234e-06,
+              3.939808346888123e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              5.521530088119745e-06,
+              4.328907148207647e-06,
+              4.706898667038274e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.6045381229323743e-05,
+            "raw_field_relative_L2": 2.606771625201505e-05,
+            "scaled_state_error": 1.5063288125935596e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.352255013310285e-05,
+              4.333009699081537e-05
+            ],
+            "density_relative_L2": [
+              4.248175563223208e-05,
+              4.4944865151137866e-05
+            ],
+            "reservoir_relative_L2": [
+              2.0381493456615685e-06,
+              7.212388157530762e-07,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              1.3823787598647092e-05,
+              9.822239883729234e-06,
+              3.939808346888123e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              5.521530088119745e-06,
+              4.328907148207647e-06,
+              4.706898667038274e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.6045381229323743e-05,
+            "raw_field_relative_L2": 2.606771625201505e-05,
+            "scaled_state_error": 1.5063288125935596e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.2970345129453437e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.3261934943868552e-20
+          },
+          "input_perturbation_norm": 9.365033295942549e-06,
+          "directional_amplification": 0.8861287794039835,
+          "risk_score": 4.4944865151137866e-05,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            1995.0,
+            2005.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.282910615554607e-05,
+              4.403970273088166e-05
+            ],
+            "density_relative_L2": [
+              4.4160284332534484e-05,
+              4.6859906154907565e-05
+            ],
+            "reservoir_relative_L2": [
+              2.9324745280251956e-06,
+              2.0302252394487905e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.6932491060186484e-05,
+              2.6908512946949263e-05,
+              2.5577277325806602e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              8.028767239267288e-06,
+              8.087528279262112e-06,
+              4.505472696223731e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.695805138972645e-05,
+            "raw_field_relative_L2": 2.698491693807516e-05,
+            "scaled_state_error": 1.5632259697521855e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.282910615554607e-05,
+              4.403970273088166e-05
+            ],
+            "density_relative_L2": [
+              4.4160284332534484e-05,
+              4.6859906154907565e-05
+            ],
+            "reservoir_relative_L2": [
+              2.9324745280251956e-06,
+              2.0302252394487905e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.6932491060186484e-05,
+              2.6908512946949263e-05,
+              2.5577277325806602e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              8.028767239267288e-06,
+              8.087528279262112e-06,
+              4.505472696223731e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.695805138972645e-05,
+            "raw_field_relative_L2": 2.698491693807516e-05,
+            "scaled_state_error": 1.5632259697521855e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 5.1601554139177215e-23,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 2.9792171172857014e-23
+          },
+          "input_perturbation_norm": 9.929398771696446e-06,
+          "directional_amplification": 0.8441822643324665,
+          "risk_score": 4.6859906154907565e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.272162985898809e-05,
+              4.4200750240228636e-05
+            ],
+            "density_relative_L2": [
+              4.431304150044527e-05,
+              4.5560344935636366e-05
+            ],
+            "reservoir_relative_L2": [
+              3.0681306212136445e-06,
+              1.979714086730095e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.672624097316388e-05,
+              2.7101565437269543e-05,
+              2.559597292311815e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              8.37165735596069e-06,
+              8.654728767473533e-06,
+              4.767894355200119e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.6928770830484153e-05,
+            "raw_field_relative_L2": 2.6951916550458238e-05,
+            "scaled_state_error": 1.5618719757103282e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.272162985898809e-05,
+              4.4200750240228636e-05
+            ],
+            "density_relative_L2": [
+              4.431304150044527e-05,
+              4.5560344935636366e-05
+            ],
+            "reservoir_relative_L2": [
+              3.0681306212136445e-06,
+              1.979714086730095e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.672624097316388e-05,
+              2.7101565437269543e-05,
+              2.559597292311815e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              8.37165735596069e-06,
+              8.654728767473533e-06,
+              4.767894355200119e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.6928770830484153e-05,
+            "raw_field_relative_L2": 2.6951916550458238e-05,
+            "scaled_state_error": 1.5618719757103282e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.5198185277842505e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 8.774676361356177e-21
+          },
+          "input_perturbation_norm": 1.0721036177365468e-05,
+          "directional_amplification": 0.9174958635937213,
+          "risk_score": 4.5560344935636366e-05,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 4.6859906154907565e-05,
+      "elapsed_s": 70.03236183800618
+    },
+    "production_J1_spot": {
+      "case": "J1",
+      "geometry": "spot",
+      "blocks": [
+        {
+          "interval_ps": [
+            2440.0,
+            2450.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.787026303209732e-05,
+              5.407691449069715e-05
+            ],
+            "density_relative_L2": [
+              4.322281117235629e-05,
+              5.3471079230168586e-05
+            ],
+            "reservoir_relative_L2": [
+              2.4815225779987043e-06,
+              2.4393525900260086e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              1.2594865714888331e-05,
+              4.5995291821672325e-05,
+              4.0653169886929425e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              3.1208194080674187e-06,
+              2.52808913920725e-06,
+              4.359245499671836e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.8154249592175397e-05,
+            "raw_field_relative_L2": 2.8157192907276722e-05,
+            "scaled_state_error": 1.6316872664430126e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.787026303209732e-05,
+              5.407691449069715e-05
+            ],
+            "density_relative_L2": [
+              4.322281117235629e-05,
+              5.3471079230168586e-05
+            ],
+            "reservoir_relative_L2": [
+              2.4815225779987043e-06,
+              2.4393525900260086e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              1.2594865714888331e-05,
+              4.5995291821672325e-05,
+              4.0653169886929425e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              3.1208194080674187e-06,
+              2.52808913920725e-06,
+              4.359245499671836e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.8154249592175397e-05,
+            "raw_field_relative_L2": 2.8157192907276722e-05,
+            "scaled_state_error": 1.6316872664430126e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.900905680071633e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.097488406093446e-20
+          },
+          "input_perturbation_norm": 8.9612303382583e-06,
+          "directional_amplification": 1.9724150494220458,
+          "risk_score": 0.00010666211996776018,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2715.0,
+            2725.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.9582120487419494e-05,
+              5.4317301966024446e-05
+            ],
+            "density_relative_L2": [
+              4.526959724413122e-05,
+              5.351457761793326e-05
+            ],
+            "reservoir_relative_L2": [
+              2.577847270492053e-06,
+              2.1319494823357037e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.337612802179733e-05,
+              4.051410358641275e-05,
+              1.2941203435512331e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              3.1727126771269955e-06,
+              4.068328610286887e-06,
+              3.7621216527120508e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.8413409210542412e-05,
+            "raw_field_relative_L2": 2.8417036198609135e-05,
+            "scaled_state_error": 1.6461525689127852e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.9582120487419494e-05,
+              5.4317301966024446e-05
+            ],
+            "density_relative_L2": [
+              4.526959724413122e-05,
+              5.351457761793326e-05
+            ],
+            "reservoir_relative_L2": [
+              2.577847270492053e-06,
+              2.1319494823357037e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.337612802179733e-05,
+              4.051410358641275e-05,
+              1.2941203435512331e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              3.1727126771269955e-06,
+              4.068328610286887e-06,
+              3.7621216527120508e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.8413409210542412e-05,
+            "raw_field_relative_L2": 2.8417036198609135e-05,
+            "scaled_state_error": 1.6461525689127852e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 4.553156276733779e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 2.6287660020346813e-21
+          },
+          "input_perturbation_norm": 1.0302516801977083e-05,
+          "directional_amplification": 1.4823969601001377,
+          "risk_score": 8.051980331527586e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              5.130220714587713e-05,
+              5.435780182152914e-05
+            ],
+            "density_relative_L2": [
+              4.772343147923291e-05,
+              5.447456157548963e-05
+            ],
+            "reservoir_relative_L2": [
+              2.706755921093864e-06,
+              2.0326508792116645e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.487280964839477e-05,
+              1.661464079369325e-05,
+              1.541177853852765e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.205725551614866e-06,
+              4.187984753667211e-06,
+              3.098792647252161e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.8894423534333972e-05,
+            "raw_field_relative_L2": 2.8901266819592083e-05,
+            "scaled_state_error": 1.6739667416838003e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              5.130220714587713e-05,
+              5.435780182152914e-05
+            ],
+            "density_relative_L2": [
+              4.772343147923291e-05,
+              5.447456157548963e-05
+            ],
+            "reservoir_relative_L2": [
+              2.706755921093864e-06,
+              2.0326508792116645e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.487280964839477e-05,
+              1.661464079369325e-05,
+              1.541177853852765e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.205725551614866e-06,
+              4.187984753667211e-06,
+              3.098792647252161e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.8894423534333972e-05,
+            "raw_field_relative_L2": 2.8901266819592083e-05,
+            "scaled_state_error": 1.6739667416838003e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.318605827765594e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.3386476988051007e-21
+          },
+          "input_perturbation_norm": 1.2628082920728174e-05,
+          "directional_amplification": 3.0420793347172785,
+          "risk_score": 0.00016571593803658093,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 0.00016571593803658093,
+      "elapsed_s": 53.45368008899095
+    },
+    "production_J1_ring": {
+      "case": "J1",
+      "geometry": "ring",
+      "blocks": [
+        {
+          "interval_ps": [
+            1995.0,
+            2005.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.4527446472591024e-05,
+              4.5308078169028895e-05
+            ],
+            "density_relative_L2": [
+              4.605658580850279e-05,
+              4.7005014695432704e-05
+            ],
+            "reservoir_relative_L2": [
+              2.4414791720116375e-06,
+              1.5790797165570592e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.107684355714186e-05,
+              3.055614877067783e-05,
+              1.980745608704256e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              9.263330979401007e-06,
+              9.199495745210012e-06,
+              5.905562415464495e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7670587407032247e-05,
+            "raw_field_relative_L2": 2.7691257457968356e-05,
+            "scaled_state_error": 1.6020000991647468e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.4527446472591024e-05,
+              4.5308078169028895e-05
+            ],
+            "density_relative_L2": [
+              4.605658580850279e-05,
+              4.7005014695432704e-05
+            ],
+            "reservoir_relative_L2": [
+              2.4414791720116375e-06,
+              1.5790797165570592e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.107684355714186e-05,
+              3.055614877067783e-05,
+              1.980745608704256e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              9.263330979401007e-06,
+              9.199495745210012e-06,
+              5.905562415464495e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7670587407032247e-05,
+            "raw_field_relative_L2": 2.7691257457968356e-05,
+            "scaled_state_error": 1.6020000991647468e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 5.189491426394361e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 2.9961542719860395e-21
+          },
+          "input_perturbation_norm": 9.459648993171363e-06,
+          "directional_amplification": 0.9435989514383822,
+          "risk_score": 4.7005014695432704e-05,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2495.0,
+            2505.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.437770187186624e-05,
+              4.619445710638704e-05
+            ],
+            "density_relative_L2": [
+              4.606233299336069e-05,
+              4.694638838422377e-05
+            ],
+            "reservoir_relative_L2": [
+              2.699651644354312e-06,
+              1.7042572521702099e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.855828301210332e-05,
+              8.515424432810784e-06,
+              2.425294775002282e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.2927986155106153e-06,
+              2.4782039005628466e-06,
+              2.1458895463885853e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7645088211484453e-05,
+            "raw_field_relative_L2": 2.7665012995320552e-05,
+            "scaled_state_error": 1.6014229424058588e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.437770187186624e-05,
+              4.619445710638704e-05
+            ],
+            "density_relative_L2": [
+              4.606233299336069e-05,
+              4.694638838422377e-05
+            ],
+            "reservoir_relative_L2": [
+              2.699651644354312e-06,
+              1.7042572521702099e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.855828301210332e-05,
+              8.515424432810784e-06,
+              2.425294775002282e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.2927986155106153e-06,
+              2.4782039005628466e-06,
+              2.1458895463885853e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7645088211484453e-05,
+            "raw_field_relative_L2": 2.7665012995320552e-05,
+            "scaled_state_error": 1.6014229424058588e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.595596056297679e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 9.212178126213703e-21
+          },
+          "input_perturbation_norm": 1.0037726772118321e-05,
+          "directional_amplification": 0.8536568605125504,
+          "risk_score": 4.694638838422377e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.500275859874748e-05,
+              4.641504483472159e-05
+            ],
+            "density_relative_L2": [
+              4.662562157916449e-05,
+              4.8433624172282655e-05
+            ],
+            "reservoir_relative_L2": [
+              2.6850783762039463e-06,
+              1.5995939791044792e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.1685712913477064e-05,
+              1.9034775216671932e-06,
+              2.186228994153082e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              6.614580542833279e-07,
+              1.2872339196274592e-06,
+              1.2504574329026907e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.787007278103908e-05,
+            "raw_field_relative_L2": 2.7889993409553562e-05,
+            "scaled_state_error": 1.614154950341953e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.500275859874748e-05,
+              4.641504483472159e-05
+            ],
+            "density_relative_L2": [
+              4.662562157916449e-05,
+              4.8433624172282655e-05
+            ],
+            "reservoir_relative_L2": [
+              2.6850783762039463e-06,
+              1.5995939791044792e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.1685712913477064e-05,
+              1.9034775216671932e-06,
+              2.186228994153082e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              6.614580542833279e-07,
+              1.2872339196274592e-06,
+              1.2504574329026907e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.787007278103908e-05,
+            "raw_field_relative_L2": 2.7889993409553562e-05,
+            "scaled_state_error": 1.614154950341953e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 1.4457499076042707e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 8.347040983362022e-21
+          },
+          "input_perturbation_norm": 1.0763945013726555e-05,
+          "directional_amplification": 0.9136664708400865,
+          "risk_score": 4.8433624172282655e-05,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 4.8433624172282655e-05,
+      "elapsed_s": 53.6284391629888,
+      "half_epsilon_check": {
+        "amplification": 0.9136651296459334,
+        "relative_change": 1.4679253270699633e-06,
+        "status": "PASS"
+      }
+    },
+    "production_C1_spot": {
+      "case": "C1",
+      "geometry": "spot",
+      "blocks": [
+        {
+          "interval_ps": [
+            2445.0,
+            2455.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.7330821016625713e-05,
+              5.300148884432825e-05
+            ],
+            "density_relative_L2": [
+              4.1473745265861794e-05,
+              5.063867948744046e-05
+            ],
+            "reservoir_relative_L2": [
+              2.448968612060824e-06,
+              2.127530723010728e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              1.4871377318188936e-05,
+              4.133244430015718e-05,
+              9.911128095308661e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.5560416361317475e-06,
+              3.273768498208984e-06,
+              4.046996866286205e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7653139664770127e-05,
+            "raw_field_relative_L2": 2.7660065648880842e-05,
+            "scaled_state_error": 1.6020628492965115e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.7330821016625713e-05,
+              5.300148884432825e-05
+            ],
+            "density_relative_L2": [
+              4.1473745265861794e-05,
+              5.063867948744046e-05
+            ],
+            "reservoir_relative_L2": [
+              2.448968612060824e-06,
+              2.127530723010728e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              1.4871377318188936e-05,
+              4.133244430015718e-05,
+              9.911128095308661e-06
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.5560416361317475e-06,
+              3.273768498208984e-06,
+              4.046996866286205e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7653139664770127e-05,
+            "raw_field_relative_L2": 2.7660065648880842e-05,
+            "scaled_state_error": 1.6020628492965115e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.10750724618951e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.2167698759066005e-20
+          },
+          "input_perturbation_norm": 8.961485472481266e-06,
+          "directional_amplification": 1.8761436788749433,
+          "risk_score": 9.943840826624726e-05,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2715.0,
+            2725.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.744653507984608e-05,
+              5.265308225484507e-05
+            ],
+            "density_relative_L2": [
+              4.17660040319447e-05,
+              4.9678820164093434e-05
+            ],
+            "reservoir_relative_L2": [
+              2.516942872942924e-06,
+              2.1082901238176706e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.0040343468864232e-05,
+              3.829501379388387e-05,
+              1.1652857189845302e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.7603015935444192e-06,
+              3.545758119220829e-06,
+              3.7469249809966423e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7591189396993915e-05,
+            "raw_field_relative_L2": 2.7596186835567574e-05,
+            "scaled_state_error": 1.5986354182321268e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.744653507984608e-05,
+              5.265308225484507e-05
+            ],
+            "density_relative_L2": [
+              4.17660040319447e-05,
+              4.9678820164093434e-05
+            ],
+            "reservoir_relative_L2": [
+              2.516942872942924e-06,
+              2.1082901238176706e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              2.0040343468864232e-05,
+              3.829501379388387e-05,
+              1.1652857189845302e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.7603015935444192e-06,
+              3.545758119220829e-06,
+              3.7469249809966423e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7591189396993915e-05,
+            "raw_field_relative_L2": 2.7596186835567574e-05,
+            "scaled_state_error": 1.5986354182321268e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 6.7020862148682666e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 3.8694512802862734e-21
+          },
+          "input_perturbation_norm": 1.0303337643067659e-05,
+          "directional_amplification": 1.4954745679557715,
+          "risk_score": 7.874134543660414e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.7618141286271654e-05,
+              5.1751572736000275e-05
+            ],
+            "density_relative_L2": [
+              4.151436235405051e-05,
+              4.906184665548437e-05
+            ],
+            "reservoir_relative_L2": [
+              2.5151215201650867e-06,
+              1.8463295439852917e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.796068507136223e-05,
+              1.8848315811255876e-05,
+              1.3317938627204611e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.5072417329148164e-06,
+              4.607847431508485e-06,
+              3.5168923119729324e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7538453680411997e-05,
+            "raw_field_relative_L2": 2.7538689814443644e-05,
+            "scaled_state_error": 1.5950589240474547e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.7618141286271654e-05,
+              5.1751572736000275e-05
+            ],
+            "density_relative_L2": [
+              4.151436235405051e-05,
+              4.906184665548437e-05
+            ],
+            "reservoir_relative_L2": [
+              2.5151215201650867e-06,
+              1.8463295439852917e-06,
+              2.720299150727527e-08,
+              2.2077274858945613e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.796068507136223e-05,
+              1.8848315811255876e-05,
+              1.3317938627204611e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              2.5072417329148164e-06,
+              4.607847431508485e-06,
+              3.5168923119729324e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.7538453680411997e-05,
+            "raw_field_relative_L2": 2.7538689814443644e-05,
+            "scaled_state_error": 1.5950589240474547e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.9785524980381134e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.719668086537737e-20
+          },
+          "input_perturbation_norm": 1.2642013561183144e-05,
+          "directional_amplification": 3.0444985807467275,
+          "risk_score": 0.0001575575897461639,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 0.0001575575897461639,
+      "elapsed_s": 51.5510104069981
+    },
+    "production_C1_ring": {
+      "case": "C1",
+      "geometry": "ring",
+      "blocks": [
+        {
+          "interval_ps": [
+            1290.0,
+            1300.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.262049889326931e-05,
+              4.416842270583972e-05
+            ],
+            "density_relative_L2": [
+              4.424334309542938e-05,
+              4.474866395522072e-05
+            ],
+            "reservoir_relative_L2": [
+              3.575382700217298e-06,
+              3.079956834363019e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.88682609058982e-05,
+              3.830093533618794e-06,
+              2.1073345982658857e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.4040362678490565e-06,
+              2.1150531407977294e-06,
+              1.9730724555019457e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.6909271582309568e-05,
+            "raw_field_relative_L2": 2.69326757189972e-05,
+            "scaled_state_error": 1.5655255899220957e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.262049889326931e-05,
+              4.416842270583972e-05
+            ],
+            "density_relative_L2": [
+              4.424334309542938e-05,
+              4.474866395522072e-05
+            ],
+            "reservoir_relative_L2": [
+              3.575382700217298e-06,
+              3.079956834363019e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              3.88682609058982e-05,
+              3.830093533618794e-06,
+              2.1073345982658857e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.4040362678490565e-06,
+              2.1150531407977294e-06,
+              1.9730724555019457e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.6909271582309568e-05,
+            "raw_field_relative_L2": 2.69326757189972e-05,
+            "scaled_state_error": 1.5655255899220957e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 8.814103472806053e-21,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 5.0888250126897895e-21
+          },
+          "input_perturbation_norm": 9.504446486463943e-06,
+          "directional_amplification": 0.925644459594961,
+          "risk_score": 4.474866395522072e-05,
+          "perturbation_seed": 20261025
+        },
+        {
+          "interval_ps": [
+            2140.0,
+            2150.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.458169856389325e-05,
+              4.444360306172498e-05
+            ],
+            "density_relative_L2": [
+              4.703461123787385e-05,
+              4.5398085166325355e-05
+            ],
+            "reservoir_relative_L2": [
+              1.7795896911877542e-06,
+              1.5281578547475407e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.0351682875658215e-05,
+              3.783656207397266e-06,
+              2.302807910093399e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.4642553122963148e-06,
+              2.3143957488763577e-06,
+              2.1000290377322346e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.767341763034326e-05,
+            "raw_field_relative_L2": 2.7730050487063197e-05,
+            "scaled_state_error": 1.600597710074775e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.458169856389325e-05,
+              4.444360306172498e-05
+            ],
+            "density_relative_L2": [
+              4.703461123787385e-05,
+              4.5398085166325355e-05
+            ],
+            "reservoir_relative_L2": [
+              1.7795896911877542e-06,
+              1.5281578547475407e-06,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.0351682875658215e-05,
+              3.783656207397266e-06,
+              2.302807910093399e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.4642553122963148e-06,
+              2.3143957488763577e-06,
+              2.1000290377322346e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.767341763034326e-05,
+            "raw_field_relative_L2": 2.7730050487063197e-05,
+            "scaled_state_error": 1.600597710074775e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 4.286879814672884e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 2.4750312149849624e-20
+          },
+          "input_perturbation_norm": 1.0008366588130186e-05,
+          "directional_amplification": 0.8542617454320048,
+          "risk_score": 4.703461123787385e-05,
+          "perturbation_seed": 20261026
+        },
+        {
+          "interval_ps": [
+            2990.0,
+            3000.0
+          ],
+          "single_vs_double": {
+            "population_relative": [
+              4.480015167110559e-05,
+              4.506500495025694e-05
+            ],
+            "density_relative_L2": [
+              4.715381768629375e-05,
+              4.6137467977781014e-05
+            ],
+            "reservoir_relative_L2": [
+              3.3486669742714613e-07,
+              2.472434026487162e-07,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.074551016361317e-05,
+              3.647885668686206e-06,
+              2.2898777123356947e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.3955366618635498e-06,
+              2.058039072999929e-06,
+              1.9206320973639846e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.775784902793072e-05,
+            "raw_field_relative_L2": 2.7820481720158705e-05,
+            "scaled_state_error": 1.6026910586489083e-05
+          },
+          "single_vs_saved": {
+            "population_relative": [
+              4.480015167110559e-05,
+              4.506500495025694e-05
+            ],
+            "density_relative_L2": [
+              4.715381768629375e-05,
+              4.6137467977781014e-05
+            ],
+            "reservoir_relative_L2": [
+              3.3486669742714613e-07,
+              2.472434026487162e-07,
+              2.2440463617763406e-08,
+              2.296794073058594e-08
+            ],
+            "unnormalized_stokes_relative_L2": [
+              4.074551016361317e-05,
+              3.647885668686206e-06,
+              2.2898777123356947e-05
+            ],
+            "normalized_stokes_weighted_RMS": [
+              1.3955366618635498e-06,
+              2.058039072999929e-06,
+              1.9206320973639846e-06
+            ],
+            "common_phase_aligned_field_relative_L2": 2.775784902793072e-05,
+            "raw_field_relative_L2": 2.7820481720158705e-05,
+            "scaled_state_error": 1.6026910586489083e-05
+          },
+          "double_restart_vs_saved": {
+            "population_relative": [
+              0.0,
+              0.0
+            ],
+            "density_relative_L2": [
+              0.0,
+              0.0
+            ],
+            "reservoir_relative_L2": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unnormalized_stokes_relative_L2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normalized_stokes_weighted_RMS": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "common_phase_aligned_field_relative_L2": 2.703085318476092e-20,
+            "raw_field_relative_L2": 0.0,
+            "scaled_state_error": 1.560627036264697e-20
+          },
+          "input_perturbation_norm": 1.0748120808808615e-05,
+          "directional_amplification": 0.9084959345379903,
+          "risk_score": 4.715381768629375e-05,
+          "perturbation_seed": 20261027
+        }
+      ],
+      "risk_score": 4.715381768629375e-05,
+      "elapsed_s": 61.96310228999937
+    }
+  },
+  "interpretation": "empirical directional sensitivity; NOT a rigorous upper error bound",
+  "caveat": "saved rolling history samples late dynamics, not the entire transient",
+  "policy": "all original double trajectories and checkpoints remain unchanged",
+  "selected_full_repeats": [
+    "production_J1_ring",
+    "production_A1_spot"
+  ]
+}

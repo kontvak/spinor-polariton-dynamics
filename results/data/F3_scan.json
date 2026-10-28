@@ -1,0 +1,737 @@
+[
+  {
+    "epsilon": -1.0,
+    "status": "PASS",
+    "density": [
+      0.753333449628161,
+      4.008571312267051
+    ],
+    "z": -0.6835999511555375,
+    "SA": 2.84834068793072e-13,
+    "SI": -0.3417999755769935,
+    "energy_difference": -0.03646283076606341,
+    "density_error": 6.90642127046531e-12,
+    "analytic_density": [
+      0.7533334496333638,
+      4.008571312271398
+    ],
+    "analytic_energy_difference": -0.03646283076601016,
+    "settling": {
+      "span_max": 1.7047393311590545e-10,
+      "half_mean_drift_max": 3.6055666156558887e-11,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687648002667856e-05,
+      "denominator": 7017.790855634343,
+      "relative": 9.52956299246019e-09,
+      "population_change": 39.08180476190428,
+      "plus": {
+        "absolute": 3.4587409603048513e-08,
+        "denominator": 0.7533780952354047,
+        "relative": 4.590976273638689e-08
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": -0.9,
+    "status": "PASS",
+    "density": [
+      0.9160953427744735,
+      3.845809419123717
+    ],
+    "z": -0.6152399560341898,
+    "SA": -8.028070894658396e-13,
+    "SI": -0.3076199780192942,
+    "energy_difference": -0.03281654768947436,
+    "density_error": 1.0051077925183307e-11,
+    "analytic_density": [
+      0.9160953427652657,
+      3.8458094191394965
+    ],
+    "analytic_energy_difference": -0.03281654768940914,
+    "settling": {
+      "span_max": 5.16755868864306e-11,
+      "half_mean_drift_max": 2.8346521735757045e-13,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687633189272901e-05,
+      "denominator": 7017.79085563449,
+      "relative": 9.529541884115127e-09,
+      "population_change": 39.08180476190442,
+      "plus": {
+        "absolute": 3.462516928731674e-08,
+        "denominator": 0.9161397117755343,
+        "relative": 3.779463857124047e-08
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": -0.8,
+    "status": "PASS",
+    "density": [
+      1.07885723590733,
+      3.683047525991508
+    ],
+    "z": -0.546879960918358,
+    "SA": -8.188593121570447e-13,
+    "SI": -0.27343998046159484,
+    "energy_difference": -0.029170264612876348,
+    "density_error": 9.419518260127366e-12,
+    "analytic_density": [
+      1.0788572358971678,
+      3.683047526007594
+    ],
+    "analytic_energy_difference": -0.02917026461280811,
+    "settling": {
+      "span_max": 5.5078813305050515e-11,
+      "half_mean_drift_max": 7.091763074212754e-14,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687617020872949e-05,
+      "denominator": 7017.790855634652,
+      "relative": 9.529518844955884e-09,
+      "population_change": 39.08180476190486,
+      "plus": {
+        "absolute": 3.466952991360017e-08,
+        "denominator": 1.078901318604433,
+        "relative": 3.213410653575387e-08
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": -0.7,
+    "status": "PASS",
+    "density": [
+      1.241619129040248,
+      3.5202856328594794
+    ],
+    "z": -0.4785199658025445,
+    "SA": -7.531432891477122e-13,
+    "SI": -0.23925998290389536,
+    "energy_difference": -0.025523981536279307,
+    "density_error": 9.003612636265932e-12,
+    "analytic_density": [
+      1.241619129029069,
+      3.5202856328756926
+    ],
+    "analytic_energy_difference": -0.025523981536207108,
+    "settling": {
+      "span_max": 5.936236118043114e-11,
+      "half_mean_drift_max": 2.5825495588176085e-14,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687600212984535e-05,
+      "denominator": 7017.79085563482,
+      "relative": 9.529494894557646e-09,
+      "population_change": 39.081804761905076,
+      "plus": {
+        "absolute": 3.473575871382195e-08,
+        "denominator": 1.241662916517012,
+        "relative": 2.7975192181191338e-08
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": -0.6,
+    "status": "PASS",
+    "density": [
+      1.4043810221735522,
+      3.357523739726732
+    ],
+    "z": -0.4101599706865526,
+    "SA": -9.14187140875787e-13,
+    "SI": -0.20507998534619618,
+    "energy_difference": -0.021877698459683525,
+    "density_error": 8.958586851521215e-12,
+    "analytic_density": [
+      1.404381022160971,
+      3.3575237397437916
+    ],
+    "analytic_energy_difference": -0.02187769845960609,
+    "settling": {
+      "span_max": 6.567505513772436e-11,
+      "half_mean_drift_max": 2.7670173844470075e-14,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687573986852158e-05,
+      "denominator": 7017.790855635082,
+      "relative": 9.529457523633993e-09,
+      "population_change": 39.08180476190556,
+      "plus": {
+        "absolute": 3.479827870300767e-08,
+        "denominator": 1.40442450691493,
+        "relative": 2.4777607149171957e-08
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": -0.5,
+    "status": "PASS",
+    "density": [
+      1.5671429153073393,
+      3.1947618465932033
+    ],
+    "z": -0.3417999755703337,
+    "SA": -1.3054908213220117e-12,
+    "SI": -0.1708999877884967,
+    "energy_difference": -0.018231415383089644,
+    "density_error": 9.231367479957596e-12,
+    "analytic_density": [
+      1.5671429152928724,
+      3.194761846611889
+    ],
+    "analytic_energy_difference": -0.018231415383005073,
+    "settling": {
+      "span_max": 7.501999021984785e-11,
+      "half_mean_drift_max": 3.679108300059476e-13,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687547330130883e-05,
+      "denominator": 7017.790855635347,
+      "relative": 9.529419539142756e-09,
+      "population_change": 39.08180476190617,
+      "plus": {
+        "absolute": 3.491919020603973e-08,
+        "denominator": 1.6245325405196345,
+        "relative": 2.1494915820442863e-08
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": -0.3999999999999999,
+    "status": "PASS",
+    "density": [
+      1.7299048084414586,
+      3.0319999534613418
+    ],
+    "z": -0.2734399804542885,
+    "SA": -1.0971255154618919e-12,
+    "SI": -0.13671999023079737,
+    "energy_difference": -0.014585132306496905,
+    "density_error": 9.6445824580685e-12,
+    "analytic_density": [
+      1.7299048084247743,
+      3.0319999534799877
+    ],
+    "analytic_energy_difference": -0.01458513230640407,
+    "settling": {
+      "span_max": 8.744328338328228e-11,
+      "half_mean_drift_max": 9.202894856418779e-14,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687495235979668e-05,
+      "denominator": 7017.790855635869,
+      "relative": 9.529345307589288e-09,
+      "population_change": 39.081804761907115,
+      "plus": {
+        "absolute": 3.499808398643722e-08,
+        "denominator": 2.136300196812501,
+        "relative": 1.638256834814538e-08
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": -0.29999999999999993,
+    "status": "PASS",
+    "density": [
+      1.892666701576821,
+      2.869238060327931
+    ],
+    "z": -0.20507998533773267,
+    "SA": -1.3428505213848645e-12,
+    "SI": -0.1025399926730979,
+    "energy_difference": -0.01093884922990854,
+    "density_error": 1.0643945315075361e-11,
+    "analytic_density": [
+      1.8926667015566756,
+      2.8692380603480863
+    ],
+    "analytic_energy_difference": -0.010938849229803038,
+    "settling": {
+      "span_max": 1.0511509611433825e-10,
+      "half_mean_drift_max": 3.219340943715762e-14,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687427705287519e-05,
+      "denominator": 7017.79085563654,
+      "relative": 9.529249079738989e-09,
+      "population_change": 39.081804761908096,
+      "plus": {
+        "absolute": 3.518624813736437e-08,
+        "denominator": 2.8699972127622764,
+        "relative": 1.226002867908669e-08
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": -0.19999999999999996,
+    "status": "PASS",
+    "density": [
+      2.0554285947120485,
+      2.7064761671965307
+    ],
+    "z": -0.13671999022163153,
+    "SA": -1.4337859518293442e-12,
+    "SI": -0.06835999511539868,
+    "energy_difference": -0.007292566153315299,
+    "density_error": 1.141903103792893e-11,
+    "analytic_density": [
+      2.0554285946885775,
+      2.706476167216184
+    ],
+    "analytic_energy_difference": -0.007292566153202035,
+    "settling": {
+      "span_max": 1.4310332665288908e-10,
+      "half_mean_drift_max": 1.2536011232527907e-13,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687304190222676e-05,
+      "denominator": 7017.790855637773,
+      "relative": 9.52907307696467e-09,
+      "population_change": 39.08180476191106,
+      "plus": {
+        "absolute": 3.532377856885205e-08,
+        "denominator": 3.755240064732771,
+        "relative": 9.406530064640688e-09
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": -0.09999999999999998,
+    "status": "PASS",
+    "density": [
+      2.2181904878433736,
+      2.5437142740727716
+    ],
+    "z": -0.06835999510800939,
+    "SA": -9.94575307446569e-13,
+    "SI": -0.03417999755769931,
+    "energy_difference": -0.003646283076693612,
+    "density_error": 1.0321084307730168e-11,
+    "analytic_density": [
+      2.2181904878204795,
+      2.5437142740842824
+    ],
+    "analytic_energy_difference": -0.0036462830766010035,
+    "settling": {
+      "span_max": 2.2476580585868404e-10,
+      "half_mean_drift_max": 4.2214163766835533e-13,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687094084156797e-05,
+      "denominator": 7017.7908556398725,
+      "relative": 9.528773686355573e-09,
+      "population_change": 39.081804761914476,
+      "plus": {
+        "absolute": 3.520956637359518e-08,
+        "denominator": 4.700111789382709,
+        "relative": 7.491218922309812e-09
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": 0.0,
+    "status": "PASS",
+    "density": [
+      2.3809523809592257,
+      2.380952380959226
+    ],
+    "z": 5.273171177095731e-17,
+    "SA": 1.9452151664786156e-17,
+    "SI": 0.0,
+    "energy_difference": -3.653810348169806e-17,
+    "density_error": 2.8749802538641234e-12,
+    "analytic_density": [
+      2.380952380952381,
+      2.380952380952381
+    ],
+    "analytic_energy_difference": 0.0,
+    "settling": {
+      "span_max": 1.8672375645624907e-10,
+      "half_mean_drift_max": 2.6858515411654575e-13,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.686969164348966e-05,
+      "denominator": 7017.790855641103,
+      "relative": 9.528595681892953e-09,
+      "population_change": 39.08180476193194,
+      "plus": {
+        "absolute": 3.435341122681734e-08,
+        "denominator": 5.6198735930701655,
+        "relative": 6.112844116134274e-09
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": 0.10000000000000009,
+    "status": "PASS",
+    "density": [
+      2.5437142740720216,
+      2.218190487842853
+    ],
+    "z": 0.06835999510798074,
+    "SA": 1.1383322367490132e-12,
+    "SI": 0.034179997557699446,
+    "energy_difference": 0.0036462830766933563,
+    "density_error": 1.0086646162048018e-11,
+    "analytic_density": [
+      2.5437142740842824,
+      2.218190487820479
+    ],
+    "analytic_energy_difference": 0.0036462830766010035,
+    "settling": {
+      "span_max": 2.2496116420968128e-10,
+      "half_mean_drift_max": 3.563238554513512e-13,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687120514925482e-05,
+      "denominator": 7017.790855639607,
+      "relative": 9.528811348875703e-09,
+      "population_change": 39.08180476191458,
+      "plus": {
+        "absolute": 3.322629416047107e-08,
+        "denominator": 6.4451054622672554,
+        "relative": 5.155275480749503e-09
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": 0.20000000000000018,
+    "status": "PASS",
+    "density": [
+      2.7064761671965805,
+      2.055428594711969
+    ],
+    "z": 0.1367199902216582,
+    "SA": 1.4327603115366575e-12,
+    "SI": 0.06835999511539871,
+    "energy_difference": 0.007292566153315445,
+    "density_error": 1.1380572937483323e-11,
+    "analytic_density": [
+      2.706476167216185,
+      2.055428594688577
+    ],
+    "analytic_energy_difference": 0.007292566153202049,
+    "settling": {
+      "span_max": 1.4196491243912626e-10,
+      "half_mean_drift_max": 1.580128117398449e-13,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687303564234526e-05,
+      "denominator": 7017.790855637779,
+      "relative": 9.529072184962944e-09,
+      "population_change": 39.08180476191295,
+      "plus": {
+        "absolute": 3.296797279617181e-08,
+        "denominator": 7.12680953237248,
+        "relative": 4.6259090616102e-09
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": 0.30000000000000004,
+    "status": "PASS",
+    "density": [
+      2.8692380603280947,
+      1.8926667015767975
+    ],
+    "z": 0.20507998533776678,
+    "SA": 1.2854175316952893e-12,
+    "SI": 0.10253999267309809,
+    "energy_difference": 0.010938849229908476,
+    "density_error": 1.0631509566032651e-11,
+    "analytic_density": [
+      2.8692380603480863,
+      1.8926667015566756
+    ],
+    "analytic_energy_difference": 0.010938849229803038,
+    "settling": {
+      "span_max": 1.0723586121633516e-10,
+      "half_mean_drift_max": 4.837156316513237e-14,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687427383411659e-05,
+      "denominator": 7017.790855636545,
+      "relative": 9.529248621082025e-09,
+      "population_change": 39.08180476190804,
+      "plus": {
+        "absolute": 3.296047079714981e-08,
+        "denominator": 7.646005852089824,
+        "relative": 4.310808994233372e-09
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": 0.40000000000000013,
+    "status": "PASS",
+    "density": [
+      3.031999953460896,
+      1.7299048084414475
+    ],
+    "z": 0.27343998045422285,
+    "SA": 1.247874469495329e-12,
+    "SI": 0.13671999023079745,
+    "energy_difference": 0.014585132306496924,
+    "density_error": 9.638164630802987e-12,
+    "analytic_density": [
+      3.0319999534799877,
+      1.7299048084247743
+    ],
+    "analytic_energy_difference": 0.01458513230640407,
+    "settling": {
+      "span_max": 8.721372342248288e-11,
+      "half_mean_drift_max": 1.424501542363007e-13,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687501857527423e-05,
+      "denominator": 7017.790855635802,
+      "relative": 9.529354742962834e-09,
+      "population_change": 39.08180476190773,
+      "plus": {
+        "absolute": 3.297528561319041e-08,
+        "denominator": 8.012398939742948,
+        "relative": 4.115532172222108e-09
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": 0.5,
+    "status": "PASS",
+    "density": [
+      3.1947618465938663,
+      1.5671429153073002
+    ],
+    "z": 0.3417999755704368,
+    "SA": 1.0515056127351963e-12,
+    "SI": 0.1708999877884967,
+    "energy_difference": 0.0182314153830897,
+    "density_error": 9.206430475115571e-12,
+    "analytic_density": [
+      3.194761846611889,
+      1.5671429152928724
+    ],
+    "analytic_energy_difference": 0.018231415383005073,
+    "settling": {
+      "span_max": 7.455123697851943e-11,
+      "half_mean_drift_max": 2.480067433467e-13,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687548857087222e-05,
+      "denominator": 7017.790855635332,
+      "relative": 9.529421714978976e-09,
+      "population_change": 39.08180476190607,
+      "plus": {
+        "absolute": 3.2942888417153426e-08,
+        "denominator": 8.261997837668128,
+        "relative": 3.9872787507835095e-09
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": 0.6000000000000001,
+    "status": "PASS",
+    "density": [
+      3.3575237397264193,
+      1.4043810221735793
+    ],
+    "z": 0.41015997068650684,
+    "SA": 1.043067064590209e-12,
+    "SI": 0.20507998534619618,
+    "energy_difference": 0.021877698459683424,
+    "density_error": 8.978192308000783e-12,
+    "analytic_density": [
+      3.3575237397437916,
+      1.4043810221609705
+    ],
+    "analytic_energy_difference": 0.02187769845960609,
+    "settling": {
+      "span_max": 6.549571141835243e-11,
+      "half_mean_drift_max": 1.004324828428766e-14,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687576268404882e-05,
+      "denominator": 7017.790855635058,
+      "relative": 9.529460774732231e-09,
+      "population_change": 39.081804761905516,
+      "plus": {
+        "absolute": 3.298946626983934e-08,
+        "denominator": 8.451244384564708,
+        "relative": 3.903504001149353e-09
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": 0.7000000000000002,
+    "status": "PASS",
+    "density": [
+      3.5202856328594723,
+      1.2416191290402587
+    ],
+    "z": 0.4785199658025406,
+    "SA": 7.667027697953126e-13,
+    "SI": 0.2392599829038956,
+    "energy_difference": 0.02552398153627929,
+    "density_error": 9.012196702657319e-12,
+    "analytic_density": [
+      3.5202856328756926,
+      1.241619129029069
+    ],
+    "analytic_energy_difference": 0.025523981536207108,
+    "settling": {
+      "span_max": 5.866671251355522e-11,
+      "half_mean_drift_max": 5.124106267495189e-15,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687594364507277e-05,
+      "denominator": 7017.790855634879,
+      "relative": 9.529486560770796e-09,
+      "population_change": 39.08180476190513,
+      "plus": {
+        "absolute": 3.312579766046042e-08,
+        "denominator": 8.607585165716383,
+        "relative": 3.848442626208214e-09
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": 0.8,
+    "status": "PASS",
+    "density": [
+      3.683047525991466,
+      1.078857235907327
+    ],
+    "z": 0.5468799609183551,
+    "SA": 8.389652608771596e-13,
+    "SI": 0.27343998046159484,
+    "energy_difference": 0.02917026461287624,
+    "density_error": 9.416636855280166e-12,
+    "analytic_density": [
+      3.683047526007594,
+      1.0788572358971678
+    ],
+    "analytic_energy_difference": 0.02917026461280811,
+    "settling": {
+      "span_max": 5.525877191716365e-11,
+      "half_mean_drift_max": 1.2502819292686933e-13,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687617908340826e-05,
+      "denominator": 7017.790855634643,
+      "relative": 9.529520109553111e-09,
+      "population_change": 39.08180476190481,
+      "plus": {
+        "absolute": 3.301555207002593e-08,
+        "denominator": 8.727684252741918,
+        "relative": 3.782853631494936e-09
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": 0.9000000000000001,
+    "status": "PASS",
+    "density": [
+      3.845809419123729,
+      0.9160953427744823
+    ],
+    "z": 0.6152399560341882,
+    "SA": 7.932317166189816e-13,
+    "SI": 0.30761997801929425,
+    "energy_difference": 0.03281654768947435,
+    "density_error": 1.0061379140863364e-11,
+    "analytic_density": [
+      3.8458094191394965,
+      0.9160953427652652
+    ],
+    "analytic_energy_difference": 0.032816547689409156,
+    "settling": {
+      "span_max": 5.175634280120673e-11,
+      "half_mean_drift_max": 2.9909882703654425e-13,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687634759572347e-05,
+      "denominator": 7017.790855634475,
+      "relative": 9.529544121713103e-09,
+      "population_change": 39.08180476190442,
+      "plus": {
+        "absolute": 3.296722583812084e-08,
+        "denominator": 8.846022638995965,
+        "relative": 3.726785153453175e-09
+      },
+      "status": "PASS"
+    }
+  },
+  {
+    "epsilon": 1.0,
+    "status": "PASS",
+    "density": [
+      4.008571312267014,
+      0.7533334496281643
+    ],
+    "z": 0.6835999511555343,
+    "SA": -2.687262538981781e-13,
+    "SI": 0.3417999755769935,
+    "energy_difference": 0.036462830766063443,
+    "density_error": 6.902000029014401e-12,
+    "analytic_density": [
+      4.008571312271398,
+      0.7533334496333638
+    ],
+    "analytic_energy_difference": 0.03646283076601016,
+    "settling": {
+      "span_max": 1.7077251428855814e-10,
+      "half_mean_drift_max": 3.609427833189694e-11,
+      "passed": true
+    },
+    "balance": {
+      "absolute": 6.687647944403352e-05,
+      "denominator": 7017.790855634343,
+      "relative": 9.529562909436193e-09,
+      "population_change": 39.081804761904,
+      "plus": {
+        "absolute": 3.292303940582997e-08,
+        "denominator": 8.960992460146057,
+        "relative": 3.674039404926957e-09
+      },
+      "status": "PASS"
+    }
+  }
+]
