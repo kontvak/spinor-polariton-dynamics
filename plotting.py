@@ -25,12 +25,14 @@ DATA=ROOT/'results/data'
 def _layout_check(fig,name):
     """Check the physical canvas; do not crop fonts or resize after export."""
     from matplotlib.text import Text
-    fig.canvas.draw();renderer=fig.canvas.get_renderer();bounds=fig.bbox
+    fig.canvas.draw();fig.canvas.draw();renderer=fig.canvas.get_renderer();bounds=fig.bbox
     axes=list(fig.axes)
     for ax in list(axes):axes.extend(ax.child_axes)
     texts=list(fig.texts)
     for ax in axes:
-        texts.extend([ax.title,ax._left_title,ax.xaxis.label,ax.yaxis.label,*ax.texts])
+        texts.extend([ax.title,ax._left_title,*ax.texts])
+        if not ax.axison:continue
+        texts.extend([ax.xaxis.label,ax.yaxis.label])
         for axis,limits in ((ax.xaxis,ax.get_xlim()),(ax.yaxis,ax.get_ylim())):
             for tick in axis.get_major_ticks():
                 if min(limits)<=tick.get_loc()<=max(limits):texts.extend([tick.label1,tick.label2])
@@ -51,10 +53,10 @@ def _layout_check(fig,name):
                 raise ValueError(f'Overlapping text in {name}: {first.get_text()} / {second.get_text()}')
 
 
-def save(fig,out,name):
+def save(fig,out,name,*,width_mm=160):
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
     height=FIGURE_HEIGHTS_MM.get(name,fig.get_size_inches()[1]*25.4)
-    fig.set_size_inches(WIDTH,height/25.4);fig.set_dpi(300)
+    fig.set_size_inches(width_mm/25.4,height/25.4);fig.set_dpi(300)
     _layout_check(fig,name)
     path=out/(name+'.png');fig.savefig(path,dpi=300,facecolor='white',pil_kwargs={'optimize':True})
     plt.close(fig)
@@ -631,7 +633,7 @@ def report_figures45(out):
             handles=[Line2D([],[],color=SPIN_COLORS[k],label=label) for k,label in enumerate((r'$+$ circular',r'$-$ circular'))]
             fig.legend(handles=handles,loc='outside upper center',ncol=2,frameon=False,
                        title=r'$P_{A,\mathrm{tot}}=4P_{\rm th}$; $\epsilon=0.3$',title_fontsize=8.5)
-        else:fig.suptitle('Relative phase (different vertical scales); same time windows as Fig. 4',fontsize=8.5)
+        else:fig.suptitle('Relative phase (different vertical scales); matched time windows',fontsize=8.5)
         paths.append(save(fig,out,name))
     write={k:{field:c[field] for field in ('J','start_ps','end_ps','current_mean','status')}
            for k,c in zip(('J5','J6.5','J10'),cases)}
@@ -644,7 +646,7 @@ def report_figure6(out):
     rows=sorted((r for r in json.loads((DATA/'F5_scan.json').read_text()) if r['J']<=.010000001),key=lambda r:r['J'])
     fig,axes=plt.subplots(1,2,figsize=(WIDTH,78/25.4),layout='constrained')
     x=np.array([1000*r['J'] for r in rows]);amplitude=np.array([r['A_z'] for r in rows])
-    frequency=np.array([-r['mean_phase_drift'] if r.get('mean_phase_drift') is not None else np.nan for r in rows])
+    frequency=np.array([r['mean_phase_drift'] if r.get('mean_phase_drift') is not None else np.nan for r in rows])
     for ax,values in zip(axes,(amplitude,frequency)):
         ax.plot(x,values,'o-',color='C0',ms=3,mfc='white',mew=.8,lw=.8)
         for j,marker,color in ((5.,'o','C1'),(6.5,'s','C2'),(10.,'D','C3')):
@@ -659,14 +661,14 @@ def report_figure6(out):
     axes[0].annotate(r'$6.84$-$6.86$ $\mu$eV',xy=(6.85,.005),xytext=(8.55,.32),
                      ha='center',fontsize=8,color='.25',
                      arrowprops={'arrowstyle':'->','lw':.8,'color':'.35'})
-    axes[1].set_title('(b) Mean frequency difference',loc='left')
-    axes[1].set_ylabel(r'$\overline{\omega_+-\omega_-}$ (ps$^{-1}$)')
+    axes[1].set_title('(b) Mean phase drift',loc='left')
+    axes[1].set_ylabel(r'$\langle\dot\theta\rangle$ (rad ps$^{-1}$)')
     axes[1].ticklabel_format(axis='y',style='sci',scilimits=(-2,-2),useMathText=True)
     axes[1].axhline(0,color='.6',lw=.7,zorder=0)
     handles=[Line2D([],[],ls='',marker=m,color=c,label=rf'$J={j:g}$ $\mu$eV',ms=5)
              for j,m,c in ((5,'o','C1'),(6.5,'s','C2'),(10,'D','C3'))]
     fig.legend(handles=handles,loc='outside upper center',ncol=3,frameon=False,
-               title='Examples shown in Figs. 4 and 5',title_fontsize=8.5)
+               title='Selected homogeneous regimes',title_fontsize=8.5)
     return save(fig,out,'N6_coupling_summary')
 
 
@@ -804,7 +806,7 @@ def _update_spatial_notes(report):
     for filename,tag,content in (('results_overview.md','N3_RESULT','\n'.join(overview)),
                                   ('diagnostic_summary.md','N3_CHECKS','\n'.join(diagnostic))):
         content=re.sub(r'(?m)(^\|.*\|)\n(?:[ \t]*\n)+(?=\|)',r'\1\n',content)
-        path=ROOT/'docs'/filename;text=path.read_text();start=f'<!-- {tag}_START -->';end=f'<!-- {tag}_END -->'
+        path=ROOT/'docs/journal'/filename;text=path.read_text();start=f'<!-- {tag}_START -->';end=f'<!-- {tag}_END -->'
         if start not in text or end not in text:raise ValueError('Missing documentation markers: '+filename)
         before,rest=text.split(start,1);_,after=rest.split(end,1)
         path.write_text(before+start+'\n'+content+'\n'+end+after)
@@ -814,7 +816,7 @@ def _update_spatial_notes(report):
 def _update_latex_spatial_results(report):
     """Update both report languages from the same measured N3 results."""
     import re,shutil,subprocess
-    path=ROOT/'latex/report.tex'
+    path=ROOT/'latex/report_ru.tex'
     if not path.exists():return
     cases=[report['cases'][name] for name in ('N3_eps_0','N3_eps_03')]
     t=cases[0]['time_ps']
@@ -1001,7 +1003,7 @@ def make_report3_pilot_figures():
 
 def _report3_notes(report):
     """One short marked addition to the existing results file, no new MD files."""
-    path=ROOT/'docs/results_overview.md';text=path.read_text();tag='REPORT3_PILOTS'
+    path=ROOT/'docs/journal/results_overview.md';text=path.read_text();tag='REPORT3_PILOTS'
     lines=['## Новая серия: предварительная проверка TE–TM',
            f'Статус: **{report["status"]}**. Здесь выполняются только B0/A1/T0; остальные расчёты не запущены.',
            'Независимые радиальные затравки, пустые резервуары; L=256 мкм, 512², dx=0.5 мкм, dt=0.025 пс. Intel Arc, complex128/float64, скомпилированный совместный RK4 и точная FFT-экспонента. Температурных остановок нет.',
@@ -1101,175 +1103,6 @@ def report3_polar_profile(psi,x,limits=(5.,7.5),order=3):
     return np.degrees(centers),difference/total
 
 
-def make_report3_figures(*,animations=True):
-    """CPU-only rendering. No integration, PyTorch import, or report text edits."""
-    from model import stokes
-    from numerics import write_json
-    from scipy.stats import binned_statistic
-    from PIL import Image
-    import hashlib
-    directory=DATA/'report3';out=ROOT/'results/figures/report3';out.mkdir(parents=True,exist_ok=True)
-    diagnostic=ROOT/'results/diagnostics/report3'
-    manifest={'method':'CPU postprocessing of saved arrays; no field integration or temporal interpolation',
-              'PNG_width_mm':160,'PNG_dpi':300,'mask_relative_S0':.001,'figures':{},'animations':{},
-              'limitations':['T0 ring polarization still evolves at6000 ps','Small alpha2 contribution has no paired error bound','Only two modes are verified in the new0D sample; no2D J scan has been performed']}
-    prior=directory/'figure_manifest.json'
-    if prior.exists() and not animations:
-        manifest['animations']=json.loads(prior.read_text()).get('animations',{})
-    queue_file=directory/'experiment_queue.json'
-    queue_state=json.loads(queue_file.read_text()) if queue_file.exists() else {}
-    def c1_status(geometry):
-        records=queue_state.get('experiments',{})
-        return 'READY' if all(records.get('C1_'+geometry+'_'+kind,{}).get('convergence',{}).get('status')=='PASS' for kind in ('dt','grid')) else 'PENDING_C1_CHECKS'
-    cache={};paths=[]
-    reviews=json.loads((directory/'report3_cycle_review.json').read_text())['cases']
-    def load(name):
-        if name not in cache:
-            with np.load(directory/(name+'.npz'),allow_pickle=False) as z:
-                cache[name]={k:z[k].copy() for k in ('psi','x','y','history','features','mean_maps','mean_interval_ps')}
-                cache[name]['config']=json.loads(str(z['config_json']))
-                cache[name]['summary']=json.loads(str(z['summary_json']))
-            cache[name]['name']=name
-        return cache[name]
-    def record(key,path,caption,members=(),status='READY',**extra):
-        manifest['figures'][key]={'file':str(path.relative_to(ROOT)),'caption_en':caption,'status':status,
-             'sources':[{'run':d['name'],'time_ps':float(d['history'][-1,0]),'field_sha256':hashlib.sha256(np.ascontiguousarray(d['psi']).tobytes()).hexdigest(),'config':d['config']} for d in members],**extra}
-        write_json(directory/'figure_manifest.json',manifest);paths.append(path);print('FIGURE',path.name,status,flush=True)
-    def finish(fig,key,caption,members=(),status='READY',height=72,where=out,**extra):
-        fig.set_size_inches(WIDTH,height/25.4)
-        path=save(fig,where,key);record(key,path,caption,members,status,**extra);return path
-    def extent(x):
-        dx=x[1]-x[0];return [x[0]-dx/2,x[-1]+dx/2]*2
-    def draw(ax,image,d,title,*,polar=False,vmax=None,span=25):
-        x=d['x'];ix=np.flatnonzero(abs(x)<=span);im=image[np.ix_(ix,ix)]
-        if polar:
-            S0=abs(d['psi'])**2;S0=S0.sum(0)
-            im=np.ma.masked_where(S0[np.ix_(ix,ix)]<.001*S0.max(),im)
-        cmap=plt.get_cmap('RdBu_r' if polar else 'viridis').copy();cmap.set_bad('#ececec')
-        artist=ax.imshow(im,origin='lower',extent=extent(x[ix]),interpolation='nearest',cmap=cmap,
-                          vmin=-1 if polar else 0,vmax=1 if polar else vmax)
-        cfg=d['config'];g=make_grid(cfg);pump=pump_profile(cfg,g)
-        ax.contour(x[ix],x[ix],pump[np.ix_(ix,ix)],levels=[.5],colors='.25' if polar else 'white',linewidths=.55)
-        ax.set(title=title,xlabel=r'$x$ ($\mu$m)',ylabel=r'$y$ ($\mu$m)',aspect='equal',xticks=[-20,0,20],yticks=[-20,0,20])
-        ax.grid(False);return artist
-    def parameters_caption(d):
-        c=d['config'];p=parameters(c)
-        return f"{d['name']}: p={c['pump']['P0']:g}, epsilon={c['pump']['epsilon']:g}, alpha2={p['alpha2']:g} meV um^2, J={p['J']:g} meV, beta={p['beta']:g} meV um^2; N={c['space']['N']}, L={c['space']['L']:g} um, dt={c['time']['dt']:g} ps. "
-    def density_panel(geometry,name,key,provisional=False):
-        d=load(name);n=abs(d['psi'])**2;S0=n.sum(0);s3=(n[0]-n[1])/np.maximum(S0,1e-300)
-        fig,axs=plt.subplots(1,3,layout='constrained',figsize=(WIDTH,2.8))
-        for k in (0,1):im=draw(axs[k],n[k],d,f'({chr(97+k)}) '+('$n_+$' if k==0 else '$n_-$'),vmax=float(n.max()))
-        fig.colorbar(im,ax=axs[:2],fraction=.035,pad=.02,label=r'Density ($\mu$m$^{-2}$)')
-        im=draw(axs[2],s3,d,r'(c) Circular $s_3$',polar=True)
-        fig.colorbar(im,ax=axs[2],fraction=.065,pad=.025,ticks=[-1,0,1])
-        for ax in axs[1:]:ax.set_ylabel('');ax.tick_params(labelleft=False)
-        t=d['history'][-1,0]
-        pop=n.sum((-2,-1))*(d['x'][1]-d['x'][0])**2
-        caption=f'Densities and circular polarization under {geometry} pumping with TE-TM coupling, at t={t:g} ps. '+parameters_caption(d)
-        caption+=f'N+={pop[0]:.6g}, N-={pop[1]:.6g}, Z={(pop[0]-pop[1])/pop.sum():.6g}. Both densities share one absolute scale. Thin contours: half-maximum pump; polarization pixels below 0.001 of peak S0 are masked. '
-        caption+=('Densities are stationary within the stated tolerance, while full polarization continues to drift. This is a finite-time snapshot, not a phase-locked state.' if provisional else 'Density and polarization stationarity were checked on the saved late windows.')
-        finish(fig,key,caption,[d],'READY_FINITE_TIME' if provisional else 'READY',height=65)
-    with plt.rc_context(STYLE):
-        # Reuse the matched scalar switching calculation, without recomputation.
-        path=report_figure1(out);newpath=out/'F1_reservoir_switching.png';path.replace(newpath)
-        record('F1_reservoir_switching',newpath,'Condensate density after pump turn-on and turn-off in the matched one- and two-reservoir models. PA=1.5 Pth; identical seed and initially empty reservoirs. Time in (b) is measured from pump turn-off at1000 ps. The dotted level is the common stationary density. Saved F1_M0/F1_R1 data from the preceding report are reused.')
-        fig,axs=plt.subplots(2,2,figsize=(WIDTH,4.5),layout='constrained')
-        members=[]
-        for row,(geometry,name) in enumerate((('Gaussian spot','production_A1_spot'),('Annular pump','matched_A1_ring'))):
-            d=load(name);members.append(d);n=abs(d['psi'])**2
-            for k in (0,1):im=draw(axs[row,k],n[k],d,f'({chr(97+row*2+k)}) '+geometry+(': $n_+$' if k==0 else ': $n_-$'),vmax=float(n.max()))
-            axs[row,1].set_ylabel('');axs[row,1].tick_params(labelleft=False)
-            fig.colorbar(im,ax=axs[row],fraction=.035,pad=.02,label=r'Density ($\mu$m$^{-2}$)')
-        caption='Circular-component density profiles with pump imbalance epsilon=0.3, J=beta=0. '+''.join(parameters_caption(d) for d in members)
-        for d in members:
-            n=abs(d['psi'])**2;pop=n.sum((-2,-1))*(d['x'][1]-d['x'][0])**2
-            caption+=f"{d['name']}: snapshot at{d['history'][-1,0]:g} ps, N+={pop[0]:.6g}, N-={pop[1]:.6g}, Z={(pop[0]-pop[1])/pop.sum():.6g}. "
-        caption+='A common absolute density scale is used within each geometry. Density stationarity does not imply fixed relative phase. Thin contours mark half-maximum pump; w=d=2.5 um, ring radius10 um.'
-        finish(fig,'F2_circular_component_densities',caption,members,height=112)
-        fig,axs=plt.subplots(1,2,figsize=(WIDTH,2.8),layout='constrained');members=[]
-        for ax,geom in zip(axs,('spot','ring')):
-            for case,ls in (('A0','-'),('A1','--')):
-                d=load(('production_' if geom=='spot' else 'matched_')+case+'_'+geom);members.append(d)
-                radius=np.hypot(d['x'][None,:],d['y'][:,None]);edges=np.linspace(0,30,121)
-                for j in (0,1):
-                    radial=binned_statistic(radius.ravel(),(abs(d['psi'][j])**2).ravel(),statistic='mean',bins=edges)[0]
-                    ax.plot((edges[:-1]+edges[1:])/2,radial,color=f'C{j}',ls=ls,label=case+(': $n_+$' if j==0 else ': $n_-$'))
-            ax.set(title='Gaussian spot' if geom=='spot' else 'Annular pump',xlabel=r'Radius ($\mu$m)',ylabel=r'Density ($\mu$m$^{-2}$)',xlim=(0,25))
-        axs[0].legend(frameon=False,ncol=2,fontsize=7)
-        finish(fig,'F3_cross_spin_density_comparison','Radial density profiles for alpha2=0 (A0) and alpha2=-0.00024 meV um^2 (A1); all other parameters and preparation are held fixed within each geometry. Small differences have no independent paired convergence bound and are not claimed as a resolved alpha2 effect. Annular snapshots may retain evolving polarization.',members,status='DIAGNOSTIC_ONLY',height=72,where=diagnostic)
-        density_panel('Gaussian-spot','production_T0_spot','F4_TE_TM_spot')
-        density_panel('annular','matched_T0_ring','F5_TE_TM_ring',provisional=load('matched_T0_ring')['summary']['analysis']['status']!='STATIONARY')
-        fig,axs=plt.subplots(1,2,figsize=(WIDTH,2.9),layout='constrained');members=[];windows={}
-        for ax,geom in zip(axs,('spot','ring')):
-            names=['production_B0_spot','report3_T0_spot_beta_0.5','production_T0_spot','report3_T0_spot_beta_2'] if geom=='spot' else ['matched_B0_ring','report3_T0_ring_beta_0.5','matched_T0_ring','report3_T0_ring_beta_2']
-            means=[];low=[];high=[]
-            for name in names:
-                d=load(name);members.append(d);f=d['features'];f=f[f[:,0]>=f[-1,0]-400];v=2*np.hypot(f[:,10],f[:,11]);mean=float(np.trapezoid(v,f[:,0])/(f[-1,0]-f[0,0]));means.append(mean);low.append(mean-v.min());high.append(v.max()-mean);windows[name]=[float(f[0,0]),float(f[-1,0])]
-            ax.errorbar([0,.5,1,2],means,yerr=[low,high],fmt='o-' if geom=='spot' else 'o',ms=4,lw=1,elinewidth=.8,capsize=2,color='C0' if geom=='spot' else 'C1')
-            ax.set(title='Gaussian spot' if geom=='spot' else 'Annular pump',xlabel=r'TE-TM coefficient, $\beta/\beta_{\rm ref}$',ylabel=r'Second angular harmonic, $Q_2$',xticks=[0,.5,1,2],xlim=(-.1,2.1));ax.set_ylim(bottom=-.005)
-            if geom=='ring':
-                ax.plot(1.,means[2],'o',ms=5,mfc='white',mec='C1',zorder=4,label='Evolving reference')
-                ax.annotate('Evolving reference',xy=(1.,means[2]),xytext=(8,-18),textcoords='offset points',fontsize=7)
-        finish(fig,'F6_TE_TM_angular_response','Second angular harmonic Q2=2|C2| versus beta/beta_ref. Markers are time means and vertical bars show the temporal range, not statistical or numerical uncertainty. ROI: r=5-15 um for the spot, r=5-7.5 um for the ring. Each explicitly recorded late window is400 ps; ring T0 is still evolving, so no established monotonic ring response is claimed. The controlled initial seed is shared within each geometry; beta_ref=.0119 meV um^2. The hollow ring marker denotes the evolving beta_ref state at6000 ps. All points use the same Cartesian ROI quadrature; temporal bars do not include its discretization uncertainty. The independent C1 field-convergence controls passed, without providing an error bound for all beta variants.',members,status='READY_FINITE_TIME',height=76,windows_ps=windows)
-        fig,axs=plt.subplots(2,2,figsize=(WIDTH,3.5),layout='constrained');sources=[]
-        for col,J in enumerate((.005,.01)):
-            source=directory/f'report3_0d_J_{J:.8f}.npz'
-            with np.load(source,allow_pickle=False) as z:t=z['time'];psi=z['psi'];summary=json.loads(str(z['summary_json']))
-            keep=t>=t[-1]-1200;t=t[keep];psi=psi[keep];n=abs(psi)**2;phase=np.unwrap(np.angle(psi[:,0]*psi[:,1].conj()));phase-=phase[0]
-            axs[0,col].plot(t-t[0],(n[:,0]-n[:,1])/n.sum(1),color='C0');axs[1,col].plot(t-t[0],phase,color='C1')
-            axs[0,col].set_title(('(a) Running phase' if col==0 else '(b) Locked phase')+f'; $J={1000*J:g}$ '+r'$\mu$eV',loc='left')
-            axs[0,col].set_ylabel(r'Spin imbalance, $z$');axs[1,col].set_ylabel(r'Phase change, $\theta-\theta_0$ (rad)');axs[1,col].set_xlabel('Time in late window (ps)')
-            axs[0,col].set_ylim(-1,1);axs[1,col].set_ylim(-24,1);sources.append({'file':str(source.relative_to(ROOT)),'display_interval_ps':[float(t[0]),float(t[-1])],'status':summary['status']})
-        finish(fig,'F7_homogeneous_phase_dynamics','Spin imbalance z and change of unwrapped relative phase theta=arg(psi+)-arg(psi-) for independent homogeneous runs at J=.005 and .010 meV, p=2, epsilon=.3, beta=0. Each panel displays the final1200 ps, measured from the start of its own display window; theta0 is the phase at that start. Classification uses two validated windows, not only the displayed segment. Both components remain nonzero. Running and locked phase states survive tighter independent tolerances.',height=90,source_0d=sources)
-        for geometry in ('spot','ring'):
-            fig,ax=plt.subplots(figsize=(WIDTH,2.8),layout='constrained');members=[];windows={};quadrature_errors={}
-            coupling_labels={'A1':'No coherent coupling','T1':'TE-TM only','J1':'J only','C1':'J + TE-TM'}
-            for case,color,ls in (('A1','0.35',':'),('T1','C0','-'),('J1','C2','--'),('C1','C1','-')):
-                name=('production_'+case+'_spot') if geometry=='spot' else ('charge_J1_seeded_c128_L256_t3600' if case=='J1' else 'matched_'+case+'_ring')
-                d=load(name);members.append(d);f=d['features'];length=540. if geometry=='spot' else 600.
-                end=float(f[-1,0]);begin=end-length;f=f[f[:,0]>=begin]
-                windows[name]=[begin,end];q=2*np.hypot(f[:,10],f[:,11])
-                if geometry=='spot':
-                    ax.plot(f[:,0]-begin,2*f[:,10],label=coupling_labels[case],color=color,ls=ls,alpha=.85)
-                else:
-                    angles,angular=report3_polar_profile(d['psi'],d['x'])
-                    _,cross=report3_polar_profile(d['psi'],d['x'],order=5)
-                    quadrature_errors[name]=float(np.max(abs(angular-cross)))
-                    if quadrature_errors[name]>.001:raise ValueError('Polar interpolation requires refinement: '+name)
-                    ax.plot(angles,angular,label=coupling_labels[case],color=color,ls=ls,alpha=.85)
-            if geometry=='spot':
-                ax.set(xlabel='Time in late window (ps)',ylabel=r'Cosine angular component, $2\,\mathrm{Re}\,C_2$',xlim=(0,length),ylim=(-.17,.17))
-            else:
-                ax.set(xlabel=r'Polar angle, $\varphi$ (degrees)',ylabel=r'Circular polarization, $s_3(\varphi)$',xlim=(-180,180),xticks=[-180,-90,0,90,180])
-                ax.margins(y=.15)
-            if geometry=='spot':fig.legend(*ax.get_legend_handles_labels(),loc='outside upper center',frameon=False,ncol=2)
-            else:ax.legend(loc='upper center',bbox_to_anchor=(.5,1.28),frameon=False,ncol=2)
-            caption='Angular circular-polarization response under '+('Gaussian' if geometry=='spot' else 'annular')+' pumping, epsilon=.3. A1: J=beta=0; T1: J=0,beta_ref; J1: J_ref,beta=0; C1: J_ref,beta_ref. '
-            caption+=('The cosine angular component2 Re C2 retains the oscillation hidden by the nearly constant modulus Q2. All runs share interval2460-3000 ps; fixed ROI5-15 um. Full-map periodicity is verified. ' if geometry=='spot' else 'Angular s3 is the ratio of integrated S3 and S0 in each of72 polar sectors over r=5-7.5 um. The same Gauss quadrature (32 radial and8 angular nodes per sector) is applied to cubic-interpolated complex fields; a fifth-order cross-check is recorded. This removes unequal Cartesian pixel counts without angular filtering. A1/T1 have periodic observables; J1/C1 are stationary. Each snapshot uses its explicitly recorded physical time and is not phase-aligned across different parameter sets. The four starts share the same explicit seed. ')
-            finish(fig,'F8_'+geometry+'_coupling_comparison',caption,members,status=c1_status('spot') if geometry=='spot' else 'READY_PERIODIC_AND_STATIONARY',height=82,windows_ps=windows,polar_order3_vs5_max=quadrature_errors)
-        for geom,name,key in [('spot','production_C1_spot','F9_spot_Stokes'),('ring','matched_C1_ring','F10_ring_Stokes')]:
-            d=load(name);S=stokes(d['psi']);values=S[1:]/np.maximum(S[0],1e-300)
-            fig,axs=plt.subplots(1,3,figsize=(WIDTH,2.8),layout='constrained')
-            for j,ax in enumerate(axs):im=draw(ax,values[j],d,f'({chr(97+j)}) '+rf'$s_{j+1}$',polar=True)
-            for ax in axs[1:]:ax.set_ylabel('');ax.tick_params(labelleft=False)
-            fig.colorbar(im,ax=axs,fraction=.025,pad=.02,ticks=[-1,0,1],label='Normalized Stokes parameter')
-            caption=('Gaussian-spot' if geom=='spot' else 'Annular-pump')+f" C1 polarization at t={d['history'][-1,0]:g} ps. "+parameters_caption(d)
-            caption+='S1=2Re(conj(psi+)*psi-), S2=2Im(conj(psi+)*psi-), S3=n+-n-; si=Si/S0. One common [-1,1] scale; low-intensity pixels are masked. '
-            caption+=('Instantaneous phase of a verified periodic state; the accompanying GIF shows its evolution, so this is not a time mean. ' if geom=='spot' else 'Snapshot of the verified stationary polarization. ')
-            caption+=('Independent C1 space/time controls passed.' if c1_status(geom)=='READY' else 'Final C1 space/time controls are pending.')
-            finish(fig,key,caption,[d],status=c1_status(geom),height=65)
-    if animations:
-        manifest['animations'].update(_report3_saved_gifs(out,load,manifest))
-    manifest['chapters']={
-        '1':{'status':'READY','figures':['F1_reservoir_switching']},
-        '2':{'status':'DENSITY_FIGURE_READY_ALPHA2_UNRESOLVED','figures':['F2_circular_component_densities'],'diagnostic':'F3_cross_spin_density_comparison'},
-        '3':{'status':'READY_WITH_DYNAMIC_RING','figures':['F4_TE_TM_spot','F5_TE_TM_ring','F6_TE_TM_angular_response']},
-        '4':{'status':'READY_FOR_SAMPLED_CASES_NO_2D_J_SCAN','figures':['F7_homogeneous_phase_dynamics','F8_spot_coupling_comparison','F8_ring_coupling_comparison']},
-        '5':{'status':'READY_C1_CONVERGENCE_VERIFIED','figures':['F9_spot_Stokes','F10_ring_Stokes']}}
-    write_json(directory/'figure_manifest.json',manifest)
-    return paths
-
-
 def _report3_saved_gifs(out,load,manifest,*,only=None):
     """Density GIFs from portable archives; Stokes GIFs from saved complex probes."""
     from PIL import Image
@@ -1317,14 +1150,29 @@ def _report3_saved_gifs(out,load,manifest,*,only=None):
     for case,geom,name in [('C1','spot','production_C1_spot'),('C1','ring','matched_C1_ring'),('T0','ring','matched_T0_ring')]:
         key=case+'_'+geom+'_Stokes_evolution'
         if only is not None and key not in only:continue
-        # Prefer the forthcoming time-step control for full spot history.
-        if case=='C1' and geom=='spot':
+        compact_source=directory/'stokes_animation_compact.npz'
+        if compact_source.exists():
+            with np.load(compact_source,allow_pickle=False) as z:name=json.loads(str(z['metadata_json']))[case+'_'+geom]['source']
+        # A compact archive records its source independently of cleared probe indexes.
+        if case=='C1' and geom=='spot' and not compact_source.exists():
             candidate=ROOT/'results/runs/report3/check_C1_spot_full_dt0125'
             if (candidate/'summary.json').exists():
                 summary=json.loads((candidate/'summary.json').read_text())
                 if summary.get('run_status')=='RUN_COMPLETED' and summary.get('time_ps',0)>=3000:
                     with np.load(candidate/'checkpoint.npz') as z:ts=z['probe_times'];has_zero=np.any(np.isclose(ts,0,rtol=0,atol=1e-8))
                     if has_zero:name='check_C1_spot_full_dt0125'
+        compact=directory/'stokes_animation_compact.npz'
+        if compact.exists():
+            prefix=case+'_'+geom
+            with np.load(compact,allow_pickle=False) as z:
+                info=json.loads(str(z['metadata_json']))[prefix]
+                if info['source']!=name:raise ValueError('Compact Stokes source differs: '+name)
+                t=z[prefix+'_time'].copy();x=z[prefix+'_x'].copy()
+                values=z[prefix+'_stokes'].copy();masks=z[prefix+'_mask'].copy()
+            frames=(tuple(np.ma.masked_where(masks[i],values[i,j]) for j in range(3)) for i in range(len(t)))
+            render(key,t,frames,x,[r'Linear $s_1$',r'Diagonal $s_2$',r'Circular $s_3$'],[(-1,1)]*3,
+                   'Normalized Stokes from actual saved complex fields. Full evolution from0 ps; low-intensity pixels are masked. Fixed scales [-1,1], no interpolation. The compact float64 source retains the original frame times and masks.',name)
+            continue
         # Read-only memory map: plotting never opens the solver probe file in r+.
         run=ROOT/'results/runs/report3'/name
         with np.load(run/'checkpoint.npz',allow_pickle=False) as z:times=z['probe_times'].copy()
@@ -1390,6 +1238,8 @@ def make_spot_J_diagnostic():
         if key in chosen:excluded.append(chosen[key][0]['name'])
         chosen[key]=(record,c)
     rows=[]
+    phase_archive=directory/'local_phase_histories.npz'
+    phase_data=np.load(phase_archive,allow_pickle=False) if phase_archive.exists() else None
     for record,c in chosen.values():
         name=record['name'];review=record['review'];windows=review['windows'];run=ROOT/'results/runs/report3'/name
         with np.load(directory/(name+'.npz'),allow_pickle=False) as z:f=z['features'].copy()
@@ -1407,14 +1257,22 @@ def make_spot_J_diagnostic():
                           'phase_range_rad':float(np.ptp(pp)),
                           'winding_per_cycle':float((pp[-1]-pp[0])/(2*np.pi*cycles)) if cycles else None})
         # Independently inspect local relative phase where both components stay visible.
-        with np.load(run/'checkpoint.npz',allow_pickle=False) as z:times=z['probe_times'].copy()
-        maps=np.load(run/'probe_maps.npy',mmap_mode='r',allow_pickle=False);local=[];N=c['space']['N'];dx=c['space']['L']/N
-        for x,y in ((0,0),(2,0),(-2,0),(0,2),(0,-2)):
+        maps=None
+        if (run/'probe_maps.npy').exists():
+            with np.load(run/'checkpoint.npz',allow_pickle=False) as z:times=z['probe_times'].copy()
+            maps=np.load(run/'probe_maps.npy',mmap_mode='r',allow_pickle=False)
+        else:
+            if phase_data is None or name+'_time' not in phase_data:raise ValueError('Missing compact phase history: '+name)
+            times=phase_data[name+'_time'];points=phase_data[name+'_psi']
+        local=[];N=c['space']['N'];dx=c['space']['L']/N
+        for point_index,(x,y) in enumerate(((0,0),(2,0),(-2,0),(0,2),(0,-2))):
             point=[]
             for left,right in intervals:
                 ids=np.flatnonzero((times>=left-1e-8)&(times<=right+1e-8));ids=ids[np.argsort(times[ids])]
-                v=np.asarray(maps[ids,:,round(N/2+y/dx),round(N/2+x/dx)])
-                plus=v[:,0]+1j*v[:,1];minus=v[:,2]+1j*v[:,3];arg=np.angle(plus*minus.conj());pp=np.unwrap(arg)
+                if maps is not None:
+                    v=np.asarray(maps[ids,:,round(N/2+y/dx),round(N/2+x/dx)]);plus=v[:,0]+1j*v[:,1];minus=v[:,2]+1j*v[:,3]
+                else:plus,minus=points[ids,point_index].T
+                arg=np.angle(plus*minus.conj());pp=np.unwrap(arg)
                 fraction=np.minimum(abs(plus)**2,abs(minus)**2)/(abs(plus)**2+abs(minus)**2)
                 point.append({'phase_range_rad':float(np.ptp(pp)),'turns':float((pp[-1]-pp[0])/(2*np.pi)),
                               'min_component_fraction':float(fraction.min()),'max_phase_increment_rad':float(max(abs(np.diff(pp))))})
@@ -1457,12 +1315,15 @@ def make_spot_J_diagnostic():
             for ax in axes[:,col]:ax.set_xlim(-3,123);ax.set_xticks([0,20,40,60,80,100,120]);ax.axhline(0,color='.55',lw=.65,zorder=0)
         axes[0,0].set_ylabel(r'Mean $Z$')
         axes[1,0].set_ylabel(r'Amplitude $A_Z$')
-        axes[2,0].set_ylabel('Mean phase drift\n'+r'(rad ps$^{-1}$)')
+        axes[2,0].set_ylabel(r'Phase drift (rad ps$^{-1}$)')
+        for ax in axes[:,0]:ax.yaxis.set_label_coords(-.14,.5)
         for ax in axes[1]:ax.set_ylim(-.025,.77)
         regimes=[Line2D([],[],color=color,lw=2,label=label) for key,(color,label) in styles.items() if any(r['regime']==key for r in rows)]
         fig.legend(handles=regimes,loc='outside upper center',ncol=2,frameon=False,title='Diagnostic 2D scan: Gaussian spot')
         handles=[Line2D([],[],color='.25',mfc='none',ls='',marker=m,label=label,ms=5) for key,(m,label) in symbols.items() if any(resolution(r)==key for r in rows)]
         fig.legend(handles=handles,loc='outside lower center',ncol=2,fontsize=7,frameon=False,title=r'Numerical controls: $L$ in $\mu$m, $\Delta t$ in ps; complex128')
+        fig.set_layout_engine('none')
+        for k,ax in enumerate(axes[:,0]):ax.set_position([.18,.27+(2-k)*.19,.80,.16])
         path=save(fig,out,'spot_J_regime_scan')
     report={'status':'DIAGNOSTIC_ONLY','figure':str(path.relative_to(ROOT)),
             'definitions':{'Z':'(Nplus-Nminus)/(Nplus+Nminus)','A_Z':'half peak-to-peak Z; averaged across two windows',
@@ -1473,3 +1334,276 @@ def make_spot_J_diagnostic():
     from numerics import write_json
     write_json(directory/'spot_J_diagnostic.json',report)
     return path
+
+
+def make_report3_figures(*,animations=False):
+    """The 16-figure report set from local/figure_requirements.md; no report editing."""
+    import hashlib
+    import shutil
+    from model import stokes
+    from numerics import sample_report3_center_cycles,write_json
+    from matplotlib.colors import Normalize
+    from matplotlib.collections import LineCollection
+    from mpl_toolkits.mplot3d.art3d import Line3DCollection
+    directory=DATA/'report3';out=ROOT/'results/figures/report3';out.mkdir(parents=True,exist_ok=True)
+    manifest_path=directory/'figure_manifest.json';old=json.loads(manifest_path.read_text())
+    manifest={'method':'Saved arrays and verified short CPU replay of two local cycles; report text unchanged',
+              'PNG_width_mm':160,'PNG_dpi':300,'mask_relative_S0':.001,'figures':{},'animations':old.get('animations',{}),
+              'figure_order':['P1_reservoir_switching','P2_homogeneous_pump_response','N1_spatial_component_densities',
+                 'P3_homogeneous_densities','P4_homogeneous_relative_phase','P5_homogeneous_J_scan',
+                 'N3_TE_TM_spot','N4_TE_TM_ring','N5_TE_TM_angular_response',
+                 'N7_ring_angular_polarization','N12_spot_J_scan','N13_spot_regime_dynamics','N8_spot_Stokes','N9_ring_Stokes','N10_homogeneous_Poincare','N11_spot_Poincare'],
+              'limitations':['T0 ring at6000ps is a finite-time polarization snapshot','Alpha2 figure is reserved; no paired error bound',
+                             'The diagnostic2D J scan is separate from this report set']}
+    cache={};paths=[]
+    with np.load(sample_report3_center_cycles(),allow_pickle=False) as z:
+        cycles={k:z[k].copy() for k in z.files if k!='metadata_json'};local_meta=json.loads(str(z['metadata_json']))
+    reviews=json.loads((directory/'report3_cycle_review.json').read_text())['cases']
+    from numerics import _lag_polynomial_weights
+    center_cases=[]
+    queue=json.loads((directory/'experiment_queue.json').read_text())
+    center_archive=directory/'regime_center_data.npz'
+    if center_archive.exists():
+        with np.load(center_archive,allow_pickle=False) as z:
+            center_cases=json.loads(str(z['metadata_json']))
+            for i,c in enumerate(center_cases):
+                for k in ('time','psi','stokes','phase','z','initial_psi'):c[k]=z[f'{i}_{k}'].copy()
+    else:
+        for label,name in [('Running phase','Jspot_TETM_J0p04000_refine'),('Oscillating phase','Jspot_TETM_J0p06500_fill2h'),('Fixed phase','Jspot_TETM_J0p10000_fill2h')]:
+            from numerics import _lag_polynomial_weights
+            run=ROOT/'results/runs/report3'/name
+            with np.load(run/'checkpoint.npz',allow_pickle=False) as z:ts=z['probe_times'].copy()
+            raw=np.load(run/'probe_maps.npy',mmap_mode='r');ids=np.flatnonzero(np.isfinite(ts));ids=ids[np.argsort(ts[ids])];t=ts[ids];n=raw.shape[-1]//2
+            v=np.asarray(raw[ids,:4,n,n]);psi=np.stack((v[:,0]+1j*v[:,1],v[:,2]+1j*v[:,3]),axis=1)
+            S=stokes(psi,axis=1);vec=(S[1:]/S[0]).T;phase=np.unwrap(np.angle(psi[:,0]*psi[:,1].conj()));review=queue['experiments'][name]['review'];T=review.get('period_ps');errors=[];cross=[]
+            if T:
+                for j in np.flatnonzero((t>=2500)&(t<=2700))[::8]:
+                    vals=[]
+                    for count in (6,8):
+                        ix,w=_lag_polynomial_weights(t,t[j]+T,count);vals.append(w@vec[ix])
+                    errors.append(float(np.linalg.norm(vals[1]-vec[j])));cross.append(float(np.linalg.norm(vals[0]-vals[1])))
+                if max(errors)>.01 or max(cross)>.002:raise ValueError('Local cycle not confirmed: '+name)
+            start=np.flatnonzero(np.isclose(t,2600.,atol=1e-8,rtol=0));assert len(start)==1
+            field=raw[ids[start[0]]];initial=np.stack((field[0]+1j*field[1],field[2]+1j*field[3]))
+            center_cases.append(dict(name=name,label=label,time=t,psi=psi,stokes=vec,phase=phase,z=S[3]/S[0],period=T,initial_psi=initial,review_status=review['status'],recurrence_max=max(errors,default=0.),interpolation_crosscheck_max=max(cross,default=0.)))
+        values={f'{i}_{k}':c[k] for i,c in enumerate(center_cases) for k in ('time','psi','stokes','phase','z','initial_psi')}
+        meta=[{k:v for k,v in c.items() if k not in ('time','psi','stokes','phase','z','initial_psi')} for c in center_cases]
+        values['metadata_json']=np.array(json.dumps(meta));np.savez_compressed(center_archive,**values)
+    for c in center_cases:
+        T=c['period']
+        if not T:continue
+        c['full_map_period_ps']=T
+        for _ in range(3):
+            candidate=T/2;errors=[];cross=[]
+            if candidate<8*np.median(np.diff(c['time'])):break
+            for j in np.flatnonzero((c['time']>=2500)&(c['time']<=2700))[::8]:
+                values=[]
+                for count in (6,8):
+                    ix,w=_lag_polynomial_weights(c['time'],c['time'][j]+candidate,count);values.append(w@c['stokes'][ix])
+                errors.append(float(np.linalg.norm(values[1]-c['stokes'][j])));cross.append(float(np.linalg.norm(values[0]-values[1])))
+            if max(errors)>.01 or max(cross)>.002:break
+            T=candidate;c['period']=T;c['recurrence_max']=max(errors);c['interpolation_crosscheck_max']=max(cross)
+    def load(name):
+        if name not in cache:
+            with np.load(directory/(name+'.npz'),allow_pickle=False) as z:
+                d={k:z[k].copy() for k in ('psi','x','y','features','history','mean_maps','mean_interval_ps')}
+                d.update(config=json.loads(str(z['config_json'])),summary=json.loads(str(z['summary_json'])))
+            d.update(name=name,time_ps=float(d['history'][-1,0]));cache[name]=d
+        return cache[name]
+    def config_caption(d):
+        c=d['config'];p=parameters(c)
+        return (f"{d['name']}: p={c['pump']['P0']:g}, epsilon={c['pump']['epsilon']:g}, J={p['J']:g} meV, "
+                f"beta={p['beta']:g} meV um^2, alpha2={p['alpha2']:g} meV um^2, "
+                f"N={c['space']['N']}, L={c['space']['L']:g} um, dt={c['time']['dt']:g} ps. ")
+    def publish(path,key,caption,members=(),status='READY',**extra):
+        manifest['figures'][key]={'file':str(path.relative_to(ROOT)),'caption_en':caption,'status':'DIAGNOSTIC_ONLY' if key=='N6_spot_coupling_dynamics' else status,
+            'sources':[{'run':d['name'],'time_ps':d['time_ps'],'config':d['config'],
+                        'field_sha256':hashlib.sha256(np.ascontiguousarray(d['psi']).tobytes()).hexdigest()} for d in members],**extra}
+        paths.append(path);print('REPORT FIGURE',key,status,flush=True)
+    def finish(fig,key,caption,members=(),height=72,**extra):
+        fig.set_size_inches(WIDTH,height/25.4);width=105 if key=='N5_TE_TM_angular_response' else 160
+        target=ROOT/'results/diagnostics/report3' if key=='N6_spot_coupling_dynamics' else out
+        path=save(fig,target,key,width_mm=width);publish(path,key,caption,members,**extra)
+    def draw(ax,image,d,title,polar=False,vmax=None,center=False):
+        x=d['x'];ids=np.flatnonzero(abs(x)<=25);dx=x[1]-x[0];extent=[x[ids[0]]-dx/2,x[ids[-1]]+dx/2]*2
+        image=image[np.ix_(ids,ids)];S0=abs(d['psi'])**2;S0=S0.sum(0)
+        if polar:image=np.ma.masked_where(S0[np.ix_(ids,ids)]<.001*S0.max(),image)
+        cmap=plt.get_cmap('RdBu_r' if polar else 'viridis').copy();cmap.set_bad('#ececec')
+        im=ax.imshow(image,origin='lower',extent=extent,cmap=cmap,vmin=-1 if polar else 0,vmax=1 if polar else vmax,interpolation='nearest')
+        profile=pump_profile(d['config'],make_grid(d['config']))
+        ax.contour(x[ids],x[ids],profile[np.ix_(ids,ids)],levels=[.5],colors='.2' if polar else 'white',linewidths=.55)
+        if center:ax.plot(0,0,'o',ms=2.5,mfc='black',mec='white',mew=.55)
+        ax.set(title=title,xlabel=r'$x$ ($\mu$m)',ylabel=r'$y$ ($\mu$m)',aspect='equal',xticks=[-20,0,20],yticks=[-20,0,20]);ax.grid(False)
+        return im
+    def draw_projection(ax,v,fixed=False,fractions=None):
+        ax.set_xlim(-1.08,1.08);ax.set_ylim(-1.08,1.08);ax.set_aspect('equal');ax.grid(False)
+        circle=np.linspace(0,2*np.pi,200)
+        ax.plot(np.cos(circle),np.sin(circle),color='.86',lw=.45)
+        ax.axhline(0,color='.78',lw=.35);ax.axvline(0,color='.78',lw=.35)
+        if fixed:
+            ax.scatter(v[-1,0],v[-1,1],color='C0',s=9,zorder=5)
+        else:
+            points=v[:,:2];segments=np.stack((points[:-1],points[1:]),axis=1)
+            fraction=np.linspace(0,1,len(v)) if fractions is None else np.asarray(fractions)
+            collection=LineCollection(segments,cmap='viridis',norm=Normalize(0,1),lw=1.0)
+            collection.set_array((fraction[:-1]+fraction[1:])/2);ax.add_collection(collection)
+            ax.scatter(points[0,0],points[0,1],color='C1',s=8,zorder=6)
+        ax.set_xticks([-1,0,1]);ax.set_yticks([-1,0,1]);ax.tick_params(labelsize=5,pad=1,length=1.5,width=.5)
+        ax.set_xlabel(r'$s_1$',fontsize=6,labelpad=0);ax.set_ylabel(r'$s_2$',fontsize=6,labelpad=0)
+
+    def sphere(ax,v,title,fixed=False,fractions=None):
+        from mpl_toolkits.mplot3d import proj3d
+        ax.set(xlim=(-1.2,1.2),ylim=(-1.2,1.2),zlim=(-1.2,1.2));ax.set_box_aspect((1,1,1),zoom=1.12);ax.view_init(elev=22,azim=35)
+        u=np.linspace(0,2*np.pi,25);w=np.linspace(0,np.pi,13)
+        ax.plot_wireframe(np.outer(np.cos(u),np.sin(w)),np.outer(np.sin(u),np.sin(w)),np.outer(np.ones_like(u),np.cos(w)),color='.83',lw=.3,alpha=.3)
+        for k,label in enumerate((r'$s_1$',r'$s_2$',r'$s_3$')):
+            line=np.zeros((2,3));line[1,k]=1.12;ax.plot(*line.T,color='.5',lw=.5);tip=line[1].copy()*1.07;px,py,_=proj3d.proj_transform(*tip,ax.get_proj());ax.text2D(px,py,label,transform=ax.transData,fontsize=8)
+        if fixed:ax.scatter(*v[-1],color='C0',s=24,depthshade=False)
+        else:
+            segments=np.stack((v[:-1],v[1:]),axis=1);collection=Line3DCollection(segments,cmap='viridis',norm=Normalize(0,1),lw=1.7)
+            fraction=np.linspace(0,1,len(v)) if fractions is None else np.asarray(fractions)
+            collection.set_array((fraction[:-1]+fraction[1:])/2);ax.add_collection3d(collection)
+            ax.scatter(*v[0],color='C1',s=15,depthshade=False,zorder=5)
+            k=max(1,len(v)//3);delta=v[min(len(v)-1,k+max(2,len(v)//40))]-v[k-1];length=np.linalg.norm(delta)
+            if length>1e-10:ax.quiver(*v[k],*(delta/length*.13),color=plt.get_cmap('viridis')(k/(len(v)-1)),arrow_length_ratio=.6,lw=1.2)
+        ax.set(xlim=(-1.2,1.2),ylim=(-1.2,1.2),zlim=(-1.2,1.2));ax.set_box_aspect((1,1,1),zoom=1.12);ax.view_init(elev=22,azim=35)
+        ax.set_axis_off();ax.set_title(title,fontsize=9,pad=0)
+        inset=ax.inset_axes([0.65,0.02,0.34,0.34])
+        draw_projection(inset,v,fixed=fixed,fractions=fractions)
+    with plt.rc_context(STYLE):
+        reused=[('N1_reservoir_switching','P1_reservoir_switching','Matched scalar models after pump turn-on and turn-off, PA=1.5 Pth. Curves and dotted steady-state level are copied unchanged from the preceding report.'),
+                ('N2_circular_populations','P2_homogeneous_pump_response','Homogeneous circular densities versus pump polarization epsilon, J=0 and total active pump4 Pth. Analytic stationary branches and independent integrations, copied unchanged from the preceding report.'),
+                ('N4_component_dynamics','P3_homogeneous_densities','Homogeneous densities at J=5,6.5,10 microeV: running phase, bounded-phase oscillations and fixed phase. Same original trajectories, pump s=2, epsilon=.3 and common late interval as the preceding report.'),
+                ('N5_relative_phase','P4_homogeneous_relative_phase','Relative phase theta=arg(psi+)-arg(psi-) for the same three homogeneous trajectories and late intervals as P3. Only integer2pi offsets are applied. Copied unchanged from the preceding report.'),
+                ('N6_coupling_summary','P5_homogeneous_J_scan','Oscillation amplitude and mean frequency difference versus J for the original homogeneous preparation. Masked low-component-density phases and sampled transition interval retain the preceding report definitions; this scan is not combined with the new2D scan.')]
+        fresh=[report_figure1(out),report_figure2(out),*report_figures45(out),report_figure6(out)]
+        fresh_names=dict(zip((row[1] for row in reused),fresh))
+        for source,key,caption in reused:
+            if key=='P1_reservoir_switching':caption+=' The horizontal dotted line is the matched pumped stationary condensate density, before switch-off.'
+            if key=='P2_homogeneous_pump_response':caption+=' Pth=gammaC*gammaA/R is the active-pump threshold per component. Spin exchange between reservoirs remains present even at J=0.'
+            if key=='P5_homogeneous_J_scan':caption='Original homogeneous scan: amplitude and mean theta drift, theta=arg(psi+)-arg(psi-), so frequency difference is minus theta drift. Gray diamonds mark phase-masked cycles near weak component density; gaps do not mean zero.'
+            path=out/(key+'.png');shutil.copy2(fresh_names[key],path)
+            publish(path,key,caption,source_method={'P1_reservoir_switching':'report_figure1','P2_homogeneous_pump_response':'report_figure2','P3_homogeneous_densities':'report_figures45','P4_homogeneous_relative_phase':'report_figures45','P5_homogeneous_J_scan':'report_figure6'}[key],preserved_from_previous_report=key.startswith(('P1_','P2_')))
+        for path in fresh:path.unlink()
+        members=[load('production_A1_spot'),load('matched_A1_ring')]
+        fig,axes=plt.subplots(2,2,figsize=(WIDTH,112/25.4),layout='constrained')
+        caption='Circular-component densities without coherent coupling, J=beta=0, alpha2=-.1alpha1 and epsilon=.3. '
+        for row,d in enumerate(members):
+            n=abs(d['psi'])**2
+            for k in (0,1):im=draw(axes[row,k],n[k],d,f'({chr(97+2*row+k)}) '+('Gaussian spot' if row==0 else 'Annular pump')+(': $n_+$' if k==0 else ': $n_-$'),vmax=float(n.max()))
+            axes[row,1].set_ylabel('');axes[row,1].tick_params(labelleft=False)
+            fig.colorbar(im,ax=axes[row],fraction=.035,pad=.02,label=r'Density ($\mu$m$^{-2}$)')
+            pop=n.sum((-2,-1))*(d['x'][1]-d['x'][0])**2
+            caption+=config_caption(d)+f"Snapshot t={d['time_ps']:g} ps, N+={pop[0]:.6g}, N-={pop[1]:.6g}, Z={(pop[0]-pop[1])/pop.sum():.6g}. "
+        caption+='Densities share an absolute scale within each geometry. Half-maximum pump contours are shown. Stationary density does not imply stationary full polarization.'
+        finish(fig,'N1_spatial_component_densities',caption,members,height=112)
+        for key,name,geometry in [('N3_TE_TM_spot','production_T0_spot','Gaussian spot'),('N4_TE_TM_ring','matched_T0_ring','Annular pump')]:
+            d=load(name);S=stokes(d['psi']);fig,axes=plt.subplots(1,2,figsize=(WIDTH,70/25.4),layout='constrained')
+            im=draw(axes[0],S[0],d,'(a) Total density $S_0$',vmax=float(S[0].max()));fig.colorbar(im,ax=axes[0],fraction=.045,pad=.025,label=r'$S_0$ ($\mu$m$^{-2}$)')
+            im=draw(axes[1],S[3]/np.maximum(S[0],1e-300),d,'(b) Circular polarization $s_3$',polar=True);fig.colorbar(im,ax=axes[1],fraction=.045,pad=.025,ticks=[-1,0,1])
+            axes[1].set_ylabel('');axes[1].tick_params(labelleft=False)
+            caption=geometry+f": snapshot at t={d['time_ps']:g} ps under equal component pumping epsilon=0. "+config_caption(d)
+            caption+='The controlled beta=0 preparation is the corresponding B0 run; no change of epsilon is used to attribute polarization to TE-TM. Contours: half-maximum pump; s3 masked below0.001 peak S0. '
+            caption+=('Ring polarization continues to evolve; this is not a phase-locked or stationary polarization state.' if geometry=='Annular pump' else 'Late density and polarization pass stationarity checks.')
+            finish(fig,key,caption,[d],height=70,status='READY_FINITE_TIME' if geometry=='Annular pump' else 'READY')
+        names=['production_B0_spot','report3_T0_spot_beta_0.5','production_T0_spot','report3_T0_spot_beta_2'];members=[load(n) for n in names]
+        fig,ax=plt.subplots(figsize=(WIDTH,67/25.4),layout='constrained');means=[];ranges=[];windows={}
+        for d in members:
+            f=d['features'];f=f[f[:,0]>=f[-1,0]-400];q=2*np.hypot(f[:,10],f[:,11]);m=np.trapezoid(q,f[:,0])/(f[-1,0]-f[0,0]);means.append(m);ranges.append([m-q.min(),q.max()-m]);windows[d['name']]=[float(f[0,0]),float(f[-1,0])]
+        ax.errorbar([0,.5,1,2],means,yerr=np.asarray(ranges).T,fmt='o-',ms=4,capsize=2,lw=1,color='C0')
+        ax.set(xlabel=r'TE-TM coefficient, $\beta/\beta_{\rm ref}$',ylabel=r'Second harmonic, $Q_2$',xticks=[0,.5,1,2],ylim=(-.005,.34),xlim=(-.08,2.08))
+        finish(fig,'N5_TE_TM_angular_response','Gaussian spot with equal pumping, J=0: Q2=2|C2|, C2=integral_R S3 exp(-2i phi) dA / integral_R S0 dA, R=5-15um. Four actual beta values; line is a guide only. Means over the final400ps; bars show temporal range, not numerical uncertainty. Same Cartesian quadrature for every point. The response is approximately linear over the sampled range; lines guide the eye. beta_ref=.0119meV um^2; p=13.8, epsilon=0, identical radial preparation.',members,height=52,windows_ps=windows,PNG_width_mm=105)
+        coupling_labels={'A1':'No coherent coupling','T1':'TE-TM only','J1':'J only','C1':'J + TE-TM'}
+        fig,ax=plt.subplots(figsize=(WIDTH,72/25.4),layout='constrained');members=[];begin=2600.;end=begin+3*max(reviews['production_'+k+'_spot']['period_ps'] for k in ('A1','T1','J1','C1'))
+        for case,color,ls in [('A1','.35',':'),('T1','C0','-'),('J1','C2','--'),('C1','C1','-')]:
+            d=load('production_'+case+'_spot');members.append(d);f=d['features'];keep=(f[:,0]>=begin)&(f[:,0]<=end)
+            ax.plot(f[keep,0]-begin,2*f[keep,10],color=color,ls=ls,label=coupling_labels[case],lw=1.2)
+        ax.set(xlabel=r'Time after $t_0=2600$ ps (ps)',ylabel=r'Cosine angular component, $2\mathrm{Re}\,C_2$',xlim=(0,end-begin))
+        fig.legend(loc='outside upper center',ncol=2,frameon=False)
+        finish(fig,'N6_spot_coupling_dynamics','Gaussian spot, epsilon=.3, p=13.8: 2Re C2 is the cosine component of the second angular harmonic of S3, normalized by S0 in R=5-15um. Approximately three late cycles are displayed from one shared t0=2600ps; no independent curve shifts. beta is0 or.0119meV um^2 and J is0 or.010meV. The beta=0 controls nearly overlap at zero. This observable alone does not prove rigid rotation of a whole polarization map.',members,height=72,display_interval_ps=[begin,end])
+        fig,ax=plt.subplots(figsize=(WIDTH,72/25.4),layout='constrained');members=[];errors={}
+        for case,color,ls in [('A1','.35',':'),('T1','C0','-'),('J1','C2','--'),('C1','C1','-')]:
+            name='charge_J1_seeded_c128_L256_t3600' if case=='J1' else 'matched_'+case+'_ring';d=load(name);members.append(d)
+            phi,v=report3_polar_profile(d['psi'],d['x']);_,cross=report3_polar_profile(d['psi'],d['x'],order=5);errors[name]=float(max(abs(v-cross)))
+            if errors[name]>.001:raise ValueError('Polar interpolation requires refinement')
+            ax.plot(phi,v,color=color,ls=ls,label=coupling_labels[case])
+        ax.set(xlabel=r'Azimuthal angle, $\varphi$ (deg)',ylabel=r'Circular polarization, $s_3(\varphi)$',xlim=(-180,180),xticks=[-180,-90,0,90,180])
+        fig.legend(loc='outside upper center',ncol=2,frameon=False)
+        caption='Annular pump p=3.3, epsilon=.3: ratio of radial integrals S3/S0 in r=5-7.5um using a common72-sector polar Gauss quadrature, including r dr dphi. This is not an unweighted mean of local s3. '
+        caption+=' '.join(f"{d['name']}: t={d['time_ps']:g}ps." for d in members)+' T1 is a snapshot of a periodic state, not a time-independent angular profile. Stationary references use their own stated late times; no common-time convergence is implied.'
+        finish(fig,'N7_ring_angular_polarization',caption,members,height=72,polar_order3_vs5_errors=errors)
+        for geom,name,key in [('spot',center_cases[0]['name'],'N8_spot_Stokes'),('ring','matched_C1_ring','N9_ring_Stokes')]:
+            d=load(name).copy()
+            if geom=='spot':d.update(psi=center_cases[0]['initial_psi'],time_ps=2600.)
+            S=stokes(d['psi']);fig,axes=plt.subplots(1,3,figsize=(WIDTH,64/25.4),layout='constrained')
+            for k,(ax,label) in enumerate(zip(axes,('Linear (H/V), $s_1$',r'Linear ($\pm45^\circ$), $s_2$','Circular, $s_3$')),1):
+                im=draw(ax,S[k]/np.maximum(S[0],1e-300),d,f'({chr(96+k)}) '+label,polar=True,center=geom=='spot')
+                if k>1:ax.set_ylabel('');ax.tick_params(labelleft=False)
+            fig.colorbar(im,ax=axes,fraction=.025,pad=.02,ticks=[-1,0,1],label='Normalized Stokes')
+            caption=f"Full local Stokes polarization of the {geom} at t={d['time_ps']:g}ps. "+config_caption(d)
+            caption+='S1=2Re(conj(psi+)psi-), S2=2Im(conj(psi+)psi-), S3=n+-n-, si=Si/S0. Common scale[-1,1]; low-S0 pixels masked below0.001 peak. Contours show half-maximum pump. '
+            caption+=('Instantaneous snapshot of the selected running-phase state; the center dot is the observation point in N11/N13 and this is their common initial time.' if geom=='spot' else 'Verified stationary density and polarization; any low-density central region is masked by the same rule.')
+            finish(fig,key,caption,[d],height=64)
+        scan=json.loads((DATA/'F5_scan.json').read_text());fig=plt.figure(figsize=(WIDTH,77/25.4),layout='constrained');axes=[];zero_sources=[]
+        for i,(J,label) in enumerate([(.005,'Running phase'),(.0065,'Oscillating phase'),(.010,'Fixed phase')]):
+            row=next(r for r in scan if abs(r['J']-J)<1e-10);data=load_0d(DATA/f'F5_J_{J:.5f}.npz');t=data['time'];T=row.get('period_ps');t0=17000.
+            ids=np.flatnonzero((t>=t0)&(t<=t0+T)) if T else np.array([np.argmin(abs(t-18000.))])
+            field=data['psi'][ids];S=stokes(field,axis=1);v=(S[1:]/S[0]).T;res=float(max(abs(np.sum(v*v,axis=1)-1)))
+            if res>1e-12:raise ValueError('Invalid0D Stokes identity')
+            ax=fig.add_subplot(1,3,i+1,projection='3d');axes.append(ax);sphere(ax,v,rf'$J={J*1000:g}$ $\mu$eV'+'\n'+label,fixed=T is None)
+            zero_sources.append({'J_meV':J,'config':data['config'],'interval_ps':[float(t[ids[0]]),float(t[ids[-1]])],'period_ps':T,
+                                 'samples':len(ids),'sphere_identity_max_residual':res,'min_component_fraction':float(np.min(abs(field)**2/np.sum(abs(field)**2,axis=1)[:,None])),'max_unwrapped_phase_increment':float(np.max(abs(np.diff(np.unwrap(np.angle(field[:,0]*field[:,1].conj())))),initial=0.)),'status':row['status']})
+        bar=plt.cm.ScalarMappable(norm=Normalize(0,1),cmap='viridis');fig.colorbar(bar,ax=axes,orientation='horizontal',fraction=.045,pad=.02,label=r'$(t-t_0)/T$ (periodic trajectories only)',ticks=[0,.5,1])
+        finish(fig,'N10_homogeneous_Poincare','Three original homogeneous J preparations on the Poincare sphere; s=2, epsilon=.3, beta=0. Running and bounded phase states show one late cycle at the actual0.5ps saved sampling; the fixed state is a point. s is computed from complex fields using S2=2Im(conj(psi+)psi-), not legacy_s2. No forced normalization or curve smoothing. Orange dot: start; arrow: direction; color: fraction of cycle. Measured periods:344.479051ps (running) and282.408941ps (oscillating); actual sampled intervals are recorded below. The oscillating0D component minimum fraction is0.00384 and the largest unwrapped increment is0.0723rad at0.5ps sampling, so the near-pole passage does not break the phase unwrap. A closed Stokes loop alone does not distinguish phase winding; retain the original theta(t) examples.',height=67,source_0d=zero_sources)
+        fig=plt.figure(figsize=(WIDTH,67/25.4),layout='constrained');axes=[];central_metadata=[]
+        for i,c in enumerate(center_cases):
+            T=c['period'];use=(c['time']>=2600)&(c['time']<=2600+(T or 0)+1e-8)
+            ax=fig.add_subplot(1,3,i+1,projection='3d');axes.append(ax);d=load(c['name'])
+            vector=c['stokes'][use];fraction=(c['time'][use]-2600)/T if T else None
+            endpoint_error=0.
+            if T:
+                ix,w=_lag_polynomial_weights(c['time'],2600+T,8);S_end=w@stokes(c['psi'][ix],axis=1).T;endpoint=S_end[1:]/S_end[0]
+                endpoint_error=float(abs(np.dot(endpoint,endpoint)-1))
+                if endpoint_error>.002:raise ValueError('Cycle endpoint needs denser sampling')
+                vector=np.vstack((vector,endpoint));fraction=np.r_[fraction,1.]
+            sphere(ax,vector,rf"$J={1000*d['config']['physical']['J']:g}$ $\mu$eV"+'\n'+c['label'],fixed=T is None,fractions=fraction)
+            central_metadata.append({'run':c['name'],'coordinates_um':[0,0],'start_ps':2600.,'period_ps':T,'actual_last_sample_ps':float(c['time'][use][-1]),'display_end_ps':2600+T if T else 2600.,'endpoint_interpolation_unit_residual':endpoint_error,'recurrence_max':c['recurrence_max'],'interpolation_crosscheck_max':c['interpolation_crosscheck_max'],'classification':c['label']})
+        fig.colorbar(plt.cm.ScalarMappable(norm=Normalize(0,1),cmap='viridis'),ax=axes,orientation='horizontal',fraction=.045,pad=.02,label=r'$(t-t_0)/T_c$ (periodic trajectories only)',ticks=[0,.5,1])
+        periods=', '.join(f"{v['run']}: T={v['period_ps']:.6g}ps" for v in central_metadata if v['period_ps'])
+        finish(fig,'N11_spot_Poincare','Local center(0,0) polarization of the same three2D runs as N13: J=.040,.065,.100meV; p=13.8, epsilon=.3, beta=.0119meV um^2, identical preparation. '+periods+'. Orange dot marks the start at2600ps; arrows show increasing time. Color is elapsed fraction of each periodic trajectory only. Fixed state is a point. The final cycle endpoint is evaluated by the validated local8-point polynomial in unnormalized Stokes, then divided by S0; no artificial closing segment or unit-vector normalization. No averaging or replacement observation point. Local Stokes recurrence and temporal interpolation cross-check pass; periods are confirmed returns, not asserted minimal periods. N8 is the starting snapshot of the running case.',height=67,center_cycles=central_metadata)
+        with open(directory/'spot_J_diagnostic.json') as stream:scan2=json.load(stream)['cases']
+        candidates={}
+        for r in scan2:
+            if r['beta']!=.0119 or r['L_um']!=256 or r['dt_ps']!=.025:continue
+            if r['J_meV'] not in candidates or r['N']<candidates[r['J_meV']]['N']:candidates[r['J_meV']]=r
+        fig,axes=plt.subplots(1,2,figsize=(WIDTH,68/25.4),layout='constrained');colors={'RUNNING':'C1','BOUNDED':'C2','LOCKED':'C0','UNRESOLVED':'.5'}
+        for J,r in sorted(candidates.items()):
+            for ax,key in zip(axes,('A_Z','phase_drift_rad_ps')):ax.plot(1000*J,r[key],'o',color=colors[r['regime']],ms=4)
+        axes[0].set(ylabel=r'Integral imbalance amplitude, $A_Z$',title='(a) Population oscillations');axes[1].set(ylabel=r'$\langle\dot\Theta\rangle$ (rad ps$^{-1}$)',title='(b) Relative-phase drift')
+        for ax in axes:ax.set_xlabel(r'Coherent coupling, $J$ ($\mu$eV)');ax.axhline(0,color='.65',lw=.6)
+        fig.legend(handles=[Line2D([],[],marker='o',ls='',color=color,label=label) for label,color in [('Running','C1'),('Oscillating','C2'),('Fixed','C0'),('Unresolved','.5')]],loc='outside upper center',ncol=4,frameon=False)
+        finish(fig,'N12_spot_J_scan','TE-TM spatial scan: p=13.8, epsilon=.3, beta=.0119meV um^2. A_Z is half peak-to-peak of the INTEGRAL population imbalance Z=(N+-N-)/(N++N-). Phase is Theta=-arg integral(S1+iS2)dA, not a relabelled central phase. Two adjacent late analysis windows, each at least max(200ps,5T); they end at3000ps except continued J=.055/.075 at4500ps. Integer-cycle means in accepted periodic windows; actual windows and statuses are recorded per point in spot_J_diagnostic.json. Color denotes phase family; gray is unresolved. Selected J=.040,.065,.100 cases have independently checked matching central classifications. No interpolation across unresolved points. Confirmed rotating and bounded examples bracket a possible transition in(.045,.060)meV; .055 remains locally phase-masked. Bounded-to-fixed transition is bracketed by .070 and .075meV. These sampled intervals are not precise bifurcation values.',height=68,scan_points=list(candidates.values()))
+        fig,axes=plt.subplots(2,3,figsize=(WIDTH,96/25.4),layout='constrained')
+        for col,c in enumerate(center_cases):
+            duration=3*(c['period'] or max(v['period'] or 0 for v in center_cases));use=(c['time']>=2600)&(c['time']<=2600+duration)
+            t=c['time'][use]-2600;phase=c['phase'][use];phase-=2*np.pi*np.floor((phase[0]+np.pi)/(2*np.pi))
+            axes[0,col].plot(t,c['z'][use],lw=1);axes[1,col].plot(t,phase,lw=1,color='C1');J=load(c['name'])['config']['physical']['J']
+            axes[0,col].set_title(c['label']+'\n'+rf'$J={J*1000:g}$ $\mu$eV',fontsize=9);axes[0,col].set_ylim(-1,1)
+            if c['period'] is None:
+                axes[1,col].set_ylim(float(np.mean(phase))-.05,float(np.mean(phase))+.05);axes[1,col].ticklabel_format(axis='y',style='plain',useOffset=False)
+            axes[1,col].set_xlabel(r'$t-2600$ (ps)');axes[1,col].set_ylabel(r'$\theta(0,0,t)$ (rad)')
+        axes[0,0].set_ylabel(r'Central imbalance, $z(0,0,t)$')
+        finish(fig,'N13_spot_regime_dynamics','Central observables only at(0,0) for the same runs as N11: J=.040,.065,.100meV, all other parameters and seeds identical. z=(n+-n-)/(n++n-); theta=arg psi+-arg psi-. Three confirmed periods shown for each oscillating trajectory, a comparable duration for the stationary case. Phase is continuously unwrapped; only integer2pi branch offsets are applied. The fixed phase retains its actual value. Central classification is checked separately from whole-map stationarity/periodicity and does not imply the same local phase behavior everywhere.',height=96,center_cycles=central_metadata)
+    # Keep the optional alpha2 candidate among diagnostics, not in the main set.
+    reserve=ROOT/'results/diagnostics/report3/F3_cross_spin_density_comparison.png'
+    manifest['reserve']={'N2':{'file':str(reserve.relative_to(ROOT)),'status':'DIAGNOSTIC_ONLY','caption_en':'Optional radial alpha2 comparison A0/A1; small differences lack an independent paired error bound. No large extra series is scheduled.'}}
+    main_paths=[v for v in paths if v.parent==out]
+    if len(main_paths)!=16 or set(manifest['figures'])-{'N6_spot_coupling_dynamics'}!=set(manifest['figure_order']):raise ValueError('Incomplete report figure set')
+    # Remove superseded report-3 PNG prototypes only after the complete replacement exists.
+    keep={p.name for p in main_paths}
+    for path in out.glob('*.png'):
+        if path.name not in keep:path.unlink()
+    manifest['chapters']={'1': {'figures': ['P1_reservoir_switching']}, '2': {'figures': ['P2_homogeneous_pump_response', 'N1_spatial_component_densities'], 'reserve': 'N2'}, '3': {'figures': ['P3_homogeneous_densities', 'P4_homogeneous_relative_phase', 'P5_homogeneous_J_scan']}, '4': {'figures': ['N3_TE_TM_spot', 'N4_TE_TM_ring', 'N5_TE_TM_angular_response',  'N7_ring_angular_polarization','N12_spot_J_scan','N13_spot_regime_dynamics']}, '5': {'figures': ['N8_spot_Stokes', 'N9_ring_Stokes', 'N10_homogeneous_Poincare', 'N11_spot_Poincare']}}
+    write_json(manifest_path,manifest)
+    if animations:_report3_saved_gifs(out,load,manifest)
+    return main_paths

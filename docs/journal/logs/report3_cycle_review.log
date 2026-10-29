@@ -1,0 +1,5 @@
+REVIEW CYCLE production_A0_spot PERIODIC
+REVIEW CYCLE production_A1_spot PERIODIC
+REVIEW CYCLE production_T1_spot PERIODIC
+REVIEW CYCLE production_J1_spot PERIODIC
+REVIEW CYCLE production_C1_spot PERIODIC

@@ -3612,6 +3612,432 @@
       "phase_drift_rad_ps": 1.4904744105592727e-15
     },
     {
+      "name": "Jspot_TETM_J0p07000_transition3",
+      "J_meV": 0.07,
+      "beta": 0.0119,
+      "N": 256,
+      "L_um": 256.0,
+      "dt_ps": 0.025,
+      "precision": "complex128",
+      "probe_ps": 2.5,
+      "regime": "BOUNDED",
+      "original_status": "PERIODIC",
+      "statistics": [
+        {
+          "interval_ps": [
+            2280.0,
+            2636.375534626996
+          ],
+          "mean_Z": -0.28276357563706866,
+          "A_Z": 0.26690828512625214,
+          "phase_drift_rad_ps": 5.808297951606831e-07,
+          "phase_range_rad": 0.7147177039459468,
+          "winding_per_cycle": 6.588808658600355e-06
+        },
+        {
+          "interval_ps": [
+            2640.0,
+            2996.375387417964
+          ],
+          "mean_Z": -0.2827648997483458,
+          "A_Z": 0.2669049447032234,
+          "phase_drift_rad_ps": 2.667549981173461e-07,
+          "phase_range_rad": 0.7146872831814942,
+          "winding_per_cycle": 3.026010252828924e-06
+        }
+      ],
+      "local_phase_checks": [
+        {
+          "xy_um": [
+            0,
+            0
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 0.7996703518277941,
+              "turns": 0.044535250896704015,
+              "min_component_fraction": 0.08346167201642472,
+              "max_phase_increment_rad": 0.35828266025810473
+            },
+            {
+              "phase_range_rad": 0.799964795603859,
+              "turns": 0.07369525177601104,
+              "min_component_fraction": 0.08296539451776198,
+              "max_phase_increment_rad": 0.3610224822731108
+            }
+          ]
+        },
+        {
+          "xy_um": [
+            2,
+            0
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 0.8006220177612445,
+              "turns": 0.04396068825543215,
+              "min_component_fraction": 0.08425652255805138,
+              "max_phase_increment_rad": 0.35666837249920946
+            },
+            {
+              "phase_range_rad": 0.8003645874329296,
+              "turns": 0.07379901466349643,
+              "min_component_fraction": 0.08384742216300388,
+              "max_phase_increment_rad": 0.3589245280399246
+            }
+          ]
+        },
+        {
+          "xy_um": [
+            -2,
+            0
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 0.8006220633407453,
+              "turns": 0.043960701265406917,
+              "min_component_fraction": 0.0842565071132331,
+              "max_phase_increment_rad": 0.3566683818840055
+            },
+            {
+              "phase_range_rad": 0.8003646281729184,
+              "turns": 0.07379901240472139,
+              "min_component_fraction": 0.08384740607554914,
+              "max_phase_increment_rad": 0.358924543107673
+            }
+          ]
+        },
+        {
+          "xy_um": [
+            0,
+            2
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 0.8106445606032414,
+              "turns": 0.04692894396279044,
+              "min_component_fraction": 0.08340142694097039,
+              "max_phase_increment_rad": 0.35644274974937384
+            },
+            {
+              "phase_range_rad": 0.8082569238777085,
+              "turns": 0.07292015610756723,
+              "min_component_fraction": 0.08283739765626344,
+              "max_phase_increment_rad": 0.3598382370625728
+            }
+          ]
+        },
+        {
+          "xy_um": [
+            0,
+            -2
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 0.810644601578054,
+              "turns": 0.04692895744302422,
+              "min_component_fraction": 0.08340141378705018,
+              "max_phase_increment_rad": 0.3564427520227701
+            },
+            {
+              "phase_range_rad": 0.8082569675841378,
+              "turns": 0.07292015244871296,
+              "min_component_fraction": 0.08283738385954469,
+              "max_phase_increment_rad": 0.3598382451758295
+            }
+          ]
+        }
+      ],
+      "numerical_convergence": null,
+      "mean_Z": -0.2827642376927072,
+      "A_Z": 0.26690661491473777,
+      "phase_drift_rad_ps": 4.237923966390146e-07
+    },
+    {
+      "name": "Jspot_TETM_J0p05000_transition3",
+      "J_meV": 0.05,
+      "beta": 0.0119,
+      "N": 256,
+      "L_um": 256.0,
+      "dt_ps": 0.025,
+      "precision": "complex128",
+      "probe_ps": 2.5,
+      "regime": "UNRESOLVED",
+      "original_status": "PERIODIC",
+      "statistics": [
+        {
+          "interval_ps": [
+            2390.0,
+            2690.927507636194
+          ],
+          "mean_Z": -0.2224301168656792,
+          "A_Z": 0.6577775261045462,
+          "phase_drift_rad_ps": 5.978521711569378e-07,
+          "phase_range_rad": 2.33973892919885,
+          "winding_per_cycle": 5.72671837628495e-06
+        },
+        {
+          "interval_ps": [
+            2695.0,
+            2995.927528505161
+          ],
+          "mean_Z": -0.22243011810790858,
+          "A_Z": 0.6577777283883405,
+          "phase_drift_rad_ps": 2.546011899011943e-07,
+          "phase_range_rad": 2.3397395193125616,
+          "winding_per_cycle": 2.438779156931513e-06
+        }
+      ],
+      "local_phase_checks": [
+        {
+          "xy_um": [
+            0,
+            0
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 63.2333900927222,
+              "turns": -10.063906601714821,
+              "min_component_fraction": 0.011242531711026802,
+              "max_phase_increment_rad": 1.691802778683801
+            },
+            {
+              "phase_range_rad": 63.27542873339525,
+              "turns": -10.0705972591788,
+              "min_component_fraction": 0.014120446555782361,
+              "max_phase_increment_rad": 1.8389207538149748
+            }
+          ]
+        },
+        {
+          "xy_um": [
+            2,
+            0
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 63.22676889818978,
+              "turns": -10.062852805875814,
+              "min_component_fraction": 0.01021744427440118,
+              "max_phase_increment_rad": 1.7628764915843789
+            },
+            {
+              "phase_range_rad": 63.25235396045917,
+              "turns": -10.0669247950053,
+              "min_component_fraction": 0.01400758649136016,
+              "max_phase_increment_rad": 1.8766408322265988
+            }
+          ]
+        },
+        {
+          "xy_um": [
+            -2,
+            0
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 63.22676897367002,
+              "turns": -10.062852817888865,
+              "min_component_fraction": 0.010217447562443804,
+              "max_phase_increment_rad": 1.7628759259823354
+            },
+            {
+              "phase_range_rad": 63.25235406577984,
+              "turns": -10.066924811767606,
+              "min_component_fraction": 0.01400757919878268,
+              "max_phase_increment_rad": 1.8766406136774805
+            }
+          ]
+        },
+        {
+          "xy_um": [
+            0,
+            2
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 63.22093121960637,
+              "turns": -10.061923710473081,
+              "min_component_fraction": 0.010310529273438493,
+              "max_phase_increment_rad": 1.668437960594602
+            },
+            {
+              "phase_range_rad": 63.25610233390175,
+              "turns": -10.067521367167242,
+              "min_component_fraction": 0.012461267670602872,
+              "max_phase_increment_rad": 1.8576728936540405
+            }
+          ]
+        },
+        {
+          "xy_um": [
+            0,
+            -2
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 63.22093129362693,
+              "turns": -10.06192372225382,
+              "min_component_fraction": 0.010310532103465954,
+              "max_phase_increment_rad": 1.6684373247313786
+            },
+            {
+              "phase_range_rad": 63.256102441672446,
+              "turns": -10.06752138431948,
+              "min_component_fraction": 0.012461262588373821,
+              "max_phase_increment_rad": 1.8576727072777928
+            }
+          ]
+        }
+      ],
+      "numerical_convergence": null,
+      "mean_Z": -0.2224301174867939,
+      "A_Z": 0.6577776272464433,
+      "phase_drift_rad_ps": 4.2622668052906604e-07
+    },
+    {
+      "name": "Jspot_TETM_J0p04500_transition3",
+      "J_meV": 0.045,
+      "beta": 0.0119,
+      "N": 256,
+      "L_um": 256.0,
+      "dt_ps": 0.025,
+      "precision": "complex128",
+      "probe_ps": 2.5,
+      "regime": "RUNNING",
+      "original_status": "PERIODIC",
+      "statistics": [
+        {
+          "interval_ps": [
+            2350.0,
+            2672.1513294864044
+          ],
+          "mean_Z": -0.1929200793926216,
+          "A_Z": 0.6851559134762133,
+          "phase_drift_rad_ps": -0.1950359837076838,
+          "phase_range_rad": 62.831101449119046,
+          "winding_per_cycle": -1.999976075107129
+        },
+        {
+          "interval_ps": [
+            2675.0,
+            2997.1513329057825
+          ],
+          "mean_Z": -0.1929200805949523,
+          "A_Z": 0.6851558492087095,
+          "phase_drift_rad_ps": -0.1950384236551445,
+          "phase_range_rad": 62.8318881483475,
+          "winding_per_cycle": -2.000001116521316
+        }
+      ],
+      "local_phase_checks": [
+        {
+          "xy_um": [
+            0,
+            0
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 63.63761422759831,
+              "turns": -10.128240870897399,
+              "min_component_fraction": 0.03238107827774852,
+              "max_phase_increment_rad": 1.2906901654802567
+            },
+            {
+              "phase_range_rad": 63.320838212445125,
+              "turns": -10.077824402232816,
+              "min_component_fraction": 0.03229936863290632,
+              "max_phase_increment_rad": 1.291925532571554
+            }
+          ]
+        },
+        {
+          "xy_um": [
+            2,
+            0
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 63.65920257075807,
+              "turns": -10.131676762424439,
+              "min_component_fraction": 0.03052298749715136,
+              "max_phase_increment_rad": 1.3083849594667925
+            },
+            {
+              "phase_range_rad": 63.32639600748944,
+              "turns": -10.07870895278681,
+              "min_component_fraction": 0.030597361248101584,
+              "max_phase_increment_rad": 1.3064213779102687
+            }
+          ]
+        },
+        {
+          "xy_um": [
+            -2,
+            0
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 63.6592023193745,
+              "turns": -10.1316767224155,
+              "min_component_fraction": 0.030522992447907477,
+              "max_phase_increment_rad": 1.3083848200624715
+            },
+            {
+              "phase_range_rad": 63.32639594575715,
+              "turns": -10.07870894296181,
+              "min_component_fraction": 0.030597367108833345,
+              "max_phase_increment_rad": 1.3064213103399993
+            }
+          ]
+        },
+        {
+          "xy_um": [
+            0,
+            2
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 63.614284623275715,
+              "turns": -10.124527849049079,
+              "min_component_fraction": 0.030404924098585365,
+              "max_phase_increment_rad": 1.2969896861855048
+            },
+            {
+              "phase_range_rad": 63.32142952165905,
+              "turns": -10.077918512017108,
+              "min_component_fraction": 0.030396840823789826,
+              "max_phase_increment_rad": 1.2966433243209323
+            }
+          ]
+        },
+        {
+          "xy_um": [
+            0,
+            -2
+          ],
+          "windows": [
+            {
+              "phase_range_rad": 63.61428439476282,
+              "turns": -10.124527812680123,
+              "min_component_fraction": 0.03040492730811275,
+              "max_phase_increment_rad": 1.296989591871224
+            },
+            {
+              "phase_range_rad": 63.321429460506685,
+              "turns": -10.077918502284406,
+              "min_component_fraction": 0.030396844936414463,
+              "max_phase_increment_rad": 1.2966432094677245
+            }
+          ]
+        }
+      ],
+      "numerical_convergence": null,
+      "mean_Z": -0.19292007999378696,
+      "A_Z": 0.6851558813424614,
+      "phase_drift_rad_ps": -0.19503720368141414
+    },
+    {
       "name": "check_C1_spot_full_dt0125",
       "J_meV": 0.01,
       "beta": 0.0119,

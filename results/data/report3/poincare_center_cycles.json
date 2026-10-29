@@ -1,0 +1,208 @@
+{
+  "start_ps": 2600.0,
+  "cadence_ps": 0.25,
+  "sources": [
+    {
+      "case": "T1",
+      "run": "production_T1_spot",
+      "config": {
+        "model": "M3",
+        "reservoir": "R1",
+        "physical": {
+          "hbar": 0.6582119569,
+          "mass_over_me": 5.63e-05,
+          "gC": 0.0024,
+          "gR": 0.0048,
+          "gA": 0.0048,
+          "eta": 9.8,
+          "R": 0.021,
+          "gammaC": 0.182,
+          "gammaA": 0.05,
+          "alpha1": 0.0024,
+          "alpha2": -0.00024,
+          "GammaA": 0.1,
+          "GammaI": 0.1,
+          "J": 0.0,
+          "beta": 0.0119
+        },
+        "reservoirs": {
+          "R1": {
+            "W": 0.1020408163265306,
+            "gammaI": 0.0018181818181818182,
+            "gI": 0.0048
+          },
+          "R2": {
+            "W": 0.05,
+            "gammaI": 0.0018181818181818182,
+            "gI": 0.002352
+          }
+        },
+        "pump": {
+          "kind": "gaussian",
+          "s": 1.5,
+          "epsilon": 0.3,
+          "P0": 13.799999999999999,
+          "d": 2.5,
+          "r0": 10.0,
+          "off_time": null
+        },
+        "initial": {
+          "density_0d": 0.0001,
+          "density_2d": 0.0001,
+          "theta": 0.0,
+          "seed": 20261008,
+          "kind": "radial"
+        },
+        "space": {
+          "N": 512,
+          "L": 256.0
+        },
+        "time": {
+          "dt": 0.025,
+          "final": 3000.0,
+          "sample": 0.5
+        },
+        "ode": {
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_step": 2.0
+        },
+        "save": {
+          "observable": 0.25,
+          "core": 20.0,
+          "checkpoint": 200.0,
+          "diagnostic": 20.0,
+          "angular": 1.0,
+          "probe": 5.0
+        },
+        "execution": {
+          "fft_workers": 1,
+          "local_workers": 1,
+          "backend": "xpu"
+        },
+        "analysis": {
+          "min_window": 200.0,
+          "max_final": 6000.0,
+          "high_k_cut": 0.7,
+          "edge_limit": 1e-05
+        }
+      },
+      "start_ps": 2600.0,
+      "period_ps": 55.56403386860481,
+      "end_ps": 2655.564033868605,
+      "source_state_sha256": "8cb4d4a80e8614bb3c80a1b635c2f88572ecc7f86d3ff8481f7d814000996dcc",
+      "replay_5ps_relative_errors": [
+        7.483020687733978e-14,
+        3.3655691294927117e-15,
+        2.721928638426415e-17
+      ],
+      "sphere_identity_max_residual": 6.661338147750939e-16,
+      "coordinates_um": [
+        0.0,
+        0.0
+      ],
+      "method": "CPU complex128 replay, same Strang FFT + joint RK4 and dt; no curve smoothing or vector renormalization"
+    },
+    {
+      "case": "C1",
+      "run": "production_C1_spot",
+      "config": {
+        "model": "M3",
+        "reservoir": "R1",
+        "physical": {
+          "hbar": 0.6582119569,
+          "mass_over_me": 5.63e-05,
+          "gC": 0.0024,
+          "gR": 0.0048,
+          "gA": 0.0048,
+          "eta": 9.8,
+          "R": 0.021,
+          "gammaC": 0.182,
+          "gammaA": 0.05,
+          "alpha1": 0.0024,
+          "alpha2": -0.00024,
+          "GammaA": 0.1,
+          "GammaI": 0.1,
+          "J": 0.01,
+          "beta": 0.0119
+        },
+        "reservoirs": {
+          "R1": {
+            "W": 0.1020408163265306,
+            "gammaI": 0.0018181818181818182,
+            "gI": 0.0048
+          },
+          "R2": {
+            "W": 0.05,
+            "gammaI": 0.0018181818181818182,
+            "gI": 0.002352
+          }
+        },
+        "pump": {
+          "kind": "gaussian",
+          "s": 1.5,
+          "epsilon": 0.3,
+          "P0": 13.799999999999999,
+          "d": 2.5,
+          "r0": 10.0,
+          "off_time": null
+        },
+        "initial": {
+          "density_0d": 0.0001,
+          "density_2d": 0.0001,
+          "theta": 0.0,
+          "seed": 20261008,
+          "kind": "radial"
+        },
+        "space": {
+          "N": 512,
+          "L": 256.0
+        },
+        "time": {
+          "dt": 0.025,
+          "final": 3000.0,
+          "sample": 0.5
+        },
+        "ode": {
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_step": 2.0
+        },
+        "save": {
+          "observable": 0.25,
+          "core": 20.0,
+          "checkpoint": 200.0,
+          "diagnostic": 20.0,
+          "angular": 1.0,
+          "probe": 5.0
+        },
+        "execution": {
+          "fft_workers": 1,
+          "local_workers": 1,
+          "backend": "xpu"
+        },
+        "analysis": {
+          "min_window": 200.0,
+          "max_final": 6000.0,
+          "high_k_cut": 0.7,
+          "edge_limit": 1e-05
+        }
+      },
+      "start_ps": 2600.0,
+      "period_ps": 53.67939628522594,
+      "end_ps": 2653.6793962852257,
+      "source_state_sha256": "110b2726c1074fe783c9eb7f195507175c5c91e450e05db0c736a5244ec11c0e",
+      "replay_5ps_relative_errors": [
+        7.492553954422559e-14,
+        3.312746457049653e-15,
+        2.721928638426415e-17
+      ],
+      "sphere_identity_max_residual": 8.881784197001252e-16,
+      "coordinates_um": [
+        0.0,
+        0.0
+      ],
+      "method": "CPU complex128 replay, same Strang FFT + joint RK4 and dt; no curve smoothing or vector renormalization"
+    }
+  ]
+}

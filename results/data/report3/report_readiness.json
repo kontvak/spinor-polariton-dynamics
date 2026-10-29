@@ -11780,5 +11780,53 @@
       "recommendation": "Further adaptive J refinement primarily with TE-TM; retain beta0 checks near transitions rather than duplicate the entire scan."
     },
     "display": "TE-TM only; beta0 column removed at user request, underlying runs retained"
+  },
+  "storage_cleanup": {
+    "status": "COMPLETED",
+    "policy": "Only5 obsolete intermediate full-map histories; all checkpoints, final portable fields, summaries, later histories, current queue and primary report sources retained. Earlier dense histories cannot be reanalysed after removal.",
+    "files": [
+      {
+        "file": "results/runs/report3/charge_J1_seeded_c128_L256_t3000/probe_maps.npy",
+        "allocated_bytes": 6778003456,
+        "retained_export": "results/data/report3/charge_J1_seeded_c128_L256_t3000.npz",
+        "retained_later_run": "charge_J1_seeded_c128_L256_t3600",
+        "earlier_end_ps": 3000.0,
+        "later_end_ps": 3600.0
+      },
+      {
+        "file": "results/runs/report3/charge_J1_seeded_c128_L384_t3000/probe_maps.npy",
+        "allocated_bytes": 15250497536,
+        "retained_export": "results/data/report3/charge_J1_seeded_c128_L384_t3000.npz",
+        "retained_later_run": "charge_J1_seeded_c128_L384_t3600",
+        "earlier_end_ps": 3000.0,
+        "later_end_ps": 3600.0
+      },
+      {
+        "file": "results/runs/report3/charge_J1_seeded_c128_dt0125_t2000/probe_maps.npy",
+        "allocated_bytes": 6727802880,
+        "retained_export": "results/data/report3/charge_J1_seeded_c128_dt0125_t2000.npz",
+        "retained_later_run": "charge_J1_seeded_c128_dt0125_t3600",
+        "earlier_end_ps": 2000.0,
+        "later_end_ps": 3600.0
+      },
+      {
+        "file": "results/runs/report3/charge_J1_seeded_c64_L256_t2000/probe_maps.npy",
+        "allocated_bytes": 6727802880,
+        "retained_export": "results/data/report3/charge_J1_seeded_c64_L256_t2000.npz",
+        "retained_later_run": "charge_J1_seeded_c64_L256_t3600",
+        "earlier_end_ps": 2000.0,
+        "later_end_ps": 3600.0
+      },
+      {
+        "file": "results/runs/report3/charge_J1_seeded_c64_L256_t3000/probe_maps.npy",
+        "allocated_bytes": 6778003456,
+        "retained_export": "results/data/report3/charge_J1_seeded_c64_L256_t3000.npz",
+        "retained_later_run": "charge_J1_seeded_c64_L256_t3600",
+        "earlier_end_ps": 3000.0,
+        "later_end_ps": 3600.0
+      }
+    ],
+    "released_GiB": 39.359657287597656,
+    "free_GiB": 43.539546966552734
   }
 }

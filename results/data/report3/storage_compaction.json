@@ -1,0 +1,496 @@
+{
+  "removed": [
+    {
+      "run": "Jspot_TETM_J0p00250_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p00250_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p00500_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p00500_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p00500_N512",
+      "bytes": 4093648896,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p00500_N512/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p00500_dt",
+      "bytes": 4093648896,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p00500_dt/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p00625_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p00625_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p00750_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p00750_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p01500_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p01500_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p02000_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p02000_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p02000_N512",
+      "bytes": 4093648896,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p02000_N512/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p02000_domain",
+      "bytes": 9210699776,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p02000_domain/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p02000_domain_dx1_L384",
+      "bytes": 2302681088,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p02000_domain_dx1_L384/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p02000_domain_dx1_L512",
+      "bytes": 4093648896,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p02000_domain_dx1_L512/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p02500_refine",
+      "bytes": 2038439936,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p02500_refine/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p03000_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p03000_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p03000_N512_probe25",
+      "bytes": 8153735168,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p03000_N512_probe25/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p03000_probe25",
+      "bytes": 2038439936,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p03000_probe25/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p04000_refine",
+      "bytes": 2038439936,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p04000_refine/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p04500_transition3",
+      "bytes": 1367351296,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p04500_transition3/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p05000_transition3",
+      "bytes": 1367351296,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p05000_transition3/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p05500_fill2h",
+      "bytes": 3397394432,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p05500_fill2h/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p06000_refine",
+      "bytes": 2038439936,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p06000_refine/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p06500_fill2h",
+      "bytes": 3397394432,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p06500_fill2h/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p07000_transition3",
+      "bytes": 1367351296,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p07000_transition3/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p07500_fill2h",
+      "bytes": 3397394432,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p07500_fill2h/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p08000_refine",
+      "bytes": 6635397120,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p08000_refine/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p10000_fill2h",
+      "bytes": 6736060416,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p10000_fill2h/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_TETM_J0p12000_refine",
+      "bytes": 6727671808,
+      "retained_checkpoint": "results/runs/report3/Jspot_TETM_J0p12000_refine/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p00250_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p00250_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p00500_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p00500_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p00500_N512",
+      "bytes": 4093648896,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p00500_N512/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p00625_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p00625_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p00750_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p00750_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p01500_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p01500_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p02000_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p02000_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p02000_N512",
+      "bytes": 4093648896,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p02000_N512/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p02500_refine",
+      "bytes": 2038439936,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p02500_refine/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p03000_N256",
+      "bytes": 1023418368,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p03000_N256/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p03000_probe25",
+      "bytes": 2038439936,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p03000_probe25/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p04000_refine",
+      "bytes": 2038439936,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p04000_refine/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p05500_fill2h",
+      "bytes": 3397394432,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p05500_fill2h/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p06000_refine",
+      "bytes": 2038439936,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p06000_refine/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p06500_fill2h",
+      "bytes": 3397394432,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p06500_fill2h/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p07500_fill2h",
+      "bytes": 3397394432,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p07500_fill2h/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p08000_refine",
+      "bytes": 6635397120,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p08000_refine/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p10000_fill2h",
+      "bytes": 6744449024,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p10000_fill2h/checkpoint.npz"
+    },
+    {
+      "run": "Jspot_noTETM_J0p12000_refine",
+      "bytes": 6727671808,
+      "retained_checkpoint": "results/runs/report3/Jspot_noTETM_J0p12000_refine/checkpoint.npz"
+    },
+    {
+      "run": "boundary_J1_ring_seeded_L256",
+      "bytes": 6727802880,
+      "retained_checkpoint": "results/runs/report3/boundary_J1_ring_seeded_L256/checkpoint.npz"
+    },
+    {
+      "run": "boundary_J1_ring_seeded_L384",
+      "bytes": 15137382400,
+      "retained_checkpoint": "results/runs/report3/boundary_J1_ring_seeded_L384/checkpoint.npz"
+    },
+    {
+      "run": "charge_J1_radial_early_c128",
+      "bytes": 2701271040,
+      "retained_checkpoint": "results/runs/report3/charge_J1_radial_early_c128/checkpoint.npz"
+    },
+    {
+      "run": "charge_J1_radial_early_c64",
+      "bytes": 2701271040,
+      "retained_checkpoint": "results/runs/report3/charge_J1_radial_early_c64/checkpoint.npz"
+    },
+    {
+      "run": "charge_J1_seeded_c128_L256_t3600",
+      "bytes": 6778003456,
+      "retained_checkpoint": "results/runs/report3/charge_J1_seeded_c128_L256_t3600/checkpoint.npz"
+    },
+    {
+      "run": "charge_J1_seeded_c128_L384_t3600",
+      "bytes": 15250497536,
+      "retained_checkpoint": "results/runs/report3/charge_J1_seeded_c128_L384_t3600/checkpoint.npz"
+    },
+    {
+      "run": "charge_J1_seeded_c128_dt0125_t3600",
+      "bytes": 6778003456,
+      "retained_checkpoint": "results/runs/report3/charge_J1_seeded_c128_dt0125_t3600/checkpoint.npz"
+    },
+    {
+      "run": "charge_J1_seeded_c64_L256_t3600",
+      "bytes": 6778003456,
+      "retained_checkpoint": "results/runs/report3/charge_J1_seeded_c64_L256_t3600/checkpoint.npz"
+    },
+    {
+      "run": "check_C1_ring_full_N768",
+      "bytes": 12910075904,
+      "retained_checkpoint": "results/runs/report3/check_C1_ring_full_N768/checkpoint.npz"
+    },
+    {
+      "run": "check_C1_ring_full_dt0125",
+      "bytes": 5737816064,
+      "retained_checkpoint": "results/runs/report3/check_C1_ring_full_dt0125/checkpoint.npz"
+    },
+    {
+      "run": "check_C1_spot_domain_L384",
+      "bytes": 4303364096,
+      "retained_checkpoint": "results/runs/report3/check_C1_spot_domain_L384/checkpoint.npz"
+    },
+    {
+      "run": "check_C1_spot_full_N768",
+      "bytes": 9210699776,
+      "retained_checkpoint": "results/runs/report3/check_C1_spot_full_N768/checkpoint.npz"
+    },
+    {
+      "run": "check_C1_spot_full_dt0125",
+      "bytes": 10083246080,
+      "retained_checkpoint": "results/runs/report3/check_C1_spot_full_dt0125/checkpoint.npz"
+    },
+    {
+      "run": "check_C1_spot_grid_N256",
+      "bytes": 478158848,
+      "retained_checkpoint": "results/runs/report3/check_C1_spot_grid_N256/checkpoint.npz"
+    },
+    {
+      "run": "check_C1_spot_late_dt0125",
+      "bytes": 1879056384,
+      "retained_checkpoint": "results/runs/report3/check_C1_spot_late_dt0125/checkpoint.npz"
+    },
+    {
+      "run": "check_J1_ring_grid_N768_L256",
+      "bytes": 27216977920,
+      "retained_checkpoint": "results/runs/report3/check_J1_ring_grid_N768_L256/checkpoint.npz"
+    },
+    {
+      "run": "check_T0_spot_seeded",
+      "bytes": 6744449024,
+      "retained_checkpoint": "results/runs/report3/check_T0_spot_seeded/checkpoint.npz"
+    },
+    {
+      "run": "matched_A0_ring",
+      "bytes": 20149575680,
+      "retained_checkpoint": "results/runs/report3/matched_A0_ring/checkpoint.npz"
+    },
+    {
+      "run": "matched_A1_ring",
+      "bytes": 20149575680,
+      "retained_checkpoint": "results/runs/report3/matched_A1_ring/checkpoint.npz"
+    },
+    {
+      "run": "matched_B0_ring",
+      "bytes": 12096512000,
+      "retained_checkpoint": "results/runs/report3/matched_B0_ring/checkpoint.npz"
+    },
+    {
+      "run": "matched_C1_ring",
+      "bytes": 12096512000,
+      "retained_checkpoint": "results/runs/report3/matched_C1_ring/checkpoint.npz"
+    },
+    {
+      "run": "matched_J1_ring",
+      "bytes": 6778003456,
+      "retained_checkpoint": "results/runs/report3/matched_J1_ring/checkpoint.npz"
+    },
+    {
+      "run": "matched_T0_ring",
+      "bytes": 20149575680,
+      "retained_checkpoint": "results/runs/report3/matched_T0_ring/checkpoint.npz"
+    },
+    {
+      "run": "matched_T1_ring",
+      "bytes": 20166352896,
+      "retained_checkpoint": "results/runs/report3/matched_T1_ring/checkpoint.npz"
+    },
+    {
+      "run": "near_threshold_A1_ring_startup",
+      "bytes": 343937024,
+      "retained_checkpoint": "results/runs/report3/near_threshold_A1_ring_startup/checkpoint.npz"
+    },
+    {
+      "run": "near_threshold_A1_spot_startup",
+      "bytes": 339873792,
+      "retained_checkpoint": "results/runs/report3/near_threshold_A1_spot_startup/checkpoint.npz"
+    },
+    {
+      "run": "near_threshold_B0_ring_startup",
+      "bytes": 343937024,
+      "retained_checkpoint": "results/runs/report3/near_threshold_B0_ring_startup/checkpoint.npz"
+    },
+    {
+      "run": "near_threshold_B0_spot_startup",
+      "bytes": 339877888,
+      "retained_checkpoint": "results/runs/report3/near_threshold_B0_spot_startup/checkpoint.npz"
+    },
+    {
+      "run": "near_threshold_T0_ring_startup",
+      "bytes": 343941120,
+      "retained_checkpoint": "results/runs/report3/near_threshold_T0_ring_startup/checkpoint.npz"
+    },
+    {
+      "run": "near_threshold_T0_spot_startup",
+      "bytes": 339873792,
+      "retained_checkpoint": "results/runs/report3/near_threshold_T0_spot_startup/checkpoint.npz"
+    },
+    {
+      "run": "p4_A1_spot",
+      "bytes": 1375739904,
+      "retained_checkpoint": "results/runs/report3/p4_A1_spot/checkpoint.npz"
+    },
+    {
+      "run": "p4_B0_spot",
+      "bytes": 1375739904,
+      "retained_checkpoint": "results/runs/report3/p4_B0_spot/checkpoint.npz"
+    },
+    {
+      "run": "production_A0_ring",
+      "bytes": 2483167232,
+      "retained_checkpoint": "results/runs/report3/production_A0_ring/checkpoint.npz"
+    },
+    {
+      "run": "production_A0_spot",
+      "bytes": 1946165248,
+      "retained_checkpoint": "results/runs/report3/production_A0_spot/checkpoint.npz"
+    },
+    {
+      "run": "production_A1_ring",
+      "bytes": 2718048256,
+      "retained_checkpoint": "results/runs/report3/production_A1_ring/checkpoint.npz"
+    },
+    {
+      "run": "production_A1_spot",
+      "bytes": 1946165248,
+      "retained_checkpoint": "results/runs/report3/production_A1_spot/checkpoint.npz"
+    },
+    {
+      "run": "production_A1_spot_c64",
+      "bytes": 1962942464,
+      "retained_checkpoint": "results/runs/report3/production_A1_spot_c64/checkpoint.npz"
+    },
+    {
+      "run": "production_B0_ring",
+      "bytes": 1375739904,
+      "retained_checkpoint": "results/runs/report3/production_B0_ring/checkpoint.npz"
+    },
+    {
+      "run": "production_B0_spot",
+      "bytes": 1929388032,
+      "retained_checkpoint": "results/runs/report3/production_B0_spot/checkpoint.npz"
+    },
+    {
+      "run": "production_C1_ring",
+      "bytes": 5754593280,
+      "retained_checkpoint": "results/runs/report3/production_C1_ring/checkpoint.npz"
+    },
+    {
+      "run": "production_C1_spot",
+      "bytes": 1879056384,
+      "retained_checkpoint": "results/runs/report3/production_C1_spot/checkpoint.npz"
+    },
+    {
+      "run": "production_J1_ring",
+      "bytes": 3389136896,
+      "retained_checkpoint": "results/runs/report3/production_J1_ring/checkpoint.npz"
+    },
+    {
+      "run": "production_J1_ring_c64",
+      "bytes": 3389136896,
+      "retained_checkpoint": "results/runs/report3/production_J1_ring_c64/checkpoint.npz"
+    },
+    {
+      "run": "production_J1_spot",
+      "bytes": 1895833600,
+      "retained_checkpoint": "results/runs/report3/production_J1_spot/checkpoint.npz"
+    },
+    {
+      "run": "production_T0_ring",
+      "bytes": 1962942464,
+      "retained_checkpoint": "results/runs/report3/production_T0_ring/checkpoint.npz"
+    },
+    {
+      "run": "production_T0_spot",
+      "bytes": 1895833600,
+      "retained_checkpoint": "results/runs/report3/production_T0_spot/checkpoint.npz"
+    },
+    {
+      "run": "production_T1_ring",
+      "bytes": 6744580096,
+      "retained_checkpoint": "results/runs/report3/production_T1_ring/checkpoint.npz"
+    },
+    {
+      "run": "production_T1_spot",
+      "bytes": 1946165248,
+      "retained_checkpoint": "results/runs/report3/production_T1_spot/checkpoint.npz"
+    },
+    {
+      "run": "report3_T0_ring_beta_0.5",
+      "bytes": 10083246080,
+      "retained_checkpoint": "results/runs/report3/report3_T0_ring_beta_0.5/checkpoint.npz"
+    },
+    {
+      "run": "report3_T0_ring_beta_2",
+      "bytes": 10083246080,
+      "retained_checkpoint": "results/runs/report3/report3_T0_ring_beta_2/checkpoint.npz"
+    },
+    {
+      "run": "report3_T0_spot_beta_0.5",
+      "bytes": 10083246080,
+      "retained_checkpoint": "results/runs/report3/report3_T0_spot_beta_0.5/checkpoint.npz"
+    },
+    {
+      "run": "report3_T0_spot_beta_2",
+      "bytes": 10083246080,
+      "retained_checkpoint": "results/runs/report3/report3_T0_spot_beta_2/checkpoint.npz"
+    }
+  ],
+  "released_GiB": 447.886474609375,
+  "note": "Dense full-map histories removed. Final states, configurations, aggregate histories, selected exported maps and phase traces retained. Exact full-map reanalysis of deleted intervals requires rerunning. Restart physical state unchanged; new diagnostics need a fresh dense window."
+}

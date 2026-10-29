@@ -1,0 +1,41 @@
+START charge_J1_seeded_c64_L256_t2000 2026-10-25T17:40:43.715417+00:00
+charge_J1_seeded_c64_L256_t2000: 200/2000 ps, 1.22 min
+charge_J1_seeded_c64_L256_t2000: 400/2000 ps, 2.06 min
+charge_J1_seeded_c64_L256_t2000: 600/2000 ps, 3.02 min
+charge_J1_seeded_c64_L256_t2000: 800/2000 ps, 3.87 min
+charge_J1_seeded_c64_L256_t2000: 1000/2000 ps, 4.71 min
+charge_J1_seeded_c64_L256_t2000: 1200/2000 ps, 5.56 min
+charge_J1_seeded_c64_L256_t2000: 1400/2000 ps, 6.41 min
+charge_J1_seeded_c64_L256_t2000: 1600/2000 ps, 7.37 min
+charge_J1_seeded_c64_L256_t2000: 1800/2000 ps, 8.30 min
+charge_J1_seeded_c64_L256_t2000: 2000/2000 ps, 9.26 min
+START charge_J1_seeded_c128_L256_t3000 2026-10-25T17:50:34.955420+00:00
+charge_J1_seeded_c128_L256_t3000: 2200/3000 ps, 27.70 min
+charge_J1_seeded_c128_L256_t3000: 2400/3000 ps, 29.90 min
+charge_J1_seeded_c128_L256_t3000: 2600/3000 ps, 31.95 min
+charge_J1_seeded_c128_L256_t3000: 2800/3000 ps, 34.03 min
+charge_J1_seeded_c128_L256_t3000: 3000/3000 ps, 36.20 min
+START charge_J1_seeded_c128_L384_t3000 2026-10-25T18:02:37.639024+00:00
+charge_J1_seeded_c128_L384_t3000: 2200/3000 ps, 49.06 min
+charge_J1_seeded_c128_L384_t3000: 2400/3000 ps, 55.28 min
+charge_J1_seeded_c128_L384_t3000: 2600/3000 ps, 59.85 min
+charge_J1_seeded_c128_L384_t3000: 2800/3000 ps, 63.77 min
+charge_J1_seeded_c128_L384_t3000: 3000/3000 ps, 67.84 min
+START charge_J1_seeded_c64_L256_t3000 2026-10-25T18:29:47.885765+00:00
+charge_J1_seeded_c64_L256_t3000: 2200/3000 ps, 10.39 min
+charge_J1_seeded_c64_L256_t3000: 2400/3000 ps, 11.43 min
+charge_J1_seeded_c64_L256_t3000: 2600/3000 ps, 12.70 min
+charge_J1_seeded_c64_L256_t3000: 2800/3000 ps, 14.01 min
+charge_J1_seeded_c64_L256_t3000: 3000/3000 ps, 15.29 min
+START charge_J1_seeded_c128_dt0125_t2000 2026-10-25T18:37:20.303746+00:00
+charge_J1_seeded_c128_dt0125_t2000: 200/2000 ps, 6.89 min
+charge_J1_seeded_c128_dt0125_t2000: 400/2000 ps, 13.09 min
+charge_J1_seeded_c128_dt0125_t2000: 600/2000 ps, 18.54 min
+charge_J1_seeded_c128_dt0125_t2000: 800/2000 ps, 24.14 min
+charge_J1_seeded_c128_dt0125_t2000: 1000/2000 ps, 29.55 min
+charge_J1_seeded_c128_dt0125_t2000: 1200/2000 ps, 35.16 min
+charge_J1_seeded_c128_dt0125_t2000: 1400/2000 ps, 41.23 min
+charge_J1_seeded_c128_dt0125_t2000: 1600/2000 ps, 46.14 min
+charge_J1_seeded_c128_dt0125_t2000: 1800/2000 ps, 50.89 min
+charge_J1_seeded_c128_dt0125_t2000: 2000/2000 ps, 55.58 min
+QUEUE COMPLETED 2026-10-25T19:33:20.935132+00:00

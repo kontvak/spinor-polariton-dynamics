@@ -1,0 +1,140 @@
+ARC PREFLIGHT PASS 2026-10-26T12:28:26.603672+00:00
+QUEUE START ring_A0_late matched_A0_ring 6000.0 2026-10-26T12:28:26.680681+00:00
+QUEUE DONE ring_A0_late UNRESOLVED 2026-10-26T13:23:50.355472+00:00
+QUEUE START ring_A1_late matched_A1_ring 6000.0 2026-10-26T13:23:50.480473+00:00
+ARC PREFLIGHT PASS 2026-10-26T20:51:15.497428+00:00
+QUEUE START ring_A1_late matched_A1_ring 6000.0 2026-10-26T20:51:15.556239+00:00
+QUEUE DONE ring_A1_late UNRESOLVED 2026-10-26T20:53:27.847000+00:00
+QUEUE START ring_T1_late matched_T1_ring 6000.0 2026-10-26T20:53:27.936172+00:00
+QUEUE DONE ring_T1_late UNRESOLVED 2026-10-26T21:46:59.801356+00:00
+QUEUE START ring_T0_late matched_T0_ring 6000.0 2026-10-26T21:46:59.923884+00:00
+QUEUE DONE ring_T0_late UNRESOLVED 2026-10-26T22:24:59.567848+00:00
+QUEUE START spot_T0_seed check_T0_spot_seeded 3000.0 2026-10-26T22:24:59.659949+00:00
+QUEUE DONE spot_T0_seed STATIONARY 2026-10-26T23:13:51.251828+00:00
+QUEUE START C1_spot_dt check_C1_spot_full_dt0125 3000.0 2026-10-26T23:13:51.347426+00:00
+QUEUE DONE C1_spot_dt PERIODIC 2026-10-27T00:44:16.002648+00:00
+QUEUE START C1_spot_grid check_C1_spot_full_N768 3000.0 2026-10-27T00:44:16.103952+00:00
+QUEUE DONE C1_spot_grid PERIODIC 2026-10-27T02:26:44.948677+00:00
+QUEUE START C1_ring_dt check_C1_ring_full_dt0125 3600.0 2026-10-27T02:26:45.057333+00:00
+QUEUE DONE C1_ring_dt STATIONARY 2026-10-27T04:13:43.717930+00:00
+QUEUE START C1_ring_grid check_C1_ring_full_N768 3600.0 2026-10-27T04:13:43.857536+00:00
+QUEUE DONE C1_ring_grid STATIONARY 2026-10-27T06:14:50.980413+00:00
+QUEUE COMPLETED 2026-10-27T06:14:51.103065+00:00
+PREFLIGHT PASS 2026-10-27T19:26:05.017490+00:00 Overnight ~10h spot J scan: 14 coarse points, 4 grid checks, half-dt and enlarged-domain controls. Morning review before adaptive J refinement.
+START Jspot_noTETM_reuse_0p00000 Reuse established endpoint; no integration; same pump and continuous initial seed. 2026-10-27T19:26:05.222318+00:00
+DONE Jspot_noTETM_reuse_0p00000 PERIODIC 2026-10-27T19:26:26.186944+00:00
+START Jspot_noTETM_reuse_0p01000 Reuse established endpoint; no integration; same pump and continuous initial seed. 2026-10-27T19:26:26.424530+00:00
+DONE Jspot_noTETM_reuse_0p01000 PERIODIC 2026-10-27T19:26:48.651361+00:00
+START Jspot_TETM_reuse_0p00000 Reuse established endpoint; no integration; same pump and continuous initial seed. 2026-10-27T19:26:48.859341+00:00
+DONE Jspot_TETM_reuse_0p00000 PERIODIC 2026-10-27T19:27:10.996413+00:00
+START Jspot_TETM_reuse_0p01000 Reuse established endpoint; no integration; same pump and continuous initial seed. 2026-10-27T19:27:11.212163+00:00
+DONE Jspot_TETM_reuse_0p01000 PERIODIC 2026-10-27T19:27:34.817514+00:00
+START Jspot_noTETM_J0p00250_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T19:27:35.039538+00:00
+DONE Jspot_noTETM_J0p00250_N256 PERIODIC 2026-10-27T19:41:15.579382+00:00
+START Jspot_TETM_J0p00250_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T19:41:15.877391+00:00
+DONE Jspot_TETM_J0p00250_N256 PERIODIC 2026-10-27T19:55:45.444546+00:00
+START Jspot_noTETM_J0p00500_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T19:55:45.873595+00:00
+DONE Jspot_noTETM_J0p00500_N256 PERIODIC 2026-10-27T20:08:58.071148+00:00
+START Jspot_TETM_J0p00500_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T20:08:58.306462+00:00
+DONE Jspot_TETM_J0p00500_N256 PERIODIC 2026-10-27T20:22:25.579023+00:00
+START Jspot_noTETM_J0p00750_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T20:22:25.797287+00:00
+DONE Jspot_noTETM_J0p00750_N256 PERIODIC 2026-10-27T20:34:52.711506+00:00
+START Jspot_TETM_J0p00750_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T20:34:52.959294+00:00
+DONE Jspot_TETM_J0p00750_N256 PERIODIC 2026-10-27T20:48:53.319409+00:00
+START Jspot_noTETM_J0p01500_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T20:48:53.786693+00:00
+DONE Jspot_noTETM_J0p01500_N256 PERIODIC 2026-10-27T21:04:00.982556+00:00
+START Jspot_TETM_J0p01500_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T21:04:01.206715+00:00
+DONE Jspot_TETM_J0p01500_N256 PERIODIC 2026-10-27T21:18:27.665875+00:00
+START Jspot_noTETM_J0p02000_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T21:18:27.905818+00:00
+DONE Jspot_noTETM_J0p02000_N256 PERIODIC 2026-10-27T21:32:07.690484+00:00
+START Jspot_TETM_J0p02000_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T21:32:07.930031+00:00
+DONE Jspot_TETM_J0p02000_N256 PERIODIC 2026-10-27T21:47:00.947872+00:00
+START Jspot_noTETM_J0p03000_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T21:47:01.185814+00:00
+DONE Jspot_noTETM_J0p03000_N256 UNRESOLVED 2026-10-27T22:00:19.532275+00:00
+START Jspot_TETM_J0p03000_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T22:00:19.765199+00:00
+DONE Jspot_TETM_J0p03000_N256 UNRESOLVED 2026-10-27T22:14:19.815456+00:00
+START Jspot_noTETM_J0p00625_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T22:14:20.321871+00:00
+DONE Jspot_noTETM_J0p00625_N256 PERIODIC 2026-10-27T22:27:20.768936+00:00
+START Jspot_TETM_J0p00625_N256 Independent t=0 preparation; preliminary 2D J scan, not a 0D-derived regime label. Save late full fields every5ps and density frames every20ps. UNRESOLVED is retained; no automatic extension. 2026-10-27T22:27:20.999951+00:00
+DONE Jspot_TETM_J0p00625_N256 PERIODIC 2026-10-27T22:41:26.161283+00:00
+START Jspot_noTETM_J0p00500_N512 Independent N512 check of the N256 scan; compare populations, maps, Stokes and periodicity on shared late times. Do not infer all J values converge from this test. 2026-10-27T22:41:26.393489+00:00
+DONE Jspot_noTETM_J0p00500_N512 PERIODIC 2026-10-27T23:29:34.567353+00:00
+START Jspot_TETM_J0p00500_N512 Independent N512 check of the N256 scan; compare populations, maps, Stokes and periodicity on shared late times. Do not infer all J values converge from this test. 2026-10-27T23:29:34.813533+00:00
+DONE Jspot_TETM_J0p00500_N512 PERIODIC 2026-10-28T00:21:09.526958+00:00
+START Jspot_noTETM_J0p02000_N512 Independent N512 check of the N256 scan; compare populations, maps, Stokes and periodicity on shared late times. Do not infer all J values converge from this test. 2026-10-28T00:21:09.785192+00:00
+DONE Jspot_noTETM_J0p02000_N512 PERIODIC 2026-10-28T01:10:33.107514+00:00
+START Jspot_TETM_J0p02000_N512 Independent N512 check of the N256 scan; compare populations, maps, Stokes and periodicity on shared late times. Do not infer all J values converge from this test. 2026-10-28T01:10:33.446834+00:00
+DONE Jspot_TETM_J0p02000_N512 PERIODIC 2026-10-28T02:03:10.168543+00:00
+START Jspot_TETM_J0p00500_dt Independent half-time-step check. 2026-10-28T02:03:10.545025+00:00
+DONE Jspot_TETM_J0p00500_dt PERIODIC 2026-10-28T03:35:29.204655+00:00
+START Jspot_TETM_J0p02000_domain Independent larger-domain check at fixed dx=.5um; pump width and seed definition unchanged. 2026-10-28T03:35:29.553303+00:00
+DONE Jspot_TETM_J0p02000_domain PERIODIC 2026-10-28T05:24:58.569903+00:00
+QUEUE COMPLETED 2026-10-28T05:24:58.845634+00:00
+PREFLIGHT PASS 2026-10-28T07:19:36.808893+00:00 28 Oct: ~5h targeted J scan refinement after completed first pass; dense probes at J=.03, stronger J and fixed-dx domain controls.
+START Jspot_noTETM_J0p03000_probe25 Resolve interpolation-limited rejection at J=.03 with 2.5ps complex maps; independent start. No blind time extension. 2026-10-28T07:19:37.146230+00:00
+DONE Jspot_noTETM_J0p03000_probe25 PERIODIC 2026-10-28T07:33:01.387783+00:00
+START Jspot_TETM_J0p03000_probe25 Resolve interpolation-limited rejection at J=.03 with 2.5ps complex maps; independent start. No blind time extension. 2026-10-28T07:33:01.750346+00:00
+DONE Jspot_TETM_J0p03000_probe25 PERIODIC 2026-10-28T07:48:12.131722+00:00
+START Jspot_TETM_J0p02000_domain_dx1_L384 Fixed dx=1um domain check L256 ->384. Diagnostic coarse-grid control; does not replace fine-grid domain convergence. 2026-10-28T07:48:12.488934+00:00
+DONE Jspot_TETM_J0p02000_domain_dx1_L384 PERIODIC 2026-10-28T08:19:33.566737+00:00
+START Jspot_TETM_J0p02000_domain_dx1_L512 Fixed dx=1um domain check L384 ->512; isolate far-field boundary effect before paying for N1024. 2026-10-28T08:19:33.936606+00:00
+DONE Jspot_TETM_J0p02000_domain_dx1_L512 PERIODIC 2026-10-28T09:13:13.600245+00:00
+START Jspot_noTETM_J0p04000_refine Independent start; expand spatial J scan beyond running-phase region; no assumed 0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion. 2026-10-28T09:13:13.967346+00:00
+DONE Jspot_noTETM_J0p04000_refine PERIODIC 2026-10-28T09:27:21.381600+00:00
+START Jspot_TETM_J0p04000_refine Independent start; expand spatial J scan beyond running-phase region; no assumed 0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion. 2026-10-28T09:27:21.732758+00:00
+DONE Jspot_TETM_J0p04000_refine PERIODIC 2026-10-28T09:42:36.161077+00:00
+START Jspot_noTETM_J0p06000_refine Independent start; expand spatial J scan beyond running-phase region; no assumed 0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion. 2026-10-28T09:42:36.526367+00:00
+DONE Jspot_noTETM_J0p06000_refine PERIODIC 2026-10-28T09:56:51.642097+00:00
+START Jspot_TETM_J0p06000_refine Independent start; expand spatial J scan beyond running-phase region; no assumed 0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion. 2026-10-28T09:56:52.168080+00:00
+DONE Jspot_TETM_J0p06000_refine PERIODIC 2026-10-28T10:12:05.977860+00:00
+START Jspot_noTETM_J0p02500_refine Independent start; expand spatial J scan beyond running-phase region; no assumed 0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion. 2026-10-28T10:12:06.339834+00:00
+DONE Jspot_noTETM_J0p02500_refine PERIODIC 2026-10-28T10:26:15.058251+00:00
+START Jspot_TETM_J0p02500_refine Independent start; expand spatial J scan beyond running-phase region; no assumed 0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion. 2026-10-28T10:26:15.459432+00:00
+DONE Jspot_TETM_J0p02500_refine PERIODIC 2026-10-28T10:41:35.539767+00:00
+START Jspot_noTETM_J0p08000_refine Independent start; expand spatial J scan beyond running-phase region; no assumed 0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion. 2026-10-28T10:41:35.922425+00:00
+DONE Jspot_noTETM_J0p08000_refine STATIONARY 2026-10-28T10:55:45.950407+00:00
+START Jspot_TETM_J0p08000_refine Independent start; expand spatial J scan beyond running-phase region; no assumed 0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion. 2026-10-28T10:55:46.517622+00:00
+DONE Jspot_TETM_J0p08000_refine STATIONARY 2026-10-28T11:10:58.146801+00:00
+START Jspot_noTETM_J0p12000_refine Independent start; expand spatial J scan beyond running-phase region; no assumed 0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion. 2026-10-28T11:10:58.659424+00:00
+DONE Jspot_noTETM_J0p12000_refine STATIONARY 2026-10-28T11:25:11.834745+00:00
+START Jspot_TETM_J0p12000_refine Independent start; expand spatial J scan beyond running-phase region; no assumed 0D boundary. Probe2.5ps up to J=.06 and1.25ps above to resolve faster motion. 2026-10-28T11:25:12.333350+00:00
+DONE Jspot_TETM_J0p12000_refine STATIONARY 2026-10-28T11:40:30.049744+00:00
+START Jspot_TETM_J0p03000_N512_probe25 Independent fine-grid check at previously interpolation-limited J=.03, same 2.5ps map cadence as coarse reference. 2026-10-28T11:40:30.586614+00:00
+DONE Jspot_TETM_J0p03000_N512_probe25 PERIODIC 2026-10-28T12:37:11.365612+00:00
+QUEUE COMPLETED 2026-10-28T12:37:11.905613+00:00
+PREFLIGHT PASS 2026-10-28T15:02:20.882341+00:00 Two-hour branch filling: .065/.055 near oscillating phase, .075/.1 toward fixed phase; both beta series; independent N256 starts.
+START Jspot_TETM_J0p06500_fill2h Two-hour fill: prioritize bounded-phase interval and stationary branch. Independent t=0 seed, unchanged pump. Dense1.25ps probes in last1000ps; no automatic extension; preserve unresolved status if windows insufficient. 2026-10-28T15:02:21.307481+00:00
+DONE Jspot_TETM_J0p06500_fill2h PERIODIC 2026-10-28T15:15:30.815755+00:00
+START Jspot_noTETM_J0p06500_fill2h Two-hour fill: prioritize bounded-phase interval and stationary branch. Independent t=0 seed, unchanged pump. Dense1.25ps probes in last1000ps; no automatic extension; preserve unresolved status if windows insufficient. 2026-10-28T15:15:31.260285+00:00
+DONE Jspot_noTETM_J0p06500_fill2h PERIODIC 2026-10-28T15:28:59.388545+00:00
+START Jspot_TETM_J0p05500_fill2h Two-hour fill: prioritize bounded-phase interval and stationary branch. Independent t=0 seed, unchanged pump. Dense1.25ps probes in last1000ps; no automatic extension; preserve unresolved status if windows insufficient. 2026-10-28T15:28:59.825386+00:00
+DONE Jspot_TETM_J0p05500_fill2h PERIODIC 2026-10-28T15:43:42.763909+00:00
+START Jspot_noTETM_J0p05500_fill2h Two-hour fill: prioritize bounded-phase interval and stationary branch. Independent t=0 seed, unchanged pump. Dense1.25ps probes in last1000ps; no automatic extension; preserve unresolved status if windows insufficient. 2026-10-28T15:43:43.232416+00:00
+DONE Jspot_noTETM_J0p05500_fill2h PERIODIC 2026-10-28T15:57:47.976692+00:00
+START Jspot_TETM_J0p07500_fill2h Two-hour fill: prioritize bounded-phase interval and stationary branch. Independent t=0 seed, unchanged pump. Dense1.25ps probes in last1000ps; no automatic extension; preserve unresolved status if windows insufficient. 2026-10-28T15:57:48.449151+00:00
+DONE Jspot_TETM_J0p07500_fill2h UNRESOLVED 2026-10-28T16:13:23.513365+00:00
+START Jspot_noTETM_J0p07500_fill2h Two-hour fill: prioritize bounded-phase interval and stationary branch. Independent t=0 seed, unchanged pump. Dense1.25ps probes in last1000ps; no automatic extension; preserve unresolved status if windows insufficient. 2026-10-28T16:13:23.984888+00:00
+DONE Jspot_noTETM_J0p07500_fill2h UNRESOLVED 2026-10-28T16:28:00.849817+00:00
+START Jspot_TETM_J0p10000_fill2h Two-hour fill: prioritize bounded-phase interval and stationary branch. Independent t=0 seed, unchanged pump. Dense1.25ps probes in last1000ps; no automatic extension; preserve unresolved status if windows insufficient. 2026-10-28T16:28:01.315854+00:00
+DONE Jspot_TETM_J0p10000_fill2h STATIONARY 2026-10-28T16:43:14.497481+00:00
+START Jspot_noTETM_J0p10000_fill2h Two-hour fill: prioritize bounded-phase interval and stationary branch. Independent t=0 seed, unchanged pump. Dense1.25ps probes in last1000ps; no automatic extension; preserve unresolved status if windows insufficient. 2026-10-28T16:43:15.006168+00:00
+DONE Jspot_noTETM_J0p10000_fill2h STATIONARY 2026-10-28T16:57:29.195498+00:00
+QUEUE COMPLETED 2026-10-28T16:57:31.670062+00:00
+PREFLIGHT PASS 2026-10-28T17:31:49.601976+00:00 Continue J=.075 then .055, both beta series,3000->4500ps; reuse existing rotating full-field storage.
+START Jspot_TETM_J0p07500_fill2h User-authorized continuation3000->4500ps from same checkpoint; physical parameters and1.25ps probe cadence unchanged, existing1000ps rolling storage reused. J=.075: test amplitude relaxation; J=.055: inspect late dynamics without assuming local phase ambiguity resolves. 2026-10-28T17:31:50.034672+00:00
+DONE Jspot_TETM_J0p07500_fill2h STATIONARY 2026-10-28T17:39:04.129069+00:00
+START Jspot_noTETM_J0p07500_fill2h User-authorized continuation3000->4500ps from same checkpoint; physical parameters and1.25ps probe cadence unchanged, existing1000ps rolling storage reused. J=.075: test amplitude relaxation; J=.055: inspect late dynamics without assuming local phase ambiguity resolves. 2026-10-28T17:39:04.611650+00:00
+DONE Jspot_noTETM_J0p07500_fill2h STATIONARY 2026-10-28T17:46:08.353971+00:00
+START Jspot_TETM_J0p05500_fill2h User-authorized continuation3000->4500ps from same checkpoint; physical parameters and1.25ps probe cadence unchanged, existing1000ps rolling storage reused. J=.075: test amplitude relaxation; J=.055: inspect late dynamics without assuming local phase ambiguity resolves. 2026-10-28T17:46:08.831625+00:00
+DONE Jspot_TETM_J0p05500_fill2h PERIODIC 2026-10-28T17:54:03.560437+00:00
+START Jspot_noTETM_J0p05500_fill2h User-authorized continuation3000->4500ps from same checkpoint; physical parameters and1.25ps probe cadence unchanged, existing1000ps rolling storage reused. J=.075: test amplitude relaxation; J=.055: inspect late dynamics without assuming local phase ambiguity resolves. 2026-10-28T17:54:04.031432+00:00
+DONE Jspot_noTETM_J0p05500_fill2h PERIODIC 2026-10-28T18:01:31.836528+00:00
+QUEUE COMPLETED 2026-10-28T18:01:32.297717+00:00
+PREFLIGHT PASS 2026-10-28T18:14:12.346560+00:00 Three TE-TM-only transition points J=.07,.05,.045; no beta0 duplication; unchanged pump and seed.
+START Jspot_TETM_J0p07000_transition3 TE-TM-only transition fill. Independent t=0 preparation; 2.5ps complex probes, initial800ps rolling retention. No beta0 duplicate, no automatic extension. 2026-10-28T18:14:12.805804+00:00
+DONE Jspot_TETM_J0p07000_transition3 PERIODIC 2026-10-28T18:33:51.402652+00:00
+START Jspot_TETM_J0p05000_transition3 TE-TM-only transition fill. Independent t=0 preparation; 2.5ps complex probes, initial800ps rolling retention. No beta0 duplicate, no automatic extension. 2026-10-28T18:33:51.972471+00:00
+DONE Jspot_TETM_J0p05000_transition3 PERIODIC 2026-10-28T18:49:37.497490+00:00
+START Jspot_TETM_J0p04500_transition3 TE-TM-only transition fill. Independent t=0 preparation; 2.5ps complex probes, initial800ps rolling retention. No beta0 duplicate, no automatic extension. 2026-10-28T18:49:38.059713+00:00
+DONE Jspot_TETM_J0p04500_transition3 PERIODIC 2026-10-28T19:05:12.064482+00:00
+QUEUE COMPLETED 2026-10-28T19:05:12.585785+00:00

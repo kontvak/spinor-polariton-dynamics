@@ -445,7 +445,7 @@ def test_declarative_queue_rebuilds_missing_fork_exports_without_steps(tmp_path,
     import sys
     from pathlib import Path
     import json
-    sys.path.insert(0,str(Path(__file__).parent/'local'))
+    sys.path.insert(0,str(Path(__file__).parent/'scripts'))
     import experiment_queue as q
     c={'time':{'dt':.025,'final':3600.}}
     from types import SimpleNamespace
@@ -476,7 +476,7 @@ def test_declarative_queue_rejects_dependency_cycles_and_wrong_checkpoint(tmp_pa
     import sys
     from pathlib import Path
     import pytest,yaml
-    sys.path.insert(0,str(Path(__file__).parent/'local'))
+    sys.path.insert(0,str(Path(__file__).parent/'scripts'))
     import experiment_queue as q
     plan=tmp_path/'jobs.yaml'
     plan.write_text(yaml.safe_dump({'experiments':[{'id':'a','name':'a','depends_on':['b']},{'id':'b','name':'b','depends_on':['a']}]}))
@@ -491,7 +491,7 @@ def test_full_map_cycle_amplitude_survives_cancelling_integrals():
     import sys
     from pathlib import Path
     from model import stokes
-    sys.path.insert(0,str(Path(__file__).parent/'local'))
+    sys.path.insert(0,str(Path(__file__).parent/'scripts'))
     from check_ring_cycles import cycle_statistics,amplitude_errors
     times=np.arange(0.,1000.1,5.)
     checker=(-1.)**np.indices((8,8)).sum(0)
@@ -511,7 +511,7 @@ def test_full_map_cycle_amplitude_rejects_hidden_amplitude_change():
     import sys
     from pathlib import Path
     from model import stokes
-    sys.path.insert(0,str(Path(__file__).parent/'local'))
+    sys.path.insert(0,str(Path(__file__).parent/'scripts'))
     from check_ring_cycles import cycle_statistics,amplitude_errors
     times=np.arange(0.,1000.1,5.);checker=(-1.)**np.indices((8,8)).sum(0)
     def maps(i):
@@ -574,10 +574,10 @@ def test_queue_add_note_extend_and_measured_eta(tmp_path,monkeypatch):
     import sys,yaml,json
     from pathlib import Path
     from types import SimpleNamespace
-    sys.path.insert(0,str(Path(__file__).parent/'local'))
+    sys.path.insert(0,str(Path(__file__).parent/'scripts'))
     import experiment_queue as q
     monkeypatch.setattr(q,'ROOT',tmp_path);monkeypatch.setattr(q,'RUNS',tmp_path/'runs');monkeypatch.setattr(q,'DATA',tmp_path/'data')
-    (tmp_path/'local').mkdir();(q.RUNS/'reference').mkdir(parents=True);q.DATA.mkdir()
+    (tmp_path/'scripts').mkdir();(q.RUNS/'reference').mkdir(parents=True);q.DATA.mkdir()
     c=load_config('F4');c['space']={'N':8,'L':8.}
     (q.RUNS/'reference/resolved_config.yaml').write_text(yaml.safe_dump(c))
     plan=tmp_path/'jobs.yaml';plan.write_text('experiments: []\n')
@@ -598,15 +598,17 @@ def test_queue_add_note_extend_and_measured_eta(tmp_path,monkeypatch):
 def test_queue_pause_during_review_and_resume(tmp_path,monkeypatch):
     import sys,subprocess,time,json
     from pathlib import Path
-    sys.path.insert(0,str(Path(__file__).parent/'local'))
+    sys.path.insert(0,str(Path(__file__).parent/'scripts'))
     import experiment_queue as q
     state=tmp_path/'queue.json';runs=tmp_path/'runs';runs.mkdir();release=tmp_path/'release'
     code=f'''import sys,time,ctypes
 from pathlib import Path
 from types import SimpleNamespace
-sys.path.insert(0,{str(Path(__file__).parent/'local')!r})
+sys.path.insert(0,{str(Path(__file__).parent/'scripts')!r})
 import experiment_queue as q
 q.STATE=Path({str(state)!r});q.RUNS=Path({str(runs)!r})
+q.log_dir=lambda: q.ROOT/'results/runs/test_logs'
+q.log_dir().mkdir(parents=True,exist_ok=True)
 q.load_plan=lambda *a,**k:{{'experiments':[{{'id':'demo','name':'demo','final_ps':1.}}]}}
 q.fingerprint=lambda job:'same physics'
 q.compute_imports=lambda:None

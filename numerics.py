@@ -2205,6 +2205,7 @@ def save_report3_animation_frames(path, *, cadence=20., halfwidth=40.):
                         raise ValueError('Animation crop/grid changed within a run')
                     valid=z['time']<=end+1e-8
                     tt=z['time'][valid].tolist();frames=list(z['density'][valid])
+        if not (path/'probe_maps.npy').exists():return destination if destination.exists() else None
         maps=np.load(path/'probe_maps.npy',mmap_mode='r',allow_pickle=False)
         if len(maps)!=len(times):return None  # Producer is resizing its probe buffer.
         eligible=np.flatnonzero(np.isfinite(times)&(times<=end+1e-8))
@@ -2630,6 +2631,7 @@ def _precision_perturb(state,grid,epsilon,seed):
 
 def _precision_reference(name):
     path=ROOT/'results/runs/report3'/name
+    if not (path/'probe_maps.npy').exists():raise ValueError('Dense history compacted; a fresh dense window is required for full-map reanalysis: '+name)
     config=yaml.safe_load((path/'resolved_config.yaml').read_text())
     with np.load(path/'checkpoint.npz') as z:times=z['probe_times'].copy()
     store=_ProbeStore(path/'probe_maps.npy',config['space']['N'],times=times)
@@ -2861,3 +2863,59 @@ def run_report3_boundary_queue(hours=1.5):
         except BaseException as error:
             report.update(status='RUN_INCOMPLETE' if isinstance(error,KeyboardInterrupt) else 'FAILED',error=str(error))
             write_json(manifest,report);raise
+
+
+def sample_report3_center_cycles(start_ps=2600.,cadence=.25,*,refresh=False):
+    """Short CPU replays for local Poincare curves; verify against saved full fields."""
+    from numba import set_num_threads
+    set_num_threads(1)
+    directory=ROOT/'results/data/report3';archive=directory/'poincare_center_cycles.npz'
+    if archive.exists() and not refresh:
+        with np.load(archive,allow_pickle=False) as z:
+            metadata=json.loads(str(z['metadata_json']))
+        if metadata['start_ps']==start_ps and metadata['cadence_ps']==cadence:return archive
+    reviews=json.loads((directory/'report3_cycle_review.json').read_text())['cases'];output={};sources=[]
+    for label,name in (('T1','production_T1_spot'),('C1','production_C1_spot')):
+        c,store=_precision_reference(name);review=reviews[name]
+        if review['status']!='PERIODIC':raise ValueError('No accepted periodic state: '+name)
+        period=float(review['period_ps']);ids=store.ordered();times=store.times[ids]
+        match=np.flatnonzero(np.isclose(times,start_ps,rtol=0,atol=1e-8))
+        if len(match)!=1:raise ValueError('Missing physical restart frame: '+name)
+        state=store.state(ids[match[0]]);p=parameters(c);g=make_grid(c);pump=injection(c,g);dt=c['time']['dt']
+        if abs(round(cadence/dt)*dt-cadence)>1e-9:raise ValueError('Output cadence must align with dt')
+        center=len(g.x)//2
+        if abs(g.x[center])>1e-9 or abs(g.y[center])>1e-9:raise ValueError('Grid has no origin')
+        import hashlib
+        source_hash=hashlib.sha256(b''.join(np.ascontiguousarray(v).tobytes() for v in state)).hexdigest()
+        output[label+'_initial_psi']=state[0].copy()  # The same instant is used for N8.
+        factor=kinetic_factor(g,p,dt/2);coeff=spin_coefficients(p)
+        sample_t=[start_ps];sample_psi=[state[0][:,center,center].copy()];check=[];steps=int(np.floor(period/dt+1e-10))
+        for step in range(1,steps+2):
+            h=dt if step<=steps else period-steps*dt
+            if h<1e-10:break
+            half=factor if h==dt else kinetic_factor(g,p,h/2)
+            field=kinetic_step(state[0],half,workers=1)
+            state=(np.ascontiguousarray(field),state[1],state[2]);_spin_local_inplace(*state,pump,coeff,h)
+            state=(kinetic_step(state[0],half,workers=1),state[1],state[2]);t=start_ps+min(step*dt,period)
+            if step%round(cadence/dt)==0 or step==steps+1:
+                sample_t.append(t);sample_psi.append(state[0][:,center,center].copy())
+            if abs(t-(start_ps+5.))<1e-8:
+                ref_id=np.flatnonzero(np.isclose(times,t,rtol=0,atol=1e-8))
+                if len(ref_id)!=1:raise ValueError('Missing independent replay-check frame')
+                ref=store.state(ids[ref_id[0]]);check=[relative_norm(a,b) for a,b in zip(state,ref)]
+                if max(check)>1e-8:raise ValueError('CPU replay disagrees with stored trajectory: '+str(check))
+                print('CENTER REPLAY',label,'5ps errors',check,flush=True)
+        psi=np.asarray(sample_psi);S=stokes(psi,axis=1);sphere=S[1:]/S[0]
+        residual=float(np.max(abs(np.sum(sphere*sphere,axis=0)-1)))
+        if residual>1e-12 or np.any(S[0]<=0):raise ValueError('Invalid local Stokes vector')
+        output[label+'_time']=np.asarray(sample_t);output[label+'_psi']=psi;output[label+'_stokes']=sphere.T
+        sources.append({'case':label,'run':name,'config':c,'start_ps':start_ps,'period_ps':period,
+                        'end_ps':sample_t[-1],'source_state_sha256':source_hash,'replay_5ps_relative_errors':check,
+                        'sphere_identity_max_residual':residual,'coordinates_um':[0.,0.],
+                        'method':'CPU complex128 replay, same Strang FFT + joint RK4 and dt; no curve smoothing or vector renormalization'})
+        print('CENTER CYCLE',label,'frames',len(sample_t),'period',period,flush=True)
+    metadata={'start_ps':start_ps,'cadence_ps':cadence,'sources':sources}
+    output['metadata_json']=np.array(json.dumps(metadata));tmp=archive.with_suffix('.tmp.npz')
+    np.savez_compressed(tmp,**output);tmp.replace(archive)
+    write_json(archive.with_suffix('.json'),metadata)
+    return archive

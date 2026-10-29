@@ -1,24 +1,57 @@
 {
-  "method": "CPU postprocessing of saved arrays; no field integration or temporal interpolation",
+  "method": "Saved arrays and verified short CPU replay of two local cycles; report text unchanged",
   "PNG_width_mm": 160,
   "PNG_dpi": 300,
   "mask_relative_S0": 0.001,
   "figures": {
-    "F1_reservoir_switching": {
-      "file": "results/figures/report3/F1_reservoir_switching.png",
-      "caption_en": "Condensate density after pump turn-on and turn-off in the matched one- and two-reservoir models. PA=1.5 Pth; identical seed and initially empty reservoirs. Time in (b) is measured from pump turn-off at1000 ps. The dotted level is the common stationary density. Saved F1_M0/F1_R1 data from the preceding report are reused.",
+    "P1_reservoir_switching": {
+      "file": "results/figures/report3/P1_reservoir_switching.png",
+      "caption_en": "Matched scalar models after pump turn-on and turn-off, PA=1.5 Pth. Curves and dotted steady-state level are copied unchanged from the preceding report. The horizontal dotted line is the matched pumped stationary condensate density, before switch-off.",
       "status": "READY",
-      "sources": []
+      "sources": [],
+      "preserved_from_previous_report": true,
+      "source_method": "report_figure1"
     },
-    "F2_circular_component_densities": {
-      "file": "results/figures/report3/F2_circular_component_densities.png",
-      "caption_en": "Circular-component density profiles with pump imbalance epsilon=0.3, J=beta=0. production_A1_spot: p=13.8, epsilon=0.3, alpha2=-0.00024 meV um^2, J=0 meV, beta=0 meV um^2; N=512, L=256 um, dt=0.025 ps. matched_A1_ring: p=3.3, epsilon=0.3, alpha2=-0.00024 meV um^2, J=0 meV, beta=0 meV um^2; N=512, L=256 um, dt=0.025 ps. production_A1_spot: snapshot at3000 ps, N+=116.277, N-=93.7473, Z=0.107274. matched_A1_ring: snapshot at6000 ps, N+=516.265, N-=241.631, Z=0.362365. A common absolute density scale is used within each geometry. Density stationarity does not imply fixed relative phase. Thin contours mark half-maximum pump; w=d=2.5 um, ring radius10 um.",
+    "P2_homogeneous_pump_response": {
+      "file": "results/figures/report3/P2_homogeneous_pump_response.png",
+      "caption_en": "Homogeneous circular densities versus pump polarization epsilon, J=0 and total active pump4 Pth. Analytic stationary branches and independent integrations, copied unchanged from the preceding report. Pth=gammaC*gammaA/R is the active-pump threshold per component. Spin exchange between reservoirs remains present even at J=0.",
+      "status": "READY",
+      "sources": [],
+      "preserved_from_previous_report": true,
+      "source_method": "report_figure2"
+    },
+    "P3_homogeneous_densities": {
+      "file": "results/figures/report3/P3_homogeneous_densities.png",
+      "caption_en": "Homogeneous densities at J=5,6.5,10 microeV: running phase, bounded-phase oscillations and fixed phase. Same original trajectories, pump s=2, epsilon=.3 and common late interval as the preceding report.",
+      "status": "READY",
+      "sources": [],
+      "preserved_from_previous_report": false,
+      "source_method": "report_figures45"
+    },
+    "P4_homogeneous_relative_phase": {
+      "file": "results/figures/report3/P4_homogeneous_relative_phase.png",
+      "caption_en": "Relative phase theta=arg(psi+)-arg(psi-) for the same three homogeneous trajectories and late intervals as P3. Only integer2pi offsets are applied. Copied unchanged from the preceding report.",
+      "status": "READY",
+      "sources": [],
+      "preserved_from_previous_report": false,
+      "source_method": "report_figures45"
+    },
+    "P5_homogeneous_J_scan": {
+      "file": "results/figures/report3/P5_homogeneous_J_scan.png",
+      "caption_en": "Original homogeneous scan: amplitude and mean theta drift, theta=arg(psi+)-arg(psi-), so frequency difference is minus theta drift. Gray diamonds mark phase-masked cycles near weak component density; gaps do not mean zero.",
+      "status": "READY",
+      "sources": [],
+      "preserved_from_previous_report": false,
+      "source_method": "report_figure6"
+    },
+    "N1_spatial_component_densities": {
+      "file": "results/figures/report3/N1_spatial_component_densities.png",
+      "caption_en": "Circular-component densities without coherent coupling, J=beta=0, alpha2=-.1alpha1 and epsilon=.3. production_A1_spot: p=13.8, epsilon=0.3, J=0 meV, beta=0 meV um^2, alpha2=-0.00024 meV um^2, N=512, L=256 um, dt=0.025 ps. Snapshot t=3000 ps, N+=116.277, N-=93.7473, Z=0.107274. matched_A1_ring: p=3.3, epsilon=0.3, J=0 meV, beta=0 meV um^2, alpha2=-0.00024 meV um^2, N=512, L=256 um, dt=0.025 ps. Snapshot t=6000 ps, N+=516.265, N-=241.631, Z=0.362365. Densities share an absolute scale within each geometry. Half-maximum pump contours are shown. Stationary density does not imply stationary full polarization.",
       "status": "READY",
       "sources": [
         {
           "run": "production_A1_spot",
           "time_ps": 3000.0,
-          "field_sha256": "15486c3484b6e3865be5a393b83871ec574b704e158799fc0a71dc9d4cbfffe3",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -100,12 +133,12 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "15486c3484b6e3865be5a393b83871ec574b704e158799fc0a71dc9d4cbfffe3"
         },
         {
           "run": "matched_A1_ring",
           "time_ps": 6000.0,
-          "field_sha256": "248cf1c20d82c06d661d84872d245081dff2aab412fd24aa26a1255f608cd752",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -190,380 +223,19 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "248cf1c20d82c06d661d84872d245081dff2aab412fd24aa26a1255f608cd752"
         }
       ]
     },
-    "F3_cross_spin_density_comparison": {
-      "file": "results/diagnostics/report3/F3_cross_spin_density_comparison.png",
-      "caption_en": "Radial density profiles for alpha2=0 (A0) and alpha2=-0.00024 meV um^2 (A1); all other parameters and preparation are held fixed within each geometry. Small differences have no independent paired convergence bound and are not claimed as a resolved alpha2 effect. Annular snapshots may retain evolving polarization.",
-      "status": "DIAGNOSTIC_ONLY",
-      "sources": [
-        {
-          "run": "production_A0_spot",
-          "time_ps": 3000.0,
-          "field_sha256": "10f28f2b1c9623e0cc70349cd186f9a2cc5eef7e56e2150f6510066515b0565c",
-          "config": {
-            "model": "M3",
-            "reservoir": "R1",
-            "physical": {
-              "hbar": 0.6582119569,
-              "mass_over_me": 5.63e-05,
-              "gC": 0.0024,
-              "gR": 0.0048,
-              "gA": 0.0048,
-              "eta": 9.8,
-              "R": 0.021,
-              "gammaC": 0.182,
-              "gammaA": 0.05,
-              "alpha1": 0.0024,
-              "alpha2": 0.0,
-              "GammaA": 0.1,
-              "GammaI": 0.1,
-              "J": 0.0,
-              "beta": 0.0
-            },
-            "reservoirs": {
-              "R1": {
-                "W": 0.1020408163265306,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.0048
-              },
-              "R2": {
-                "W": 0.05,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.002352
-              }
-            },
-            "pump": {
-              "kind": "gaussian",
-              "s": 1.5,
-              "epsilon": 0.3,
-              "P0": 13.799999999999999,
-              "d": 2.5,
-              "r0": 10.0,
-              "off_time": null
-            },
-            "initial": {
-              "density_0d": 0.0001,
-              "density_2d": 0.0001,
-              "theta": 0.0,
-              "seed": 20261008,
-              "kind": "radial"
-            },
-            "space": {
-              "N": 512,
-              "L": 256.0
-            },
-            "time": {
-              "dt": 0.025,
-              "final": 3000.0,
-              "sample": 0.5
-            },
-            "ode": {
-              "rtol": 2e-11,
-              "atol": 2e-13,
-              "max_step": 2.0
-            },
-            "save": {
-              "observable": 0.25,
-              "core": 20.0,
-              "checkpoint": 200.0,
-              "diagnostic": 20.0,
-              "angular": 1.0,
-              "probe": 5.0
-            },
-            "execution": {
-              "fft_workers": 1,
-              "local_workers": 1,
-              "backend": "xpu"
-            },
-            "analysis": {
-              "min_window": 200.0,
-              "max_final": 6000.0,
-              "high_k_cut": 0.7,
-              "edge_limit": 1e-05
-            }
-          }
-        },
-        {
-          "run": "production_A1_spot",
-          "time_ps": 3000.0,
-          "field_sha256": "15486c3484b6e3865be5a393b83871ec574b704e158799fc0a71dc9d4cbfffe3",
-          "config": {
-            "model": "M3",
-            "reservoir": "R1",
-            "physical": {
-              "hbar": 0.6582119569,
-              "mass_over_me": 5.63e-05,
-              "gC": 0.0024,
-              "gR": 0.0048,
-              "gA": 0.0048,
-              "eta": 9.8,
-              "R": 0.021,
-              "gammaC": 0.182,
-              "gammaA": 0.05,
-              "alpha1": 0.0024,
-              "alpha2": -0.00024,
-              "GammaA": 0.1,
-              "GammaI": 0.1,
-              "J": 0.0,
-              "beta": 0.0
-            },
-            "reservoirs": {
-              "R1": {
-                "W": 0.1020408163265306,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.0048
-              },
-              "R2": {
-                "W": 0.05,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.002352
-              }
-            },
-            "pump": {
-              "kind": "gaussian",
-              "s": 1.5,
-              "epsilon": 0.3,
-              "P0": 13.799999999999999,
-              "d": 2.5,
-              "r0": 10.0,
-              "off_time": null
-            },
-            "initial": {
-              "density_0d": 0.0001,
-              "density_2d": 0.0001,
-              "theta": 0.0,
-              "seed": 20261008,
-              "kind": "radial"
-            },
-            "space": {
-              "N": 512,
-              "L": 256.0
-            },
-            "time": {
-              "dt": 0.025,
-              "final": 3000.0,
-              "sample": 0.5
-            },
-            "ode": {
-              "rtol": 2e-11,
-              "atol": 2e-13,
-              "max_step": 2.0
-            },
-            "save": {
-              "observable": 0.25,
-              "core": 20.0,
-              "checkpoint": 200.0,
-              "diagnostic": 20.0,
-              "angular": 1.0,
-              "probe": 5.0
-            },
-            "execution": {
-              "fft_workers": 1,
-              "local_workers": 1,
-              "backend": "xpu"
-            },
-            "analysis": {
-              "min_window": 200.0,
-              "max_final": 6000.0,
-              "high_k_cut": 0.7,
-              "edge_limit": 1e-05
-            }
-          }
-        },
-        {
-          "run": "matched_A0_ring",
-          "time_ps": 6000.0,
-          "field_sha256": "dde5e96cae73ed9c7ccd77e50b8344a6763c9084224e4267fc6f3318d8ce5178",
-          "config": {
-            "model": "M3",
-            "reservoir": "R1",
-            "physical": {
-              "hbar": 0.6582119569,
-              "mass_over_me": 5.63e-05,
-              "gC": 0.0024,
-              "gR": 0.0048,
-              "gA": 0.0048,
-              "eta": 9.8,
-              "R": 0.021,
-              "gammaC": 0.182,
-              "gammaA": 0.05,
-              "alpha1": 0.0024,
-              "alpha2": 0.0,
-              "GammaA": 0.1,
-              "GammaI": 0.1,
-              "J": 0.0,
-              "beta": 0.0
-            },
-            "reservoirs": {
-              "R1": {
-                "W": 0.1020408163265306,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.0048
-              },
-              "R2": {
-                "W": 0.05,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.002352
-              }
-            },
-            "pump": {
-              "kind": "ring",
-              "s": 1.5,
-              "epsilon": 0.3,
-              "P0": 3.3,
-              "d": 2.5,
-              "r0": 10.0,
-              "off_time": null
-            },
-            "initial": {
-              "density_0d": 0.0001,
-              "density_2d": 0.0001,
-              "theta": 0.0,
-              "seed": 20261008,
-              "kind": "radial_perturbed",
-              "perturbation": 0.001,
-              "perturb_seed": 20261025
-            },
-            "space": {
-              "N": 512,
-              "L": 256.0
-            },
-            "time": {
-              "dt": 0.025,
-              "final": 6000.0,
-              "sample": 0.5
-            },
-            "ode": {
-              "rtol": 2e-11,
-              "atol": 2e-13,
-              "max_step": 2.0
-            },
-            "save": {
-              "observable": 0.25,
-              "core": 20.0,
-              "checkpoint": 200.0,
-              "diagnostic": 20.0,
-              "angular": 1.0,
-              "probe": 5.0
-            },
-            "execution": {
-              "fft_workers": 1,
-              "local_workers": 1,
-              "backend": "xpu",
-              "precision": "complex128"
-            },
-            "analysis": {
-              "min_window": 200.0,
-              "max_final": 6000.0,
-              "high_k_cut": 0.7,
-              "edge_limit": 1e-05
-            }
-          }
-        },
-        {
-          "run": "matched_A1_ring",
-          "time_ps": 6000.0,
-          "field_sha256": "248cf1c20d82c06d661d84872d245081dff2aab412fd24aa26a1255f608cd752",
-          "config": {
-            "model": "M3",
-            "reservoir": "R1",
-            "physical": {
-              "hbar": 0.6582119569,
-              "mass_over_me": 5.63e-05,
-              "gC": 0.0024,
-              "gR": 0.0048,
-              "gA": 0.0048,
-              "eta": 9.8,
-              "R": 0.021,
-              "gammaC": 0.182,
-              "gammaA": 0.05,
-              "alpha1": 0.0024,
-              "alpha2": -0.00024,
-              "GammaA": 0.1,
-              "GammaI": 0.1,
-              "J": 0.0,
-              "beta": 0.0
-            },
-            "reservoirs": {
-              "R1": {
-                "W": 0.1020408163265306,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.0048
-              },
-              "R2": {
-                "W": 0.05,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.002352
-              }
-            },
-            "pump": {
-              "kind": "ring",
-              "s": 1.5,
-              "epsilon": 0.3,
-              "P0": 3.3,
-              "d": 2.5,
-              "r0": 10.0,
-              "off_time": null
-            },
-            "initial": {
-              "density_0d": 0.0001,
-              "density_2d": 0.0001,
-              "theta": 0.0,
-              "seed": 20261008,
-              "kind": "radial_perturbed",
-              "perturbation": 0.001,
-              "perturb_seed": 20261025
-            },
-            "space": {
-              "N": 512,
-              "L": 256.0
-            },
-            "time": {
-              "dt": 0.025,
-              "final": 6000.0,
-              "sample": 0.5
-            },
-            "ode": {
-              "rtol": 2e-11,
-              "atol": 2e-13,
-              "max_step": 2.0
-            },
-            "save": {
-              "observable": 0.25,
-              "core": 20.0,
-              "checkpoint": 200.0,
-              "diagnostic": 20.0,
-              "angular": 1.0,
-              "probe": 5.0
-            },
-            "execution": {
-              "fft_workers": 1,
-              "local_workers": 1,
-              "backend": "xpu",
-              "precision": "complex128"
-            },
-            "analysis": {
-              "min_window": 200.0,
-              "max_final": 6000.0,
-              "high_k_cut": 0.7,
-              "edge_limit": 1e-05
-            }
-          }
-        }
-      ]
-    },
-    "F4_TE_TM_spot": {
-      "file": "results/figures/report3/F4_TE_TM_spot.png",
-      "caption_en": "Densities and circular polarization under Gaussian-spot pumping with TE-TM coupling, at t=3000 ps. production_T0_spot: p=13.8, epsilon=0, alpha2=-0.00024 meV um^2, J=0 meV, beta=0.0119 meV um^2; N=512, L=256 um, dt=0.025 ps. N+=104.912, N-=104.912, Z=5.41141e-14. Both densities share one absolute scale. Thin contours: half-maximum pump; polarization pixels below 0.001 of peak S0 are masked. Density and polarization stationarity were checked on the saved late windows.",
+    "N3_TE_TM_spot": {
+      "file": "results/figures/report3/N3_TE_TM_spot.png",
+      "caption_en": "Gaussian spot: snapshot at t=3000 ps under equal component pumping epsilon=0. production_T0_spot: p=13.8, epsilon=0, J=0 meV, beta=0.0119 meV um^2, alpha2=-0.00024 meV um^2, N=512, L=256 um, dt=0.025 ps. The controlled beta=0 preparation is the corresponding B0 run; no change of epsilon is used to attribute polarization to TE-TM. Contours: half-maximum pump; s3 masked below0.001 peak S0. Late density and polarization pass stationarity checks.",
       "status": "READY",
       "sources": [
         {
           "run": "production_T0_spot",
           "time_ps": 3000.0,
-          "field_sha256": "7082364ff34caad0d794c74803f63ddfc938fbc520747d0d59282c70c6c2fd24",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -645,19 +317,19 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "7082364ff34caad0d794c74803f63ddfc938fbc520747d0d59282c70c6c2fd24"
         }
       ]
     },
-    "F5_TE_TM_ring": {
-      "file": "results/figures/report3/F5_TE_TM_ring.png",
-      "caption_en": "Densities and circular polarization under annular pumping with TE-TM coupling, at t=6000 ps. matched_T0_ring: p=3.3, epsilon=0, alpha2=-0.00024 meV um^2, J=0 meV, beta=0.0119 meV um^2; N=512, L=256 um, dt=0.025 ps. N+=373.522, N-=382.324, Z=-0.0116459. Both densities share one absolute scale. Thin contours: half-maximum pump; polarization pixels below 0.001 of peak S0 are masked. Densities are stationary within the stated tolerance, while full polarization continues to drift. This is a finite-time snapshot, not a phase-locked state.",
+    "N4_TE_TM_ring": {
+      "file": "results/figures/report3/N4_TE_TM_ring.png",
+      "caption_en": "Annular pump: snapshot at t=6000 ps under equal component pumping epsilon=0. matched_T0_ring: p=3.3, epsilon=0, J=0 meV, beta=0.0119 meV um^2, alpha2=-0.00024 meV um^2, N=512, L=256 um, dt=0.025 ps. The controlled beta=0 preparation is the corresponding B0 run; no change of epsilon is used to attribute polarization to TE-TM. Contours: half-maximum pump; s3 masked below0.001 peak S0. Ring polarization continues to evolve; this is not a phase-locked or stationary polarization state.",
       "status": "READY_FINITE_TIME",
       "sources": [
         {
           "run": "matched_T0_ring",
           "time_ps": 6000.0,
-          "field_sha256": "674aebcbb9791cfec0c18a189d4b2b868df310c89ff5e76e4789cdb06bbf6171",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -742,19 +414,19 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "674aebcbb9791cfec0c18a189d4b2b868df310c89ff5e76e4789cdb06bbf6171"
         }
       ]
     },
-    "F6_TE_TM_angular_response": {
-      "file": "results/figures/report3/F6_TE_TM_angular_response.png",
-      "caption_en": "Second angular harmonic Q2=2|C2| versus beta/beta_ref. Markers are time means and vertical bars show the temporal range, not statistical or numerical uncertainty. ROI: r=5-15 um for the spot, r=5-7.5 um for the ring. Each explicitly recorded late window is400 ps; ring T0 is still evolving, so no established monotonic ring response is claimed. The controlled initial seed is shared within each geometry; beta_ref=.0119 meV um^2. The hollow ring marker denotes the evolving beta_ref state at6000 ps. All points use the same Cartesian ROI quadrature; temporal bars do not include its discretization uncertainty. The independent C1 field-convergence controls passed, without providing an error bound for all beta variants.",
-      "status": "READY_FINITE_TIME",
+    "N5_TE_TM_angular_response": {
+      "file": "results/figures/report3/N5_TE_TM_angular_response.png",
+      "caption_en": "Gaussian spot with equal pumping, J=0: Q2=2|C2|, C2=integral_R S3 exp(-2i phi) dA / integral_R S0 dA, R=5-15um. Four actual beta values; line is a guide only. Means over the final400ps; bars show temporal range, not numerical uncertainty. Same Cartesian quadrature for every point. The response is approximately linear over the sampled range; lines guide the eye. beta_ref=.0119meV um^2; p=13.8, epsilon=0, identical radial preparation.",
+      "status": "READY",
       "sources": [
         {
           "run": "production_B0_spot",
           "time_ps": 3000.0,
-          "field_sha256": "a6628b5bfc60065b2cae24b4bde2d29150474481dfb96c57ff28c8fa25295380",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -836,12 +508,12 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "a6628b5bfc60065b2cae24b4bde2d29150474481dfb96c57ff28c8fa25295380"
         },
         {
           "run": "report3_T0_spot_beta_0.5",
           "time_ps": 3000.0,
-          "field_sha256": "e8711a0de09c9bbcec697c064e5ab48a5f4efdad1d6b1f8f457a52cdbade3fc6",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -924,12 +596,12 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "e8711a0de09c9bbcec697c064e5ab48a5f4efdad1d6b1f8f457a52cdbade3fc6"
         },
         {
           "run": "production_T0_spot",
           "time_ps": 3000.0,
-          "field_sha256": "7082364ff34caad0d794c74803f63ddfc938fbc520747d0d59282c70c6c2fd24",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -1011,12 +683,12 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "7082364ff34caad0d794c74803f63ddfc938fbc520747d0d59282c70c6c2fd24"
         },
         {
           "run": "report3_T0_spot_beta_2",
           "time_ps": 3000.0,
-          "field_sha256": "d3066d70298ac33bb6a3ee272bde747a49b7cae66dab6dbfd6fcd0e5cda10fe6",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -1099,367 +771,8 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
-        },
-        {
-          "run": "matched_B0_ring",
-          "time_ps": 3600.0,
-          "field_sha256": "b76a10025fa368c11348abf7955a9f3e3c52ae77475c28b14c9456756b9d2b66",
-          "config": {
-            "model": "M3",
-            "reservoir": "R1",
-            "physical": {
-              "hbar": 0.6582119569,
-              "mass_over_me": 5.63e-05,
-              "gC": 0.0024,
-              "gR": 0.0048,
-              "gA": 0.0048,
-              "eta": 9.8,
-              "R": 0.021,
-              "gammaC": 0.182,
-              "gammaA": 0.05,
-              "alpha1": 0.0024,
-              "alpha2": -0.00024,
-              "GammaA": 0.1,
-              "GammaI": 0.1,
-              "J": 0.0,
-              "beta": 0.0
-            },
-            "reservoirs": {
-              "R1": {
-                "W": 0.1020408163265306,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.0048
-              },
-              "R2": {
-                "W": 0.05,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.002352
-              }
-            },
-            "pump": {
-              "kind": "ring",
-              "s": 1.5,
-              "epsilon": 0.0,
-              "P0": 3.3,
-              "d": 2.5,
-              "r0": 10.0,
-              "off_time": null
-            },
-            "initial": {
-              "density_0d": 0.0001,
-              "density_2d": 0.0001,
-              "theta": 0.0,
-              "seed": 20261008,
-              "kind": "radial_perturbed",
-              "perturbation": 0.001,
-              "perturb_seed": 20261025
-            },
-            "space": {
-              "N": 512,
-              "L": 256.0
-            },
-            "time": {
-              "dt": 0.025,
-              "final": 3600.0,
-              "sample": 0.5
-            },
-            "ode": {
-              "rtol": 2e-11,
-              "atol": 2e-13,
-              "max_step": 2.0
-            },
-            "save": {
-              "observable": 0.25,
-              "core": 20.0,
-              "checkpoint": 200.0,
-              "diagnostic": 20.0,
-              "angular": 1.0,
-              "probe": 5.0
-            },
-            "execution": {
-              "fft_workers": 1,
-              "local_workers": 1,
-              "backend": "xpu",
-              "precision": "complex128"
-            },
-            "analysis": {
-              "min_window": 200.0,
-              "max_final": 6000.0,
-              "high_k_cut": 0.7,
-              "edge_limit": 1e-05
-            }
-          }
-        },
-        {
-          "run": "report3_T0_ring_beta_0.5",
-          "time_ps": 3000.0,
-          "field_sha256": "704b1b2735c4c12f622a85f475d4a9986e1cc858c12ea9f9b3a24649f92c3164",
-          "config": {
-            "model": "M3",
-            "reservoir": "R1",
-            "physical": {
-              "hbar": 0.6582119569,
-              "mass_over_me": 5.63e-05,
-              "gC": 0.0024,
-              "gR": 0.0048,
-              "gA": 0.0048,
-              "eta": 9.8,
-              "R": 0.021,
-              "gammaC": 0.182,
-              "gammaA": 0.05,
-              "alpha1": 0.0024,
-              "alpha2": -0.00024,
-              "GammaA": 0.1,
-              "GammaI": 0.1,
-              "J": 0.0,
-              "beta": 0.00595
-            },
-            "reservoirs": {
-              "R1": {
-                "W": 0.1020408163265306,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.0048
-              },
-              "R2": {
-                "W": 0.05,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.002352
-              }
-            },
-            "pump": {
-              "kind": "ring",
-              "s": 1.5,
-              "epsilon": 0.0,
-              "P0": 3.3,
-              "d": 2.5,
-              "r0": 10.0,
-              "off_time": null
-            },
-            "initial": {
-              "density_0d": 0.0001,
-              "density_2d": 0.0001,
-              "theta": 0.0,
-              "seed": 20261008,
-              "kind": "radial_perturbed",
-              "perturbation": 0.001,
-              "perturb_seed": 20261025
-            },
-            "space": {
-              "N": 512,
-              "L": 256.0
-            },
-            "time": {
-              "dt": 0.025,
-              "final": 3000.0,
-              "sample": 0.5
-            },
-            "ode": {
-              "rtol": 2e-11,
-              "atol": 2e-13,
-              "max_step": 2.0
-            },
-            "save": {
-              "observable": 0.25,
-              "core": 20.0,
-              "checkpoint": 200.0,
-              "diagnostic": 20.0,
-              "angular": 1.0,
-              "probe": 5.0
-            },
-            "execution": {
-              "fft_workers": 1,
-              "local_workers": 1,
-              "backend": "xpu",
-              "precision": "complex128"
-            },
-            "analysis": {
-              "min_window": 200.0,
-              "max_final": 6000.0,
-              "high_k_cut": 0.7,
-              "edge_limit": 1e-05
-            }
-          }
-        },
-        {
-          "run": "matched_T0_ring",
-          "time_ps": 6000.0,
-          "field_sha256": "674aebcbb9791cfec0c18a189d4b2b868df310c89ff5e76e4789cdb06bbf6171",
-          "config": {
-            "model": "M3",
-            "reservoir": "R1",
-            "physical": {
-              "hbar": 0.6582119569,
-              "mass_over_me": 5.63e-05,
-              "gC": 0.0024,
-              "gR": 0.0048,
-              "gA": 0.0048,
-              "eta": 9.8,
-              "R": 0.021,
-              "gammaC": 0.182,
-              "gammaA": 0.05,
-              "alpha1": 0.0024,
-              "alpha2": -0.00024,
-              "GammaA": 0.1,
-              "GammaI": 0.1,
-              "J": 0.0,
-              "beta": 0.0119
-            },
-            "reservoirs": {
-              "R1": {
-                "W": 0.1020408163265306,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.0048
-              },
-              "R2": {
-                "W": 0.05,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.002352
-              }
-            },
-            "pump": {
-              "kind": "ring",
-              "s": 1.5,
-              "epsilon": 0.0,
-              "P0": 3.3,
-              "d": 2.5,
-              "r0": 10.0,
-              "off_time": null
-            },
-            "initial": {
-              "density_0d": 0.0001,
-              "density_2d": 0.0001,
-              "theta": 0.0,
-              "seed": 20261008,
-              "kind": "radial_perturbed",
-              "perturbation": 0.001,
-              "perturb_seed": 20261025
-            },
-            "space": {
-              "N": 512,
-              "L": 256.0
-            },
-            "time": {
-              "dt": 0.025,
-              "final": 6000.0,
-              "sample": 0.5
-            },
-            "ode": {
-              "rtol": 2e-11,
-              "atol": 2e-13,
-              "max_step": 2.0
-            },
-            "save": {
-              "observable": 0.25,
-              "core": 20.0,
-              "checkpoint": 200.0,
-              "diagnostic": 20.0,
-              "angular": 1.0,
-              "probe": 5.0
-            },
-            "execution": {
-              "fft_workers": 1,
-              "local_workers": 1,
-              "backend": "xpu",
-              "precision": "complex128"
-            },
-            "analysis": {
-              "min_window": 200.0,
-              "max_final": 6000.0,
-              "high_k_cut": 0.7,
-              "edge_limit": 1e-05
-            }
-          }
-        },
-        {
-          "run": "report3_T0_ring_beta_2",
-          "time_ps": 3000.0,
-          "field_sha256": "281a7b1ad6b853b77608942daf95c91c3598af7d1a2f170c842443b2fc24f02d",
-          "config": {
-            "model": "M3",
-            "reservoir": "R1",
-            "physical": {
-              "hbar": 0.6582119569,
-              "mass_over_me": 5.63e-05,
-              "gC": 0.0024,
-              "gR": 0.0048,
-              "gA": 0.0048,
-              "eta": 9.8,
-              "R": 0.021,
-              "gammaC": 0.182,
-              "gammaA": 0.05,
-              "alpha1": 0.0024,
-              "alpha2": -0.00024,
-              "GammaA": 0.1,
-              "GammaI": 0.1,
-              "J": 0.0,
-              "beta": 0.0238
-            },
-            "reservoirs": {
-              "R1": {
-                "W": 0.1020408163265306,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.0048
-              },
-              "R2": {
-                "W": 0.05,
-                "gammaI": 0.0018181818181818182,
-                "gI": 0.002352
-              }
-            },
-            "pump": {
-              "kind": "ring",
-              "s": 1.5,
-              "epsilon": 0.0,
-              "P0": 3.3,
-              "d": 2.5,
-              "r0": 10.0,
-              "off_time": null
-            },
-            "initial": {
-              "density_0d": 0.0001,
-              "density_2d": 0.0001,
-              "theta": 0.0,
-              "seed": 20261008,
-              "kind": "radial_perturbed",
-              "perturbation": 0.001,
-              "perturb_seed": 20261025
-            },
-            "space": {
-              "N": 512,
-              "L": 256.0
-            },
-            "time": {
-              "dt": 0.025,
-              "final": 3000.0,
-              "sample": 0.5
-            },
-            "ode": {
-              "rtol": 2e-11,
-              "atol": 2e-13,
-              "max_step": 2.0
-            },
-            "save": {
-              "observable": 0.25,
-              "core": 20.0,
-              "checkpoint": 200.0,
-              "diagnostic": 20.0,
-              "angular": 1.0,
-              "probe": 5.0
-            },
-            "execution": {
-              "fft_workers": 1,
-              "local_workers": 1,
-              "backend": "xpu",
-              "precision": "complex128"
-            },
-            "analysis": {
-              "min_window": 200.0,
-              "max_final": 6000.0,
-              "high_k_cut": 0.7,
-              "edge_limit": 1e-05
-            }
-          }
+          },
+          "field_sha256": "d3066d70298ac33bb6a3ee272bde747a49b7cae66dab6dbfd6fcd0e5cda10fe6"
         }
       ],
       "windows_ps": {
@@ -1478,58 +791,18 @@
         "report3_T0_spot_beta_2": [
           2600.0,
           3000.0
-        ],
-        "matched_B0_ring": [
-          3200.0,
-          3600.0
-        ],
-        "report3_T0_ring_beta_0.5": [
-          2600.0,
-          3000.0
-        ],
-        "matched_T0_ring": [
-          5600.0,
-          6000.0
-        ],
-        "report3_T0_ring_beta_2": [
-          2600.0,
-          3000.0
         ]
-      }
+      },
+      "PNG_width_mm": 105
     },
-    "F7_homogeneous_phase_dynamics": {
-      "file": "results/figures/report3/F7_homogeneous_phase_dynamics.png",
-      "caption_en": "Spin imbalance z and change of unwrapped relative phase theta=arg(psi+)-arg(psi-) for independent homogeneous runs at J=.005 and .010 meV, p=2, epsilon=.3, beta=0. Each panel displays the final1200 ps, measured from the start of its own display window; theta0 is the phase at that start. Classification uses two validated windows, not only the displayed segment. Both components remain nonzero. Running and locked phase states survive tighter independent tolerances.",
-      "status": "READY",
-      "sources": [],
-      "source_0d": [
-        {
-          "file": "results/data/report3/report3_0d_J_0.00500000.npz",
-          "display_interval_ps": [
-            18800.0,
-            20000.0
-          ],
-          "status": "RUNNING_PHASE_PERIODIC"
-        },
-        {
-          "file": "results/data/report3/report3_0d_J_0.01000000.npz",
-          "display_interval_ps": [
-            18800.0,
-            20000.0
-          ],
-          "status": "LOCKED_STEADY"
-        }
-      ]
-    },
-    "F8_spot_coupling_comparison": {
-      "file": "results/figures/report3/F8_spot_coupling_comparison.png",
-      "caption_en": "Angular circular-polarization response under Gaussian pumping, epsilon=.3. A1: J=beta=0; T1: J=0,beta_ref; J1: J_ref,beta=0; C1: J_ref,beta_ref. The cosine angular component2 Re C2 retains the oscillation hidden by the nearly constant modulus Q2. All runs share interval2460-3000 ps; fixed ROI5-15 um. Full-map periodicity is verified. ",
-      "status": "READY",
+    "N6_spot_coupling_dynamics": {
+      "file": "results/diagnostics/report3/N6_spot_coupling_dynamics.png",
+      "caption_en": "Gaussian spot, epsilon=.3, p=13.8: 2Re C2 is the cosine component of the second angular harmonic of S3, normalized by S0 in R=5-15um. Approximately three late cycles are displayed from one shared t0=2600ps; no independent curve shifts. beta is0 or.0119meV um^2 and J is0 or.010meV. The beta=0 controls nearly overlap at zero. This observable alone does not prove rigid rotation of a whole polarization map.",
+      "status": "DIAGNOSTIC_ONLY",
       "sources": [
         {
           "run": "production_A1_spot",
           "time_ps": 3000.0,
-          "field_sha256": "15486c3484b6e3865be5a393b83871ec574b704e158799fc0a71dc9d4cbfffe3",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -1611,12 +884,12 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "15486c3484b6e3865be5a393b83871ec574b704e158799fc0a71dc9d4cbfffe3"
         },
         {
           "run": "production_T1_spot",
           "time_ps": 3000.0,
-          "field_sha256": "bf86138e6cfbbc41d7c8ad2a4677b8cc7f73707bf25b6a017b83a736f8220d7f",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -1698,12 +971,12 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "bf86138e6cfbbc41d7c8ad2a4677b8cc7f73707bf25b6a017b83a736f8220d7f"
         },
         {
           "run": "production_J1_spot",
           "time_ps": 3000.0,
-          "field_sha256": "c16fefa347c80ac187d2b903181a6999ee7f34c4e7d15863119443f1c35242f8",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -1785,12 +1058,12 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "c16fefa347c80ac187d2b903181a6999ee7f34c4e7d15863119443f1c35242f8"
         },
         {
           "run": "production_C1_spot",
           "time_ps": 3000.0,
-          "field_sha256": "01f1f7590d91f4bb1001994833032b711f50794035c1e6eb75207a77fd2b9592",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -1872,38 +1145,23 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "01f1f7590d91f4bb1001994833032b711f50794035c1e6eb75207a77fd2b9592"
         }
       ],
-      "windows_ps": {
-        "production_A1_spot": [
-          2460.0,
-          3000.0
-        ],
-        "production_T1_spot": [
-          2460.0,
-          3000.0
-        ],
-        "production_J1_spot": [
-          2460.0,
-          3000.0
-        ],
-        "production_C1_spot": [
-          2460.0,
-          3000.0
-        ]
-      },
-      "polar_order3_vs5_max": {}
+      "display_interval_ps": [
+        2600.0,
+        2766.703415594653
+      ]
     },
-    "F8_ring_coupling_comparison": {
-      "file": "results/figures/report3/F8_ring_coupling_comparison.png",
-      "caption_en": "Angular circular-polarization response under annular pumping, epsilon=.3. A1: J=beta=0; T1: J=0,beta_ref; J1: J_ref,beta=0; C1: J_ref,beta_ref. Angular s3 is the ratio of integrated S3 and S0 in each of72 polar sectors over r=5-7.5 um. The same Gauss quadrature (32 radial and8 angular nodes per sector) is applied to cubic-interpolated complex fields; a fifth-order cross-check is recorded. This removes unequal Cartesian pixel counts without angular filtering. A1/T1 have periodic observables; J1/C1 are stationary. Each snapshot uses its explicitly recorded physical time and is not phase-aligned across different parameter sets. The four starts share the same explicit seed. ",
-      "status": "READY_PERIODIC_AND_STATIONARY",
+    "N7_ring_angular_polarization": {
+      "file": "results/figures/report3/N7_ring_angular_polarization.png",
+      "caption_en": "Annular pump p=3.3, epsilon=.3: ratio of radial integrals S3/S0 in r=5-7.5um using a common72-sector polar Gauss quadrature, including r dr dphi. This is not an unweighted mean of local s3. matched_A1_ring: t=6000ps. matched_T1_ring: t=6000ps. charge_J1_seeded_c128_L256_t3600: t=3600ps. matched_C1_ring: t=3600ps. T1 is a snapshot of a periodic state, not a time-independent angular profile. Stationary references use their own stated late times; no common-time convergence is implied.",
+      "status": "READY",
       "sources": [
         {
           "run": "matched_A1_ring",
           "time_ps": 6000.0,
-          "field_sha256": "248cf1c20d82c06d661d84872d245081dff2aab412fd24aa26a1255f608cd752",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -1988,12 +1246,12 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "248cf1c20d82c06d661d84872d245081dff2aab412fd24aa26a1255f608cd752"
         },
         {
           "run": "matched_T1_ring",
           "time_ps": 6000.0,
-          "field_sha256": "5149e303ce119b40306a7c6eb0b040c248a4ceeda560c546ca646ffa80c6b7b1",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -2078,12 +1336,12 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "5149e303ce119b40306a7c6eb0b040c248a4ceeda560c546ca646ffa80c6b7b1"
         },
         {
           "run": "charge_J1_seeded_c128_L256_t3600",
           "time_ps": 3600.0,
-          "field_sha256": "4dcb5b26ce89b3d30d4336a5a6eb7cf9a91eaa312e125f02e4ee187f3e6fa163",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -2168,12 +1426,12 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "4dcb5b26ce89b3d30d4336a5a6eb7cf9a91eaa312e125f02e4ee187f3e6fa163"
         },
         {
           "run": "matched_C1_ring",
           "time_ps": 3600.0,
-          "field_sha256": "5e6a49ee8cf52c3a75331ddba3f73b9e892d324548011e6246334379b9de365c",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -2258,43 +1516,25 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "5e6a49ee8cf52c3a75331ddba3f73b9e892d324548011e6246334379b9de365c"
         }
       ],
-      "windows_ps": {
-        "matched_A1_ring": [
-          5400.0,
-          6000.0
-        ],
-        "matched_T1_ring": [
-          5400.0,
-          6000.0
-        ],
-        "charge_J1_seeded_c128_L256_t3600": [
-          3000.0,
-          3600.0
-        ],
-        "matched_C1_ring": [
-          3000.0,
-          3600.0
-        ]
-      },
-      "polar_order3_vs5_max": {
+      "polar_order3_vs5_errors": {
         "matched_A1_ring": 2.2602050480102776e-06,
         "matched_T1_ring": 1.9295458417722955e-06,
         "charge_J1_seeded_c128_L256_t3600": 5.342914004557997e-07,
         "matched_C1_ring": 6.04664425862822e-07
       }
     },
-    "F9_spot_Stokes": {
-      "file": "results/figures/report3/F9_spot_Stokes.png",
-      "caption_en": "Gaussian-spot C1 polarization at t=3000 ps. production_C1_spot: p=13.8, epsilon=0.3, alpha2=-0.00024 meV um^2, J=0.01 meV, beta=0.0119 meV um^2; N=512, L=256 um, dt=0.025 ps. S1=2Re(conj(psi+)*psi-), S2=2Im(conj(psi+)*psi-), S3=n+-n-; si=Si/S0. One common [-1,1] scale; low-intensity pixels are masked. Instantaneous phase of a verified periodic state; the accompanying GIF shows its evolution, so this is not a time mean. Independent C1 space/time controls passed.",
+    "N8_spot_Stokes": {
+      "file": "results/figures/report3/N8_spot_Stokes.png",
+      "caption_en": "Full local Stokes polarization of the spot at t=2600ps. Jspot_TETM_J0p04000_refine: p=13.8, epsilon=0.3, J=0.04 meV, beta=0.0119 meV um^2, alpha2=-0.00024 meV um^2, N=256, L=256 um, dt=0.025 ps. S1=2Re(conj(psi+)psi-), S2=2Im(conj(psi+)psi-), S3=n+-n-, si=Si/S0. Common scale[-1,1]; low-S0 pixels masked below0.001 peak. Contours show half-maximum pump. Instantaneous snapshot of the selected running-phase state; the center dot is the observation point in N11/N13 and this is their common initial time.",
       "status": "READY",
       "sources": [
         {
-          "run": "production_C1_spot",
-          "time_ps": 3000.0,
-          "field_sha256": "01f1f7590d91f4bb1001994833032b711f50794035c1e6eb75207a77fd2b9592",
+          "run": "Jspot_TETM_J0p04000_refine",
+          "time_ps": 2600.0,
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -2312,7 +1552,7 @@
               "alpha2": -0.00024,
               "GammaA": 0.1,
               "GammaI": 0.1,
-              "J": 0.01,
+              "J": 0.04,
               "beta": 0.0119
             },
             "reservoirs": {
@@ -2344,7 +1584,7 @@
               "kind": "radial"
             },
             "space": {
-              "N": 512,
+              "N": 256,
               "L": 256.0
             },
             "time": {
@@ -2363,12 +1603,13 @@
               "checkpoint": 200.0,
               "diagnostic": 20.0,
               "angular": 1.0,
-              "probe": 5.0
+              "probe": 2.5
             },
             "execution": {
               "fft_workers": 1,
               "local_workers": 1,
-              "backend": "xpu"
+              "backend": "xpu",
+              "precision": "complex128"
             },
             "analysis": {
               "min_window": 200.0,
@@ -2376,19 +1617,19 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "ca2698eca3bff54ba3f5c2c6653fed4ec29e394d6edf1cb8ff145eb9ec8f9007"
         }
       ]
     },
-    "F10_ring_Stokes": {
-      "file": "results/figures/report3/F10_ring_Stokes.png",
-      "caption_en": "Annular-pump C1 polarization at t=3600 ps. matched_C1_ring: p=3.3, epsilon=0.3, alpha2=-0.00024 meV um^2, J=0.01 meV, beta=0.0119 meV um^2; N=512, L=256 um, dt=0.025 ps. S1=2Re(conj(psi+)*psi-), S2=2Im(conj(psi+)*psi-), S3=n+-n-; si=Si/S0. One common [-1,1] scale; low-intensity pixels are masked. Snapshot of the verified stationary polarization. Independent C1 space/time controls passed.",
+    "N9_ring_Stokes": {
+      "file": "results/figures/report3/N9_ring_Stokes.png",
+      "caption_en": "Full local Stokes polarization of the ring at t=3600ps. matched_C1_ring: p=3.3, epsilon=0.3, J=0.01 meV, beta=0.0119 meV um^2, alpha2=-0.00024 meV um^2, N=512, L=256 um, dt=0.025 ps. S1=2Re(conj(psi+)psi-), S2=2Im(conj(psi+)psi-), S3=n+-n-, si=Si/S0. Common scale[-1,1]; low-S0 pixels masked below0.001 peak. Contours show half-maximum pump. Verified stationary density and polarization; any low-density central region is masked by the same rule.",
       "status": "READY",
       "sources": [
         {
           "run": "matched_C1_ring",
           "time_ps": 3600.0,
-          "field_sha256": "5e6a49ee8cf52c3a75331ddba3f73b9e892d324548011e6246334379b9de365c",
           "config": {
             "model": "M3",
             "reservoir": "R1",
@@ -2473,7 +1714,3362 @@
               "high_k_cut": 0.7,
               "edge_limit": 1e-05
             }
-          }
+          },
+          "field_sha256": "5e6a49ee8cf52c3a75331ddba3f73b9e892d324548011e6246334379b9de365c"
+        }
+      ]
+    },
+    "N10_homogeneous_Poincare": {
+      "file": "results/figures/report3/N10_homogeneous_Poincare.png",
+      "caption_en": "Three original homogeneous J preparations on the Poincare sphere; s=2, epsilon=.3, beta=0. Running and bounded phase states show one late cycle at the actual0.5ps saved sampling; the fixed state is a point. s is computed from complex fields using S2=2Im(conj(psi+)psi-), not legacy_s2. No forced normalization or curve smoothing. Orange dot: start; arrow: direction; color: fraction of cycle. Measured periods:344.479051ps (running) and282.408941ps (oscillating); actual sampled intervals are recorded below. The oscillating0D component minimum fraction is0.00384 and the largest unwrapped increment is0.0723rad at0.5ps sampling, so the near-pole passage does not break the phase unwrap. A closed Stokes loop alone does not distinguish phase winding; retain the original theta(t) examples.",
+      "status": "READY",
+      "sources": [],
+      "source_0d": [
+        {
+          "J_meV": 0.005,
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.005
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "uniform",
+              "s": 2.0,
+              "epsilon": 0.3,
+              "P0": 3.16875,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 1e-06,
+              "theta": 0.2,
+              "seed": 20261008
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 18000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 1.0,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0
+            },
+            "execution": {
+              "fft_workers": 2
+            }
+          },
+          "interval_ps": [
+            17000.0,
+            17344.0
+          ],
+          "period_ps": 344.47905148658896,
+          "samples": 689,
+          "sphere_identity_max_residual": 8.881784197001252e-16,
+          "min_component_fraction": 0.11799975151311344,
+          "max_unwrapped_phase_increment": 0.014917604645755311,
+          "status": "RUNNING_PHASE_PERIODIC"
+        },
+        {
+          "J_meV": 0.0065,
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.0065
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "uniform",
+              "s": 2.0,
+              "epsilon": 0.3,
+              "P0": 3.16875,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 1e-06,
+              "theta": 0.2,
+              "seed": 20261008
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 24000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 1.0,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0
+            },
+            "execution": {
+              "fft_workers": 2,
+              "local_workers": 4
+            }
+          },
+          "interval_ps": [
+            17000.0,
+            17282.0
+          ],
+          "period_ps": 282.40894118617183,
+          "samples": 565,
+          "sphere_identity_max_residual": 8.881784197001252e-16,
+          "min_component_fraction": 0.0038382604748224344,
+          "max_unwrapped_phase_increment": 0.07228042847314642,
+          "status": "BOUNDED_PHASE_PERIODIC"
+        },
+        {
+          "J_meV": 0.01,
+          "config": {
+            "model": "M3",
+            "reservoir": "R1",
+            "physical": {
+              "hbar": 0.6582119569,
+              "mass_over_me": 5.63e-05,
+              "gC": 0.0024,
+              "gR": 0.0048,
+              "gA": 0.0048,
+              "eta": 9.8,
+              "R": 0.021,
+              "gammaC": 0.182,
+              "gammaA": 0.05,
+              "alpha1": 0.0024,
+              "alpha2": -0.00024,
+              "GammaA": 0.1,
+              "GammaI": 0.1,
+              "J": 0.01
+            },
+            "reservoirs": {
+              "R1": {
+                "W": 0.1020408163265306,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.0048
+              },
+              "R2": {
+                "W": 0.05,
+                "gammaI": 0.0018181818181818182,
+                "gI": 0.002352
+              }
+            },
+            "pump": {
+              "kind": "uniform",
+              "s": 2.0,
+              "epsilon": 0.3,
+              "P0": 3.16875,
+              "d": 2.5,
+              "r0": 10.0,
+              "off_time": null
+            },
+            "initial": {
+              "density_0d": 0.0001,
+              "density_2d": 1e-06,
+              "theta": 0.2,
+              "seed": 20261008
+            },
+            "space": {
+              "N": 512,
+              "L": 256.0
+            },
+            "time": {
+              "dt": 0.025,
+              "final": 18000.0,
+              "sample": 0.5
+            },
+            "ode": {
+              "rtol": 2e-11,
+              "atol": 2e-13,
+              "max_step": 2.0
+            },
+            "save": {
+              "observable": 1.0,
+              "core": 20.0,
+              "checkpoint": 200.0,
+              "diagnostic": 20.0
+            },
+            "execution": {
+              "fft_workers": 2
+            }
+          },
+          "interval_ps": [
+            18000.0,
+            18000.0
+          ],
+          "period_ps": null,
+          "samples": 1,
+          "sphere_identity_max_residual": 1.1102230246251565e-16,
+          "min_component_fraction": 0.26310680329592545,
+          "max_unwrapped_phase_increment": 0.0,
+          "status": "LOCKED_STEADY"
+        }
+      ]
+    },
+    "N11_spot_Poincare": {
+      "file": "results/figures/report3/N11_spot_Poincare.png",
+      "caption_en": "Local center(0,0) polarization of the same three2D runs as N13: J=.040,.065,.100meV; p=13.8, epsilon=.3, beta=.0119meV um^2, identical preparation. Jspot_TETM_J0p04000_refine: T=34.6402ps, Jspot_TETM_J0p06500_fill2h: T=25.0861ps. Orange dot marks the start at2600ps; arrows show increasing time. Color is elapsed fraction of each periodic trajectory only. Fixed state is a point. The final cycle endpoint is evaluated by the validated local8-point polynomial in unnormalized Stokes, then divided by S0; no artificial closing segment or unit-vector normalization. No averaging or replacement observation point. Local Stokes recurrence and temporal interpolation cross-check pass; periods are confirmed returns, not asserted minimal periods. N8 is the starting snapshot of the running case.",
+      "status": "READY",
+      "sources": [],
+      "center_cycles": [
+        {
+          "run": "Jspot_TETM_J0p04000_refine",
+          "coordinates_um": [
+            0,
+            0
+          ],
+          "start_ps": 2600.0,
+          "period_ps": 34.640211650053566,
+          "actual_last_sample_ps": 2632.5,
+          "display_end_ps": 2634.6402116500535,
+          "endpoint_interpolation_unit_residual": 2.2797876952695972e-05,
+          "recurrence_max": 0.0002738453369331476,
+          "interpolation_crosscheck_max": 0.00037124374212771626,
+          "classification": "Running phase"
+        },
+        {
+          "run": "Jspot_TETM_J0p06500_fill2h",
+          "coordinates_um": [
+            0,
+            0
+          ],
+          "start_ps": 2600.0,
+          "period_ps": 25.08612916925666,
+          "actual_last_sample_ps": 2625.0,
+          "display_end_ps": 2625.0861291692568,
+          "endpoint_interpolation_unit_residual": 3.65392205381454e-08,
+          "recurrence_max": 1.5238468219020685e-06,
+          "interpolation_crosscheck_max": 5.789345490035517e-06,
+          "classification": "Oscillating phase"
+        },
+        {
+          "run": "Jspot_TETM_J0p10000_fill2h",
+          "coordinates_um": [
+            0,
+            0
+          ],
+          "start_ps": 2600.0,
+          "period_ps": null,
+          "actual_last_sample_ps": 2600.0,
+          "display_end_ps": 2600.0,
+          "endpoint_interpolation_unit_residual": 0.0,
+          "recurrence_max": 0.0,
+          "interpolation_crosscheck_max": 0.0,
+          "classification": "Fixed phase"
+        }
+      ]
+    },
+    "N12_spot_J_scan": {
+      "file": "results/figures/report3/N12_spot_J_scan.png",
+      "caption_en": "TE-TM spatial scan: p=13.8, epsilon=.3, beta=.0119meV um^2. A_Z is half peak-to-peak of the INTEGRAL population imbalance Z=(N+-N-)/(N++N-). Phase is Theta=-arg integral(S1+iS2)dA, not a relabelled central phase. Two adjacent late analysis windows, each at least max(200ps,5T); they end at3000ps except continued J=.055/.075 at4500ps. Integer-cycle means in accepted periodic windows; actual windows and statuses are recorded per point in spot_J_diagnostic.json. Color denotes phase family; gray is unresolved. Selected J=.040,.065,.100 cases have independently checked matching central classifications. No interpolation across unresolved points. Confirmed rotating and bounded examples bracket a possible transition in(.045,.060)meV; .055 remains locally phase-masked. Bounded-to-fixed transition is bracketed by .070 and .075meV. These sampled intervals are not precise bifurcation values.",
+      "status": "READY",
+      "sources": [],
+      "scan_points": [
+        {
+          "name": "production_T1_spot",
+          "J_meV": 0.0,
+          "beta": 0.0119,
+          "N": 512,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 5.0,
+          "regime": "RUNNING",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2440.0,
+                2717.820169343873
+              ],
+              "mean_Z": 0.09594588660037895,
+              "A_Z": 1.5759058551167993e-08,
+              "phase_drift_rad_ps": -0.11308007307535341,
+              "phase_range_rad": 31.41592505121224,
+              "winding_per_cycle": -0.9999999527409867
+            },
+            {
+              "interval_ps": [
+                2720.0,
+                2997.8201693421747
+              ],
+              "mean_Z": 0.09594588660037984,
+              "A_Z": 1.5759062506337518e-08,
+              "phase_drift_rad_ps": -0.1130800730753724,
+              "phase_range_rad": 31.415925051025454,
+              "winding_per_cycle": -0.999999952735041
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.66242046122387,
+                  "turns": -5.039230726657748,
+                  "min_component_fraction": 0.4576219015257071,
+                  "max_phase_increment_rad": 0.5654003684425346
+                },
+                {
+                  "phase_range_rad": 31.66242046184249,
+                  "turns": -5.039230726756204,
+                  "min_component_fraction": 0.4576219015333301,
+                  "max_phase_increment_rad": 0.5654003684432567
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.66139461474803,
+                  "turns": -5.039067458120265,
+                  "min_component_fraction": 0.44951928500332045,
+                  "max_phase_increment_rad": 0.5676492451096635
+                },
+                {
+                  "phase_range_rad": 31.66142048920569,
+                  "turns": -5.039071576168101,
+                  "min_component_fraction": 0.4496001048954517,
+                  "max_phase_increment_rad": 0.5676626762537236
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.661394614748023,
+                  "turns": -5.039067458120263,
+                  "min_component_fraction": 0.44951928500331373,
+                  "max_phase_increment_rad": 0.5676492451096831
+                },
+                {
+                  "phase_range_rad": 31.661420489205685,
+                  "turns": -5.0390715761681,
+                  "min_component_fraction": 0.44960010489544194,
+                  "max_phase_increment_rad": 0.5676626762537378
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.663416089737474,
+                  "turns": -5.039389185857171,
+                  "min_component_fraction": 0.4495974858531208,
+                  "max_phase_increment_rad": 0.567662584369252
+                },
+                {
+                  "phase_range_rad": 31.663377128707772,
+                  "turns": -5.039382985016706,
+                  "min_component_fraction": 0.44951977890880024,
+                  "max_phase_increment_rad": 0.567644249184724
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.66341608973747,
+                  "turns": -5.03938918585717,
+                  "min_component_fraction": 0.4495974858531269,
+                  "max_phase_increment_rad": 0.5676625843692413
+                },
+                {
+                  "phase_range_rad": 31.66337712870777,
+                  "turns": -5.039382985016705,
+                  "min_component_fraction": 0.44951977890881034,
+                  "max_phase_increment_rad": 0.5676442491847133
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": 0.0959458866003794,
+          "A_Z": 1.5759060528752755e-08,
+          "phase_drift_rad_ps": -0.11308007307536291
+        },
+        {
+          "name": "production_C1_spot",
+          "J_meV": 0.01,
+          "beta": 0.0119,
+          "N": 512,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 5.0,
+          "regime": "RUNNING",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2460.0,
+                2728.39698400332
+              ],
+              "mean_Z": 0.09615999126260424,
+              "A_Z": 0.31419412548946807,
+              "phase_drift_rad_ps": -0.11705021557841574,
+              "phase_range_rad": 31.41592483818522,
+              "winding_per_cycle": -0.999999945960126
+            },
+            {
+              "interval_ps": [
+                2730.0,
+                2998.3969788489394
+              ],
+              "mean_Z": 0.09615998668094222,
+              "A_Z": 0.3141941607250584,
+              "phase_drift_rad_ps": -0.11705020731784027,
+              "phase_range_rad": 31.415922017750347,
+              "winding_per_cycle": -0.9999998561828957
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.581029459559886,
+                  "turns": -5.026276946419724,
+                  "min_component_fraction": 0.32624334474440025,
+                  "max_phase_increment_rad": 0.7098935652328038
+                },
+                {
+                  "phase_range_rad": 31.579863326675532,
+                  "turns": -5.026091350606877,
+                  "min_component_fraction": 0.32635181117160916,
+                  "max_phase_increment_rad": 0.7100181431275132
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.580821068199263,
+                  "turns": -5.026243779904584,
+                  "min_component_fraction": 0.32644073968870124,
+                  "max_phase_increment_rad": 0.7124621029850964
+                },
+                {
+                  "phase_range_rad": 31.579559126485925,
+                  "turns": -5.026042935643011,
+                  "min_component_fraction": 0.32644073968870124,
+                  "max_phase_increment_rad": 0.7123031447114698
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.580821068199256,
+                  "turns": -5.026243779904582,
+                  "min_component_fraction": 0.3264407396887262,
+                  "max_phase_increment_rad": 0.7124621029850977
+                },
+                {
+                  "phase_range_rad": 31.579559126485922,
+                  "turns": -5.026042935643011,
+                  "min_component_fraction": 0.3264407396887262,
+                  "max_phase_increment_rad": 0.7123031447114752
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.582965684762172,
+                  "turns": -5.0265851062316065,
+                  "min_component_fraction": 0.31973347993495493,
+                  "max_phase_increment_rad": 0.7056054608257831
+                },
+                {
+                  "phase_range_rad": 31.581241983376714,
+                  "turns": -5.026310770635697,
+                  "min_component_fraction": 0.31967169603536694,
+                  "max_phase_increment_rad": 0.7057850514674904
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.582965684762165,
+                  "turns": -5.026585106231606,
+                  "min_component_fraction": 0.3197334799349767,
+                  "max_phase_increment_rad": 0.7056054608257867
+                },
+                {
+                  "phase_range_rad": 31.58124198337671,
+                  "turns": -5.026310770635696,
+                  "min_component_fraction": 0.31967169603538864,
+                  "max_phase_increment_rad": 0.7057850514674904
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": 0.09615998897177323,
+          "A_Z": 0.31419414310726324,
+          "phase_drift_rad_ps": -0.11705021144812801
+        },
+        {
+          "name": "Jspot_TETM_J0p00250_N256",
+          "J_meV": 0.0025,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 5.0,
+          "regime": "RUNNING",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2440.0,
+                2717.265814444105
+              ],
+              "mean_Z": 0.0962735107247059,
+              "A_Z": 0.08224721796421279,
+              "phase_drift_rad_ps": -0.11330616591234668,
+              "phase_range_rad": 31.415926373225716,
+              "winding_per_cycle": -0.9999999948219825
+            },
+            {
+              "interval_ps": [
+                2720.0,
+                2997.2658152267695
+              ],
+              "mean_Z": 0.09627351078084409,
+              "A_Z": 0.08224721218615524,
+              "phase_drift_rad_ps": -0.1133061668497081,
+              "phase_range_rad": 31.41592672180468,
+              "winding_per_cycle": -1.0000000059175955
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.71386385517222,
+                  "turns": -5.047418197094052,
+                  "min_component_fraction": 0.4228606417054909,
+                  "max_phase_increment_rad": 0.5942781535121249
+                },
+                {
+                  "phase_range_rad": 31.716442365429007,
+                  "turns": -5.047828579747232,
+                  "min_component_fraction": 0.42280025867156323,
+                  "max_phase_increment_rad": 0.5945555391443236
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.712928141800976,
+                  "turns": -5.047269273685701,
+                  "min_component_fraction": 0.42426603421665654,
+                  "max_phase_increment_rad": 0.5963784394958225
+                },
+                {
+                  "phase_range_rad": 31.71560447583526,
+                  "turns": -5.047695225476622,
+                  "min_component_fraction": 0.424735450635683,
+                  "max_phase_increment_rad": 0.5969078696497192
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.71292816806232,
+                  "turns": -5.047269277865324,
+                  "min_component_fraction": 0.42426607413778095,
+                  "max_phase_increment_rad": 0.5963784252253213
+                },
+                {
+                  "phase_range_rad": 31.71560451653774,
+                  "turns": -5.0476952319546236,
+                  "min_component_fraction": 0.42473548769340547,
+                  "max_phase_increment_rad": 0.5969078726960699
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.713918961415036,
+                  "turns": -5.0474269675249905,
+                  "min_component_fraction": 0.41744597666134675,
+                  "max_phase_increment_rad": 0.5915307266917762
+                },
+                {
+                  "phase_range_rad": 31.71605799108727,
+                  "turns": -5.047767404670747,
+                  "min_component_fraction": 0.416988849575306,
+                  "max_phase_increment_rad": 0.5919417675577527
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.71391898857895,
+                  "turns": -5.047426971848262,
+                  "min_component_fraction": 0.41744601743151527,
+                  "max_phase_increment_rad": 0.5915307536911989
+                },
+                {
+                  "phase_range_rad": 31.716058032184606,
+                  "turns": -5.047767411211591,
+                  "min_component_fraction": 0.41698889021588126,
+                  "max_phase_increment_rad": 0.5919417775813471
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": 0.09627351075277499,
+          "A_Z": 0.08224721507518401,
+          "phase_drift_rad_ps": -0.11330616638102739
+        },
+        {
+          "name": "Jspot_TETM_J0p00500_N256",
+          "J_meV": 0.005,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 5.0,
+          "regime": "RUNNING",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2440.0,
+                2715.550682093259
+              ],
+              "mean_Z": 0.09691380935150173,
+              "A_Z": 0.16298180599462408,
+              "phase_drift_rad_ps": -0.11401145104606823,
+              "phase_range_rad": 31.41593310218633,
+              "winding_per_cycle": -1.0000002090114513
+            },
+            {
+              "interval_ps": [
+                2720.0,
+                2995.5506780736323
+              ],
+              "mean_Z": 0.09691381285386298,
+              "A_Z": 0.16298196244753627,
+              "phase_drift_rad_ps": -0.1140114442684615,
+              "phase_range_rad": 31.415930776328707,
+              "winding_per_cycle": -1.0000001349771037
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.96577794377577,
+                  "turns": -5.087511569529796,
+                  "min_component_fraction": 0.3890835156106776,
+                  "max_phase_increment_rad": 0.6285990596812177
+                },
+                {
+                  "phase_range_rad": 31.975479549262403,
+                  "turns": -5.089055627998921,
+                  "min_component_fraction": 0.3895273201940667,
+                  "max_phase_increment_rad": 0.6286097768228682
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.965381536234162,
+                  "turns": -5.08744847931007,
+                  "min_component_fraction": 0.39099756874664576,
+                  "max_phase_increment_rad": 0.6311035650109638
+                },
+                {
+                  "phase_range_rad": 31.97745699704205,
+                  "turns": -5.089370348587758,
+                  "min_component_fraction": 0.3917992966453256,
+                  "max_phase_increment_rad": 0.6309789489070887
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.96538159953927,
+                  "turns": -5.087448489385391,
+                  "min_component_fraction": 0.3909976136980982,
+                  "max_phase_increment_rad": 0.631103569819448
+                },
+                {
+                  "phase_range_rad": 31.977457010171285,
+                  "turns": -5.089370350677341,
+                  "min_component_fraction": 0.39179934210551387,
+                  "max_phase_increment_rad": 0.6309789598208941
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.962812984994414,
+                  "turns": -5.087039681683679,
+                  "min_component_fraction": 0.38276444968627105,
+                  "max_phase_increment_rad": 0.62552772995965
+                },
+                {
+                  "phase_range_rad": 31.972676933219685,
+                  "turns": -5.088609577802134,
+                  "min_component_fraction": 0.38292763109302846,
+                  "max_phase_increment_rad": 0.6255192895311215
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.96281304757771,
+                  "turns": -5.0870396916441205,
+                  "min_component_fraction": 0.38276449192418666,
+                  "max_phase_increment_rad": 0.6255277401529149
+                },
+                {
+                  "phase_range_rad": 31.972676946935277,
+                  "turns": -5.088609579985038,
+                  "min_component_fraction": 0.3829276739916673,
+                  "max_phase_increment_rad": 0.6255193012086315
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": 0.09691381110268235,
+          "A_Z": 0.16298188422108018,
+          "phase_drift_rad_ps": -0.11401144765726487
+        },
+        {
+          "name": "Jspot_TETM_J0p00750_N256",
+          "J_meV": 0.0075,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 5.0,
+          "regime": "RUNNING",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2450.0,
+                2722.62117357391
+              ],
+              "mean_Z": 0.09724506121513422,
+              "A_Z": 0.2407432055302982,
+              "phase_drift_rad_ps": -0.11523653355482812,
+              "phase_range_rad": 31.415919016306475,
+              "winding_per_cycle": -0.9999997606439699
+            },
+            {
+              "interval_ps": [
+                2725.0,
+                2997.6211533580895
+              ],
+              "mean_Z": 0.09724504660747832,
+              "A_Z": 0.24074675218156932,
+              "phase_drift_rad_ps": -0.11523653760745861,
+              "phase_range_rad": 31.41591779153822,
+              "winding_per_cycle": -0.9999997216583856
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.659272363942556,
+                  "turns": -5.038729691414092,
+                  "min_component_fraction": 0.3573848771876632,
+                  "max_phase_increment_rad": 0.6665486218657684
+                },
+                {
+                  "phase_range_rad": 31.66088432491242,
+                  "turns": -5.038986242970518,
+                  "min_component_fraction": 0.3564437896323494,
+                  "max_phase_increment_rad": 0.667138383788858
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.658471335243284,
+                  "turns": -5.038602203737045,
+                  "min_component_fraction": 0.35737803266206114,
+                  "max_phase_increment_rad": 0.6681221013962251
+                },
+                {
+                  "phase_range_rad": 31.65992966311652,
+                  "turns": -5.038834303826719,
+                  "min_component_fraction": 0.35711164773996923,
+                  "max_phase_increment_rad": 0.6697106446665764
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.658471347092974,
+                  "turns": -5.038602205622982,
+                  "min_component_fraction": 0.3573780746792318,
+                  "max_phase_increment_rad": 0.6681221241928661
+                },
+                {
+                  "phase_range_rad": 31.65992968691279,
+                  "turns": -5.038834307614013,
+                  "min_component_fraction": 0.3571116915078088,
+                  "max_phase_increment_rad": 0.6697106457116764
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.65880609646128,
+                  "turns": -5.038655482639644,
+                  "min_component_fraction": 0.35122342281787555,
+                  "max_phase_increment_rad": 0.6627857356456737
+                },
+                {
+                  "phase_range_rad": 31.659683401933304,
+                  "turns": -5.038795110142119,
+                  "min_component_fraction": 0.3500110233927466,
+                  "max_phase_increment_rad": 0.6635395390114187
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.658806109459206,
+                  "turns": -5.038655484708329,
+                  "min_component_fraction": 0.35122346808220034,
+                  "max_phase_increment_rad": 0.6627857584679582
+                },
+                {
+                  "phase_range_rad": 31.65968342647543,
+                  "turns": -5.038795114048119,
+                  "min_component_fraction": 0.3500110662475909,
+                  "max_phase_increment_rad": 0.6635395477408874
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": 0.09724505391130628,
+          "A_Z": 0.24074497885593377,
+          "phase_drift_rad_ps": -0.11523653558114336
+        },
+        {
+          "name": "Jspot_TETM_J0p01500_N256",
+          "J_meV": 0.015,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 5.0,
+          "regime": "RUNNING",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2480.0,
+                2736.04625708564
+              ],
+              "mean_Z": 0.08433900892239458,
+              "A_Z": 0.4438753589865872,
+              "phase_drift_rad_ps": -0.12269644136333127,
+              "phase_range_rad": 31.415964568808647,
+              "winding_per_cycle": -1.0000012106251481
+            },
+            {
+              "interval_ps": [
+                2740.0,
+                2996.046257172405
+              ],
+              "mean_Z": 0.08433900674305404,
+              "A_Z": 0.4438776724915354,
+              "phase_drift_rad_ps": -0.12269641210343338,
+              "phase_range_rad": 31.415957087567108,
+              "winding_per_cycle": -1.0000009724898338
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 32.033229222756084,
+                  "turns": -5.098246773997383,
+                  "min_component_fraction": 0.27596235973242983,
+                  "max_phase_increment_rad": 0.8089084074581354
+                },
+                {
+                  "phase_range_rad": 32.055775340474725,
+                  "turns": -5.101835100079837,
+                  "min_component_fraction": 0.2761473273285237,
+                  "max_phase_increment_rad": 0.8088376535333239
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 32.0291701487868,
+                  "turns": -5.097600752310796,
+                  "min_component_fraction": 0.2752178949799891,
+                  "max_phase_increment_rad": 0.8109725661162521
+                },
+                {
+                  "phase_range_rad": 32.05899882544469,
+                  "turns": -5.102348133646789,
+                  "min_component_fraction": 0.27528485318833396,
+                  "max_phase_increment_rad": 0.8114093121907899
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 32.02917020563454,
+                  "turns": -5.097600761358396,
+                  "min_component_fraction": 0.27521793712119935,
+                  "max_phase_increment_rad": 0.8109725695306782
+                },
+                {
+                  "phase_range_rad": 32.058998812762326,
+                  "turns": -5.102348131628328,
+                  "min_component_fraction": 0.27528489470267026,
+                  "max_phase_increment_rad": 0.8114093083519265
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 32.02901814188043,
+                  "turns": -5.097576559660263,
+                  "min_component_fraction": 0.2694153301908036,
+                  "max_phase_increment_rad": 0.8033142210694546
+                },
+                {
+                  "phase_range_rad": 32.05138612620707,
+                  "turns": -5.10113653493285,
+                  "min_component_fraction": 0.26922725479771376,
+                  "max_phase_increment_rad": 0.8032619348473382
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 32.0290181971976,
+                  "turns": -5.097576568464264,
+                  "min_component_fraction": 0.2694153736533197,
+                  "max_phase_increment_rad": 0.8033142234135582
+                },
+                {
+                  "phase_range_rad": 32.05138611320418,
+                  "turns": -5.101136532863376,
+                  "min_component_fraction": 0.2692272976795758,
+                  "max_phase_increment_rad": 0.8032619336763531
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": 0.08433900783272431,
+          "A_Z": 0.4438765157390613,
+          "phase_drift_rad_ps": -0.12269642673338232
+        },
+        {
+          "name": "Jspot_TETM_J0p02000_N256",
+          "J_meV": 0.02,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 5.0,
+          "regime": "RUNNING",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2040.0,
+                2518.563667228983
+              ],
+              "mean_Z": 0.05102595231274824,
+              "A_Z": 0.5459362000171903,
+              "phase_drift_rad_ps": -0.13129248702950175,
+              "phase_range_rad": 62.83181407245203,
+              "winding_per_cycle": -1.9999987586123305
+            },
+            {
+              "interval_ps": [
+                2520.0,
+                2998.5636672666046
+              ],
+              "mean_Z": 0.05102595333480243,
+              "A_Z": 0.5459358602187365,
+              "phase_drift_rad_ps": -0.13129241953100443,
+              "phase_range_rad": 62.831781775063064,
+              "winding_per_cycle": -1.9999977305545098
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.08443857636589,
+                  "turns": -10.04020023160568,
+                  "min_component_fraction": 0.2440740398063922,
+                  "max_phase_increment_rad": 0.9294945830341845
+                },
+                {
+                  "phase_range_rad": 63.06955218220879,
+                  "turns": -10.037830988390763,
+                  "min_component_fraction": 0.24406962160789153,
+                  "max_phase_increment_rad": 0.9294944666079914
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.08769881647717,
+                  "turns": -10.040719114935058,
+                  "min_component_fraction": 0.2429969981351587,
+                  "max_phase_increment_rad": 0.9314010932168202
+                },
+                {
+                  "phase_range_rad": 63.073222303234026,
+                  "turns": -10.038415106293675,
+                  "min_component_fraction": 0.2430006004404112,
+                  "max_phase_increment_rad": 0.9314203207070513
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.08769879132155,
+                  "turns": -10.040719110931416,
+                  "min_component_fraction": 0.2429970370981219,
+                  "max_phase_increment_rad": 0.9314010881875632
+                },
+                {
+                  "phase_range_rad": 63.07322227461622,
+                  "turns": -10.03841510173901,
+                  "min_component_fraction": 0.24300063937636046,
+                  "max_phase_increment_rad": 0.9314203155076797
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.08270044641184,
+                  "turns": -10.039923599631758,
+                  "min_component_fraction": 0.23752746706511615,
+                  "max_phase_increment_rad": 0.922582386772973
+                },
+                {
+                  "phase_range_rad": 63.06870174196495,
+                  "turns": -10.037695636622152,
+                  "min_component_fraction": 0.2375256847234967,
+                  "max_phase_increment_rad": 0.9225803607235612
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.08270042208156,
+                  "turns": -10.039923595759472,
+                  "min_component_fraction": 0.23752750625401808,
+                  "max_phase_increment_rad": 0.9225823791696541
+                },
+                {
+                  "phase_range_rad": 63.06870171446568,
+                  "turns": -10.037695632245509,
+                  "min_component_fraction": 0.23752572388564253,
+                  "max_phase_increment_rad": 0.9225803529561674
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": 0.05102595282377534,
+          "A_Z": 0.5459360301179634,
+          "phase_drift_rad_ps": -0.13129245328025307
+        },
+        {
+          "name": "Jspot_TETM_J0p03000_probe25",
+          "J_meV": 0.03,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 2.5,
+          "regime": "RUNNING",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2180.0,
+                2585.8502430212766
+              ],
+              "mean_Z": -0.058154313868948634,
+              "A_Z": 0.6650274135642841,
+              "phase_drift_rad_ps": -0.15481441054527717,
+              "phase_range_rad": 62.83146614299642,
+              "winding_per_cycle": -1.9999876836737889
+            },
+            {
+              "interval_ps": [
+                2590.0,
+                2995.850254500463
+              ],
+              "mean_Z": -0.058154326750532455,
+              "A_Z": 0.6650282068297254,
+              "phase_drift_rad_ps": -0.15481497708034944,
+              "phase_range_rad": 62.83169784854317,
+              "winding_per_cycle": -1.9999950590904103
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.668275319389245,
+                  "turns": -10.13312073521652,
+                  "min_component_fraction": 0.1487927144994088,
+                  "max_phase_increment_rad": 0.652721077066893
+                },
+                {
+                  "phase_range_rad": 63.46132441679237,
+                  "turns": -10.100183476090898,
+                  "min_component_fraction": 0.14876837068500084,
+                  "max_phase_increment_rad": 0.6521695163421342
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.683144894494745,
+                  "turns": -10.135487301596237,
+                  "min_component_fraction": 0.1461493857087163,
+                  "max_phase_increment_rad": 0.6549330609839572
+                },
+                {
+                  "phase_range_rad": 63.472609045891666,
+                  "turns": -10.101979480593009,
+                  "min_component_fraction": 0.14631147584851076,
+                  "max_phase_increment_rad": 0.6551002202520664
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.68314476469986,
+                  "turns": -10.135487280938738,
+                  "min_component_fraction": 0.14614939470198507,
+                  "max_phase_increment_rad": 0.6549330413541696
+                },
+                {
+                  "phase_range_rad": 63.47260894672359,
+                  "turns": -10.10197946480992,
+                  "min_component_fraction": 0.14631148212647765,
+                  "max_phase_increment_rad": 0.6551001934301866
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.66158138268397,
+                  "turns": -10.13205536210113,
+                  "min_component_fraction": 0.14400240654959343,
+                  "max_phase_increment_rad": 0.6488569287941743
+                },
+                {
+                  "phase_range_rad": 63.47213830167973,
+                  "turns": -10.101904559324748,
+                  "min_component_fraction": 0.14402676158909763,
+                  "max_phase_increment_rad": 0.6486574780242336
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.6615812583283,
+                  "turns": -10.132055342309311,
+                  "min_component_fraction": 0.14400241483835513,
+                  "max_phase_increment_rad": 0.648856910097912
+                },
+                {
+                  "phase_range_rad": 63.472138201484995,
+                  "turns": -10.10190454337826,
+                  "min_component_fraction": 0.14402677044238466,
+                  "max_phase_increment_rad": 0.6486574641017242
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.05815432030974055,
+          "A_Z": 0.6650278101970047,
+          "phase_drift_rad_ps": -0.15481469381281332
+        },
+        {
+          "name": "Jspot_TETM_J0p00625_N256",
+          "J_meV": 0.00625,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 5.0,
+          "regime": "RUNNING",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2450.0,
+                2724.2424287057133
+              ],
+              "mean_Z": 0.09717560987709206,
+              "A_Z": 0.20232296516025988,
+              "phase_drift_rad_ps": -0.1145553061012239,
+              "phase_range_rad": 31.415925366326064,
+              "winding_per_cycle": -0.9999999627713713
+            },
+            {
+              "interval_ps": [
+                2725.0,
+                2999.2424291517536
+              ],
+              "mean_Z": 0.09717560982496001,
+              "A_Z": 0.20232316483465324,
+              "phase_drift_rad_ps": -0.11455530635432923,
+              "phase_range_rad": 31.415925486834567,
+              "winding_per_cycle": -0.999999966607276
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.499951217940495,
+                  "turns": -5.013372943488799,
+                  "min_component_fraction": 0.3732891760159214,
+                  "max_phase_increment_rad": 0.6451595229410465
+                },
+                {
+                  "phase_range_rad": 31.499259724953742,
+                  "turns": -5.013262888961844,
+                  "min_component_fraction": 0.3745556748075918,
+                  "max_phase_increment_rad": 0.6466325348110367
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.500207315240175,
+                  "turns": -5.013413702639955,
+                  "min_component_fraction": 0.3735285139575026,
+                  "max_phase_increment_rad": 0.6465854060303173
+                },
+                {
+                  "phase_range_rad": 31.49945585203548,
+                  "turns": -5.013294103556377,
+                  "min_component_fraction": 0.374259196823492,
+                  "max_phase_increment_rad": 0.6482203182180832
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.500207299396525,
+                  "turns": -5.0134137001183605,
+                  "min_component_fraction": 0.37352855584960004,
+                  "max_phase_increment_rad": 0.6465853797083381
+                },
+                {
+                  "phase_range_rad": 31.499455836445232,
+                  "turns": -5.013294101075112,
+                  "min_component_fraction": 0.37425923682626716,
+                  "max_phase_increment_rad": 0.6482203437097205
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.50088247964174,
+                  "turns": -5.013521158391864,
+                  "min_component_fraction": 0.36791105464818846,
+                  "max_phase_increment_rad": 0.6415896576548796
+                },
+                {
+                  "phase_range_rad": 31.500222599766314,
+                  "turns": -5.0134161352478435,
+                  "min_component_fraction": 0.36787964137811735,
+                  "max_phase_increment_rad": 0.6431303428110198
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 31.500882463376648,
+                  "turns": -5.013521155803194,
+                  "min_component_fraction": 0.36791109333662425,
+                  "max_phase_increment_rad": 0.6415896937422403
+                },
+                {
+                  "phase_range_rad": 31.500222583744225,
+                  "turns": -5.013416132697849,
+                  "min_component_fraction": 0.36787968622691525,
+                  "max_phase_increment_rad": 0.6431303684632788
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": 0.09717560985102604,
+          "A_Z": 0.20232306499745656,
+          "phase_drift_rad_ps": -0.11455530622777657
+        },
+        {
+          "name": "Jspot_TETM_J0p04000_refine",
+          "J_meV": 0.04,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 2.5,
+          "regime": "RUNNING",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2300.0,
+                2646.402121231373
+              ],
+              "mean_Z": -0.15562137488938188,
+              "A_Z": 0.6959643669946728,
+              "phase_drift_rad_ps": -0.1813837528274828,
+              "phase_range_rad": 62.83171673634706,
+              "winding_per_cycle": -1.999995660307881
+            },
+            {
+              "interval_ps": [
+                2650.0,
+                2996.4021117696984
+              ],
+              "mean_Z": -0.1556213585451451,
+              "A_Z": 0.6959650327969282,
+              "phase_drift_rad_ps": -0.1813840302673101,
+              "phase_range_rad": 62.831811125895115,
+              "winding_per_cycle": -1.9999986648205108
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.18374639012483,
+                  "turns": -10.056005561053066,
+                  "min_component_fraction": 0.06260345813454433,
+                  "max_phase_increment_rad": 0.9845745165795989
+                },
+                {
+                  "phase_range_rad": 63.2438983461438,
+                  "turns": -10.06557904219013,
+                  "min_component_fraction": 0.06262035292592555,
+                  "max_phase_increment_rad": 0.9849520730930408
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.17631469722871,
+                  "turns": -10.054822770393107,
+                  "min_component_fraction": 0.06029935698433552,
+                  "max_phase_increment_rad": 0.9922603637115088
+                },
+                {
+                  "phase_range_rad": 63.2270792737861,
+                  "turns": -10.062902203686182,
+                  "min_component_fraction": 0.06028031297281285,
+                  "max_phase_increment_rad": 0.9919046922589203
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.176314768141125,
+                  "turns": -10.054822781679167,
+                  "min_component_fraction": 0.06029936094596867,
+                  "max_phase_increment_rad": 0.9922602767545641
+                },
+                {
+                  "phase_range_rad": 63.227079363788874,
+                  "turns": -10.062902218010569,
+                  "min_component_fraction": 0.060280317180396115,
+                  "max_phase_increment_rad": 0.9919046025777014
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.171811564789174,
+                  "turns": -10.054106074605958,
+                  "min_component_fraction": 0.05974779801653866,
+                  "max_phase_increment_rad": 0.9844167207036207
+                },
+                {
+                  "phase_range_rad": 63.229849826178416,
+                  "turns": -10.063343150794514,
+                  "min_component_fraction": 0.059804130355062296,
+                  "max_phase_increment_rad": 0.984421450413441
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.171811634430625,
+                  "turns": -10.054106085689739,
+                  "min_component_fraction": 0.05974780412339042,
+                  "max_phase_increment_rad": 0.9844166662539919
+                },
+                {
+                  "phase_range_rad": 63.229849917325964,
+                  "turns": -10.063343165301097,
+                  "min_component_fraction": 0.059804136956335546,
+                  "max_phase_increment_rad": 0.9844213930983052
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.1556213667172635,
+          "A_Z": 0.6959646998958005,
+          "phase_drift_rad_ps": -0.18138389154739645
+        },
+        {
+          "name": "Jspot_TETM_J0p06000_refine",
+          "J_meV": 0.06,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 2.5,
+          "regime": "BOUNDED",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2460.0,
+                2725.6686966686448
+              ],
+              "mean_Z": -0.2620767595214121,
+              "A_Z": 0.5433104434743866,
+              "phase_drift_rad_ps": 2.26262949601244e-07,
+              "phase_range_rad": 1.6270166752898017,
+              "winding_per_cycle": 1.9133920133241632e-06
+            },
+            {
+              "interval_ps": [
+                2730.0,
+                2995.6687128458934
+              ],
+              "mean_Z": -0.2620767239121002,
+              "A_Z": 0.5433097733736726,
+              "phase_drift_rad_ps": 6.154506237898209e-07,
+              "phase_range_rad": 1.6270111562475296,
+              "winding_per_cycle": 5.204556830613004e-06
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 2.147806640593611,
+                  "turns": -0.07595722722323561,
+                  "min_component_fraction": 0.0034777226173375265,
+                  "max_phase_increment_rad": 1.936122594172546
+                },
+                {
+                  "phase_range_rad": 2.147806453478341,
+                  "turns": -0.04820851285349541,
+                  "min_component_fraction": 0.003528638841419579,
+                  "max_phase_increment_rad": 1.9327041341510989
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 2.1227100131845624,
+                  "turns": -0.07639765286831082,
+                  "min_component_fraction": 0.003922964571032994,
+                  "max_phase_increment_rad": 1.8789885734987166
+                },
+                {
+                  "phase_range_rad": 2.123275544602958,
+                  "turns": -0.04609030957182073,
+                  "min_component_fraction": 0.0038749265997838627,
+                  "max_phase_increment_rad": 1.8821548165062403
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 2.122710137105911,
+                  "turns": -0.07639766158689192,
+                  "min_component_fraction": 0.003922963190548447,
+                  "max_phase_increment_rad": 1.8789887272759063
+                },
+                {
+                  "phase_range_rad": 2.1232756720910997,
+                  "turns": -0.04609031686728122,
+                  "min_component_fraction": 0.0038749247838673053,
+                  "max_phase_increment_rad": 1.882154994032278
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 2.1404543493328356,
+                  "turns": -0.0755790183797995,
+                  "min_component_fraction": 0.0036362516788434195,
+                  "max_phase_increment_rad": 1.9058574220567142
+                },
+                {
+                  "phase_range_rad": 2.140330674673275,
+                  "turns": -0.044799673794800744,
+                  "min_component_fraction": 0.0036717579699226486,
+                  "max_phase_increment_rad": 1.9045750369805
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 2.1404544783025115,
+                  "turns": -0.07557902705684683,
+                  "min_component_fraction": 0.0036362487127291152,
+                  "max_phase_increment_rad": 1.9058576622460115
+                },
+                {
+                  "phase_range_rad": 2.140330807494376,
+                  "turns": -0.044799680527579974,
+                  "min_component_fraction": 0.003671754566109411,
+                  "max_phase_increment_rad": 1.9045753011832938
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.2620767417167561,
+          "A_Z": 0.5433101084240296,
+          "phase_drift_rad_ps": 4.2085678669553243e-07
+        },
+        {
+          "name": "Jspot_TETM_J0p02500_refine",
+          "J_meV": 0.025,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 2.5,
+          "regime": "RUNNING",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2110.0,
+                2551.3752346390884
+              ],
+              "mean_Z": -0.001258294080811859,
+              "A_Z": 0.6186549700190704,
+              "phase_drift_rad_ps": -0.14235476703493496,
+              "phase_range_rad": 62.831868702037184,
+              "winding_per_cycle": -2.0000004975260337
+            },
+            {
+              "interval_ps": [
+                2555.0,
+                2996.3752346538895
+              ],
+              "mean_Z": -0.0012582994133357118,
+              "A_Z": 0.6186541793834807,
+              "phase_drift_rad_ps": -0.1423548717569944,
+              "phase_range_rad": 62.83191492586775,
+              "winding_per_cycle": -2.0000019688762585
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.299194895272,
+                  "turns": -10.074379761319808,
+                  "min_component_fraction": 0.20478517334256705,
+                  "max_phase_increment_rad": 0.5498486885910268
+                },
+                {
+                  "phase_range_rad": 63.298484604256124,
+                  "turns": -10.074266714993596,
+                  "min_component_fraction": 0.20498793852984679,
+                  "max_phase_increment_rad": 0.549394888092543
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.30514310291993,
+                  "turns": -10.075326447969513,
+                  "min_component_fraction": 0.20261199286292994,
+                  "max_phase_increment_rad": 0.5514060479833489
+                },
+                {
+                  "phase_range_rad": 63.30189514843881,
+                  "turns": -10.074809519958905,
+                  "min_component_fraction": 0.20266443899907002,
+                  "max_phase_increment_rad": 0.5513184666683486
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.305143006096664,
+                  "turns": -10.075326432559612,
+                  "min_component_fraction": 0.20261200476905836,
+                  "max_phase_increment_rad": 0.551406032447403
+                },
+                {
+                  "phase_range_rad": 63.301895080925426,
+                  "turns": -10.074809509213816,
+                  "min_component_fraction": 0.202664451633741,
+                  "max_phase_increment_rad": 0.5513184488499441
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.31587462063722,
+                  "turns": -10.077034422061097,
+                  "min_component_fraction": 0.1995307601574172,
+                  "max_phase_increment_rad": 0.545767138833142
+                },
+                {
+                  "phase_range_rad": 63.311365460021435,
+                  "turns": -10.0763167668599,
+                  "min_component_fraction": 0.1994639994161173,
+                  "max_phase_increment_rad": 0.5456606117968335
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.315874519716424,
+                  "turns": -10.077034405999054,
+                  "min_component_fraction": 0.19953077329730565,
+                  "max_phase_increment_rad": 0.5457671247275435
+                },
+                {
+                  "phase_range_rad": 63.31136539320849,
+                  "turns": -10.076316756226289,
+                  "min_component_fraction": 0.19946400970019718,
+                  "max_phase_increment_rad": 0.5456606066498111
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.0012582967470737855,
+          "A_Z": 0.6186545747012755,
+          "phase_drift_rad_ps": -0.14235481939596467
+        },
+        {
+          "name": "Jspot_TETM_J0p08000_refine",
+          "J_meV": 0.08,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 1.25,
+          "regime": "LOCKED",
+          "original_status": "STATIONARY",
+          "statistics": [
+            {
+              "interval_ps": [
+                2600.0,
+                2800.0
+              ],
+              "mean_Z": -0.2373267910026358,
+              "A_Z": 6.305738066703093e-07,
+              "phase_drift_rad_ps": 1.224487395506957e-09,
+              "phase_range_rad": 1.6000370492430527e-06,
+              "winding_per_cycle": null
+            },
+            {
+              "interval_ps": [
+                2800.0,
+                3000.0
+              ],
+              "mean_Z": -0.23732679174145774,
+              "A_Z": 2.216026890322631e-07,
+              "phase_drift_rad_ps": 1.342341551385795e-09,
+              "phase_range_rad": 5.475572247004568e-07,
+              "winding_per_cycle": null
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 1.687134127820178e-06,
+                  "turns": 5.543877060907315e-08,
+                  "min_component_fraction": 0.22509967963227143,
+                  "max_phase_increment_rad": 3.031943100195722e-07
+                },
+                {
+                  "phase_range_rad": 5.60422228026991e-07,
+                  "turns": 4.4949655123984535e-08,
+                  "min_component_fraction": 0.22509988009731527,
+                  "max_phase_increment_rad": 1.0538568551154981e-07
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 1.6977642784549163e-06,
+                  "turns": 5.519076914601843e-08,
+                  "min_component_fraction": 0.22602582796131382,
+                  "max_phase_increment_rad": 3.0513510534957433e-07
+                },
+                {
+                  "phase_range_rad": 5.643276884820247e-07,
+                  "turns": 4.5251252407736164e-08,
+                  "min_component_fraction": 0.2260260290742364,
+                  "max_phase_increment_rad": 1.0612597485526454e-07
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 1.6977643429449962e-06,
+                  "turns": 5.519078124537853e-08,
+                  "min_component_fraction": 0.22602579861684474,
+                  "max_phase_increment_rad": 3.051351204208519e-07
+                },
+                {
+                  "phase_range_rad": 5.643277024569571e-07,
+                  "turns": 4.5251253529765174e-08,
+                  "min_component_fraction": 0.2260259997297517,
+                  "max_phase_increment_rad": 1.061259792267677e-07
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 1.712979014766025e-06,
+                  "turns": 5.984896902238336e-08,
+                  "min_component_fraction": 0.22447860214177204,
+                  "max_phase_increment_rad": 3.076572614862938e-07
+                },
+                {
+                  "phase_range_rad": 5.667751770757623e-07,
+                  "turns": 4.552864031532378e-08,
+                  "min_component_fraction": 0.22447880264207665,
+                  "max_phase_increment_rad": 1.0656415352916504e-07
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 1.7129790700134984e-06,
+                  "turns": 5.984898043262328e-08,
+                  "min_component_fraction": 0.22447857537346336,
+                  "max_phase_increment_rad": 3.0765726879988797e-07
+                },
+                {
+                  "phase_range_rad": 5.667751895449546e-07,
+                  "turns": 4.55286415809195e-08,
+                  "min_component_fraction": 0.2244787758737602,
+                  "max_phase_increment_rad": 1.0656415849741308e-07
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.23732679137204676,
+          "A_Z": 4.260882478512862e-07,
+          "phase_drift_rad_ps": 1.283414473446376e-09
+        },
+        {
+          "name": "Jspot_TETM_J0p12000_refine",
+          "J_meV": 0.12,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 1.25,
+          "regime": "LOCKED",
+          "original_status": "STATIONARY",
+          "statistics": [
+            {
+              "interval_ps": [
+                2600.0,
+                2800.0
+              ],
+              "mean_Z": -0.09467990454343661,
+              "A_Z": 3.339759024889588e-13,
+              "phase_drift_rad_ps": -3.294586825575152e-15,
+              "phase_range_rad": 7.193273754424467e-13,
+              "winding_per_cycle": null
+            },
+            {
+              "interval_ps": [
+                2800.0,
+                3000.0
+              ],
+              "mean_Z": -0.09467990454345199,
+              "A_Z": 3.327060849045438e-13,
+              "phase_drift_rad_ps": 3.2127772664480857e-15,
+              "phase_range_rad": 7.172040739078511e-13,
+              "winding_per_cycle": null
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 7.641387522738796e-13,
+                  "turns": -1.0570264263249967e-13,
+                  "min_component_fraction": 0.3189827309332126,
+                  "max_phase_increment_rad": 1.8672563495414352e-13
+                },
+                {
+                  "phase_range_rad": 7.620015729514762e-13,
+                  "turns": 1.021664842679003e-13,
+                  "min_component_fraction": 0.3189827309332124,
+                  "max_phase_increment_rad": 1.8496315590255108e-13
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 7.692006753767799e-13,
+                  "turns": -1.0648397681206058e-13,
+                  "min_component_fraction": 0.32171627119126706,
+                  "max_phase_increment_rad": 1.860768483741282e-13
+                },
+                {
+                  "phase_range_rad": 7.635073129286241e-13,
+                  "turns": 1.0349226756480897e-13,
+                  "min_component_fraction": 0.32171627119126667,
+                  "max_phase_increment_rad": 1.8644807919798723e-13
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 7.688572001285365e-13,
+                  "turns": -1.0620457391816813e-13,
+                  "min_component_fraction": 0.3217162404978418,
+                  "max_phase_increment_rad": 1.8562928971732617e-13
+                },
+                {
+                  "phase_range_rad": 7.644926358629789e-13,
+                  "turns": 1.0309525040925822e-13,
+                  "min_component_fraction": 0.32171624049784064,
+                  "max_phase_increment_rad": 1.8540724511240114e-13
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 7.716917382882826e-13,
+                  "turns": -1.0563665716645194e-13,
+                  "min_component_fraction": 0.32098656264663306,
+                  "max_phase_increment_rad": 1.8780636767967707e-13
+                },
+                {
+                  "phase_range_rad": 7.686195430123277e-13,
+                  "turns": 1.0202981980893116e-13,
+                  "min_component_fraction": 0.32098656264663333,
+                  "max_phase_increment_rad": 1.8848637928225997e-13
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 7.725504264088912e-13,
+                  "turns": -1.0492738242889294e-13,
+                  "min_component_fraction": 0.32098653448648856,
+                  "max_phase_increment_rad": 1.8917679922569874e-13
+                },
+                {
+                  "phase_range_rad": 7.689664877075231e-13,
+                  "turns": 1.0188376829621465e-13,
+                  "min_component_fraction": 0.3209865344864865,
+                  "max_phase_increment_rad": 1.866371640568687e-13
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.0946799045434443,
+          "A_Z": 3.333409936967513e-13,
+          "phase_drift_rad_ps": -4.090477956353318e-17
+        },
+        {
+          "name": "Jspot_TETM_J0p06500_fill2h",
+          "J_meV": 0.065,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 1.25,
+          "regime": "BOUNDED",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2490.0,
+                2740.86131108049
+              ],
+              "mean_Z": -0.2743575773417737,
+              "A_Z": 0.4405156477135448,
+              "phase_drift_rad_ps": -8.233589286050117e-07,
+              "phase_range_rad": 1.242802788442541,
+              "winding_per_cycle": -6.574655695214471e-06
+            },
+            {
+              "interval_ps": [
+                2745.0,
+                2995.8612723046435
+              ],
+              "mean_Z": -0.2743575822044953,
+              "A_Z": 0.4405048085944193,
+              "phase_drift_rad_ps": -3.555418953105863e-08,
+              "phase_range_rad": 1.2428205188319246,
+              "winding_per_cycle": -2.839059739756575e-07
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 1.4827352891024228,
+                  "turns": -0.08235995005658395,
+                  "min_component_fraction": 0.024518018069092484,
+                  "max_phase_increment_rad": 0.5266407239633301
+                },
+                {
+                  "phase_range_rad": 1.481898932714564,
+                  "turns": -0.06782577646153526,
+                  "min_component_fraction": 0.024512994786061795,
+                  "max_phase_increment_rad": 0.5314364835633151
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 1.4784038755539888,
+                  "turns": -0.08351389325296499,
+                  "min_component_fraction": 0.02548742836624434,
+                  "max_phase_increment_rad": 0.516837017465281
+                },
+                {
+                  "phase_range_rad": 1.4783214416125046,
+                  "turns": -0.06843759332195168,
+                  "min_component_fraction": 0.02547751928328701,
+                  "max_phase_increment_rad": 0.5184980370836285
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 1.4784039483289628,
+                  "turns": -0.08351389065020143,
+                  "min_component_fraction": 0.025487419739034,
+                  "max_phase_increment_rad": 0.5168370494215317
+                },
+                {
+                  "phase_range_rad": 1.478321513632535,
+                  "turns": -0.06843759857863703,
+                  "min_component_fraction": 0.02547751108692875,
+                  "max_phase_increment_rad": 0.5184980887809568
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 1.4902272430161112,
+                  "turns": -0.0848054471398982,
+                  "min_component_fraction": 0.024765946393013657,
+                  "max_phase_increment_rad": 0.5157608243310559
+                },
+                {
+                  "phase_range_rad": 1.4897992938262343,
+                  "turns": -0.06794478527642905,
+                  "min_component_fraction": 0.024786033156713922,
+                  "max_phase_increment_rad": 0.5238756757724287
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 1.490227310384446,
+                  "turns": -0.08480544446466295,
+                  "min_component_fraction": 0.024765939102712603,
+                  "max_phase_increment_rad": 0.5157609282468136
+                },
+                {
+                  "phase_range_rad": 1.4897993550793804,
+                  "turns": -0.06794479048867273,
+                  "min_component_fraction": 0.024786026298758645,
+                  "max_phase_increment_rad": 0.5238757325199362
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.27435757977313446,
+          "A_Z": 0.44051022815398205,
+          "phase_drift_rad_ps": -4.2945655906803516e-07
+        },
+        {
+          "name": "Jspot_TETM_J0p05500_fill2h",
+          "J_meV": 0.055,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 1.25,
+          "regime": "UNRESOLVED",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                3930.0,
+                4212.247966430987
+              ],
+              "mean_Z": -0.24505615180345863,
+              "A_Z": 0.6121578730688372,
+              "phase_drift_rad_ps": -3.850874883986167e-08,
+              "phase_range_rad": 1.971260416920185,
+              "winding_per_cycle": -3.4597152617583673e-07
+            },
+            {
+              "interval_ps": [
+                4215.0,
+                4497.247969782578
+              ],
+              "mean_Z": -0.24505610021342772,
+              "A_Z": 0.612158153668041,
+              "phase_drift_rad_ps": -5.110328141951381e-08,
+              "phase_range_rad": 1.9712604105313787,
+              "winding_per_cycle": -4.5912373182449163e-07
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.27273480502653,
+                  "turns": -10.070168507162583,
+                  "min_component_fraction": 0.0007744520723266125,
+                  "max_phase_increment_rad": 2.3412643126678208
+                },
+                {
+                  "phase_range_rad": 63.25761922624762,
+                  "turns": -10.067762788082225,
+                  "min_component_fraction": 0.0007877954891147843,
+                  "max_phase_increment_rad": 2.3402011747675857
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.279487085627764,
+                  "turns": -10.071243165997412,
+                  "min_component_fraction": 0.0005626950922184043,
+                  "max_phase_increment_rad": 2.467869609677436
+                },
+                {
+                  "phase_range_rad": 63.265008010561225,
+                  "turns": -10.068938749629174,
+                  "min_component_fraction": 0.0005359114099555895,
+                  "max_phase_increment_rad": 2.4680925516535375
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.27948703744428,
+                  "turns": -10.071243158328773,
+                  "min_component_fraction": 0.000562695100250939,
+                  "max_phase_increment_rad": 2.4678689122852546
+                },
+                {
+                  "phase_range_rad": 63.265008008873124,
+                  "turns": -10.068938749360505,
+                  "min_component_fraction": 0.0005359121529730115,
+                  "max_phase_increment_rad": 2.468092054989688
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.28817306219503,
+                  "turns": -10.072625582103674,
+                  "min_component_fraction": 0.000597006853940064,
+                  "max_phase_increment_rad": 2.4250958328104986
+                },
+                {
+                  "phase_range_rad": 63.26737303967546,
+                  "turns": -10.069315155703261,
+                  "min_component_fraction": 0.0005976435424073877,
+                  "max_phase_increment_rad": 2.4212432341865266
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.28817301311968,
+                  "turns": -10.07262557429309,
+                  "min_component_fraction": 0.0005970072775065895,
+                  "max_phase_increment_rad": 2.4250953114866434
+                },
+                {
+                  "phase_range_rad": 63.26737303983715,
+                  "turns": -10.069315155728995,
+                  "min_component_fraction": 0.0005976446991902795,
+                  "max_phase_increment_rad": 2.4212425623301357
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.24505612600844318,
+          "A_Z": 0.6121580133684391,
+          "phase_drift_rad_ps": -4.4806015129687745e-08
+        },
+        {
+          "name": "Jspot_TETM_J0p07500_fill2h",
+          "J_meV": 0.075,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 1.25,
+          "regime": "LOCKED",
+          "original_status": "STATIONARY",
+          "statistics": [
+            {
+              "interval_ps": [
+                4100.0,
+                4300.0
+              ],
+              "mean_Z": -0.26886645238579043,
+              "A_Z": 0.00014210766241182227,
+              "phase_drift_rad_ps": 8.36611478113869e-07,
+              "phase_range_rad": 0.00036744513507219745,
+              "winding_per_cycle": null
+            },
+            {
+              "interval_ps": [
+                4300.0,
+                4500.0
+              ],
+              "mean_Z": -0.2688642824499878,
+              "A_Z": 9.8660740498413e-05,
+              "phase_drift_rad_ps": 7.765057873809767e-08,
+              "phase_range_rad": 0.0002496468314409084,
+              "winding_per_cycle": null
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 0.000395861774176276,
+                  "turns": 2.969080240356005e-05,
+                  "min_component_fraction": 0.20905408425122002,
+                  "max_phase_increment_rad": 6.817792659094546e-05
+                },
+                {
+                  "phase_range_rad": 0.0002706348193497188,
+                  "turns": 4.9094910406086e-06,
+                  "min_component_fraction": 0.20907722188150207,
+                  "max_phase_increment_rad": 4.759232664275359e-05
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 0.0003978739948496679,
+                  "turns": 2.9795687639999444e-05,
+                  "min_component_fraction": 0.20979426038694562,
+                  "max_phase_increment_rad": 6.852643643608103e-05
+                },
+                {
+                  "phase_range_rad": 0.0002718878795448104,
+                  "turns": 4.8310544852227e-06,
+                  "min_component_fraction": 0.20981721358525268,
+                  "max_phase_increment_rad": 4.7820218347621735e-05
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 0.0003978740082346277,
+                  "turns": 2.9795689465525188e-05,
+                  "min_component_fraction": 0.20979423139449097,
+                  "max_phase_increment_rad": 6.852643870237929e-05
+                },
+                {
+                  "phase_range_rad": 0.0002718878908688077,
+                  "turns": 4.83105648917756e-06,
+                  "min_component_fraction": 0.20981718459242177,
+                  "max_phase_increment_rad": 4.7820220209479625e-05
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 0.00039990436052711464,
+                  "turns": 3.0281233225339113e-05,
+                  "min_component_fraction": 0.20812448653961538,
+                  "max_phase_increment_rad": 6.885967940879062e-05
+                },
+                {
+                  "phase_range_rad": 0.0002741604358869193,
+                  "turns": 5.6020219893440215e-06,
+                  "min_component_fraction": 0.20814754910177177,
+                  "max_phase_increment_rad": 4.8166739770295897e-05
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 0.00039990437164257736,
+                  "turns": 3.028123492479562e-05,
+                  "min_component_fraction": 0.20812446012689725,
+                  "max_phase_increment_rad": 6.885968127792741e-05
+                },
+                {
+                  "phase_range_rad": 0.0002741604457770219,
+                  "turns": 5.6020240638751685e-06,
+                  "min_component_fraction": 0.20814752268735023,
+                  "max_phase_increment_rad": 4.8166741370439525e-05
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.26886536741788913,
+          "A_Z": 0.00012038420145511763,
+          "phase_drift_rad_ps": 4.571310284259833e-07
+        },
+        {
+          "name": "Jspot_TETM_J0p10000_fill2h",
+          "J_meV": 0.1,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 1.25,
+          "regime": "LOCKED",
+          "original_status": "STATIONARY",
+          "statistics": [
+            {
+              "interval_ps": [
+                2600.0,
+                2800.0
+              ],
+              "mean_Z": -0.14654019359625783,
+              "A_Z": 3.773786838578985e-13,
+              "phase_drift_rad_ps": 2.4212576388293883e-15,
+              "phase_range_rad": 8.547051955076768e-13,
+              "winding_per_cycle": null
+            },
+            {
+              "interval_ps": [
+                2800.0,
+                3000.0
+              ],
+              "mean_Z": -0.1465401935962528,
+              "A_Z": 3.778366508555564e-13,
+              "phase_drift_rad_ps": 5.59691182289157e-16,
+              "phase_range_rad": 8.562039965909207e-13,
+              "winding_per_cycle": null
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 9.20583054231372e-13,
+                  "turns": 8.317371363879975e-14,
+                  "min_component_fraction": 0.2791262695999089,
+                  "max_phase_increment_rad": 1.9288737274081313e-13
+                },
+                {
+                  "phase_range_rad": 9.211242879558768e-13,
+                  "turns": 2.906010968334409e-14,
+                  "min_component_fraction": 0.2791262695999075,
+                  "max_phase_increment_rad": 1.9215184998699897e-13
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 9.230741171428747e-13,
+                  "turns": 8.424273340673611e-14,
+                  "min_component_fraction": 0.2809298542247939,
+                  "max_phase_increment_rad": 1.9367840664585856e-13
+                },
+                {
+                  "phase_range_rad": 9.273345979998737e-13,
+                  "turns": 2.846154696204089e-14,
+                  "min_component_fraction": 0.28092985422479283,
+                  "max_phase_increment_rad": 1.9437229603624928e-13
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 9.228035002806223e-13,
+                  "turns": 8.346084704754299e-14,
+                  "min_component_fraction": 0.28092982398866057,
+                  "max_phase_increment_rad": 1.9177021082228407e-13
+                },
+                {
+                  "phase_range_rad": 9.271958201217956e-13,
+                  "turns": 2.896734350513474e-14,
+                  "min_component_fraction": 0.2809298239886602,
+                  "max_phase_increment_rad": 1.9260287809075294e-13
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 9.306895532024129e-13,
+                  "turns": 8.423610725114973e-14,
+                  "min_component_fraction": 0.27984244616531534,
+                  "max_phase_increment_rad": 1.9437576548320123e-13
+                },
+                {
+                  "phase_range_rad": 9.347314589014388e-13,
+                  "turns": 3.138699465342868e-14,
+                  "min_component_fraction": 0.2798424461653168,
+                  "max_phase_increment_rad": 1.9614171398174562e-13
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 9.317858984392302e-13,
+                  "turns": 8.425267264011568e-14,
+                  "min_component_fraction": 0.27984241848446456,
+                  "max_phase_increment_rad": 1.9360207881291558e-13
+                },
+                {
+                  "phase_range_rad": 9.34051447298856e-13,
+                  "turns": 3.1526143920742715e-14,
+                  "min_component_fraction": 0.27984241848446334,
+                  "max_phase_increment_rad": 1.9301574227803542e-13
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.1465401935962553,
+          "A_Z": 3.7760766735672746e-13,
+          "phase_drift_rad_ps": 1.4904744105592727e-15
+        },
+        {
+          "name": "Jspot_TETM_J0p07000_transition3",
+          "J_meV": 0.07,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 2.5,
+          "regime": "BOUNDED",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2280.0,
+                2636.375534626996
+              ],
+              "mean_Z": -0.28276357563706866,
+              "A_Z": 0.26690828512625214,
+              "phase_drift_rad_ps": 5.808297951606831e-07,
+              "phase_range_rad": 0.7147177039459468,
+              "winding_per_cycle": 6.588808658600355e-06
+            },
+            {
+              "interval_ps": [
+                2640.0,
+                2996.375387417964
+              ],
+              "mean_Z": -0.2827648997483458,
+              "A_Z": 0.2669049447032234,
+              "phase_drift_rad_ps": 2.667549981173461e-07,
+              "phase_range_rad": 0.7146872831814942,
+              "winding_per_cycle": 3.026010252828924e-06
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 0.7996703518277941,
+                  "turns": 0.044535250896704015,
+                  "min_component_fraction": 0.08346167201642472,
+                  "max_phase_increment_rad": 0.35828266025810473
+                },
+                {
+                  "phase_range_rad": 0.799964795603859,
+                  "turns": 0.07369525177601104,
+                  "min_component_fraction": 0.08296539451776198,
+                  "max_phase_increment_rad": 0.3610224822731108
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 0.8006220177612445,
+                  "turns": 0.04396068825543215,
+                  "min_component_fraction": 0.08425652255805138,
+                  "max_phase_increment_rad": 0.35666837249920946
+                },
+                {
+                  "phase_range_rad": 0.8003645874329296,
+                  "turns": 0.07379901466349643,
+                  "min_component_fraction": 0.08384742216300388,
+                  "max_phase_increment_rad": 0.3589245280399246
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 0.8006220633407453,
+                  "turns": 0.043960701265406917,
+                  "min_component_fraction": 0.0842565071132331,
+                  "max_phase_increment_rad": 0.3566683818840055
+                },
+                {
+                  "phase_range_rad": 0.8003646281729184,
+                  "turns": 0.07379901240472139,
+                  "min_component_fraction": 0.08384740607554914,
+                  "max_phase_increment_rad": 0.358924543107673
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 0.8106445606032414,
+                  "turns": 0.04692894396279044,
+                  "min_component_fraction": 0.08340142694097039,
+                  "max_phase_increment_rad": 0.35644274974937384
+                },
+                {
+                  "phase_range_rad": 0.8082569238777085,
+                  "turns": 0.07292015610756723,
+                  "min_component_fraction": 0.08283739765626344,
+                  "max_phase_increment_rad": 0.3598382370625728
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 0.810644601578054,
+                  "turns": 0.04692895744302422,
+                  "min_component_fraction": 0.08340141378705018,
+                  "max_phase_increment_rad": 0.3564427520227701
+                },
+                {
+                  "phase_range_rad": 0.8082569675841378,
+                  "turns": 0.07292015244871296,
+                  "min_component_fraction": 0.08283738385954469,
+                  "max_phase_increment_rad": 0.3598382451758295
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.2827642376927072,
+          "A_Z": 0.26690661491473777,
+          "phase_drift_rad_ps": 4.237923966390146e-07
+        },
+        {
+          "name": "Jspot_TETM_J0p05000_transition3",
+          "J_meV": 0.05,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 2.5,
+          "regime": "UNRESOLVED",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2390.0,
+                2690.927507636194
+              ],
+              "mean_Z": -0.2224301168656792,
+              "A_Z": 0.6577775261045462,
+              "phase_drift_rad_ps": 5.978521711569378e-07,
+              "phase_range_rad": 2.33973892919885,
+              "winding_per_cycle": 5.72671837628495e-06
+            },
+            {
+              "interval_ps": [
+                2695.0,
+                2995.927528505161
+              ],
+              "mean_Z": -0.22243011810790858,
+              "A_Z": 0.6577777283883405,
+              "phase_drift_rad_ps": 2.546011899011943e-07,
+              "phase_range_rad": 2.3397395193125616,
+              "winding_per_cycle": 2.438779156931513e-06
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.2333900927222,
+                  "turns": -10.063906601714821,
+                  "min_component_fraction": 0.011242531711026802,
+                  "max_phase_increment_rad": 1.691802778683801
+                },
+                {
+                  "phase_range_rad": 63.27542873339525,
+                  "turns": -10.0705972591788,
+                  "min_component_fraction": 0.014120446555782361,
+                  "max_phase_increment_rad": 1.8389207538149748
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.22676889818978,
+                  "turns": -10.062852805875814,
+                  "min_component_fraction": 0.01021744427440118,
+                  "max_phase_increment_rad": 1.7628764915843789
+                },
+                {
+                  "phase_range_rad": 63.25235396045917,
+                  "turns": -10.0669247950053,
+                  "min_component_fraction": 0.01400758649136016,
+                  "max_phase_increment_rad": 1.8766408322265988
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.22676897367002,
+                  "turns": -10.062852817888865,
+                  "min_component_fraction": 0.010217447562443804,
+                  "max_phase_increment_rad": 1.7628759259823354
+                },
+                {
+                  "phase_range_rad": 63.25235406577984,
+                  "turns": -10.066924811767606,
+                  "min_component_fraction": 0.01400757919878268,
+                  "max_phase_increment_rad": 1.8766406136774805
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.22093121960637,
+                  "turns": -10.061923710473081,
+                  "min_component_fraction": 0.010310529273438493,
+                  "max_phase_increment_rad": 1.668437960594602
+                },
+                {
+                  "phase_range_rad": 63.25610233390175,
+                  "turns": -10.067521367167242,
+                  "min_component_fraction": 0.012461267670602872,
+                  "max_phase_increment_rad": 1.8576728936540405
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.22093129362693,
+                  "turns": -10.06192372225382,
+                  "min_component_fraction": 0.010310532103465954,
+                  "max_phase_increment_rad": 1.6684373247313786
+                },
+                {
+                  "phase_range_rad": 63.256102441672446,
+                  "turns": -10.06752138431948,
+                  "min_component_fraction": 0.012461262588373821,
+                  "max_phase_increment_rad": 1.8576727072777928
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.2224301174867939,
+          "A_Z": 0.6577776272464433,
+          "phase_drift_rad_ps": 4.2622668052906604e-07
+        },
+        {
+          "name": "Jspot_TETM_J0p04500_transition3",
+          "J_meV": 0.045,
+          "beta": 0.0119,
+          "N": 256,
+          "L_um": 256.0,
+          "dt_ps": 0.025,
+          "precision": "complex128",
+          "probe_ps": 2.5,
+          "regime": "RUNNING",
+          "original_status": "PERIODIC",
+          "statistics": [
+            {
+              "interval_ps": [
+                2350.0,
+                2672.1513294864044
+              ],
+              "mean_Z": -0.1929200793926216,
+              "A_Z": 0.6851559134762133,
+              "phase_drift_rad_ps": -0.1950359837076838,
+              "phase_range_rad": 62.831101449119046,
+              "winding_per_cycle": -1.999976075107129
+            },
+            {
+              "interval_ps": [
+                2675.0,
+                2997.1513329057825
+              ],
+              "mean_Z": -0.1929200805949523,
+              "A_Z": 0.6851558492087095,
+              "phase_drift_rad_ps": -0.1950384236551445,
+              "phase_range_rad": 62.8318881483475,
+              "winding_per_cycle": -2.000001116521316
+            }
+          ],
+          "local_phase_checks": [
+            {
+              "xy_um": [
+                0,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.63761422759831,
+                  "turns": -10.128240870897399,
+                  "min_component_fraction": 0.03238107827774852,
+                  "max_phase_increment_rad": 1.2906901654802567
+                },
+                {
+                  "phase_range_rad": 63.320838212445125,
+                  "turns": -10.077824402232816,
+                  "min_component_fraction": 0.03229936863290632,
+                  "max_phase_increment_rad": 1.291925532571554
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.65920257075807,
+                  "turns": -10.131676762424439,
+                  "min_component_fraction": 0.03052298749715136,
+                  "max_phase_increment_rad": 1.3083849594667925
+                },
+                {
+                  "phase_range_rad": 63.32639600748944,
+                  "turns": -10.07870895278681,
+                  "min_component_fraction": 0.030597361248101584,
+                  "max_phase_increment_rad": 1.3064213779102687
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                -2,
+                0
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.6592023193745,
+                  "turns": -10.1316767224155,
+                  "min_component_fraction": 0.030522992447907477,
+                  "max_phase_increment_rad": 1.3083848200624715
+                },
+                {
+                  "phase_range_rad": 63.32639594575715,
+                  "turns": -10.07870894296181,
+                  "min_component_fraction": 0.030597367108833345,
+                  "max_phase_increment_rad": 1.3064213103399993
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.614284623275715,
+                  "turns": -10.124527849049079,
+                  "min_component_fraction": 0.030404924098585365,
+                  "max_phase_increment_rad": 1.2969896861855048
+                },
+                {
+                  "phase_range_rad": 63.32142952165905,
+                  "turns": -10.077918512017108,
+                  "min_component_fraction": 0.030396840823789826,
+                  "max_phase_increment_rad": 1.2966433243209323
+                }
+              ]
+            },
+            {
+              "xy_um": [
+                0,
+                -2
+              ],
+              "windows": [
+                {
+                  "phase_range_rad": 63.61428439476282,
+                  "turns": -10.124527812680123,
+                  "min_component_fraction": 0.03040492730811275,
+                  "max_phase_increment_rad": 1.296989591871224
+                },
+                {
+                  "phase_range_rad": 63.321429460506685,
+                  "turns": -10.077918502284406,
+                  "min_component_fraction": 0.030396844936414463,
+                  "max_phase_increment_rad": 1.2966432094677245
+                }
+              ]
+            }
+          ],
+          "numerical_convergence": null,
+          "mean_Z": -0.19292007999378696,
+          "A_Z": 0.6851558813424614,
+          "phase_drift_rad_ps": -0.19503720368141414
+        }
+      ]
+    },
+    "N13_spot_regime_dynamics": {
+      "file": "results/figures/report3/N13_spot_regime_dynamics.png",
+      "caption_en": "Central observables only at(0,0) for the same runs as N11: J=.040,.065,.100meV, all other parameters and seeds identical. z=(n+-n-)/(n++n-); theta=arg psi+-arg psi-. Three confirmed periods shown for each oscillating trajectory, a comparable duration for the stationary case. Phase is continuously unwrapped; only integer2pi branch offsets are applied. The fixed phase retains its actual value. Central classification is checked separately from whole-map stationarity/periodicity and does not imply the same local phase behavior everywhere.",
+      "status": "READY",
+      "sources": [],
+      "center_cycles": [
+        {
+          "run": "Jspot_TETM_J0p04000_refine",
+          "coordinates_um": [
+            0,
+            0
+          ],
+          "start_ps": 2600.0,
+          "period_ps": 34.640211650053566,
+          "actual_last_sample_ps": 2632.5,
+          "display_end_ps": 2634.6402116500535,
+          "endpoint_interpolation_unit_residual": 2.2797876952695972e-05,
+          "recurrence_max": 0.0002738453369331476,
+          "interpolation_crosscheck_max": 0.00037124374212771626,
+          "classification": "Running phase"
+        },
+        {
+          "run": "Jspot_TETM_J0p06500_fill2h",
+          "coordinates_um": [
+            0,
+            0
+          ],
+          "start_ps": 2600.0,
+          "period_ps": 25.08612916925666,
+          "actual_last_sample_ps": 2625.0,
+          "display_end_ps": 2625.0861291692568,
+          "endpoint_interpolation_unit_residual": 3.65392205381454e-08,
+          "recurrence_max": 1.5238468219020685e-06,
+          "interpolation_crosscheck_max": 5.789345490035517e-06,
+          "classification": "Oscillating phase"
+        },
+        {
+          "run": "Jspot_TETM_J0p10000_fill2h",
+          "coordinates_um": [
+            0,
+            0
+          ],
+          "start_ps": 2600.0,
+          "period_ps": null,
+          "actual_last_sample_ps": 2600.0,
+          "display_end_ps": 2600.0,
+          "endpoint_interpolation_unit_residual": 0.0,
+          "recurrence_max": 0.0,
+          "interpolation_crosscheck_max": 0.0,
+          "classification": "Fixed phase"
         }
       ]
     }
@@ -3157,7 +5753,7 @@
     "C1_spot_Stokes_evolution": {
       "file": "results/figures/report3/C1_spot_Stokes_evolution.gif",
       "source": "check_C1_spot_full_dt0125",
-      "caption_en": "Normalized Stokes from actual saved complex fields and the fixed circular-basis convention. Low-intensity pixels are masked, all color scales remain [-1,1]. No phase or frame interpolation. Full evolution from0 ps. A time-step control, when used, is identified by its source run.",
+      "caption_en": "Normalized Stokes from actual saved complex fields. Full evolution from0 ps; low-intensity pixels are masked. Fixed scales [-1,1], no interpolation. The compact float64 source retains the original frame times and masks.",
       "times_ps": [
         0.0,
         10.0,
@@ -3477,12 +6073,17 @@
           -1,
           1
         ]
+      ],
+      "color_maps": [
+        "RdBu_r",
+        "RdBu_r",
+        "RdBu_r"
       ]
     },
     "C1_ring_Stokes_evolution": {
       "file": "results/figures/report3/C1_ring_Stokes_evolution.gif",
       "source": "matched_C1_ring",
-      "caption_en": "Normalized Stokes from actual saved complex fields and the fixed circular-basis convention. Low-intensity pixels are masked, all color scales remain [-1,1]. No phase or frame interpolation. Full evolution from0 ps. A time-step control, when used, is identified by its source run.",
+      "caption_en": "Normalized Stokes from actual saved complex fields. Full evolution from0 ps; low-intensity pixels are masked. Fixed scales [-1,1], no interpolation. The compact float64 source retains the original frame times and masks.",
       "times_ps": [
         0.0,
         20.0,
@@ -3682,12 +6283,17 @@
           -1,
           1
         ]
+      ],
+      "color_maps": [
+        "RdBu_r",
+        "RdBu_r",
+        "RdBu_r"
       ]
     },
     "T0_ring_Stokes_evolution": {
       "file": "results/figures/report3/T0_ring_Stokes_evolution.gif",
       "source": "matched_T0_ring",
-      "caption_en": "Normalized Stokes from actual saved complex fields and the fixed circular-basis convention. Low-intensity pixels are masked, all color scales remain [-1,1]. No phase or frame interpolation. Full evolution from0 ps. A time-step control, when used, is identified by its source run.",
+      "caption_en": "Normalized Stokes from actual saved complex fields. Full evolution from0 ps; low-intensity pixels are masked. Fixed scales [-1,1], no interpolation. The compact float64 source retains the original frame times and masks.",
       "times_ps": [
         0.0,
         20.0,
@@ -4007,49 +6613,80 @@
           -1,
           1
         ]
+      ],
+      "color_maps": [
+        "RdBu_r",
+        "RdBu_r",
+        "RdBu_r"
       ]
     }
   },
-  "limitations": [
-    "T0 ring polarization still evolves at6000 ps",
-    "Small alpha2 contribution has no paired error bound",
-    "Only two modes are verified in the new0D sample; no2D J scan has been performed"
+  "figure_order": [
+    "P1_reservoir_switching",
+    "P2_homogeneous_pump_response",
+    "N1_spatial_component_densities",
+    "P3_homogeneous_densities",
+    "P4_homogeneous_relative_phase",
+    "P5_homogeneous_J_scan",
+    "N3_TE_TM_spot",
+    "N4_TE_TM_ring",
+    "N5_TE_TM_angular_response",
+    "N7_ring_angular_polarization",
+    "N12_spot_J_scan",
+    "N13_spot_regime_dynamics",
+    "N8_spot_Stokes",
+    "N9_ring_Stokes",
+    "N10_homogeneous_Poincare",
+    "N11_spot_Poincare"
   ],
+  "limitations": [
+    "T0 ring at6000ps is a finite-time polarization snapshot",
+    "Alpha2 figure is reserved; no paired error bound",
+    "The diagnostic2D J scan is separate from this report set"
+  ],
+  "reserve": {
+    "N2": {
+      "file": "results/diagnostics/report3/F3_cross_spin_density_comparison.png",
+      "status": "DIAGNOSTIC_ONLY",
+      "caption_en": "Optional radial alpha2 comparison A0/A1; small differences lack an independent paired error bound. No large extra series is scheduled."
+    }
+  },
   "chapters": {
     "1": {
-      "status": "READY",
       "figures": [
-        "F1_reservoir_switching"
+        "P1_reservoir_switching"
       ]
     },
     "2": {
-      "status": "DENSITY_FIGURE_READY_ALPHA2_UNRESOLVED",
       "figures": [
-        "F2_circular_component_densities"
+        "P2_homogeneous_pump_response",
+        "N1_spatial_component_densities"
       ],
-      "diagnostic": "F3_cross_spin_density_comparison"
+      "reserve": "N2"
     },
     "3": {
-      "status": "READY_WITH_DYNAMIC_RING",
       "figures": [
-        "F4_TE_TM_spot",
-        "F5_TE_TM_ring",
-        "F6_TE_TM_angular_response"
+        "P3_homogeneous_densities",
+        "P4_homogeneous_relative_phase",
+        "P5_homogeneous_J_scan"
       ]
     },
     "4": {
-      "status": "READY_FOR_SAMPLED_CASES_NO_2D_J_SCAN",
       "figures": [
-        "F7_homogeneous_phase_dynamics",
-        "F8_spot_coupling_comparison",
-        "F8_ring_coupling_comparison"
+        "N3_TE_TM_spot",
+        "N4_TE_TM_ring",
+        "N5_TE_TM_angular_response",
+        "N7_ring_angular_polarization",
+        "N12_spot_J_scan",
+        "N13_spot_regime_dynamics"
       ]
     },
     "5": {
-      "status": "READY_C1_CONVERGENCE_VERIFIED",
       "figures": [
-        "F9_spot_Stokes",
-        "F10_ring_Stokes"
+        "N8_spot_Stokes",
+        "N9_ring_Stokes",
+        "N10_homogeneous_Poincare",
+        "N11_spot_Poincare"
       ]
     }
   }

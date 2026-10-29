@@ -1,0 +1,75 @@
+START charge_J1_seeded_c128_dt0125_t2000 2026-10-25T19:33:20.945320+00:00
+START charge_J1_seeded_c64_L256_t3600 2026-10-25T19:33:20.996066+00:00
+charge_J1_seeded_c64_L256_t3600: 3200/3600 ps, 16.44 min
+charge_J1_seeded_c64_L256_t3600: 3400/3600 ps, 17.41 min
+charge_J1_seeded_c64_L256_t3600: 3600/3600 ps, 18.60 min
+START charge_J1_seeded_c128_L256_t3600 2026-10-25T19:36:51.364190+00:00
+charge_J1_seeded_c128_L256_t3600: 3200/3600 ps, 39.17 min
+charge_J1_seeded_c128_L256_t3600: 3400/3600 ps, 41.75 min
+charge_J1_seeded_c128_L256_t3600: 3600/3600 ps, 44.34 min
+START charge_J1_seeded_c128_dt0125_t3600 2026-10-25T19:45:10.217600+00:00
+charge_J1_seeded_c128_dt0125_t3600: 2200/3600 ps, 61.16 min
+charge_J1_seeded_c128_dt0125_t3600: 2400/3600 ps, 66.60 min
+charge_J1_seeded_c128_dt0125_t3600: 2600/3600 ps, 72.33 min
+charge_J1_seeded_c128_dt0125_t3600: 2800/3600 ps, 77.60 min
+charge_J1_seeded_c128_dt0125_t3600: 3000/3600 ps, 81.72 min
+charge_J1_seeded_c128_dt0125_t3600: 3200/3600 ps, 86.05 min
+charge_J1_seeded_c128_dt0125_t3600: 3400/3600 ps, 90.56 min
+charge_J1_seeded_c128_dt0125_t3600: 3600/3600 ps, 95.08 min
+START charge_J1_seeded_c128_L384_t3600 2026-10-25T20:24:48.344386+00:00
+charge_J1_seeded_c128_L384_t3600: 3200/3600 ps, 73.96 min
+charge_J1_seeded_c128_L384_t3600: 3400/3600 ps, 79.95 min
+charge_J1_seeded_c128_L384_t3600: 3600/3600 ps, 86.71 min
+START charge_J1_radial_early_c128 2026-10-25T20:44:02.362544+00:00
+charge_J1_radial_early_c128: 200/800 ps, 3.63 min
+charge_J1_radial_early_c128: 400/800 ps, 7.16 min
+charge_J1_radial_early_c128: 600/800 ps, 11.23 min
+charge_J1_radial_early_c128: 800/800 ps, 14.43 min
+START charge_J1_radial_early_c64 2026-10-25T20:58:38.742162+00:00
+charge_J1_radial_early_c64: 200/800 ps, 1.16 min
+charge_J1_radial_early_c64: 400/800 ps, 2.33 min
+charge_J1_radial_early_c64: 600/800 ps, 3.52 min
+charge_J1_radial_early_c64: 800/800 ps, 4.75 min
+START check_C1_spot_domain_L384 2026-10-25T21:03:37.117851+00:00
+check_C1_spot_domain_L384: 200/3000 ps, 7.06 min
+check_C1_spot_domain_L384: 400/3000 ps, 16.41 min
+check_C1_spot_domain_L384: 600/3000 ps, 23.87 min
+check_C1_spot_domain_L384: 800/3000 ps, 30.92 min
+check_C1_spot_domain_L384: 1000/3000 ps, 37.15 min
+check_C1_spot_domain_L384: 1200/3000 ps, 43.21 min
+check_C1_spot_domain_L384: 1400/3000 ps, 49.98 min
+check_C1_spot_domain_L384: 1600/3000 ps, 56.73 min
+check_C1_spot_domain_L384: 1800/3000 ps, 63.41 min
+check_C1_spot_domain_L384: 2000/3000 ps, 69.78 min
+check_C1_spot_domain_L384: 2200/3000 ps, 76.35 min
+check_C1_spot_domain_L384: 2400/3000 ps, 82.88 min
+check_C1_spot_domain_L384: 2600/3000 ps, 89.42 min
+check_C1_spot_domain_L384: 2800/3000 ps, 95.98 min
+check_C1_spot_domain_L384: 3000/3000 ps, 102.47 min
+START check_C1_spot_grid_N256 2026-10-25T22:47:06.232349+00:00
+check_C1_spot_grid_N256: 200/3000 ps, 1.00 min
+check_C1_spot_grid_N256: 400/3000 ps, 1.87 min
+check_C1_spot_grid_N256: 600/3000 ps, 2.82 min
+check_C1_spot_grid_N256: 800/3000 ps, 3.77 min
+check_C1_spot_grid_N256: 1000/3000 ps, 4.63 min
+check_C1_spot_grid_N256: 1200/3000 ps, 5.66 min
+check_C1_spot_grid_N256: 1400/3000 ps, 6.55 min
+check_C1_spot_grid_N256: 1600/3000 ps, 7.46 min
+check_C1_spot_grid_N256: 1800/3000 ps, 8.46 min
+check_C1_spot_grid_N256: 2000/3000 ps, 9.33 min
+check_C1_spot_grid_N256: 2200/3000 ps, 10.28 min
+check_C1_spot_grid_N256: 2400/3000 ps, 11.27 min
+check_C1_spot_grid_N256: 2600/3000 ps, 12.13 min
+check_C1_spot_grid_N256: 2800/3000 ps, 13.11 min
+check_C1_spot_grid_N256: 3000/3000 ps, 14.07 min
+START check_C1_spot_late_dt0125 2026-10-25T23:01:16.989925+00:00
+check_C1_spot_late_dt0125: 2600/3000 ps, 4.38 min
+check_C1_spot_late_dt0125: 2800/3000 ps, 10.15 min
+check_C1_spot_late_dt0125: 3000/3000 ps, 16.05 min
+COMPARE charge_J1_seeded_c64_L256_t3600 charge_J1_seeded_c128_L256_t3600 2026-10-25T23:17:42.213915+00:00
+COMPARE charge_J1_seeded_c128_dt0125_t3600 charge_J1_seeded_c128_L256_t3600 2026-10-25T23:17:48.753475+00:00
+COMPARE charge_J1_seeded_c128_L384_t3600 charge_J1_seeded_c128_L256_t3600 2026-10-25T23:17:54.501497+00:00
+COMPARE check_C1_spot_domain_L384 production_C1_spot 2026-10-25T23:18:05.231374+00:00
+COMPARE check_C1_spot_grid_N256 production_C1_spot 2026-10-25T23:19:19.833449+00:00
+COMPARE check_C1_spot_late_dt0125 production_C1_spot 2026-10-25T23:19:44.609762+00:00
+FOLLOWUP COMPLETED 2026-10-25T23:20:22.073027+00:00

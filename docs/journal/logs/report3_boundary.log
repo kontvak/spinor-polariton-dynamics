@@ -1,0 +1,21 @@
+boundary_J1_ring_seeded_L256: 200/2000 ps, 2.31 min
+boundary_J1_ring_seeded_L256: 400/2000 ps, 4.71 min
+boundary_J1_ring_seeded_L256: 600/2000 ps, 7.31 min
+boundary_J1_ring_seeded_L256: 800/2000 ps, 9.93 min
+boundary_J1_ring_seeded_L256: 1000/2000 ps, 12.44 min
+boundary_J1_ring_seeded_L256: 1200/2000 ps, 15.06 min
+boundary_J1_ring_seeded_L256: 1400/2000 ps, 17.69 min
+boundary_J1_ring_seeded_L256: 1600/2000 ps, 20.33 min
+boundary_J1_ring_seeded_L256: 1800/2000 ps, 23.01 min
+boundary_J1_ring_seeded_L256: 2000/2000 ps, 25.68 min
+boundary_J1_ring_seeded_L384: 200/2000 ps, 4.77 min
+boundary_J1_ring_seeded_L384: 400/2000 ps, 9.09 min
+boundary_J1_ring_seeded_L384: 600/2000 ps, 13.44 min
+boundary_J1_ring_seeded_L384: 800/2000 ps, 17.83 min
+boundary_J1_ring_seeded_L384: 1000/2000 ps, 22.26 min
+boundary_J1_ring_seeded_L384: 1200/2000 ps, 26.62 min
+boundary_J1_ring_seeded_L384: 1400/2000 ps, 30.96 min
+boundary_J1_ring_seeded_L384: 1600/2000 ps, 35.35 min
+boundary_J1_ring_seeded_L384: 1800/2000 ps, 39.72 min
+boundary_J1_ring_seeded_L384: 2000/2000 ps, 44.21 min
+BOUNDARY QUEUE COMPLETED
